@@ -1,0 +1,30 @@
+<div id="observablehq-64bd6342">
+  <div class="observablehq-viewof-PI"></div>
+  <div class="observablehq-viewof-age"></div>
+  <div class="observablehq-viewof-sex"></div>
+  <div class="observablehq-viewof-race"></div>
+  <div class="observablehq-viewof-height"></div>
+  <div class="observablehq-viewof-weight"></div>
+  <div class="observablehq-viewof-c1"></div>
+  <div class="observablehq-viewof-factors"></div>
+  <div class="observablehq-factors"></div>
+  <div class="observablehq-viewof-prob"></div>
+  <div class="observablehq-prob"></div>
+</div>
+<script type="module">
+  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+  import define from "https://api.observablehq.com/@cadasa/xac-suat-tu-vong-vi-covid-19.js?v=3";
+  (new Runtime).module(define, name => {
+    if (name === "viewof PI") return Inspector.into("#observablehq-64bd6342 .observablehq-viewof-PI")();
+    if (name === "viewof age") return Inspector.into("#observablehq-64bd6342 .observablehq-viewof-age")();
+    if (name === "viewof sex") return Inspector.into("#observablehq-64bd6342 .observablehq-viewof-sex")();
+    if (name === "viewof race") return Inspector.into("#observablehq-64bd6342 .observablehq-viewof-race")();
+    if (name === "viewof height") return Inspector.into("#observablehq-64bd6342 .observablehq-viewof-height")();
+    if (name === "viewof weight") return Inspector.into("#observablehq-64bd6342 .observablehq-viewof-weight")();
+    if (name === "viewof c1") return Inspector.into("#observablehq-64bd6342 .observablehq-viewof-c1")();
+    if (name === "viewof factors") return Inspector.into("#observablehq-64bd6342 .observablehq-viewof-factors")();
+    if (name === "factors") return Inspector.into("#observablehq-64bd6342 .observablehq-factors")();
+    if (name === "viewof prob") return Inspector.into("#observablehq-64bd6342 .observablehq-viewof-prob")();
+    if (name === "prob") return Inspector.into("#observablehq-64bd6342 .observablehq-prob")();
+  });
+</script>
