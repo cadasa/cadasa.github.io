@@ -1,0 +1,14 @@
+<div id="observablehq-2ba4f11c">
+  <div class="observablehq-viewof-Title"></div>
+  <div class="observablehq-viewof-myvar"></div>
+  <div class="observablehq-map"></div>
+</div>
+<script type="module">
+  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+  import define from "https://api.observablehq.com/@cadasa/merry-xmas.js?v=3";
+  (new Runtime).module(define, name => {
+    if (name === "viewof Title") return Inspector.into("#observablehq-2ba4f11c .observablehq-viewof-Title")();
+    if (name === "viewof myvar") return Inspector.into("#observablehq-2ba4f11c .observablehq-viewof-myvar")();
+    if (name === "map") return Inspector.into("#observablehq-2ba4f11c .observablehq-map")();
+  });
+</script>
