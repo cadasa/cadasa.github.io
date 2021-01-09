@@ -1,0 +1,14 @@
+<div id="observablehq-950ca6c3">
+  <div class="observablehq-viewof-title"></div>
+  <div class="observablehq-viewof-sorting"></div>
+  <div class="observablehq-viewof-chart"></div>
+</div>
+<script type="module">
+  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+  import define from "https://api.observablehq.com/@cadasa/world-history-timeline.js?v=3";
+  (new Runtime).module(define, name => {
+    if (name === "viewof title") return Inspector.into("#observablehq-950ca6c3 .observablehq-viewof-title")();
+    if (name === "viewof sorting") return Inspector.into("#observablehq-950ca6c3 .observablehq-viewof-sorting")();
+    if (name === "viewof chart") return Inspector.into("#observablehq-950ca6c3 .observablehq-viewof-chart")();
+  });
+</script>
