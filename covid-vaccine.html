@@ -1,0 +1,12 @@
+<div id="observablehq-30933b66">
+  <div class="observablehq-viewof-type"></div>
+  <div class="observablehq-chart"></div>
+</div>
+<script type="module">
+  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+  import define from "https://api.observablehq.com/@cadasa/covid-19-vaccinations.js?v=3";
+  (new Runtime).module(define, name => {
+    if (name === "viewof type") return Inspector.into("#observablehq-30933b66 .observablehq-viewof-type")();
+    if (name === "chart") return Inspector.into("#observablehq-30933b66 .observablehq-chart")();
+  });
+</script>
