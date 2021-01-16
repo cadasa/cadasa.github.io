@@ -1,0 +1,10 @@
+<div id="observablehq-18132b10">
+  <div class="observablehq-chart"></div>
+</div>
+<script type="module">
+  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+  import define from "https://api.observablehq.com/@shira-sun/barbie-professions-over-the-years.js?v=3";
+  (new Runtime).module(define, name => {
+    if (name === "chart") return Inspector.into("#observablehq-18132b10 .observablehq-chart")();
+  });
+</script>
