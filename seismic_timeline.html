@@ -1,4 +1,5 @@
-<div id="observablehq-2c2861a5">
+<div id="observablehq-76155e75">
+  <div class="observablehq-viewof-title"></div>
   <div class="observablehq-viewof-sorting"></div>
   <div class="observablehq-chart"></div>
 </div>
@@ -6,7 +7,8 @@
   import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
   import define from "https://api.observablehq.com/@cadasa/seismic-technology-timeline.js?v=3";
   (new Runtime).module(define, name => {
-    if (name === "viewof sorting") return Inspector.into("#observablehq-2c2861a5 .observablehq-viewof-sorting")();
-    if (name === "chart") return Inspector.into("#observablehq-2c2861a5 .observablehq-chart")();
+    if (name === "viewof title") return Inspector.into("#observablehq-76155e75 .observablehq-viewof-title")();
+    if (name === "viewof sorting") return Inspector.into("#observablehq-76155e75 .observablehq-viewof-sorting")();
+    if (name === "chart") return Inspector.into("#observablehq-76155e75 .observablehq-chart")();
   });
 </script>
