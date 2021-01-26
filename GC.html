@@ -1,0 +1,10 @@
+<div id="observablehq-7c62eb2c">
+  <div class="observablehq-viewof-map"></div>
+</div>
+<script type="module">
+  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+  import define from "https://api.observablehq.com/@cadasa/gc-terrain-mesh.js?v=3";
+  (new Runtime).module(define, name => {
+    if (name === "viewof map") return Inspector.into("#observablehq-7c62eb2c .observablehq-viewof-map")();
+  });
+</script>
