@@ -1,0 +1,12 @@
+<div id="observablehq-12fb52ee">
+  <div class="observablehq-viewof-selection"></div>
+  <div class="observablehq-canvas"></div>
+</div>
+<script type="module">
+  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+  import define from "https://api.observablehq.com/@radames/face-landmarks-detection-tensorflow-js.js?v=3";
+  (new Runtime).module(define, name => {
+    if (name === "viewof selection") return Inspector.into("#observablehq-12fb52ee .observablehq-viewof-selection")();
+    if (name === "canvas") return Inspector.into("#observablehq-12fb52ee .observablehq-canvas")();
+  });
+</script>
