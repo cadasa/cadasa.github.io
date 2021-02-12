@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>AI TENNIS</title>
+		<meta content="https://cadasa.github.io/aitn.png" property="og:image"/>
+		<meta content="text/html; charset=UTF-8" property="og:type"/>
+		<meta content="https://cadasa.github.io/ai_tennis.html" property="og:url"/>
+		<meta content="AI TENNIS" property="og:title"/>
+		<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+</head>
+<div id="observablehq-c5b0c4b8">
+  <div class="observablehq-viewof-title"></div>
+  <div class="observablehq-viewof-gif"></div>
+  <div class="observablehq-viewof-imageSrc"></div>
+  <div class="observablehq-viewof-space"></div>
+  <div class="observablehq-stickFigure"></div>
+  <div class="observablehq-viewof-toggleImage"></div>
+  <div class="observablehq-viewof-multiple"></div>
+  <div class="observablehq-viewof-confidence"></div>
+</div>
+<script type="module">
+  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+  import define from "https://api.observablehq.com/@cadasa/rf_posenet.js?v=3";
+  (new Runtime).module(define, name => {
+    if (name === "viewof title") return Inspector.into("#observablehq-c5b0c4b8 .observablehq-viewof-title")();
+    if (name === "viewof gif") return Inspector.into("#observablehq-c5b0c4b8 .observablehq-viewof-gif")();
+    if (name === "viewof imageSrc") return Inspector.into("#observablehq-c5b0c4b8 .observablehq-viewof-imageSrc")();
+    if (name === "viewof space") return Inspector.into("#observablehq-c5b0c4b8 .observablehq-viewof-space")();
+    if (name === "stickFigure") return Inspector.into("#observablehq-c5b0c4b8 .observablehq-stickFigure")();
+    if (name === "viewof toggleImage") return Inspector.into("#observablehq-c5b0c4b8 .observablehq-viewof-toggleImage")();
+    if (name === "viewof multiple") return Inspector.into("#observablehq-c5b0c4b8 .observablehq-viewof-multiple")();
+    if (name === "viewof confidence") return Inspector.into("#observablehq-c5b0c4b8 .observablehq-viewof-confidence")();
+  });
+</script>
