@@ -1,0 +1,12 @@
+<div id="observablehq-4b3efb6c">
+  <div class="observablehq-LEGEND"></div>
+  <div class="observablehq-CHART"></div>
+</div>
+<script type="module">
+  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+  import define from "https://api.observablehq.com/@stroked/living-presidents.js?v=3";
+  (new Runtime).module(define, name => {
+    if (name === "LEGEND") return Inspector.into("#observablehq-4b3efb6c .observablehq-LEGEND")();
+    if (name === "CHART") return Inspector.into("#observablehq-4b3efb6c .observablehq-CHART")();
+  });
+</script>
