@@ -1,0 +1,10 @@
+<div id="observablehq-b213dd6b">
+  <div class="observablehq-viewof-heart"></div>
+</div>
+<script type="module">
+  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+  import define from "https://api.observablehq.com/@cadasa/heart.js?v=3";
+  (new Runtime).module(define, name => {
+    if (name === "viewof heart") return Inspector.into("#observablehq-b213dd6b .observablehq-viewof-heart")();
+  });
+</script>

@@ -1,0 +1,18 @@
+<div id="observablehq-26cac14e">
+  <div class="observablehq-viewof-title"></div>
+  <div class="observablehq-viewof-delta"></div>
+  <div class="observablehq-viewof-sigma"></div>
+  <div class="observablehq-viewof-values"></div>
+  <div class="observablehq-viewof-chart"></div>
+</div>
+<script type="module">
+  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+  import define from "https://api.observablehq.com/@cadasa/gaussian-process-playground.js?v=3";
+  (new Runtime).module(define, name => {
+    if (name === "viewof title") return Inspector.into("#observablehq-26cac14e .observablehq-viewof-title")();
+    if (name === "viewof delta") return Inspector.into("#observablehq-26cac14e .observablehq-viewof-delta")();
+    if (name === "viewof sigma") return Inspector.into("#observablehq-26cac14e .observablehq-viewof-sigma")();
+    if (name === "viewof values") return Inspector.into("#observablehq-26cac14e .observablehq-viewof-values")();
+    if (name === "viewof chart") return Inspector.into("#observablehq-26cac14e .observablehq-viewof-chart")();
+  });
+</script>
