@@ -1,0 +1,16 @@
+<div id="observablehq-784f56a8">
+  <div class="observablehq-viewof-state_population"></div>
+  <div class="observablehq-viewof-herdImmunityThreshold"></div>
+  <div class="observablehq-viewof-vaxPerWeek"></div>
+  <div class="observablehq-viewof-chart"></div>
+</div>
+<script type="module">
+  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+  import define from "https://api.observablehq.com/@cadasa/vnvc.js?v=3";
+  (new Runtime).module(define, name => {
+    if (name === "viewof state_population") return Inspector.into("#observablehq-784f56a8 .observablehq-viewof-state_population")();
+    if (name === "viewof herdImmunityThreshold") return Inspector.into("#observablehq-784f56a8 .observablehq-viewof-herdImmunityThreshold")();
+    if (name === "viewof vaxPerWeek") return Inspector.into("#observablehq-784f56a8 .observablehq-viewof-vaxPerWeek")();
+    if (name === "viewof chart") return Inspector.into("#observablehq-784f56a8 .observablehq-viewof-chart")();
+  });
+</script>
