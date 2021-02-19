@@ -1,0 +1,12 @@
+<div id="observablehq-15e7d4e2">
+  <div class="observablehq-scatterGLContainer"></div>
+  <div class="observablehq-updateScattterPointsLoop"></div>
+</div>
+<script type="module">
+  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+  import define from "https://api.observablehq.com/@radames/face-landmarks-detection-tensorflow-js.js?v=3";
+  (new Runtime).module(define, name => {
+    if (name === "scatterGLContainer") return Inspector.into("#observablehq-15e7d4e2 .observablehq-scatterGLContainer")();
+    if (name === "updateScattterPointsLoop") return Inspector.into("#observablehq-15e7d4e2 .observablehq-updateScattterPointsLoop")();
+  });
+</script>
