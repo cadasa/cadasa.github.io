@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>AI TENNIS</title>
+		<meta content="https://cadasa.github.io/chess.jpg" property="og:image"/>
+		<meta content="text/html; charset=UTF-8" property="og:type"/>
+		<meta content="https://cadasa.github.io/chess.html" property="og:url"/>
+		<meta content="chess view" property="og:title"/>
+		<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+</head>
+<div id="observablehq-877fb4d4">
+  <div class="observablehq-viewof-title"></div>
+  <div class="observablehq-viewof-gameInputSelection"></div>
+  <div class="observablehq-viewof-myGame"></div>
+  <div class="observablehq-viewof-showPath"></div>
+  <div class="observablehq-viewof-moveNumber"></div>
+  <div class="observablehq-viewof-object"></div>
+  <div class="observablehq-viewof-game"></div>
+</div>
+<script type="module">
+  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+  import define from "https://api.observablehq.com/@cadasa/view_chess_game.js?v=3";
+  (new Runtime).module(define, name => {
+    if (name === "viewof title") return Inspector.into("#observablehq-877fb4d4 .observablehq-viewof-title")();
+    if (name === "viewof gameInputSelection") return Inspector.into("#observablehq-877fb4d4 .observablehq-viewof-gameInputSelection")();
+    if (name === "viewof myGame") return Inspector.into("#observablehq-877fb4d4 .observablehq-viewof-myGame")();
+    if (name === "viewof showPath") return Inspector.into("#observablehq-877fb4d4 .observablehq-viewof-showPath")();
+    if (name === "viewof moveNumber") return Inspector.into("#observablehq-877fb4d4 .observablehq-viewof-moveNumber")();
+    if (name === "viewof object") return Inspector.into("#observablehq-877fb4d4 .observablehq-viewof-object")();
+    if (name === "viewof game") return Inspector.into("#observablehq-877fb4d4 .observablehq-viewof-game")();
+  });
+</script>
