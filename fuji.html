@@ -1,0 +1,12 @@
+<div id="observablehq-viewof-location-309eb0ab"></div>
+<div id="observablehq-viewof-map-309eb0ab"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/gc-terrain-mesh.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof location") return new Inspector(document.querySelector("#observablehq-viewof-location-309eb0ab"));
+  if (name === "viewof map") return new Inspector(document.querySelector("#observablehq-viewof-map-309eb0ab"));
+  return ["lonLatZoom","metersPerPixel","getMapImage","geometry","tileImg","textureImg","updatedGeometry","scene","terrain","texture","renderer","terrainViz","errors","textureMaterial","map"].includes(name);
+});
+</script>
