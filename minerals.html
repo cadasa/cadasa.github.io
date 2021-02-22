@@ -1,0 +1,11 @@
+<div id="observablehq-viewof-list-864c1ff8"></div>
+<div id="observablehq-viewof-gallery-864c1ff8"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/minerals.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof list") return new Inspector(document.querySelector("#observablehq-viewof-list-864c1ff8"));
+  if (name === "viewof gallery") return new Inspector(document.querySelector("#observablehq-viewof-gallery-864c1ff8"));
+});
+</script>
