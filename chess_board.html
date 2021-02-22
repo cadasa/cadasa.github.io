@@ -1,0 +1,13 @@
+<div id="observablehq-title-da7fe08f"></div>
+<div id="observablehq-board-da7fe08f"></div>
+<div id="observablehq-hhhh-da7fe08f"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/chessground-lichesss-chess-board-ui.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-da7fe08f"));
+  if (name === "board") return new Inspector(document.querySelector("#observablehq-board-da7fe08f"));
+  if (name === "hhhh") return new Inspector(document.querySelector("#observablehq-hhhh-da7fe08f"));
+});
+</script>
