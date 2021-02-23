@@ -1,12 +1,12 @@
-<div id="observablehq-viewof-loc-fc7cedc5"></div>
-<div id="observablehq-col-fc7cedc5"></div>
+<div id="observablehq-viewof-h-5109d214"></div>
+<div id="observablehq-col-5109d214"></div>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/@cadasa/stratigraphy-visualizer.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "viewof loc") return new Inspector(document.querySelector("#observablehq-viewof-loc-fc7cedc5"));
-  if (name === "col") return new Inspector(document.querySelector("#observablehq-col-fc7cedc5"));
-  return ["Latitude","Longitude","strat","strat_clipped","stratColumn","t_age","b_age","verticalAxis","numSections","lithsPerSection","environsPerSection"].includes(name);
+  if (name === "viewof h") return new Inspector(document.querySelector("#observablehq-viewof-h-5109d214"));
+  if (name === "col") return new Inspector(document.querySelector("#observablehq-col-5109d214"));
+  return ["strat","strat_clipped","stratColumn","t_age","b_age","verticalAxis","numSections","lithsPerSection","environsPerSection"].includes(name);
 });
 </script>
