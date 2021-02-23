@@ -1,0 +1,11 @@
+<div id="observablehq-h-f6f0e056"></div>
+<div id="observablehq-macrostratMap-f6f0e056"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/0dd27bf25480258a.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "h") return new Inspector(document.querySelector("#observablehq-h-f6f0e056"));
+  if (name === "macrostratMap") return new Inspector(document.querySelector("#observablehq-macrostratMap-f6f0e056"));
+});
+</script>
