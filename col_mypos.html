@@ -2,7 +2,6 @@
 <div id="observablehq-h2-1972dcc4"></div>
 <div id="observablehq-viewof-macrostratMap-1972dcc4"></div>
 <div id="observablehq-dashboard-1972dcc4"></div>
-<div id="observablehq-viewof-fullscreen-1972dcc4"></div>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
@@ -11,7 +10,6 @@ new Runtime().module(define, name => {
   if (name === "viewof col") return new Inspector(document.querySelector("#observablehq-viewof-col-1972dcc4"));
   if (name === "h2") return new Inspector(document.querySelector("#observablehq-h2-1972dcc4"));
   if (name === "viewof macrostratMap") return new Inspector(document.querySelector("#observablehq-viewof-macrostratMap-1972dcc4"));
-  if (name === "viewof fullscreen") return new Inspector(document.querySelector("#observablehq-viewof-fullscreen-1972dcc4"));
   if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-1972dcc4"));
 });
 </script>
