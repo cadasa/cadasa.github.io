@@ -1,15 +1,25 @@
-<div id="observablehq-viewof-col-1972dcc4"></div>
-<div id="observablehq-h2-1972dcc4"></div>
-<div id="observablehq-viewof-macrostratMap-1972dcc4"></div>
-<div id="observablehq-dashboard-1972dcc4"></div>
+<div id="observablehq-viewof-pagett-b82f3c88"></div>
+<div id="observablehq-dashboard-b82f3c88"></div>
+<div id="observablehq-viewof-h-b82f3c88"></div>
+<div id="observablehq-viewof-title-b82f3c88"></div>
+<div id="observablehq-viewof-maptt-b82f3c88"></div>
+<div id="observablehq-viewof-col-b82f3c88"></div>
+<div id="observablehq-h2-b82f3c88"></div>
+<div id="observablehq-viewof-macrostratMap-b82f3c88"></div>
+<p>Credit: <a href="https://observablehq.com/@cadasa/stratigraphy-visualizer">Stratigraphy Visualizer by cadasa</a></p>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/@cadasa/stratigraphy-visualizer.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "viewof col") return new Inspector(document.querySelector("#observablehq-viewof-col-1972dcc4"));
-  if (name === "h2") return new Inspector(document.querySelector("#observablehq-h2-1972dcc4"));
-  if (name === "viewof macrostratMap") return new Inspector(document.querySelector("#observablehq-viewof-macrostratMap-1972dcc4"));
-  if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-1972dcc4"));
+  if (name === "viewof pagett") return new Inspector(document.querySelector("#observablehq-viewof-pagett-b82f3c88"));
+  if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-b82f3c88"));
+  if (name === "viewof h") return new Inspector(document.querySelector("#observablehq-viewof-h-b82f3c88"));
+  if (name === "viewof title") return new Inspector(document.querySelector("#observablehq-viewof-title-b82f3c88"));
+  if (name === "viewof maptt") return new Inspector(document.querySelector("#observablehq-viewof-maptt-b82f3c88"));
+  if (name === "viewof col") return new Inspector(document.querySelector("#observablehq-viewof-col-b82f3c88"));
+  if (name === "h2") return new Inspector(document.querySelector("#observablehq-h2-b82f3c88"));
+  if (name === "viewof macrostratMap") return new Inspector(document.querySelector("#observablehq-viewof-macrostratMap-b82f3c88"));
+  return ["nHood","mapSelection","title","strat","whenClicked","macrostratMap","strat_clipped","stratColumn","t_age","b_age","verticalAxis","onEachFeature","numSections","lithsPerSection","environsPerSection","col"].includes(name);
 });
 </script>
