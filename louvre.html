@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>VIRTUAL LOUVRE</title>
+		<meta content="https://cadasa.github.io/lou.JPG" property="og:image"/>
+		<meta content="text/html; charset=UTF-8" property="og:type"/>
+		<meta content="https://cadasa.github.io/louvre.html" property="og:url"/>
+		<meta content="Virtual Louvre" property="og:title"/>
+		<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+</head>
+<div id="observablehq-viewof-title2-cb712d6f"></div>
+<div id="observablehq-viewof-fullscreen-cb712d6f"></div>
+<div id="observablehq-mainFrame-cb712d6f"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/3d-virtual-gallery.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof title2") return new Inspector(document.querySelector("#observablehq-viewof-title2-cb712d6f"));
+  if (name === "viewof fullscreen") return new Inspector(document.querySelector("#observablehq-viewof-fullscreen-cb712d6f"));
+  if (name === "mainFrame") return new Inspector(document.querySelector("#observablehq-mainFrame-cb712d6f"));
+  return ["interaction"].includes(name);
+});
+</script>
