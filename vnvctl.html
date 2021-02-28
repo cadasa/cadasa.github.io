@@ -1,11 +1,16 @@
-<div id="observablehq-viewof-title-02a67e5a"></div>
-<div id="observablehq-dashboard-02a67e5a"></div>
+<div id="observablehq-viewof-title-bfe4c111"></div>
+<div id="observablehq-viewof-countdown-bfe4c111"></div>
+<div id="observablehq-viewof-sorting-bfe4c111"></div>
+<div id="observablehq-dashboard-bfe4c111"></div>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/@cadasa/chi-tiet-lich-trinh-7-dot-cung-ung-vaccine-covid-19-o-viet-nam.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "viewof title") return new Inspector(document.querySelector("#observablehq-viewof-title-02a67e5a"));
-  if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-02a67e5a"));
+  if (name === "viewof title") return new Inspector(document.querySelector("#observablehq-viewof-title-bfe4c111"));
+  if (name === "viewof countdown") return new Inspector(document.querySelector("#observablehq-viewof-countdown-bfe4c111"));
+  if (name === "viewof sorting") return new Inspector(document.querySelector("#observablehq-viewof-sorting-bfe4c111"));
+  if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-bfe4c111"));
+  return ["chart"].includes(name);
 });
 </script>
