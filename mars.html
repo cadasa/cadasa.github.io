@@ -1,0 +1,9 @@
+<div id="observablehq-viewof-view-8ea8778a"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/541467eaaa58cc9a.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof view") return new Inspector(document.querySelector("#observablehq-viewof-view-8ea8778a"));
+});
+</script>
