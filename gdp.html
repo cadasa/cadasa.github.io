@@ -1,0 +1,16 @@
+<div id="observablehq-viewof-title-91342705"></div>
+<div id="observablehq-viewof-restartBtn-91342705"></div>
+<div id="observablehq-viewof-restart-91342705"></div>
+<div id="observablehq-viewof-chart-91342705"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/gdp-simulation.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof title") return new Inspector(document.querySelector("#observablehq-viewof-title-91342705"));
+  if (name === "viewof restartBtn") return new Inspector(document.querySelector("#observablehq-viewof-restartBtn-91342705"));
+  if (name === "viewof restart") return new Inspector(document.querySelector("#observablehq-viewof-restart-91342705"));
+  if (name === "viewof chart") return new Inspector(document.querySelector("#observablehq-viewof-chart-91342705"));
+  return ["chart","simulationYears","buttonValue","dataSim","restart","transitionTime","data","calcHeight","min","max"].includes(name);
+});
+</script>
