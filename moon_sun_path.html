@@ -1,0 +1,16 @@
+<div id="observablehq-viewof-title-d83561bf"></div>
+<div id="observablehq-viewof-location-d83561bf"></div>
+<div id="observablehq-viewof-date-d83561bf"></div>
+<div id="observablehq-chart-d83561bf"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/solar-lunar-paths.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof title") return new Inspector(document.querySelector("#observablehq-viewof-title-d83561bf"));
+  if (name === "viewof location") return new Inspector(document.querySelector("#observablehq-viewof-location-d83561bf"));
+  if (name === "viewof date") return new Inspector(document.querySelector("#observablehq-viewof-date-d83561bf"));
+  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-d83561bf"));
+  return ["lunar","formatHour","formatMonth","solar","update"].includes(name);
+});
+</script>
