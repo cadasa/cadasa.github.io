@@ -1,0 +1,12 @@
+<div id="observablehq-chart-acadf684"></div>
+<div id="observablehq-viewof-ch_flavors-acadf684"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@thijsschouten/untitled.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-acadf684"));
+  if (name === "viewof ch_flavors") return new Inspector(document.querySelector("#observablehq-viewof-ch_flavors-acadf684"));
+  return ["selected_flavs","fadeColor","fadeLineColor","getColor"].includes(name);
+});
+</script>
