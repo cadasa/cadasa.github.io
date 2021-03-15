@@ -1,20 +1,22 @@
-<div id="observablehq-viewof-title-773403c0"></div>
-<div id="observablehq-dashboard-773403c0"></div>
-<div id="observablehq-viewof-CheckPointTable-773403c0"></div>
-<div id="observablehq-chart-773403c0"></div>
-<div id="observablehq-viewof-format-773403c0"></div>
-<div id="observablehq-viewof-stkp-773403c0"></div>
+<div id="observablehq-viewof-title-93c8ea13"></div>
+<div id="observablehq-dashboard-93c8ea13"></div>
+<div id="observablehq-viewof-blank-93c8ea13"></div>
+<div id="observablehq-viewof-CheckPointTable-93c8ea13"></div>
+<div id="observablehq-viewof-save-93c8ea13"></div>
+<div id="observablehq-viewof-format-93c8ea13"></div>
+<div id="observablehq-viewof-stkp-93c8ea13"></div>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/@cadasa/stk5-singles-pyramid.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "viewof title") return new Inspector(document.querySelector("#observablehq-viewof-title-773403c0"));
-  if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-773403c0"));
-  if (name === "viewof CheckPointTable") return new Inspector(document.querySelector("#observablehq-viewof-CheckPointTable-773403c0"));
-  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-773403c0"));
-  if (name === "viewof format") return new Inspector(document.querySelector("#observablehq-viewof-format-773403c0"));
-  if (name === "viewof stkp") return new Inspector(document.querySelector("#observablehq-viewof-stkp-773403c0"));
+  if (name === "viewof title") return new Inspector(document.querySelector("#observablehq-viewof-title-93c8ea13"));
+  if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-93c8ea13"));
+  if (name === "viewof blank") return new Inspector(document.querySelector("#observablehq-viewof-blank-93c8ea13"));
+  if (name === "viewof CheckPointTable") return new Inspector(document.querySelector("#observablehq-viewof-CheckPointTable-93c8ea13"));
+  if (name === "viewof save") return new Inspector(document.querySelector("#observablehq-viewof-save-93c8ea13"));
+  if (name === "viewof format") return new Inspector(document.querySelector("#observablehq-viewof-format-93c8ea13"));
+  if (name === "viewof stkp") return new Inspector(document.querySelector("#observablehq-viewof-stkp-93c8ea13"));
   return ["rows","save"].includes(name);
 });
 </script>
