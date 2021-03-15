@@ -1,15 +1,20 @@
-<div id="observablehq-viewof-title-7ad2119c"></div>
-<div id="observablehq-dashboard-7ad2119c"></div>
-<div id="observablehq-viewof-format-7ad2119c"></div>
-<div id="observablehq-viewof-stkp-7ad2119c"></div>
+<div id="observablehq-viewof-title-773403c0"></div>
+<div id="observablehq-dashboard-773403c0"></div>
+<div id="observablehq-viewof-CheckPointTable-773403c0"></div>
+<div id="observablehq-chart-773403c0"></div>
+<div id="observablehq-viewof-format-773403c0"></div>
+<div id="observablehq-viewof-stkp-773403c0"></div>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/@cadasa/stk5-singles-pyramid.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "viewof title") return new Inspector(document.querySelector("#observablehq-viewof-title-7ad2119c"));
-  if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-7ad2119c"));
-  if (name === "viewof format") return new Inspector(document.querySelector("#observablehq-viewof-format-7ad2119c"));
-  if (name === "viewof stkp") return new Inspector(document.querySelector("#observablehq-viewof-stkp-7ad2119c"));
+  if (name === "viewof title") return new Inspector(document.querySelector("#observablehq-viewof-title-773403c0"));
+  if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-773403c0"));
+  if (name === "viewof CheckPointTable") return new Inspector(document.querySelector("#observablehq-viewof-CheckPointTable-773403c0"));
+  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-773403c0"));
+  if (name === "viewof format") return new Inspector(document.querySelector("#observablehq-viewof-format-773403c0"));
+  if (name === "viewof stkp") return new Inspector(document.querySelector("#observablehq-viewof-stkp-773403c0"));
+  return ["rows","save"].includes(name);
 });
 </script>
