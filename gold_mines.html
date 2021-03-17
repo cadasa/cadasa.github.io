@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>10 biggest diamond & gold mines</title>
+<meta content="https://cadasa.github.io/gold_mines.jpg" property="og:image"/>
+<meta content="text/html; charset=UTF-8" property="og:type"/>
+<meta content="https://cadasa.github.io/gold_mines.html" property="og:url"/>
+<meta content="10 biggest diamond & gold mines" property="og:title"/>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css" rel="stylesheet" />
+<style>
+	body { margin: 0; padding: 0; }
+	#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+</style>
+</head>
+<body>
+<style>
+	.mapboxgl-popup {
+	max-width: 400px;
+	font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	}
+	.filter-group {
+	font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	font-weight: 600;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	z-index: 1;
+	border-radius: 3px;
+	width: 120px;
+	color: #fff;
+	}
+
+.filter-group input[type='checkbox']:first-child + label {
+	border-radius: 3px 3px 0 0;
+	}
+
+.filter-group label:last-child {
+	border-radius: 0 0 3px 3px;
+	border: none;
+	}
+
+.filter-group input[type='checkbox'] {
+	display: none;
+	}
+
+.filter-group input[type='checkbox'] + label {
+	background-color: #3386c0;
+	display: block;
+	cursor: pointer;
+	padding: 10px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+	}
+
+.filter-group input[type='checkbox'] + label {
+	background-color: #3386c0;
+	text-transform: capitalize;
+	}
+
+.filter-group input[type='checkbox'] + label:hover,
+.filter-group input[type='checkbox']:checked + label {
+	background-color: #4ea0da;
+	}
+
+.filter-group input[type='checkbox']:checked + label:before {
+	content: '✔';
+	margin-right: 5px;
+	}
+</style>
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css" type="text/css">
+<!-- Promise polyfill script required to use Mapbox GL Geocoder in IE 11 -->
+<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+<div id="map"></div>
+<nav id="filter-group" class="filter-group"></nav>
+
+<script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoiY2FkYXNhIiwiYSI6ImNraWc1aTF2YjFpNWkycnBvZGs4a3ZrajEifQ.oy_ctBheuCWfip4-ou7akg';
+var map = new mapboxgl.Map({
+container: 'map',
+zoom: 1.2,
+center: [18.491427, 20.012891],
+pitch: 0,
+bearing: 0,
+style: 'mapbox://styles/mapbox-map-design/ckhqrf2tz0dt119ny6azh975y'
+});
+
+map.on('load', function () {
+map.addSource('mapbox-dem', {
+'type': 'raster-dem',
+'url': 'mapbox://mapbox.mapbox-terrain-dem-v1',
+'tileSize': 512,
+'maxzoom': 14
+});
+// add the DEM source as a terrain layer with exaggerated height
+map.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1.5 });
+
+// add a sky layer that will show when the map is highly pitched
+map.addLayer({
+'id': 'sky',
+'type': 'sky',
+'paint': {
+'sky-type': 'atmosphere',
+'sky-atmosphere-sun': [0.0, 0.0],
+'sky-atmosphere-sun-intensity': 15
+}
+});
+});
+map.addControl(
+new MapboxGeocoder({
+accessToken: mapboxgl.accessToken,
+mapboxgl: mapboxgl
+})
+);
+map.addControl(new mapboxgl.FullscreenControl());
+map.addControl(new mapboxgl.NavigationControl());
+// Add geolocate control to the map.
+map.addControl(
+new mapboxgl.GeolocateControl({
+positionOptions: {
+enableHighAccuracy: true
+},
+trackUserLocation: true
+})
+);
+var filterGroup = document.getElementById('filter-group');
+
+map.on('load', function () {
+map.loadImage(
+'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
+// Add an image to use as a custom marker
+function (error, image) {
+if (error) throw error;
+map.addImage('custom-marker', image, { 'sdf': true });
+
+map.addSource('places', {
+'type': 'geojson',
+'data': {
+'type': 'FeatureCollection',
+'features': [
+	{ "type": "Feature", "properties": { "PLACE_TYPE": "gold mine", "description": " 1 - South Deep gold mine, South Africa" }, "geometry": { "type": "Point", "coordinates": [ 27.66129475579309, -26.41682193296462 ] } },
+	{ "type": "Feature", "properties": { "PLACE_TYPE": "gold mine", "description": " 2 - Grasberg gold mine, Indonesia" }, "geometry": { "type": "Point", "coordinates": [ 137.114791467464187, -4.0555869876077 ] } },
+	{ "type": "Feature", "properties": { "PLACE_TYPE": "gold mine", "description": " 3 - Olimpiada gold mine, Russia" }, "geometry": { "type": "Point", "coordinates": [ 92.913899664011666, 59.86607259035204 ] } },
+	{ "type": "Feature", "properties": { "PLACE_TYPE": "gold mine", "description": " 4 - Lihir gold mine, Papua New Guinea" }, "geometry": { "type": "Point", "coordinates": [ 152.636067756408494, -3.128668933760774 ] } },
+	{ "type": "Feature", "properties": { "PLACE_TYPE": "gold mine", "description": " 5 - Norte Abierto gold mine - Caspiche, Chile" }, "geometry": { "type": "Point", "coordinates": [ -69.29207252878831, -27.69416467898127 ] } },
+	{ "type": "Feature", "properties": { "PLACE_TYPE": "gold mine", "description": " 5 - Norte Abierto gold mine - Cerro Casale, Chile" }, "geometry": { "type": "Point", "coordinates": [ -69.28308341876668, -27.796763539040619 ] } },
+	{ "type": "Feature", "properties": { "PLACE_TYPE": "gold mine", "description": " 6 - Gold Quarry - Carlin Trend, USA" }, "geometry": { "type": "Point", "coordinates": [ -116.2154910093018, 40.783480040569962 ] } },
+	{ "type": "Feature", "properties": { "PLACE_TYPE": "gold mine", "description": " 7 - Boddington gold mine, Western Australia" }, "geometry": { "type": "Point", "coordinates": [ 116.3404204688009, -32.750518050442111 ] } },
+	{ "type": "Feature", "properties": { "PLACE_TYPE": "gold mine", "description": " 8 - Mponeng gold mine, South Africa" }, "geometry": { "type": "Point", "coordinates": [ 27.430940907993961, -26.438598778048618 ] } },
+	{ "type": "Feature", "properties": { "PLACE_TYPE": "gold mine", "description": " 9 - Pueblo Viejo gold mine, Dominican Republic" }, "geometry": { "type": "Point", "coordinates": [ -70.180845395368479, 18.943996673339718 ] } },
+	{ "type": "Feature", "properties": { "PLACE_TYPE": "gold mine", "description": "10 - Cortez gold mine, USA" }, "geometry": { "type": "Point", "coordinates": [ -116.604626811602898, 40.166930039981771 ] } },
+	{ "type": "Feature", "properties": { "PLACE_TYPE": "diamond mine", "description": "Diamonds - 1 - Aikhal, Russia, 175.56Mct"}, "geometry": { "type": "Point", "coordinates": [ 111.495780977296903, 65.926919066752916 ] } },
+	{ "type": "Feature", "properties": { "PLACE_TYPE": "diamond mine", "description": "Diamonds - 2 – Jwaneng, Botswana, 166.6Mct"}, "geometry": { "type": "Point", "coordinates": [ 24.70323775594234, -24.523460642556461 ] } },
+	{ "type": "Feature", "properties": { "PLACE_TYPE": "diamond mine", "description": "Diamonds - 3 – Udachny, Russia, 164.46Mct"}, "geometry": { "type": "Point", "coordinates": [ 112.317993519412099, 66.435444682372463 ] } },
+	{ "type": "Feature", "properties": { "PLACE_TYPE": "diamond mine", "description": "Diamonds - 4 – Nyurba, Russia, 132.75Mct"}, "geometry": { "type": "Point", "coordinates": [ 117.082637265433107, 65.025803093040579 ] } },
+	{ "type": "Feature", "properties": { "PLACE_TYPE": "diamond mine", "description": "Diamonds - 5 – Orapa, Botswana, 131.2Mct"}, "geometry": { "type": "Point", "coordinates": [ 25.369435520492878, -21.31026994128797 ] } },
+	{ "type": "Feature", "properties": { "PLACE_TYPE": "diamond mine", "description": "Diamonds - 6 – Catoca, Angola, 130Mct"}, "geometry": { "type": "Point", "coordinates": [ 20.301468457118741, -9.405103074634741 ] } },
+	{ "type": "Feature", "properties": { "PLACE_TYPE": "diamond mine", "description": "Diamonds - 7 – Ekati, Canada, 105.4Mct"}, "geometry": { "type": "Point", "coordinates": [ -110.605432495112794, 64.716560338480107 ] } },
+	{ "type": "Feature", "properties": { "PLACE_TYPE": "diamond mine", "description": "Diamonds - 8 – Venetia , South Africa, 92.4Mct"}, "geometry": { "type": "Point", "coordinates": [ 29.321030221818329, -22.435347591967361 ] } },
+	{ "type": "Feature", "properties": { "PLACE_TYPE": "diamond mine", "description": "Diamonds - 9 – Lomonosov, Russia, 73.89Mct"}, "geometry": { "type": "Point", "coordinates": [ 41.017493942930763, 65.290518992606593 ] } },
+	{ "type": "Feature", "properties": { "PLACE_TYPE": "diamond mine", "description": "Diamonds - 10 – Mir, Russia, 57.77Mct"}, "geometry": { "type": "Point", "coordinates": [ 113.990765607255199, 62.528252443013152 ] } }
+	]
+	}
+});
+// Add a layer showing the places.
+map.addLayer({
+'id': 'places',
+'type': 'symbol',
+'source': 'places',
+'layout': {
+'icon-image': 'custom-marker',
+'icon-size': 0.5,
+'icon-allow-overlap': true
+},
+'paint': {
+				'icon-color': [
+          'match', // Use the 'match' expression: https://docs.mapbox.com/mapbox-gl-js/style-spec/#expressions-match
+          ["get", "PLACE_TYPE"], // Use the result 'STORE_TYPE' property
+          'gold mine', 'Gold',
+          'Red'
+         ]
+      }
+});
+
+}
+);
+
+// Create a popup, but don't add it to the map yet.
+var popup = new mapboxgl.Popup({
+closeButton: false,
+closeOnClick: false
+});
+// Center the map on the coordinates of any clicked symbol from the 'symbols' layer.
+map.on('click', 'places', function (e) {
+map.flyTo({
+center: e.features[0].geometry.coordinates,
+zoom: 15,
+pitch: 75,
+bearing: 0,
+});
+});
+map.on('mouseenter', 'places', function (e) {
+// Change the cursor style as a UI indicator.
+map.getCanvas().style.cursor = 'pointer';
+
+var coordinates = e.features[0].geometry.coordinates.slice();
+var description = e.features[0].properties.description;
+
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+
+// Populate the popup and set its coordinates
+// based on the feature found.
+popup.setLngLat(coordinates).setHTML(description).addTo(map);
+});
+
+map.on('mouseleave', 'places', function () {
+map.getCanvas().style.cursor = '';
+popup.remove();
+});
+});
+</script>
+
+</body>
+</html>
