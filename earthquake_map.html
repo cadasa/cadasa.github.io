@@ -19,7 +19,7 @@ body { margin: 0; padding: 0; }
 <body>
 <style>
   #buttons {
-  width: 70%;
+  width: 60%;
   margin: 0 auto;
   }
   .button {
@@ -37,6 +37,43 @@ body { margin: 0; padding: 0; }
   font-family: sans-serif;
   font-weight: bold;
   }
+  .map-overlay {
+font: 11px/15px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+position: absolute;
+width: 16.5%;
+top: 0;
+left: 0;
+padding: 10px;
+}
+
+.map-overlay .map-overlay-inner {
+background-color: #fff;
+box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+border-radius: 3px;
+padding: 6px;
+margin-bottom: 10px;
+}
+
+.map-overlay h2 {
+line-height: 24px;
+display: block;
+margin: 0 0 10px;
+}
+
+.map-overlay .legend .bar {
+height: 9px;
+width: 100%;
+background: linear-gradient(to right, #fed976, #e31a1c);
+}
+
+.map-overlay input {
+background-color: transparent;
+display: inline-block;
+width: 100%;
+position: relative;
+margin: 0;
+cursor: ew-resize;
+}
 </style>
 <div id="map"></div>
 <ul id="buttons">
@@ -45,6 +82,14 @@ body { margin: 0; padding: 0; }
   <li id="button-https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson" class="button">Past 7 Days</li>
   <li id="button-https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson" class="button">Past 30 Days</li>
 </ul>
+<div class="map-overlay top">
+<div class="map-overlay-inner">
+<div id="legend" class="legend">
+<div class="bar"></div>
+<div>Magnitude (m)</div>
+</div>
+</div>
+</div>
 <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
 <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css" type="text/css">
 <!-- Promise polyfill script required to use Mapbox GL Geocoder in IE 11 -->
