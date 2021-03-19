@@ -187,9 +187,27 @@ map.addLayer(
                 'line-color': [
                   'match', // Use the 'match' expression: https://docs.mapbox.com/mapbox-gl-js/style-spec/#expressions-match
                   ["get", "catalog_name"], // Use the result 'STORE_TYPE' property
-                  'Bird 2003', 'Red',
+                  'Bird', 'Red',
                   'Black'
                  ]
+            }
+        });
+        map.addSource('plates', {
+            'type': 'geojson',
+            'data': 'https://cadasa.github.io/Plate_Interface.geojson',
+        });
+
+        map.addLayer({
+            'id': 'plates',
+            'type': 'line',
+            'source': 'plates',
+            'layout': {
+              'line-join': 'round',
+              'line-cap': 'round'
+            },
+            'paint': {
+                'line-width': 2,
+                'line-color': 'red'
             }
         });
 
