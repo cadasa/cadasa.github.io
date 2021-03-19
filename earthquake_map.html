@@ -40,9 +40,11 @@ body { margin: 0; padding: 0; }
   .map-overlay {
 font: 11px/15px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 position: absolute;
+z-index: 1;
 width: 16.5%;
-top: 0;
-left: 0;
+top: 585px;
+left: 50%;
+margin-left: -10%;
 padding: 10px;
 }
 
@@ -78,7 +80,7 @@ cursor: ew-resize;
 <div id="map"></div>
 <ul id="buttons">
   <li id="button-https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson" class="button"> Past Hour</li>
-  <li id="button-https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson" class="button">Past Day (initial display)</li>
+  <li id="button-https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson" class="button">Past Day*</li>
   <li id="button-https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson" class="button">Past 7 Days</li>
   <li id="button-https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson" class="button">Past 30 Days</li>
 </ul>
@@ -88,7 +90,7 @@ cursor: ew-resize;
 <div class="bar"></div>
 <div style="float: left">0</div>
 <div style="float: right">10</div>
-<div style="margin: 0 auto; width: 100px;text-align: center">Magnitude</div>
+<div style="margin: 0 auto; width: 100px;text-align: center">Magnitude(m)</div>
 </div>
 </div>
 </div>
