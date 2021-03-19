@@ -18,6 +18,10 @@ body { margin: 0; padding: 0; }
 </head>
 <body>
 <style>
+  .mapboxgl-popup {
+    max-width: 300px;
+    font: 10px/15px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  }
   #buttons {
   width: 90%;
   margin: 0 auto;
@@ -28,6 +32,7 @@ body { margin: 0; padding: 0; }
   cursor: pointer;
   width: 15%;
   padding: 8px;
+  border: none;
   border-radius: 3px;
   margin-top: 10px;
   font-size: 12px;
@@ -188,6 +193,26 @@ cursor: ew-resize;
                 'circle-radius': 12
             }
         });
+
+        // When a click event occurs on a feature in the states layer, open a popup at the
+// location of the click, with description HTML from its properties.
+map.on('click', 'earthquake_circle', function (e) {
+new mapboxgl.Popup()
+.setLngLat(e.lngLat)
+.setHTML(e.features[0].properties.title)
+.addTo(map);
+});
+
+// Change the cursor to a pointer when the mouse is over the states layer.
+map.on('mouseenter', 'earthquake_circle', function () {
+map.getCanvas().style.cursor = 'pointer';
+});
+
+// Change it back to a pointer when it leaves.
+map.on('mouseleave', 'earthquake_circle', function () {
+map.getCanvas().style.cursor = '';
+});
+
         map.addLayer({
             'id': 'earthquake_label',
             'type': 'symbol',
