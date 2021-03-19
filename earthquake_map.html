@@ -197,9 +197,10 @@ cursor: ew-resize;
         // When a click event occurs on a feature in the states layer, open a popup at the
 // location of the click, with description HTML from its properties.
 map.on('click', 'earthquake_circle', function (e) {
+  var title = '<a href="' + e.features[0].properties.url + '" target="_blank">' + e.features[0].properties.title +'</a>';
 new mapboxgl.Popup()
 .setLngLat(e.lngLat)
-.setHTML(e.features[0].properties.title)
+.setHTML(title)
 .addTo(map);
 });
 
