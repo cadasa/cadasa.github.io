@@ -1,0 +1,12 @@
+{"type":"FeatureCollection", "features":[
+{"type":"Feature","geometry":{"type":"Point","coordinates":[88.17228391880722,69.28043838308264,0]},"properties":{"Name":"Nickel - 1 - Kola-Polar Division, Russia, 155kt", "description": "nickel"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-80.8032486590372,46.57661705568783,0]},"properties":{"Name":"Nickel - 2 - Integrated Nickel Operations, Canada, 87kt", "description": "nickel"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[121.3800278779036,-2.569684481657119,0]},"properties":{"Name":"Nickel - 3 - Sorowako, Indonesia, 78kt", "description": "nickel"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[120.7048429515196,-27.8159802146889,0]},"properties":{"Name":"Nickel - 4 - Nickel West, Australia, 70kt", "description": "nickel"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-81.05156564858112,46.47931932339409,0]},"properties":{"Name":"Nickel - 5 – Sudbury, Canada, 62kt", "description": "nickel"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-62.09534611201611,56.33102079908379,0]},"properties":{"Name":"Nickel - 6 - Voisey’s Bay, Canada, 52kt", "description": "nickel"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-75.55093161864382,7.91455799972101,0]},"properties":{"Name":"Nickel - 7 - Cerro Matoso, Colombia, 41kt", "description": "nickel"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[166.9684783688407,-22.29220127750078,0]},"properties":{"Name":"Nickel - 8 - VNC-Goro, New Caledonia, 36kt", "description": "nickel"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-48.98774413691317,-15.06765099033403,0]},"properties":{"Name":"Nickel - 9 - Barro Alto, Brazil, 35kt", "description": "nickel"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[121.8788769411505,-28.79013736119287,0]},"properties":{"Name":"Nickel - 10 - Murrin Murrin, Australia, 34kt", "description": "nickel"}}
+]}

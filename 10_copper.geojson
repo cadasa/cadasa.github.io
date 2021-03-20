@@ -1,0 +1,12 @@
+{"type":"FeatureCollection", "features":[
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-69.06616120894188,-24.27046184513178,0]},"properties":{"Name":"Copper - 1 - Escondida, Chile, 1400Kt", "description": "copper"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-68.63878318362538,-20.99163319936331,0]},"properties":{"Name":"Copper - 2 - Collahuasi, Chile, 570Kt", "description": "copper"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-110.3338544736494,30.96220601322569,0]},"properties":{"Name":"Copper - 3 - Buenavista del Cobre, Mexico, 525Kt", "description": "copper"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-109.3611849056834,33.10048577075459,0]},"properties":{"Name":"Copper - 4 - Morenci, USA, 520Kt", "description": "copper"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-71.58901805211357,-16.54000478756599,0]},"properties":{"Name":"Copper - 5 - Cerro Verde II, Peru, 500Kt", "description": "copper"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-77.05678489588094,-9.553612929366887,0]},"properties":{"Name":"Copper - 6 - Antamina, Peru, 450Kt", "description": "copper"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[88.17609232155804,69.28002597483673,0]},"properties":{"Name":"Copper - 7 - Norlisk-Talnakh,Russia, 450Kt", "description": "copper"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-72.28033665380771,-14.09389264018999,0]},"properties":{"Name":"Copper - 8 - Las Bambas, Peru, 430Kt", "description": "copper"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-70.44327716148113,-34.08228027803214,0]},"properties":{"Name":"Copper - 9 - El Teniente, Chile, 422Kt", "description": "copper"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-68.89869001583817,-22.2893420581023,0]},"properties":{"Name":"Copper - 10 - Chuquicamata, Chile, 390Kt", "description": "copper"}}
+]}
