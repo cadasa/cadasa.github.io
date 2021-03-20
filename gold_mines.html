@@ -26,7 +26,7 @@ margin: 0 auto;
 display: inline-block;
 position: relative;
 cursor: pointer;
-width: 15%;
+width: 12%;
 padding: 8px;
 border: none;
 border-radius: 3px;
@@ -54,6 +54,11 @@ font-weight: bold;
 <ul id="buttons">
   <li id="button-https://cadasa.github.io/10_diamond.geojson" class="button">Diamonds</li>
   <li id="button-https://cadasa.github.io/10_gold.geojson" class="button">Golds</li>
+	<li id="button-https://cadasa.github.io/10_nickel.geojson" class="button">Nickels</li>
+  <li id="button-https://cadasa.github.io/10_uranium.geojson" class="button">Uraniums</li>
+	<li id="button-https://cadasa.github.io/10_copper.geojson" class="button">Coppers</li>
+  <li id="button-https://cadasa.github.io/10_zinc.geojson" class="button">Zincs</li>
+	<li id="button-https://cadasa.github.io/10_iron.geojson" class="button">Irons</li>
 </ul>
 <script>
 	mapboxgl.accessToken = 'pk.eyJ1IjoiY2FkYXNhIiwiYSI6ImNraWc1aTF2YjFpNWkycnBvZGs4a3ZrajEifQ.oy_ctBheuCWfip4-ou7akg';
@@ -142,6 +147,11 @@ map.addLayer({
           'match', // Use the 'match' expression: https://docs.mapbox.com/mapbox-gl-js/style-spec/#expressions-match
           ["get", "description"], // Use the result 'STORE_TYPE' property
           'gold', 'Gold',
+					'nickel', 'white',
+					'uranium', 'blue',
+					'copper', 'orange',
+					'zinc', 'grey',
+					'iron', 'brown',
           'Red'
          ]
       }
