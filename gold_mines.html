@@ -18,6 +18,26 @@
 </head>
 <body>
 <style>
+#buttons {
+width: 90%;
+margin: 0 auto;
+}
+.button {
+display: inline-block;
+position: relative;
+cursor: pointer;
+width: 15%;
+padding: 8px;
+border: none;
+border-radius: 3px;
+margin-top: 10px;
+font-size: 12px;
+text-align: center;
+color: #fff;
+background: #ee8a65;
+font-family: sans-serif;
+font-weight: bold;
+}
 	.mapboxgl-popup {
 	max-width: 400px;
 	font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -77,7 +97,11 @@
 <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
 <div id="map"></div>
 <nav id="filter-group" class="filter-group"></nav>
-
+<ul id="buttons">
+  <li id="button-https://cadasa.github.io/10_all.geojson" class="button"> All*</li>
+  <li id="button-https://cadasa.github.io/10_diamond.geojson" class="button">Diamonds</li>
+  <li id="button-https://cadasa.github.io/10_gold.geojson" class="button">Golds</li>
+</ul>
 <script>
 	mapboxgl.accessToken = 'pk.eyJ1IjoiY2FkYXNhIiwiYSI6ImNraWc1aTF2YjFpNWkycnBvZGs4a3ZrajEifQ.oy_ctBheuCWfip4-ou7akg';
 var map = new mapboxgl.Map({
@@ -136,35 +160,19 @@ map.loadImage(
 function (error, image) {
 if (error) throw error;
 map.addImage('custom-marker', image, { 'sdf': true });
-
+document
+	.getElementById('buttons')
+	.addEventListener('click', function (event) {
+		var period = event.target.id.substr('button-'.length);
+		map.getSource('places').setData(period);
+	//  var link = 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_' + period + '.geojson';
+	// Use setLayoutProperty to set the value of a layout property in a style layer.
+	// The three arguments are the id of the layer, the name of the layout property,
+	// and the new property value.
+	});
 map.addSource('places', {
 'type': 'geojson',
-'data': {
-'type': 'FeatureCollection',
-'features': [
-	{ "type": "Feature", "properties": { "PLACE_TYPE": "gold mine", "description": " 1 - South Deep gold mine, South Africa" }, "geometry": { "type": "Point", "coordinates": [ 27.66129475579309, -26.41682193296462 ] } },
-	{ "type": "Feature", "properties": { "PLACE_TYPE": "gold mine", "description": " 2 - Grasberg gold mine, Indonesia" }, "geometry": { "type": "Point", "coordinates": [ 137.114791467464187, -4.0555869876077 ] } },
-	{ "type": "Feature", "properties": { "PLACE_TYPE": "gold mine", "description": " 3 - Olimpiada gold mine, Russia" }, "geometry": { "type": "Point", "coordinates": [ 92.913899664011666, 59.86607259035204 ] } },
-	{ "type": "Feature", "properties": { "PLACE_TYPE": "gold mine", "description": " 4 - Lihir gold mine, Papua New Guinea" }, "geometry": { "type": "Point", "coordinates": [ 152.636067756408494, -3.128668933760774 ] } },
-	{ "type": "Feature", "properties": { "PLACE_TYPE": "gold mine", "description": " 5 - Norte Abierto gold mine - Caspiche, Chile" }, "geometry": { "type": "Point", "coordinates": [ -69.29207252878831, -27.69416467898127 ] } },
-	{ "type": "Feature", "properties": { "PLACE_TYPE": "gold mine", "description": " 5 - Norte Abierto gold mine - Cerro Casale, Chile" }, "geometry": { "type": "Point", "coordinates": [ -69.28308341876668, -27.796763539040619 ] } },
-	{ "type": "Feature", "properties": { "PLACE_TYPE": "gold mine", "description": " 6 - Gold Quarry - Carlin Trend, USA" }, "geometry": { "type": "Point", "coordinates": [ -116.2154910093018, 40.783480040569962 ] } },
-	{ "type": "Feature", "properties": { "PLACE_TYPE": "gold mine", "description": " 7 - Boddington gold mine, Western Australia" }, "geometry": { "type": "Point", "coordinates": [ 116.3404204688009, -32.750518050442111 ] } },
-	{ "type": "Feature", "properties": { "PLACE_TYPE": "gold mine", "description": " 8 - Mponeng gold mine, South Africa" }, "geometry": { "type": "Point", "coordinates": [ 27.430940907993961, -26.438598778048618 ] } },
-	{ "type": "Feature", "properties": { "PLACE_TYPE": "gold mine", "description": " 9 - Pueblo Viejo gold mine, Dominican Republic" }, "geometry": { "type": "Point", "coordinates": [ -70.180845395368479, 18.943996673339718 ] } },
-	{ "type": "Feature", "properties": { "PLACE_TYPE": "gold mine", "description": "10 - Cortez gold mine, USA" }, "geometry": { "type": "Point", "coordinates": [ -116.604626811602898, 40.166930039981771 ] } },
-	{ "type": "Feature", "properties": { "PLACE_TYPE": "diamond mine", "description": "Diamonds - 1 - Aikhal, Russia, 175.56Mct"}, "geometry": { "type": "Point", "coordinates": [ 111.495780977296903, 65.926919066752916 ] } },
-	{ "type": "Feature", "properties": { "PLACE_TYPE": "diamond mine", "description": "Diamonds - 2 – Jwaneng, Botswana, 166.6Mct"}, "geometry": { "type": "Point", "coordinates": [ 24.70323775594234, -24.523460642556461 ] } },
-	{ "type": "Feature", "properties": { "PLACE_TYPE": "diamond mine", "description": "Diamonds - 3 – Udachny, Russia, 164.46Mct"}, "geometry": { "type": "Point", "coordinates": [ 112.317993519412099, 66.435444682372463 ] } },
-	{ "type": "Feature", "properties": { "PLACE_TYPE": "diamond mine", "description": "Diamonds - 4 – Nyurba, Russia, 132.75Mct"}, "geometry": { "type": "Point", "coordinates": [ 117.082637265433107, 65.025803093040579 ] } },
-	{ "type": "Feature", "properties": { "PLACE_TYPE": "diamond mine", "description": "Diamonds - 5 – Orapa, Botswana, 131.2Mct"}, "geometry": { "type": "Point", "coordinates": [ 25.369435520492878, -21.31026994128797 ] } },
-	{ "type": "Feature", "properties": { "PLACE_TYPE": "diamond mine", "description": "Diamonds - 6 – Catoca, Angola, 130Mct"}, "geometry": { "type": "Point", "coordinates": [ 20.301468457118741, -9.405103074634741 ] } },
-	{ "type": "Feature", "properties": { "PLACE_TYPE": "diamond mine", "description": "Diamonds - 7 – Ekati, Canada, 105.4Mct"}, "geometry": { "type": "Point", "coordinates": [ -110.605432495112794, 64.716560338480107 ] } },
-	{ "type": "Feature", "properties": { "PLACE_TYPE": "diamond mine", "description": "Diamonds - 8 – Venetia , South Africa, 92.4Mct"}, "geometry": { "type": "Point", "coordinates": [ 29.321030221818329, -22.435347591967361 ] } },
-	{ "type": "Feature", "properties": { "PLACE_TYPE": "diamond mine", "description": "Diamonds - 9 – Lomonosov, Russia, 73.89Mct"}, "geometry": { "type": "Point", "coordinates": [ 41.017493942930763, 65.290518992606593 ] } },
-	{ "type": "Feature", "properties": { "PLACE_TYPE": "diamond mine", "description": "Diamonds - 10 – Mir, Russia, 57.77Mct"}, "geometry": { "type": "Point", "coordinates": [ 113.990765607255199, 62.528252443013152 ] } }
-	]
-	}
+'data': 'https://cadasa.github.io/10_all.geojson'
 });
 // Add a layer showing the places.
 map.addLayer({
@@ -179,8 +187,8 @@ map.addLayer({
 'paint': {
 				'icon-color': [
           'match', // Use the 'match' expression: https://docs.mapbox.com/mapbox-gl-js/style-spec/#expressions-match
-          ["get", "PLACE_TYPE"], // Use the result 'STORE_TYPE' property
-          'gold mine', 'Gold',
+          ["get", "description"], // Use the result 'STORE_TYPE' property
+          'gold', 'Gold',
           'Red'
          ]
       }
