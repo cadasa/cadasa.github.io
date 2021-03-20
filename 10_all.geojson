@@ -1,6 +1,6 @@
 {
 "type": "FeatureCollection",
-"name": "The Ten Largest Diamond Mines in the World in 2018",
+"name": "diamond",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
 { "type": "Feature", "properties": { "Name": "Diamonds - 1 - Aikhal, Russia, 175.56Mct ", "description": null }, "geometry": { "type": "Point", "coordinates": [ 111.495780977296903, 65.926919066752916 ] } },
@@ -17,7 +17,7 @@
 }
 {
 "type": "FeatureCollection",
-"name": "The Ten Largest Gold Deposits in the World in 2020",
+"name": "gold",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
 { "type": "Feature", "properties": { "Name": " 1- South Deep gold mine, South Africa", "description": null }, "geometry": { "type": "Point", "coordinates": [ 27.66129475579309, -26.41682193296462 ] } },
