@@ -12,7 +12,7 @@
 { "type": "Feature", "properties": { "Name": "Diamonds - 7 – Ekati, Canada, 105.4Mct", "description": "diamond" }, "geometry": { "type": "Point", "coordinates": [ -110.605432495112794, 64.716560338480107 ] } },
 { "type": "Feature", "properties": { "Name": "Diamonds - 8 – Venetia , South Africa, 92.4Mct", "description": "diamond" }, "geometry": { "type": "Point", "coordinates": [ 29.321030221818329, -22.435347591967361 ] } },
 { "type": "Feature", "properties": { "Name": "Diamonds - 9 – Lomonosov, Russia, 73.89Mct", "description": "diamond" }, "geometry": { "type": "Point", "coordinates": [ 41.017493942930763, 65.290518992606593 ] } },
-{ "type": "Feature", "properties": { "Name": "Diamonds - 10 – Mir, Russia, 57.77Mct", "description": "diamond" }, "geometry": { "type": "Point", "coordinates": [ 113.990765607255199, 62.528252443013152 ] } }
+{ "type": "Feature", "properties": { "Name": "Diamonds - 10 – Mir, Russia, 57.77Mct", "description": "diamond" }, "geometry": { "type": "Point", "coordinates": [ 113.990765607255199, 62.528252443013152 ] } },
 { "type": "Feature", "properties": { "Name": " 1- South Deep gold mine, South Africa", "description": "gold" }, "geometry": { "type": "Point", "coordinates": [ 27.66129475579309, -26.41682193296462 ] } },
 { "type": "Feature", "properties": { "Name": " 2 - Grasberg gold mine, Indonesia", "description": "gold" }, "geometry": { "type": "Point", "coordinates": [ 137.114791467464187, -4.0555869876077 ] } },
 { "type": "Feature", "properties": { "Name": " 3 - Olimpiada gold mine, Russia", "description": "gold" }, "geometry": { "type": "Point", "coordinates": [ 92.913899664011666, 59.86607259035204 ] } },
