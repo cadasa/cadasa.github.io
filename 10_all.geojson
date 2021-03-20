@@ -14,7 +14,7 @@
 { "type": "Feature", "properties": { "Name": "Diamonds - 9 – Lomonosov, Russia, 73.89Mct", "description": null }, "geometry": { "type": "Point", "coordinates": [ 41.017493942930763, 65.290518992606593 ] } },
 { "type": "Feature", "properties": { "Name": "Diamonds - 10 – Mir, Russia, 57.77Mct", "description": null }, "geometry": { "type": "Point", "coordinates": [ 113.990765607255199, 62.528252443013152 ] } }
 ]
-}
+},
 {
 "type": "FeatureCollection",
 "name": "gold",
