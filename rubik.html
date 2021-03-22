@@ -1,0 +1,9 @@
+<div id="observablehq-viewof-rubik-5702869b"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/rubik.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof rubik") return new Inspector(document.querySelector("#observablehq-viewof-rubik-5702869b"));
+});
+</script>
