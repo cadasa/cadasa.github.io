@@ -1,0 +1,14 @@
+<div id="observablehq-viewof-topoTiffBuffer-6bea2ec5"></div>
+<div id="observablehq-viewof-photoTiffBuffer-6bea2ec5"></div>
+<div id="observablehq-viewof-model-6bea2ec5"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/korolev-crater.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof topoTiffBuffer") return new Inspector(document.querySelector("#observablehq-viewof-topoTiffBuffer-6bea2ec5"));
+  if (name === "viewof photoTiffBuffer") return new Inspector(document.querySelector("#observablehq-viewof-photoTiffBuffer-6bea2ec5"));
+  if (name === "viewof model") return new Inspector(document.querySelector("#observablehq-viewof-model-6bea2ec5"));
+  return ["topographyHR","topography","ramp","sample","elevation","lut","model","lut2","photography","colormap"].includes(name);
+});
+</script>
