@@ -1,0 +1,11 @@
+<div id="observablehq-canvas-913294af"></div>
+<p>Credit: <a href="https://observablehq.com/@cadasa/dispersion-in-water-surface-waves">Dispersion in Water Surface Waves by cadasa</a></p>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/dispersion-in-water-surface-waves.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "canvas") return new Inspector(document.querySelector("#observablehq-canvas-913294af"));
+  return ["frameLoop","attachMouseInput","regl","configureDuck","computeTimestep","onRestart","configureUniforms","mouseInput","drawWake","drawToScreen","configureMap","fFbo","performFFT","canWriteToFloatFBO","colorscales","forwardFFT","inverseFFT","dataType","colorscaleName","colorscale"].includes(name);
+});
+</script>
