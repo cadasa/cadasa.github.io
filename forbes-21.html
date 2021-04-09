@@ -1,0 +1,12 @@
+<div id="observablehq-dashboard-35b607d8"></div>
+<div id="observablehq-map-35b607d8"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/countries-vs-billionaires.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-35b607d8"));
+  if (name === "map") return new Inspector(document.querySelector("#observablehq-map-35b607d8"));
+  return ["update"].includes(name);
+});
+</script>
