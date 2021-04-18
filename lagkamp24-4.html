@@ -1,0 +1,14 @@
+<div id="observablehq-viewof-lagkamp-a29742fe"></div>
+<div id="observablehq-viewof-CheckPointTable2-a29742fe"></div>
+<div id="observablehq-viewof-CheckPointTable3-a29742fe"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/stk5-singles-pyramid.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof lagkamp") return new Inspector(document.querySelector("#observablehq-viewof-lagkamp-a29742fe"));
+  if (name === "viewof CheckPointTable2") return new Inspector(document.querySelector("#observablehq-viewof-CheckPointTable2-a29742fe"));
+  if (name === "viewof CheckPointTable3") return new Inspector(document.querySelector("#observablehq-viewof-CheckPointTable3-a29742fe"));
+  return ["save2","save3"].includes(name);
+});
+</script>
