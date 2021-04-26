@@ -10,6 +10,7 @@
 </head>
 <div id="observablehq-c5b0c4b8">
   <div class="observablehq-viewof-title"></div>
+  <div id="observablehq-viewof-forehand-d48ccf3b"></div>
   <div class="observablehq-viewof-gif"></div>
   <div class="observablehq-viewof-imageSrc"></div>
   <div class="observablehq-viewof-space"></div>
@@ -30,5 +31,6 @@
     if (name === "viewof toggleImage") return Inspector.into("#observablehq-c5b0c4b8 .observablehq-viewof-toggleImage")();
     if (name === "viewof multiple") return Inspector.into("#observablehq-c5b0c4b8 .observablehq-viewof-multiple")();
     if (name === "viewof confidence") return Inspector.into("#observablehq-c5b0c4b8 .observablehq-viewof-confidence")();
+    if (name === "viewof forehand") return new Inspector(document.querySelector("#observablehq-viewof-forehand-d48ccf3b"));
   });
 </script>
