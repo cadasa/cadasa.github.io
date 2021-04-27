@@ -2,11 +2,11 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Real-time Earthquake Map</title>
-<meta content="https://cadasa.github.io/earthquake_map.jpg" property="og:image"/>
+<title>3D map of all hike trails in the US</title>
+<meta content="https://cadasa.github.io/GC.gif" property="og:image"/>
 <meta content="text/html; charset=UTF-8" property="og:type"/>
-<meta content="https://cadasa.github.io/earthquake_map.html" property="og:url"/>
-<meta content="Real-time Earthquake Map" property="og:title"/>
+<meta content="https://cadasa.github.io/us_trails.html" property="og:url"/>
+<meta content="3D map of all hike trails in the US" property="og:title"/>
 <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
 <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
@@ -54,8 +54,8 @@ padding: 10px;
 }
 
 .map-overlay .map-overlay-inner {
-background-color:  transparent;
-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+background-color:  white;
+box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
 border-radius: 3px;
 padding: 5px;
 margin-bottom: 10px;
@@ -70,7 +70,7 @@ margin: 0 0 10px;
 .map-overlay .legend .bar {
 height: 10px;
 width: 100%;
-background: linear-gradient(to right, #fed976, #e31a1c);
+background: linear-gradient(to right, #fed976, #fc4e2a);
 }
 
 .map-overlay input {
@@ -87,13 +87,13 @@ cursor: ew-resize;
 <div class="map-overlay-inner">
 <div id="legend" class="legend">
 <div class="bar"></div>
-<div style="float: left">0</div>
-<div style="float: right">10</div>
-<div style="margin: 0 auto; width: 100px;text-align: center">Magnitude (M)</div>
+<div style="float: left">1.0</div>
+<div style="float: right">7.0</div>
+<div style="margin: 0 auto; width: 100px;text-align: center">Difficulty</div>
 </div>
 </div>
 </div>
-<!--script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
 <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css" type="text/css">-->
 <!-- Promise polyfill script required to use Mapbox GL Geocoder in IE 11 -->
 <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
@@ -102,64 +102,40 @@ cursor: ew-resize;
 	mapboxgl.accessToken = 'pk.eyJ1IjoiY2FkYXNhIiwiYSI6ImNraWc1aTF2YjFpNWkycnBvZGs4a3ZrajEifQ.oy_ctBheuCWfip4-ou7akg';
     var map = new mapboxgl.Map({
         container: 'map',
-        zoom: 1,
-        center: [50, 35],
-        style: 'mapbox://styles/mapbox/cjaudgl840gn32rnrepcb9b9g'
+        zoom: 2.5,
+        center: [-110, 45],
+        pitch: 0,
+        bearing: 0,
+        style: 'mapbox://styles/mapbox-map-design/ckhqrf2tz0dt119ny6azh975y'
         //style: 'mapbox://styles/mapbox/streets-v11'
     });
   map.on('load', function () {
-    map.addSource('dem', {
+    map.addSource('mapbox-dem', {
       'type': 'raster-dem',
-      'url': 'mapbox://mapbox.terrain-rgb'
+      'url': 'mapbox://mapbox.mapbox-terrain-dem-v1',
+      'tileSize': 512,
+      'maxzoom': 14
     });
-    map.addLayer(
-      {
-        'id': 'hillshading',
-        'source': 'dem',
-        'type': 'hillshade'
-// insert below waterway-river-canal-shadow;
-// where hillshading sits in the Mapbox Outdoors style
-      },
-      'waterway-river-canal-shadow'
-    );
-  });
-  map.on('load', function () {
-    map.addSource('10m-bathymetry-81bsvj', {
-      type: 'vector',
-      url: 'mapbox://mapbox.9tm8dx88'
-    });
+    // add the DEM source as a terrain layer with exaggerated height
+    map.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1.5 });
 
-    map.addLayer(
-      {
-        'id': '10m-bathymetry-81bsvj',
-        'type': 'fill',
-        'source': '10m-bathymetry-81bsvj',
-        'source-layer': '10m-bathymetry-81bsvj',
-        'layout': {},
-        'paint': {
-          'fill-outline-color': 'hsla(337, 82%, 62%, 0)',
-// cubic bezier is a four point curve for smooth and precise styling
-// adjust the points to change the rate and intensity of interpolation
-        'fill-color': [
-          'interpolate',
-          ['cubic-bezier', 0, 0.5, 1, 0.5],
-          ['get', 'DEPTH'],
-          200,
-          '#78bced',
-          9000,
-          '#15659f'
-        ]
-      }
-    },
-    'land-structure-polygon'
-  );
+    // add a sky layer that will show when the map is highly pitched
+    map.addLayer({
+    'id': 'sky',
+    'type': 'sky',
+    'paint': {
+    'sky-type': 'atmosphere',
+    'sky-atmosphere-sun': [0.0, 0.0],
+    'sky-atmosphere-sun-intensity': 15
+    }
+    });
   });
-  //  map.addControl(
-  //  new MapboxGeocoder({
-  //  accessToken: mapboxgl.accessToken,
-  //  mapboxgl: mapboxgl
-  //  })
-  //  );
+    map.addControl(
+    new MapboxGeocoder({
+    accessToken: mapboxgl.accessToken,
+    mapboxgl: mapboxgl
+    })
+    );
     map.addControl(new mapboxgl.FullscreenControl());
     map.addControl(new mapboxgl.NavigationControl());
     // Add geolocate control to the map.
@@ -173,14 +149,12 @@ cursor: ew-resize;
     );
 
     // filters for classifying earthquakes into five categories based on magnitude
-    var mag1 = ['<', ['get', 'difficulty_rating'], 2];
-    var mag2 = ['all', ['>=', ['get', 'difficulty_rating'], 2], ['<', ['get', 'difficulty_rating'], 3]];
-    var mag3 = ['all', ['>=', ['get', 'difficulty_rating'], 3], ['<', ['get', 'difficulty_rating'], 4]];
-    var mag4 = ['all', ['>=', ['get', 'difficulty_rating'], 4], ['<', ['get', 'difficulty_rating'], 5]];
-    var mag5 = ['>', ['get', 'difficulty_rating'], 5];
-
+    var mag1 = ['==', ['get', 'difficulty_rating'], 1];
+    var mag3 = ['==', ['get', 'difficulty_rating'], 3];
+    var mag5 = ['==', ['get', 'difficulty_rating'], 5];
+    var mag7 = ['==', ['get', 'difficulty_rating'], 7];
     // colors to use for the categories
-    var colors = ['#fed976', '#feb24c', '#fd8d3c', '#fc4e2a', '#e31a1c'];
+    var colors = ['#fed976', '#feb24c', '#fd8d3c', '#fc4e2a'];
 
     map.on('load', function () {
 
@@ -192,10 +166,9 @@ cursor: ew-resize;
             'clusterProperties': {
                 // keep separate counts for each magnitude category in a cluster
                 'mag1': ['+', ['case', mag1, 1, 0]],
-                'mag2': ['+', ['case', mag2, 1, 0]],
                 'mag3': ['+', ['case', mag3, 1, 0]],
-                'mag4': ['+', ['case', mag4, 1, 0]],
-                'mag5': ['+', ['case', mag5, 1, 0]]
+                'mag5': ['+', ['case', mag5, 1, 0]],
+                'mag7': ['+', ['case', mag7, 1, 0]]
             }
         });
 
@@ -210,13 +183,11 @@ cursor: ew-resize;
                     'case',
                     mag1,
                     colors[0],
-                    mag2,
-                    colors[1],
                     mag3,
+                    colors[1],
+                    mag5,
                     colors[2],
-                    mag4,
-                    colors[3],
-                    colors[4]
+                    colors[3]
                 ],
                 'circle-opacity': 0.6,
                 'circle-radius': 12
@@ -225,22 +196,46 @@ cursor: ew-resize;
 
         // When a click event occurs on a feature in the states layer, open a popup at the
 // location of the click, with description HTML from its properties.
+// Create a popup, but don't add it to the map yet.
+var popup = new mapboxgl.Popup({
+closeButton: false,
+closeOnClick: false
+});
+
 map.on('click', 'earthquake_circle', function (e) {
-  var title = e.features[0].properties.name + ', Difficulty: ' + e.features[0].properties.difficulty_rating;
-new mapboxgl.Popup()
-.setLngLat(e.lngLat)
-.setHTML(title)
-.addTo(map);
+  map.flyTo({
+  center: e.features[0].geometry.coordinates,
+  zoom: 14,
+  pitch: 75,
+  bearing: 0,
+  });
 });
 
+  map.on('mouseenter', 'earthquake_circle', function (e) {
 // Change the cursor to a pointer when the mouse is over the states layer.
-map.on('mouseenter', 'earthquake_circle', function () {
-map.getCanvas().style.cursor = 'pointer';
-});
+  map.getCanvas().style.cursor = 'pointer';
 
+  var coordinates = e.features[0].geometry.coordinates.slice();
+  var title = e.features[0].properties.name + ', Difficulty: ' + e.features[0].properties.difficulty_rating;
+
+  // Ensure that if the map is zoomed out such that multiple
+  // copies of the feature are visible, the popup appears
+  // over the copy being pointed to.
+  //while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+  //coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+  //}
+
+  // Populate the popup and set its coordinates
+  // based on the feature found.
+  popup.setLngLat(e.lngLat).setHTML(title).addTo(map);
+//.setLngLat(e.lngLat)
+//.setHTML(title)
+//.addTo(map);
+});
 // Change it back to a pointer when it leaves.
 map.on('mouseleave', 'earthquake_circle', function () {
 map.getCanvas().style.cursor = '';
+popup.remove();
 });
 
         map.addLayer({
@@ -313,10 +308,9 @@ map.getCanvas().style.cursor = '';
         var offsets = [];
         var counts = [
             props.mag1,
-            props.mag2,
             props.mag3,
-            props.mag4,
-            props.mag5
+            props.mag5,
+            props.mag7
         ];
         var total = 0;
         for (var i = 0; i < counts.length; i++) {
