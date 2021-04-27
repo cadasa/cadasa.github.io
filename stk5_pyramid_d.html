@@ -1,0 +1,22 @@
+<div id="observablehq-viewof-title-f341266b"></div>
+<div id="observablehq-dashboard-f341266b"></div>
+<div id="observablehq-viewof-blank-f341266b"></div>
+<div id="observablehq-viewof-CheckPointTable-f341266b"></div>
+<div id="observablehq-viewof-save-f341266b"></div>
+<div id="observablehq-viewof-format-f341266b"></div>
+<div id="observablehq-viewof-stkp-f341266b"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/tennis-pyramid-2021-stk-5-doubles.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof title") return new Inspector(document.querySelector("#observablehq-viewof-title-f341266b"));
+  if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-f341266b"));
+  if (name === "viewof CheckPointTable") return new Inspector(document.querySelector("#observablehq-viewof-CheckPointTable-f341266b"));
+  if (name === "viewof save") return new Inspector(document.querySelector("#observablehq-viewof-save-f341266b"));
+  if (name === "viewof blank") return new Inspector(document.querySelector("#observablehq-viewof-blank-f341266b"));
+  if (name === "viewof format") return new Inspector(document.querySelector("#observablehq-viewof-format-f341266b"));
+  if (name === "viewof stkp") return new Inspector(document.querySelector("#observablehq-viewof-stkp-f341266b"));
+  return ["save","rows"].includes(name);
+});
+</script>
