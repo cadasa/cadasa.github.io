@@ -19,7 +19,7 @@ body { margin: 0; padding: 0; }
 <body>
 <style>
   .mapboxgl-popup {
-    max-width: 300px;
+    max-width: 'none';
     font: 10px/15px 'Helvetica Neue', Arial, Helvetica, sans-serif;
   }
   #buttons {
@@ -216,7 +216,11 @@ map.on('click', 'earthquake_circle', function (e) {
   map.getCanvas().style.cursor = 'pointer';
 
   var coordinates = e.features[0].geometry.coordinates.slice();
-  var title = e.features[0].properties.name + ', Difficulty: ' + e.features[0].properties.difficulty_rating;
+  var title = '<strong>' + e.features[0].properties.name + '</strong><p>Route Type: ' + e.features[0].properties.route_type + '; Difficulty: ' + e.features[0].properties.difficulty_rating +
+    '; Length: ' + e.features[0].properties.length + '; Elevation Gain: ' + e.features[0].properties.elevation_gain + '</p>' +
+    '<p>Average Rating: ' + e.features[0].properties.avg_rating + '; Numbers of review: ' + e.features[0].properties.num_reviews + '</p>' +
+    '<p>Activites: ' + e.features[0].properties.activities + '</p>' +
+    '<p>Features: ' + e.features[0].properties.features + '</p>';
 
   // Ensure that if the map is zoomed out such that multiple
   // copies of the feature are visible, the popup appears
