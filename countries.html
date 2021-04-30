@@ -1,0 +1,15 @@
+<div id="observablehq-viewof-title-615045a1"></div>
+<div id="observablehq-viewof-countryname-615045a1"></div>
+<div id="observablehq-viewof-replay-615045a1"></div>
+<div id="observablehq-canvas-615045a1"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/countries-ive-visited-or-lived.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof title") return new Inspector(document.querySelector("#observablehq-viewof-title-615045a1"));
+  if (name === "viewof countryname") return new Inspector(document.querySelector("#observablehq-viewof-countryname-615045a1"));
+  if (name === "viewof replay") return new Inspector(document.querySelector("#observablehq-viewof-replay-615045a1"));
+  if (name === "canvas") return new Inspector(document.querySelector("#observablehq-canvas-615045a1"));
+});
+</script>
