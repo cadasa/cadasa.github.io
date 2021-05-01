@@ -1,0 +1,15 @@
+<div id="observablehq-viewof-title-232f4d98"></div>
+<div id="observablehq-viewof-countryname-232f4d98"></div>
+<div id="observablehq-viewof-replay-232f4d98"></div>
+<div id="observablehq-canvas-232f4d98"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/countries-using-or-planning-to-use-chinese-vaccines.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof title") return new Inspector(document.querySelector("#observablehq-viewof-title-232f4d98"));
+  if (name === "viewof countryname") return new Inspector(document.querySelector("#observablehq-viewof-countryname-232f4d98"));
+  if (name === "viewof replay") return new Inspector(document.querySelector("#observablehq-viewof-replay-232f4d98"));
+  if (name === "canvas") return new Inspector(document.querySelector("#observablehq-canvas-232f4d98"));
+});
+</script>
