@@ -1,0 +1,21 @@
+<div id="observablehq-viewof-title-9b5aca2b"></div>
+<div id="observablehq-viewof-location-9b5aca2b"></div>
+<div id="observablehq-mapboxMap-9b5aca2b"></div>
+<div id="observablehq-guessTheMovie-9b5aca2b"></div>
+<div id="observablehq-viewof-calculate-9b5aca2b"></div>
+<div id="observablehq-style-9b5aca2b"></div>
+
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/route-planner.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof title") return new Inspector(document.querySelector("#observablehq-viewof-title-9b5aca2b"));
+  if (name === "viewof location") return new Inspector(document.querySelector("#observablehq-viewof-location-9b5aca2b"));
+  if (name === "mapboxMap") return new Inspector(document.querySelector("#observablehq-mapboxMap-9b5aca2b"));
+  if (name === "guessTheMovie") return new Inspector(document.querySelector("#observablehq-guessTheMovie-9b5aca2b"));
+  if (name === "viewof calculate") return new Inspector(document.querySelector("#observablehq-viewof-calculate-9b5aca2b"));
+  if (name === "style") return new Inspector(document.querySelector("#observablehq-style-9b5aca2b"));
+  return ["calculate"].includes(name);
+});
+</script>
