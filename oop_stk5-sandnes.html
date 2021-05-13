@@ -1,0 +1,15 @@
+<div id="observablehq-viewof-lagkamp-1db36c60"></div>
+<div id="observablehq-viewof-CheckPointTable2-1db36c60"></div>
+<div id="observablehq-viewof-save2-1db36c60"></div>
+<div id="observablehq-viewof-example-1db36c60"></div>
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/tennis-pyramid-2021-stk-5-singles-5-6-for-ranking-xmas-for-fin.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof lagkamp") return new Inspector(document.querySelector("#observablehq-viewof-lagkamp-1db36c60"));
+  if (name === "viewof CheckPointTable2") return new Inspector(document.querySelector("#observablehq-viewof-CheckPointTable2-1db36c60"));
+  if (name === "viewof save2") return new Inspector(document.querySelector("#observablehq-viewof-save2-1db36c60"));
+  if (name === "viewof example") return new Inspector(document.querySelector("#observablehq-viewof-example-1db36c60"));
+  return ["save2"].includes(name);
+});
+</script>
