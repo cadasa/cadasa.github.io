@@ -1,0 +1,13 @@
+<div id="observablehq-viewof-title-76848370"></div>
+<div id="observablehq-dashboard-76848370"></div>
+<div id="observablehq-viewof-chart-76848370"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/bitcon-ethereum-price-analysis.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof title") return new Inspector(document.querySelector("#observablehq-viewof-title-76848370"));
+  if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-76848370"));
+  if (name === "viewof chart") return new Inspector(document.querySelector("#observablehq-viewof-chart-76848370"));
+});
+</script>
