@@ -1,0 +1,13 @@
+<div id="observablehq-viewof-title-afe973ef"></div>
+<div id="observablehq-dashboard-afe973ef"></div>
+<div id="observablehq-viewof-chart-afe973ef"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/crude.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof title") return new Inspector(document.querySelector("#observablehq-viewof-title-afe973ef"));
+  if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-afe973ef"));
+  if (name === "viewof chart") return new Inspector(document.querySelector("#observablehq-viewof-chart-afe973ef"));
+});
+</script>
