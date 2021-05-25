@@ -1,0 +1,15 @@
+<div id="observablehq-viewof-title-6cb671bc"></div>
+<div id="observablehq-dashboard-6cb671bc"></div>
+<div id="observablehq-calculated-6cb671bc"></div>
+<div id="observablehq-charted-6cb671bc"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/bmi-calculator.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof title") return new Inspector(document.querySelector("#observablehq-viewof-title-6cb671bc"));
+  if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-6cb671bc"));
+  if (name === "calculated") return new Inspector(document.querySelector("#observablehq-calculated-6cb671bc"));
+  if (name === "charted") return new Inspector(document.querySelector("#observablehq-charted-6cb671bc"));
+});
+</script>
