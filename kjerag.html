@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Query terrain elevation</title>
+<title>Kjerag Hike</title>
 <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
 <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css" rel="stylesheet">
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js"></script>
@@ -20,18 +20,18 @@ body { margin: 0; padding: 0; }
         const map = new mapboxgl.Map({
             container: 'map',
             zoom: 13,
-            center: [6.58968, 45.39701],
+            center: [6.61463448,59.02982711952669],
             pitch: 76,
             bearing: 150,
             style: 'mapbox://styles/mapbox/satellite-streets-v11',
-            interactive: false,
-            hash: false
+            interactive: true,
+            hash: true
         });
 
         // Start downloading the route data, and wait for map load to occur in parallel
         const [pinRouteGeojson, _] = await Promise.all([
             fetch(
-                'https://docs.mapbox.com/mapbox-gl-js/assets/route-pin.geojson'
+                'https://cadasa.github.io/kjerag.geojson'
             ).then((response) => response.json()),
             map.once('load')
         ]);
