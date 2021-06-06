@@ -12,6 +12,11 @@ body { margin: 0; padding: 0; }
 </style>
 </head>
 <body>
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css" type="text/css">
+<!-- Promise polyfill script required to use Mapbox GL Geocoder in IE 11 -->
+<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
 <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
 <div id="map"></div>
 <script>
@@ -19,15 +24,31 @@ body { margin: 0; padding: 0; }
     (async () => {
         const map = new mapboxgl.Map({
             container: 'map',
-            zoom: 14,
-            center: [6.61463448,59.02982711952669],
-            pitch: 76,
-            bearing: 50,
+            zoom: 12.5,
+            center: [6.651072,59.045867,641],
+            pitch: 60,
+            bearing:240,
             style: 'mapbox://styles/mapbox/satellite-streets-v11',
             interactive: true,
             hash: true
         });
-
+        map.addControl(
+        new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken,
+        mapboxgl: mapboxgl
+        })
+        );
+        map.addControl(new mapboxgl.FullscreenControl());
+        map.addControl(new mapboxgl.NavigationControl());
+        // Add geolocate control to the map.
+        map.addControl(
+        new mapboxgl.GeolocateControl({
+        positionOptions: {
+        enableHighAccuracy: true
+        },
+        trackUserLocation: true
+        })
+        );
         // Start downloading the route data, and wait for map load to occur in parallel
         const [pinRouteGeojson, _] = await Promise.all([
             fetch(
@@ -76,7 +97,7 @@ body { margin: 0; padding: 0; }
         map.setFog({
             'range': [-0.5, 2],
             'color': 'white',
-            'horizon-blend': 0.2
+            'horizon-blend': 0.1
         });
 
         // Add a sky layer over the horizon
@@ -144,10 +165,12 @@ body { margin: 0; padding: 0; }
             ]);
 
             // Rotate the camera at a slightly lower speed to give some parallax effect in the background
-            const rotation = 150 - animationPhase * 40.0;
+            const rotation = 240 - animationPhase * 40.0;
             map.setBearing(rotation % 360);
 
             window.requestAnimationFrame(frame);
+
+
         }
 
         window.requestAnimationFrame(frame);
