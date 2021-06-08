@@ -59,6 +59,8 @@ body { margin: 0; padding: 0; }
                             'name': 'Kjerag',
                             'description':
                                 '<iframe src="https://cadasa.github.io/kjerag.html#12.5/59.04587/6.65107/-120/60" width="775px", height="500px">',
+                            'picture':
+                                '<img src="https://cadasa.github.io/kjerag.jpg" width="100%", height="200px">',
                             'icon': 'mountain-15'
                         },
                         'geometry': {
@@ -111,7 +113,7 @@ body { margin: 0; padding: 0; }
         map.getCanvas().style.cursor = 'pointer';
 
           var coordinates = e.features[0].geometry.coordinates.slice();
-          var name = '<h2><center>' + e.features[0].properties.name +'</center></h2>' + '<p><i>(Click to see the hiking trail in 3D)</p>';
+          var name = '<h2><center>' + e.features[0].properties.name +'</center></h2>' + e.features[0].properties.picture + '<p><i>(Click to see the hiking trail in 3D)</p>';
 
         // Ensure that if the map is zoomed out such that multiple
         // copies of the feature are visible, the popup appears
