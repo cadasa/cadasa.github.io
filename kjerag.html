@@ -32,23 +32,23 @@ body { margin: 0; padding: 0; }
             interactive: true,
             hash: true
         });
-        map.addControl(
-        new MapboxGeocoder({
-        accessToken: mapboxgl.accessToken,
-        mapboxgl: mapboxgl
-        })
-        );
-        map.addControl(new mapboxgl.FullscreenControl());
+//        map.addControl(
+//        new MapboxGeocoder({
+//        accessToken: mapboxgl.accessToken,
+//        mapboxgl: mapboxgl
+//        })
+//        );
+//        map.addControl(new mapboxgl.FullscreenControl());
         map.addControl(new mapboxgl.NavigationControl());
         // Add geolocate control to the map.
-        map.addControl(
-        new mapboxgl.GeolocateControl({
-        positionOptions: {
-        enableHighAccuracy: true
-        },
-        trackUserLocation: true
-        })
-        );
+//        map.addControl(
+//        new mapboxgl.GeolocateControl({
+//        positionOptions: {
+//        enableHighAccuracy: true
+//        },
+//        trackUserLocation: true
+//        })
+//        );
         // Start downloading the route data, and wait for map load to occur in parallel
         const [pinRouteGeojson, _] = await Promise.all([
             fetch(
