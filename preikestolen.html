@@ -22,7 +22,7 @@ body { margin: 0; padding: 0; }
             zoom: 13,
             center: [6.16205833,58.990452339526364],
             pitch: 60,
-            bearing:360,
+            bearing:270,
             style: 'mapbox://styles/mapbox/satellite-streets-v11',
             interactive: true,
             hash: true
@@ -160,7 +160,7 @@ body { margin: 0; padding: 0; }
             ]);
 
             // Rotate the camera at a slightly lower speed to give some parallax effect in the background
-            const rotation = 360 - animationPhase * 40.0;
+            const rotation = 270 - animationPhase * 40.0;
             map.setBearing(rotation % 360);
 
             window.requestAnimationFrame(frame);
