@@ -132,7 +132,17 @@ body { margin: 0; padding: 0; }
                 'icon-allow-overlap': true
             }
         });
-
+        var markerHeight = 50, markerRadius = 10, linearOffset = 25;
+        var popupOffsets = {
+        'top': [0, 0],
+        'top-left': [0,0],
+        'top-right': [0,0],
+        'bottom': [0, 0],
+        'bottom-left': [linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
+        'bottom-right': [-linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
+        'left': [markerRadius, (markerHeight - markerRadius) * -1],
+        'right': [-markerRadius, (markerHeight - markerRadius) * -1]
+        };
         // When a click event occurs on a feature in the places layer, open a popup at the
         // location of the feature, with description HTML from its properties.
         map.on('click', 'places', function (e) {
@@ -147,7 +157,7 @@ body { margin: 0; padding: 0; }
                 coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
             }
 
-            new mapboxgl.Popup({closeButton: false})
+            new mapboxgl.Popup({closeButton: false, offset: popupOffsets})
                 .setLngLat(coordinates)
                 .setMaxWidth("800px")
 //                .setHTML(description)
@@ -157,6 +167,7 @@ body { margin: 0; padding: 0; }
         // Create a popup, but don't add it to the map yet.
         var popup = new mapboxgl.Popup({
         closeButton: false,
+        offset: popupOffsets,
         closeOnClick: false
         });
         map.on('mouseenter', 'places', function (e) {
