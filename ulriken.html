@@ -137,7 +137,7 @@ body { margin: 0; padding: 0; }
                 lng: alongPath[0],
                 lat: alongPath[1]
             };
-
+						//var lineDistance = turf.length([[pinRoute[0]], [lngLat]]);
             // Sample the terrain elevation. We round to an integer value to
             // prevent showing a lot of digits during the animation
             const elevation = Math.floor(
@@ -146,7 +146,7 @@ body { margin: 0; padding: 0; }
             );
 
             // Update the popup altitude value and marker location
-            popup.setHTML('Altitude: ' + elevation + 'm<br/>');
+            popup.setHTML('Altitude: ' + elevation + 'm<br/>' + 'Distance: ' + Math.round(pathDistance * animationPhase*100)/100 + 'km<br/>');
             marker.setLngLat(lngLat);
 
             // Reduce the visible length of the line by using a line-gradient to cutoff the line
