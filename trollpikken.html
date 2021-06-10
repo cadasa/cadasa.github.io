@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Ulriken Hike</title>
+<title>Trollpikken Hike</title>
 <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
 <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css" rel="stylesheet">
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js"></script>
@@ -20,7 +20,7 @@ body { margin: 0; padding: 0; }
         const map = new mapboxgl.Map({
             container: 'map',
             zoom: 13,
-            center: [5.37024, 60.37264],
+            center: [6.08213, 58.46935, 204.0],
             pitch: 60,
             bearing:30,
             style: 'mapbox://styles/mapbox/satellite-streets-v11',
@@ -47,7 +47,7 @@ body { margin: 0; padding: 0; }
         // Start downloading the route data, and wait for map load to occur in parallel
         const [pinRouteGeojson, _] = await Promise.all([
             fetch(
-                'https://cadasa.github.io/ulriken.geojson'
+                'https://cadasa.github.io/Trollpikken.geojson'
             ).then((response) => response.json()),
             map.once('load')
         ]);
