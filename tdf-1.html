@@ -19,7 +19,7 @@ body { margin: 0; padding: 0; }
     (async () => {
         const map = new mapboxgl.Map({
             container: 'map',
-            zoom: 9.5,
+            zoom: 6,
             center: [-4.19808,48.2337,142.45352743269],
             pitch: 55,
             bearing:90,
@@ -47,7 +47,7 @@ body { margin: 0; padding: 0; }
         // Start downloading the route data, and wait for map load to occur in parallel
         const [pinRouteGeojson, _] = await Promise.all([
             fetch(
-                'https://cadasa.github.io/1_Brest-Landerneau.geojson'
+                'https://cadasa.github.io/TdF.geojson'
             ).then((response) => response.json()),
             map.once('load')
         ]);
