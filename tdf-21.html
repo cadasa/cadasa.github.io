@@ -176,6 +176,7 @@ body { margin: 0; padding: 0; }
 			  map.getCanvas().style.cursor = 'pointer';
 				const pinRoute = e.features[0].geometry.coordinates;
 			  var title = '<center><strong>Stage ' + e.features[0].properties.name + '</strong><p>' +
+					'<center>' + e.features[0].properties.description + '</p>' +
 			    '<center><i>(MB1 click to see animation)';
 
 			  // Ensure that if the map is zoomed out such that multiple
