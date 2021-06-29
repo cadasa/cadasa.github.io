@@ -20,9 +20,9 @@ body { margin: 0; padding: 0; }
         const map = new mapboxgl.Map({
             container: 'map',
             zoom: 6,
-            center: [-4.19808,48.2337,142.45352743269],
-            pitch: 55,
-            bearing:90,
+            center: [1.64,45.102],
+            pitch: 50,
+            bearing:0,
             style: 'mapbox://styles/mapbox/satellite-streets-v11',
             interactive: true,
             hash: true
@@ -52,26 +52,11 @@ body { margin: 0; padding: 0; }
             map.once('load')
         ]);
 
-        const pinRoute = pinRouteGeojson.features[0].geometry.coordinates;
-        // Create the marker and popup that will display the elevation queries
-        const popup = new mapboxgl.Popup({ closeButton: false });
-        const marker = new mapboxgl.Marker({
-            color: 'red',
-            scale: 0.8,
-            draggable: false,
-            pitchAlignment: 'auto',
-            rotationAlignment: 'auto'
-        })
-            .setLngLat(pinRoute[0])
-            .setPopup(popup)
-            .addTo(map)
-            .togglePopup();
-
         // Add a line feature and layer. This feature will get updated as we progress the animation
         map.addSource('line', {
             type: 'geojson',
             // Line metrics is required to use the 'line-progress' property
-            lineMetrics: true,
+            lineMetrics: false,
             data: pinRouteGeojson
         });
         map.addLayer({
@@ -79,7 +64,7 @@ body { margin: 0; padding: 0; }
             source: 'line',
             id: 'line',
             paint: {
-                'line-color': 'rgba(0,0,0,0)',
+                'line-color': 'Red',
                 'line-width': 5
             },
             layout: {
@@ -114,9 +99,25 @@ body { margin: 0; padding: 0; }
         });
         map.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1.5 });
 
-        await map.once('idle');
+        //await map.once('idle');
         // The total animation duration, in milliseconds
-        const animationDuration = 50000;
+				map.on('click', 'line', function (e) {
+					const pinRoute = e.features[0].geometry.coordinates;
+					var name = e.features[0].properties.name;
+	        // Create the marker and popup that will display the elevation queries
+	        const popup = new mapboxgl.Popup({ closeButton: false });
+	        const marker = new mapboxgl.Marker({
+	            color: 'red',
+	            scale: 0.8,
+	            draggable: false,
+	            pitchAlignment: 'auto',
+	            rotationAlignment: 'auto'
+	        })
+	            .setLngLat(pinRoute[0])
+	            .setPopup(popup)
+	            .addTo(map)
+	            .togglePopup();
+				const animationDuration = 30000;
         // Use the https://turfjs.org/ library to calculate line distances and
         // sample the line at a given percentage with the turf.along function.
         const path = turf.lineString(pinRoute);
@@ -146,29 +147,56 @@ body { margin: 0; padding: 0; }
             );
 
             // Update the popup altitude value and marker location
-            popup.setHTML('Altitude: ' + elevation + 'm<br/>' + 'Distance: ' + Math.round(pathDistance * animationPhase*100)/100 + 'km<br/>');
+            popup.setHTML('<b>Stage ' + name + '</b><br/>' + 'Altitude: ' + elevation + 'm<br/>' + 'Distance: ' + Math.round(pathDistance * animationPhase*100)/100 + 'km<br/>');
             marker.setLngLat(lngLat);
 
             // Reduce the visible length of the line by using a line-gradient to cutoff the line
             // animationPhase is a value between 0 and 1 that reprents the progress of the animation
             map.setPaintProperty('line', 'line-gradient', [
                 'step',
-                ['line-progress'],
+                //['line-progress'],
                 'red',
                 animationPhase,
-                'rgba(255, 0, 0, 0)'
+                'red'
             ]);
 
             // Rotate the camera at a slightly lower speed to give some parallax effect in the background
-            const rotation = 90 - animationPhase * 40.0;
+            const rotation = 0 - animationPhase * 40.0;
             map.setBearing(rotation % 360);
 
             window.requestAnimationFrame(frame);
 
 
         }
-
         window.requestAnimationFrame(frame);
+				});
+				const popup2 = new mapboxgl.Popup({ closeButton: false });
+				map.on('mouseenter', 'line', function (e) {
+			// Change the cursor to a pointer when the mouse is over the states layer.
+			  map.getCanvas().style.cursor = 'pointer';
+				const pinRoute = e.features[0].geometry.coordinates;
+			  var title = '<center><strong>Stage ' + e.features[0].properties.name + '</strong><p>' +
+			    '<center><i>(MB1 click to see animation)';
+
+			  // Ensure that if the map is zoomed out such that multiple
+			  // copies of the feature are visible, the popup appears
+			  // over the copy being pointed to.
+			  //while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+			  //coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+			  //}
+
+			  // Populate the popup and set its coordinates
+			  // based on the feature found.
+			  popup2.setLngLat(pinRoute[0]).setHTML(title).addTo(map);
+			//.setLngLat(e.lngLat)
+			//.setHTML(title)
+			//.addTo(map);
+			});
+			// Change it back to a pointer when it leaves.
+			map.on('mouseleave', 'line', function () {
+			map.getCanvas().style.cursor = '';
+			popup2.remove();
+			});
     })();
 </script>
 
