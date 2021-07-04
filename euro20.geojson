@@ -1,5 +1,5 @@
 {"type":"FeatureCollection","features":[
 {"type":"Feature","properties":{"name":"Denmark","description":"Travel Route to the Final"},"geometry":{"type":"LineString","coordinates":[[12.5635, 55.6786],[4.9166, 52.35],[12.5635, 55.6786],[49.8352, 40.3667],[12.5635, 55.6786],[-0.1275, 51.5072]]}},
-{"type":"Feature","properties":{"name":"England","description":"Travel Route to the Final"},"geometry":{"type":"LineString","coordinates":[[-0.1275, 51.5072],[12.4828, 41.8931]},[-0.1275, 51.5072]]}},
+{"type":"Feature","properties":{"name":"England","description":"Travel Route to the Final"},"geometry":{"type":"LineString","coordinates":[[-0.1275, 51.5072],[12.4828, 41.8931],[-0.1275, 51.5072]]}},
 {"type":"Feature","properties":{"name":"Italy","description":"Travel Route to the Final"},"geometry":{"type":"LineString","coordinates":[[12.4828, 41.8931],[-0.1275, 51.5072],[12.4828, 41.8931],[11.5755, 48.1372],[12.4828, 41.8931],[-0.1275, 51.5072]]}},
 {"type":"Feature","properties":{"name":"Spain","description":"Travel Route to the Final"},"geometry":{"type":"LineString","coordinates":[[-5.9731, 37.3828],[12.5635, 55.6786],[-5.9731, 37.3828],[30.3167, 59.95],[-5.9731, 37.3828],[-0.1275, 51.5072]]}}]}
