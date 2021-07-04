@@ -194,12 +194,12 @@ body { margin: 0; padding: 0; }
         // Change the cursor style as a UI indicator.
         map.getCanvas().style.cursor = 'pointer';
         var country = e.features[0].properties.name;
-  //      const route = e.features[0].properties.length';
+        const route = e.features[0].properties.description;
 
         const pinRoute = e.features[0].geometry.coordinates;
         var title = '<center><strong>' + e.features[0].properties.name + '</strong><p>' +
           '<center> Travel distance including the semifinal</p>' +
-  //        '<center><strong>' + route + '</strong></p>' +
+          '<center><strong>' + route + '</strong></p>' +
           '<center><i>(MB1 click to see the route)';
 
         // Ensure that if the map is zoomed out such that multiple
