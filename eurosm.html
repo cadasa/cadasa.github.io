@@ -92,7 +92,7 @@ body { margin: 0; padding: 0; }
             'type': 'symbol',
             'source': 'places',
             'layout': {
-                'icon-image': 'mountain-15',
+                'icon-image': 'stadium-15',
                 'icon-allow-overlap': true
             }
         });
@@ -101,7 +101,7 @@ body { margin: 0; padding: 0; }
             type: 'geojson',
             // Line metrics is required to use the 'line-progress' property
             lineMetrics: true,
-            data: geojson
+            data: 'https://cadasa.github.io/dummy.geojson'
         });
         map.addLayer({
             type: 'line',
@@ -109,7 +109,7 @@ body { margin: 0; padding: 0; }
             id: 'line',
             paint: {
                 'line-color': 'red',
-                'line-width': 3
+                'line-width': 2
             },
             layout: {
                 'line-cap': 'round',
@@ -117,10 +117,8 @@ body { margin: 0; padding: 0; }
             }
         });
         map.on('click', 'places', function (e) {
-          var country = e.features[0].properties.name;
-          const route = country + '.features[0].geometry.coordinates'
-          geojson.features[0].geometry.coordinates=route;
-      		map.getSource('line').setData(geojson);
+          var country = e.features[0].properties.link;
+      		map.getSource('line').setData(country);
 
           const pinRoute = geojson.features[0].geometry.coordinates;
 					var name = e.features[0].properties.name;
@@ -191,18 +189,18 @@ body { margin: 0; padding: 0; }
         window.requestAnimationFrame(frame);
 				});
 
-        const popup2 = new mapboxgl.Popup({ closeButton: false });
+        const popup2 = new mapboxgl.Popup({ closeButton: true });
         map.on('mouseenter', 'places', function (e) {
         // Change the cursor style as a UI indicator.
         map.getCanvas().style.cursor = 'pointer';
         var country = e.features[0].properties.name;
-        const route = country + '.features[0].geometry.coordinates';
+  //      const route = e.features[0].properties.length';
 
         const pinRoute = e.features[0].geometry.coordinates;
         var title = '<center><strong>' + e.features[0].properties.name + '</strong><p>' +
-          '<center>' + e.features[0].properties.description + '</p>' +
-          '<center>' + route + '</p>' +
-          '<center><i>(MB1 click to see animation)';
+          '<center> Travel distance including the semifinal</p>' +
+  //        '<center><strong>' + route + '</strong></p>' +
+          '<center><i>(MB1 click to see the route)';
 
         // Ensure that if the map is zoomed out such that multiple
         // copies of the feature are visible, the popup appears

@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Tour de France 2021</title>
+<title>Monte Calemorro Hike</title>
 <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
 <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css" rel="stylesheet">
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js"></script>
@@ -19,8 +19,8 @@ body { margin: 0; padding: 0; }
     (async () => {
         const map = new mapboxgl.Map({
             container: 'map',
-            zoom: 3,
-            center: [27.04,47.45],
+						center: [27.04,47.45],
+		        zoom: 3,
             pitch: 0,
             bearing:0,
             style: 'mapbox://styles/mapbox/satellite-streets-v11',
@@ -47,29 +47,28 @@ body { margin: 0; padding: 0; }
         // Start downloading the route data, and wait for map load to occur in parallel
         const [pinRouteGeojson, _] = await Promise.all([
             fetch(
-                'https://cadasa.github.io/dm-euro20.geojson'
+                'https://cadasa.github.io/speuro20.geojson'
             ).then((response) => response.json()),
             map.once('load')
         ]);
+
+        const pinRoute = pinRouteGeojson.features[0].geometry.coordinates;
+        // Create the marker and popup that will display the elevation queries
+        const popup = new mapboxgl.Popup({ closeButton: false });
+        const marker = new mapboxgl.Marker({
+            color: 'red',
+            scale: 0.8,
+            draggable: false,
+            pitchAlignment: 'auto',
+            rotationAlignment: 'auto'
+        })
+            .setLngLat(pinRoute[0])
+            .setPopup(popup)
+            .addTo(map)
+            .togglePopup();
+
         // Add a line feature and layer. This feature will get updated as we progress the animation
-				map.addSource('places', {
-            // This GeoJSON contains features that include an "icon"
-            // property. The value of the "icon" property corresponds
-            // to an image in the Mapbox Streets style's sprite.
-            'type': 'geojson',
-            'data': 'https://cadasa.github.io/euro20sm.geojson'
-        });
-        // Add a layer showing the places.
-        map.addLayer({
-            'id': 'places',
-            'type': 'symbol',
-            'source': 'places',
-            'layout': {
-                'icon-image': 'mountain-15',
-                'icon-allow-overlap': true
-            }
-        });
-				map.addSource('line', {
+        map.addSource('line', {
             type: 'geojson',
             // Line metrics is required to use the 'line-progress' property
             lineMetrics: true,
@@ -81,13 +80,14 @@ body { margin: 0; padding: 0; }
             id: 'line',
             paint: {
                 'line-color': 'rgba(0,0,0,0)',
-                'line-width': 3
+                'line-width': 5
             },
             layout: {
                 'line-cap': 'round',
                 'line-join': 'round'
             }
         });
+
         // Add some fog in the background
         map.setFog({
             'range': [-0.5, 2],
@@ -114,27 +114,9 @@ body { margin: 0; padding: 0; }
         });
         map.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1.5 });
 
-        //await map.once('idle');
+        await map.once('idle');
         // The total animation duration, in milliseconds
-
-				map.on('click', 'places', function () {
-					const pinRoute = pinRouteGeojson.features[0].geometry.coordinates;
-
-					var name = pinRouteGeojson.features[0].properties.name;
-	        // Create the marker and popup that will display the elevation queries
-	        const popup = new mapboxgl.Popup({ closeButton: false });
-	        const marker = new mapboxgl.Marker({
-	            color: 'red',
-	            scale: 0.8,
-	            draggable: false,
-	            pitchAlignment: 'auto',
-	            rotationAlignment: 'auto'
-	        })
-	            .setLngLat(pinRoute[0])
-	            .setPopup(popup)
-	            .addTo(map)
-	            .togglePopup();
-				const animationDuration = 20000;
+        const animationDuration = 10000;
         // Use the https://turfjs.org/ library to calculate line distances and
         // sample the line at a given percentage with the turf.along function.
         const path = turf.lineString(pinRoute);
@@ -164,7 +146,7 @@ body { margin: 0; padding: 0; }
             );
 
             // Update the popup altitude value and marker location
-            popup.setHTML('<b>' + name + '</b><br/>' + 'Distance: ' + Math.round(pathDistance * animationPhase*100)/100 + 'km<br/>');
+            popup.setHTML('Altitude: ' + elevation + 'm<br/>' + 'Distance: ' + Math.round(pathDistance * animationPhase*100)/100 + 'km<br/>');
             marker.setLngLat(lngLat);
 
             // Reduce the visible length of the line by using a line-gradient to cutoff the line
@@ -178,45 +160,16 @@ body { margin: 0; padding: 0; }
             ]);
 
             // Rotate the camera at a slightly lower speed to give some parallax effect in the background
-            //const rotation = 0 - animationPhase * 40.0;
-          //  map.setBearing(rotation % 360);
+            //const rotation = -170 - animationPhase * 40.0;
+            //map.setBearing(rotation % 360);
 
             window.requestAnimationFrame(frame);
 
 
         }
+
         window.requestAnimationFrame(frame);
-				});
-				const popup2 = new mapboxgl.Popup({ closeButton: false });
-				map.on('mouseenter', 'places', function (e) {
-			// Change the cursor to a pointer when the mouse is over the states layer.
-			  map.getCanvas().style.cursor = 'pointer';
-				const pinRoute = e.features[0].geometry.coordinates;
-			  var title = '<center><strong>' + e.features[0].properties.name + '</strong><p>' +
-					'<center>' + e.features[0].properties.description + '</p>' +
-			    '<center><i>(MB1 click to see animation)';
-
-			  // Ensure that if the map is zoomed out such that multiple
-			  // copies of the feature are visible, the popup appears
-			  // over the copy being pointed to.
-			  //while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-			  //coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-			  //}
-
-			  // Populate the popup and set its coordinates
-			  // based on the feature found.
-			  popup2.setLngLat(pinRoute).setHTML(title).addTo(map);
-			//.setLngLat(e.lngLat)
-			//.setHTML(title)
-			//.addTo(map);
-			});
-			// Change it back to a pointer when it leaves.
-			map.on('mouseleave', 'places', function () {
-			map.getCanvas().style.cursor = '';
-			popup2.remove();
-			});
     })();
-
 </script>
 
 </body>
