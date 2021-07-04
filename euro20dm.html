@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Italy Euro20</title>
+<title>Denmark Euro20</title>
 <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
 <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css" rel="stylesheet">
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js"></script>
@@ -47,7 +47,7 @@ body { margin: 0; padding: 0; }
         // Start downloading the route data, and wait for map load to occur in parallel
         const [pinRouteGeojson, _] = await Promise.all([
             fetch(
-                'https://cadasa.github.io/iteuro20.geojson'
+                'https://cadasa.github.io/dmeuro20.geojson'
             ).then((response) => response.json()),
             map.once('load')
         ]);
@@ -146,7 +146,7 @@ body { margin: 0; padding: 0; }
             );
 
             // Update the popup altitude value and marker location
-            popup.setHTML('<center><strong>Italy</strong><p>' + 'Distance: ' + Math.round(pathDistance * animationPhase*100)/100 + 'km<br/>');
+            popup.setHTML('<center><strong>Denmark</strong><p>' + 'Distance: ' + Math.round(pathDistance * animationPhase*100)/100 + 'km<br/>');
             marker.setLngLat(lngLat);
 
             // Reduce the visible length of the line by using a line-gradient to cutoff the line
