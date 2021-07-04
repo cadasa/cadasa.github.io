@@ -1,5 +1,5 @@
 {"type":"FeatureCollection","features":[
-{"type":"Feature","properties":{"name":"Denmark","description":"Travel Route to the Final","link":"Denmark"},"geometry":{"type":"Point","coordinates":[12.5635, 55.6786]}},
-{"type":"Feature","properties":{"name":"England","description":"Travel Route to the Final","link":"England"},"geometry":{"type":"Point","coordinates":[-0.1275, 51.5072]}},
-{"type":"Feature","properties":{"name":"Italy","description":"Travel Route to the Final","link":"Italy"},"geometry":{"type":"Point","coordinates":[12.4828, 41.8931]}},
-{"type":"Feature","properties":{"name":"Spain","description":"Travel Route to the Final","link":"Spain"},"geometry":{"type":"Point","coordinates":[-5.9731, 37.3828]}}]}
+{"type":"Feature","properties":{"name":"Denmark","description":"Travel Route to the Final","link":Denmark},"geometry":{"type":"Point","coordinates":[12.5635, 55.6786]}},
+{"type":"Feature","properties":{"name":"England","description":"Travel Route to the Final","link":England},"geometry":{"type":"Point","coordinates":[-0.1275, 51.5072]}},
+{"type":"Feature","properties":{"name":"Italy","description":"Travel Route to the Final","link":Italy},"geometry":{"type":"Point","coordinates":[12.4828, 41.8931]}},
+{"type":"Feature","properties":{"name":"Spain","description":"Travel Route to the Final","link":Spain},"geometry":{"type":"Point","coordinates":[-5.9731, 37.3828]}}]}

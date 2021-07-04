@@ -98,7 +98,7 @@ body { margin: 0; padding: 0; }
             type: 'geojson',
             // Line metrics is required to use the 'line-progress' property
             lineMetrics: true,
-            data: 'https://cadasa.github.io/eneuro20.geojson'
+            data: Denmark
         });
         map.addLayer({
             type: 'line',
@@ -117,8 +117,7 @@ body { margin: 0; padding: 0; }
           var country = e.features[0].properties.link;
       		map.getSource('line').setData(country);
 
-          const pinRouteGeojson = fetch(country).then((response) => response.json());
-          const pinRoute = pinRouteGeojson.features[0].geometry.coordinates;
+          const pinRoute = country.features[0].geometry.coordinates;
 					var name = e.features[0].properties.name;
 	        // Create the marker and popup that will display the elevation queries
 	        const popup = new mapboxgl.Popup({ closeButton: false });
