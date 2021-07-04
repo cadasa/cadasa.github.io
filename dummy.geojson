@@ -1,0 +1,3 @@
+{"type":"FeatureCollection","features":[
+{"type":"Feature","properties":{"name":"Denmark","description":"Travel Route to the Final","link":"https://cadasa.github.io/dmeuro20.geojson"},"geometry":{"type":"LineString","coordinates":[[0,0]]}}
+]}
