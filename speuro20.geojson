@@ -1,0 +1,2 @@
+{"type":"FeatureCollection","features":[
+{"type":"Feature","properties":{"name":"Spain","description":"Travel Route to the Final","color":"orange"},"geometry":{"type":"LineString","coordinates":[[-5.9731, 37.3828],[12.5635, 55.6786],[-5.9731, 37.3828],[30.3167, 59.95],[-5.9731, 37.3828],[-0.1275, 51.5072]]}}]}
