@@ -29,7 +29,7 @@ body { margin: 0; padding: 0; }
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/cjaudgl840gn32rnrepcb9b9g',
-        center: [17.55,47.45],
+        center: [20.55,47.45],
         zoom: 3
     });
             map.addControl(
@@ -49,19 +49,6 @@ body { margin: 0; padding: 0; }
             trackUserLocation: true
             })
             );
-    var geojson = {"type":"FeatureCollection","features":[
-            {"type":"Feature","properties":{"name":"Denmark","description":"Travel Route to the Final","link":"https://cadasa.github.io/dmeuro20.geojson"},"geometry":{"type":"LineString","coordinates":[[0,0]]}}
-          ]};
-    var Denmark = {"type":"FeatureCollection","features":[
-                    {"type":"Feature","properties":{"name":"Denmark","description":"Travel Route to the Final","link":"https://cadasa.github.io/dmeuro20.geojson"},"geometry":{"type":"LineString","coordinates":[[12.5635, 55.6786],[4.9166, 52.35],[12.5635, 55.6786],[49.8352, 40.3667],[12.5635, 55.6786],[-0.1275, 51.5072]]}}
-                  ]};
-    var England = {"type":"FeatureCollection","features":[
-                    {"type":"Feature","properties":{"name":"England","description":"Travel Route to the Final","link":"https://cadasa.github.io/eneuro20.geojson"},"geometry":{"type":"LineString","coordinates":[[-0.1275, 51.5072],[12.4828, 41.8931],[-0.1275, 51.5072]]}}]};
-    var Italy = {"type":"FeatureCollection","features":[
-                  {"type":"Feature","properties":{"name":"Italy","description":"Travel Route to the Final","color":"blue"},"geometry":{"type":"LineString","coordinates":[[12.4828, 41.8931],[-0.1275, 51.5072],[12.4828, 41.8931],[11.5755, 48.1372],[12.4828, 41.8931],[-0.1275, 51.5072]]}}]};
-    var Spain = {"type":"FeatureCollection","features":[
-                  {"type":"Feature","properties":{"name":"Spain","description":"Travel Route to the Final","color":"orange"},"geometry":{"type":"LineString","coordinates":[[-5.9731, 37.3828],[12.5635, 55.6786],[-5.9731, 37.3828],[30.3167, 59.95],[-5.9731, 37.3828],[-0.1275, 51.5072]]}}]};
-
     map.on('load', function () {
       map.addSource('dem', {
         'type': 'raster-dem',
@@ -120,7 +107,7 @@ body { margin: 0; padding: 0; }
           var country = e.features[0].properties.link;
       		map.getSource('line').setData(country);
 
-          const pinRoute = geojson.features[0].geometry.coordinates;
+          //const pinRoute = geojson.features[0].geometry.coordinates;
 					var name = e.features[0].properties.name;
 	        // Create the marker and popup that will display the elevation queries
 	        const popup = new mapboxgl.Popup({ closeButton: false });
