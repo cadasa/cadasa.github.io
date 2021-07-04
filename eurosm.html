@@ -84,28 +84,29 @@ body { margin: 0; padding: 0; }
             }
         });
         // Add a layer showing the route.
-
+        map.addSource('line', {
+            type: 'geojson',
+            // Line metrics is required to use the 'line-progress' property
+            lineMetrics: false,
+            data: 'https://cadasa.github.io/eneuro20.geojson'
+        });
+        map.addLayer({
+            type: 'line',
+            source: 'line',
+            id: 'line',
+            paint: {
+                'line-color': 'red',
+                'line-width': 3
+            },
+            layout: {
+                'line-cap': 'round',
+                'line-join': 'round'
+            }
+        });
         map.on('click', 'places', function (e) {
+          var country = e.features[0].properties.link;
+      		map.getSource('line').setData(country);
 
-          map.addSource('line', {
-              type: 'geojson',
-              // Line metrics is required to use the 'line-progress' property
-              lineMetrics: false,
-              data: 'https://cadasa.github.io/dm-euro20.geojson'
-          });
-          map.addLayer({
-              type: 'line',
-              source: 'line',
-              id: 'line',
-              paint: {
-                  'line-color': 'red',
-                  'line-width': 3
-              },
-              layout: {
-                  'line-cap': 'round',
-                  'line-join': 'round'
-              }
-          });
           const pinRoute = pinRouteGeojson.features[0].geometry.coordinates;
 
 					var name = e.features[0].properties.name;
@@ -184,6 +185,7 @@ body { margin: 0; padding: 0; }
         const pinRoute = e.features[0].geometry.coordinates;
         var title = '<center><strong>' + e.features[0].properties.name + '</strong><p>' +
           '<center>' + e.features[0].properties.description + '</p>' +
+          '<center>' + e.features[0].properties.link + '</p>' +
           '<center><i>(MB1 click to see animation)';
 
         // Ensure that if the map is zoomed out such that multiple
