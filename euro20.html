@@ -51,7 +51,6 @@ body { margin: 0; padding: 0; }
             ).then((response) => response.json()),
             map.once('load')
         ]);
-
         // Add a line feature and layer. This feature will get updated as we progress the animation
         map.addSource('line', {
             type: 'geojson',
@@ -101,10 +100,10 @@ body { margin: 0; padding: 0; }
 
         //await map.once('idle');
         // The total animation duration, in milliseconds
-				map.on('click', 'line', function (e) {
-					const pinRoute = e.features[0].geometry.coordinates;
+				map.on('click', 'line', function () {
+					const pinRoute = pinRouteGeojson.features[0].geometry.coordinates;
 
-					var name = e.features[0].properties.name;
+					var name = pinRouteGeojson.features[0].properties.name;
 	        // Create the marker and popup that will display the elevation queries
 	        const popup = new mapboxgl.Popup({ closeButton: false });
 	        const marker = new mapboxgl.Marker({
@@ -162,8 +161,8 @@ body { margin: 0; padding: 0; }
             ]);
 
             // Rotate the camera at a slightly lower speed to give some parallax effect in the background
-            const rotation = 0 - animationPhase * 40.0;
-            map.setBearing(rotation % 360);
+            //const rotation = 0 - animationPhase * 40.0;
+          //  map.setBearing(rotation % 360);
 
             window.requestAnimationFrame(frame);
 
