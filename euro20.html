@@ -19,9 +19,9 @@ body { margin: 0; padding: 0; }
     (async () => {
         const map = new mapboxgl.Map({
             container: 'map',
-            zoom: 6,
-            center: [1.64,45.102],
-            pitch: 50,
+            zoom: 3,
+            center: [27.04,47.45],
+            pitch: 0,
             bearing:0,
             style: 'mapbox://styles/mapbox/satellite-streets-v11',
             interactive: true,
@@ -47,7 +47,7 @@ body { margin: 0; padding: 0; }
         // Start downloading the route data, and wait for map load to occur in parallel
         const [pinRouteGeojson, _] = await Promise.all([
             fetch(
-                'https://cadasa.github.io/euro20.geojson'
+                'https://cadasa.github.io/dm-euro20.geojson'
             ).then((response) => response.json()),
             map.once('load')
         ]);
@@ -56,7 +56,7 @@ body { margin: 0; padding: 0; }
         map.addSource('line', {
             type: 'geojson',
             // Line metrics is required to use the 'line-progress' property
-            lineMetrics: false,
+            lineMetrics: true,
             data: pinRouteGeojson
         });
         map.addLayer({
@@ -155,7 +155,7 @@ body { margin: 0; padding: 0; }
             // animationPhase is a value between 0 and 1 that reprents the progress of the animation
             map.setPaintProperty('line', 'line-gradient', [
                 'step',
-                //['line-progress'],
+                ['line-progress'],
                 'red',
                 animationPhase,
                 'rgba(255, 0, 0, 0)'
