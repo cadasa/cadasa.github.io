@@ -106,8 +106,12 @@ body { margin: 0; padding: 0; }
         map.on('click', 'places', function (e) {
           var country = e.features[0].properties.link;
       		map.getSource('line').setData(country);
-
-          //const pinRoute = geojson.features[0].geometry.coordinates;
+          const pinRouteGeojson =Promise.all([
+              fetch(
+                  country
+              ).then((response) => response.json())
+              ]);
+          const pinRoute = pinRouteGeojson.features[0].geometry.coordinates;
 					var name = e.features[0].properties.name;
 	        // Create the marker and popup that will display the elevation queries
 	        const popup = new mapboxgl.Popup({ closeButton: false });
