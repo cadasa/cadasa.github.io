@@ -1,0 +1,13 @@
+<div id="observablehq-viewof-title-25f1ecbe"></div>
+<div id="observablehq-dashboard-25f1ecbe"></div>
+<div id="observablehq-mapboxMap-25f1ecbe"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/getting-routes-with-osrm.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof title") return new Inspector(document.querySelector("#observablehq-viewof-title-25f1ecbe"));
+  if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-25f1ecbe"));
+  if (name === "mapboxMap") return new Inspector(document.querySelector("#observablehq-mapboxMap-25f1ecbe"));
+});
+</script>
