@@ -1,0 +1,14 @@
+<div id="observablehq-viewof-title-4a10d090"></div>
+<div id="observablehq-viewof-imageUrl-4a10d090"></div>
+<div id="observablehq-dashboard-4a10d090"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/chep-anh-bang-tri-tue-nhan-tao.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof title") return new Inspector(document.querySelector("#observablehq-viewof-title-4a10d090"));
+  if (name === "viewof imageUrl") return new Inspector(document.querySelector("#observablehq-viewof-imageUrl-4a10d090"));
+  if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-4a10d090"));
+  return ["img","img2"].includes(name);
+});
+</script>
