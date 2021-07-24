@@ -1,0 +1,14 @@
+<div id="observablehq-viewof-title-f51e343a"></div>
+<div id="observablehq-viewof-file-f51e343a"></div>
+<div id="observablehq-dashboard-f51e343a"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/untitled.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof title") return new Inspector(document.querySelector("#observablehq-viewof-title-f51e343a"));
+  if (name === "viewof file") return new Inspector(document.querySelector("#observablehq-viewof-file-f51e343a"));
+  if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-f51e343a"));
+  return ["src","inputCanvas","output"].includes(name);
+});
+</script>
