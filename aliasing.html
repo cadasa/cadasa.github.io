@@ -1,0 +1,17 @@
+<div id="observablehq-viewof-title-f6d6d8d8"></div>
+<div id="observablehq-viewof-content-f6d6d8d8"></div>
+<div id="observablehq-dashboard-f6d6d8d8"></div>
+<div id="observablehq-dashboard2-f6d6d8d8"></div>
+<div id="observablehq-svg-f6d6d8d8"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/frequency-aliasing.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof title") return new Inspector(document.querySelector("#observablehq-viewof-title-f6d6d8d8"));
+  if (name === "viewof content") return new Inspector(document.querySelector("#observablehq-viewof-content-f6d6d8d8"));
+  if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-f6d6d8d8"));
+  if (name === "dashboard2") return new Inspector(document.querySelector("#observablehq-dashboard2-f6d6d8d8"));
+  if (name === "svg") return new Inspector(document.querySelector("#observablehq-svg-f6d6d8d8"));
+});
+</script>
