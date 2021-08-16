@@ -1,12 +1,11 @@
-<div id="observablehq-4b3efb6c">
-  <div class="observablehq-LEGEND"></div>
-  <div class="observablehq-CHART"></div>
-</div>
+<div id="observablehq-CHART-031deefe"></div>
+<div id="observablehq-LEGEND-031deefe"></div>
+
 <script type="module">
-  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-  import define from "https://api.observablehq.com/@stroked/living-presidents.js?v=3";
-  (new Runtime).module(define, name => {
-    if (name === "LEGEND") return Inspector.into("#observablehq-4b3efb6c .observablehq-LEGEND")();
-    if (name === "CHART") return Inspector.into("#observablehq-4b3efb6c .observablehq-CHART")();
-  });
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/living-presidents.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "CHART") return new Inspector(document.querySelector("#observablehq-CHART-031deefe"));
+  if (name === "LEGEND") return new Inspector(document.querySelector("#observablehq-LEGEND-031deefe"));
+});
 </script>
