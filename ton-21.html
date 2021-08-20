@@ -185,7 +185,7 @@ body { margin: 0; padding: 0; }
             );
 
             // Update the popup altitude value and marker location
-            popup.setHTML('<b>Stage ' + name + '</b><br/>' + 'Altitude: ' + elevation + 'm<br/>' + 'Distance: ' + Math.round(pathDistance * animationPhase*100)/100 + 'km<br/>');
+            popup.setHTML('<b>'+ name + '</b><br/>' + 'Altitude: ' + elevation + 'm<br/>' + 'Distance: ' + Math.round(pathDistance * animationPhase*100)/100 + 'km<br/>');
             marker.setLngLat(lngLat);
 
             // Reduce the visible length of the line by using a line-gradient to cutoff the line
