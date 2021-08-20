@@ -6,8 +6,8 @@
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/@cadasa/confirmed-cases-v-deaths-aug-18-2021.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-b4eb6c77"));
-  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-b4eb6c77"));
   if (name === "title") return new Inspector(document.querySelector("#observablehq-title-b4eb6c77"));
+  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-b4eb6c77"));
+  if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-b4eb6c77"));
 });
 </script>
