@@ -19,8 +19,8 @@ body { margin: 0; padding: 0; }
     (async () => {
         const map = new mapboxgl.Map({
             container: 'map',
-            zoom: 6,
-            center: [6.18387,58.98756],
+            zoom: 8,
+            center: [6.059,58.633],
             pitch: 50,
             bearing:0,
             style: 'mapbox://styles/mapbox/satellite-streets-v11',
@@ -73,6 +73,44 @@ body { margin: 0; padding: 0; }
             }
         });
 
+				map.addSource('places', {
+            // This GeoJSON contains features that include an "icon"
+            // property. The value of the "icon" property corresponds
+            // to an image in the Mapbox Streets style's sprite.
+            'type': 'geojson',
+            'data': {
+                'type': 'FeatureCollection',
+                'features': [
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'name': 'My House',
+//                            'description':
+//                                '<iframe src="https://cadasa.github.io/montecalemorro.html#13/36.61651/-4.56111/-170/60" width="675px", height="500px">',
+//                            'picture':
+//                                '<img src="https://cadasa.github.io/montecalemorro.jpg" width="100%", height="300px">',
+//                            'rating':
+//                                '<img src="https://cadasa.github.io/rating_benal.jpg" width="100%", height="25px">',
+                            'icon': 'castle-15'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [5.6245336,58.9614261]
+                        }
+                    }
+                ]
+            }
+        });
+        // Add a layer showing the places.
+        map.addLayer({
+            'id': 'places',
+            'type': 'symbol',
+            'source': 'places',
+            'layout': {
+                'icon-image': '{icon}',
+                'icon-allow-overlap': true
+            }
+        });
         // Add some fog in the background
         map.setFog({
             'range': [-0.5, 2],
@@ -175,8 +213,8 @@ body { margin: 0; padding: 0; }
 			// Change the cursor to a pointer when the mouse is over the states layer.
 			  map.getCanvas().style.cursor = 'pointer';
 				const pinRoute = e.features[0].geometry.coordinates;
-			  var title = '<center><strong>Stage ' + e.features[0].properties.name + '</strong><p>' +
-					'<center>' + e.features[0].properties.description + '</p>' +
+			  var title = '<center><strong>' + e.features[0].properties.name + '</strong><p>' +
+				//	'<center>' + e.features[0].properties.description + '</p>' +
 			    '<center><i>(MB1 click to see animation)';
 
 			  // Ensure that if the map is zoomed out such that multiple
@@ -196,7 +234,31 @@ body { margin: 0; padding: 0; }
 			// Change it back to a pointer when it leaves.
 			map.on('mouseleave', 'line', function () {
 			map.getCanvas().style.cursor = '';
-			//popup2.remove();
+			popup2.remove();
+			});
+			const popup3 = new mapboxgl.Popup({ closeButton: false });
+			map.on('mouseenter', 'places', function (e) {
+			// Change the cursor style as a UI indicator.
+			map.getCanvas().style.cursor = 'pointer';
+
+				var coordinates = e.features[0].geometry.coordinates.slice();
+				var name = '<h2><center>' + e.features[0].properties.name;
+
+			// Ensure that if the map is zoomed out such that multiple
+			// copies of the feature are visible, the popup appears
+			// over the copy being pointed to.
+				while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+					coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+				}
+
+			// Populate the popup and set its coordinates
+			// based on the feature found.
+				popup3.setLngLat(coordinates).setHTML(name).addTo(map);
+				});
+
+			map.on('mouseleave', 'places', function () {
+			map.getCanvas().style.cursor = '';
+				popup3.remove();
 			});
     })();
 </script>
