@@ -234,7 +234,7 @@ body { margin: 0; padding: 0; }
 			// Change it back to a pointer when it leaves.
 			map.on('mouseleave', 'line', function () {
 			map.getCanvas().style.cursor = '';
-			popup2.remove();
+//			popup2.remove();
 			});
 			const popup3 = new mapboxgl.Popup({ closeButton: false });
 			map.on('mouseenter', 'places', function (e) {
@@ -258,7 +258,7 @@ body { margin: 0; padding: 0; }
 
 			map.on('mouseleave', 'places', function () {
 			map.getCanvas().style.cursor = '';
-				popup3.remove();
+//				popup3.remove();
 			});
     })();
 </script>
