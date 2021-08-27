@@ -1,0 +1,38 @@
+<div id="observablehq-title-8fb89ea8"></div>
+<div id="observablehq-text1-8fb89ea8"></div>
+<div id="observablehq-viewof-infectionRate-8fb89ea8"></div>
+<div id="observablehq-text2-8fb89ea8"></div>
+<div id="observablehq-dashboard2-8fb89ea8"></div>
+<div id="observablehq-dashboard-8fb89ea8"></div>
+<div id="observablehq-Interp-8fb89ea8"></div>
+<div id="observablehq-text3-8fb89ea8"></div>
+<div id="observablehq-falsePos-8fb89ea8"></div>
+<div id="observablehq-text4-8fb89ea8"></div>
+<div id="observablehq-truePos-8fb89ea8"></div>
+<div id="observablehq-text5-8fb89ea8"></div>
+<div id="observablehq-falseNeg-8fb89ea8"></div>
+<div id="observablehq-text6-8fb89ea8"></div>
+<div id="observablehq-trueNeg-8fb89ea8"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/c48b56d9d791e206.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-8fb89ea8"));
+  if (name === "text1") return new Inspector(document.querySelector("#observablehq-text1-8fb89ea8"));
+  if (name === "viewof infectionRate") return new Inspector(document.querySelector("#observablehq-viewof-infectionRate-8fb89ea8"));
+  if (name === "text2") return new Inspector(document.querySelector("#observablehq-text2-8fb89ea8"));
+  if (name === "dashboard2") return new Inspector(document.querySelector("#observablehq-dashboard2-8fb89ea8"));
+  if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-8fb89ea8"));
+  if (name === "Interp") return new Inspector(document.querySelector("#observablehq-Interp-8fb89ea8"));
+  if (name === "text3") return new Inspector(document.querySelector("#observablehq-text3-8fb89ea8"));
+  if (name === "falsePos") return new Inspector(document.querySelector("#observablehq-falsePos-8fb89ea8"));
+  if (name === "text4") return new Inspector(document.querySelector("#observablehq-text4-8fb89ea8"));
+  if (name === "truePos") return new Inspector(document.querySelector("#observablehq-truePos-8fb89ea8"));
+  if (name === "text5") return new Inspector(document.querySelector("#observablehq-text5-8fb89ea8"));
+  if (name === "falseNeg") return new Inspector(document.querySelector("#observablehq-falseNeg-8fb89ea8"));
+  if (name === "text6") return new Inspector(document.querySelector("#observablehq-text6-8fb89ea8"));
+  if (name === "trueNeg") return new Inspector(document.querySelector("#observablehq-trueNeg-8fb89ea8"));
+  return ["ninfectedPos","ninfectedNeg","ninfected","nhealthy","nhealthyPos","nhealthyNeg"].includes(name);
+});
+</script>
