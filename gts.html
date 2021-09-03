@@ -1,0 +1,15 @@
+<div id="observablehq-viewof-title-d0fb0b88"></div>
+<div id="observablehq-breadcrumb-d0fb0b88"></div>
+<div id="observablehq-viewof-timescale-d0fb0b88"></div>
+<div id="observablehq-viewof-note-d0fb0b88"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/b5f113ee2f5c4912.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof title") return new Inspector(document.querySelector("#observablehq-viewof-title-d0fb0b88"));
+  if (name === "breadcrumb") return new Inspector(document.querySelector("#observablehq-breadcrumb-d0fb0b88"));
+  if (name === "viewof timescale") return new Inspector(document.querySelector("#observablehq-viewof-timescale-d0fb0b88"));
+  if (name === "viewof note") return new Inspector(document.querySelector("#observablehq-viewof-note-d0fb0b88"));
+});
+</script>
