@@ -1,0 +1,17 @@
+<div id="observablehq-viewof-title-fe0b7875"></div>
+<div id="observablehq-viewof-location-fe0b7875"></div>
+<div id="observablehq-text1-fe0b7875"></div>
+<div id="observablehq-app-fe0b7875"></div>
+<div id="observablehq-text2-fe0b7875"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/bcb19e412c7f707e.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof title") return new Inspector(document.querySelector("#observablehq-viewof-title-fe0b7875"));
+  if (name === "viewof location") return new Inspector(document.querySelector("#observablehq-viewof-location-fe0b7875"));
+  if (name === "text1") return new Inspector(document.querySelector("#observablehq-text1-fe0b7875"));
+  if (name === "app") return new Inspector(document.querySelector("#observablehq-app-fe0b7875"));
+  if (name === "text2") return new Inspector(document.querySelector("#observablehq-text2-fe0b7875"));
+});
+</script>
