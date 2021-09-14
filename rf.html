@@ -1,0 +1,31 @@
+<div id="observablehq-viewof-title-4e339465"></div>
+<div id="observablehq-txt1-4e339465"></div>
+<div id="observablehq-txt2-4e339465"></div>
+<div id="observablehq-txt3-4e339465"></div>
+<div id="observablehq-txt4-4e339465"></div>
+<div id="observablehq-txt5-4e339465"></div>
+<div id="observablehq-viewof-content-4e339465"></div>
+<div id="observablehq-viewof-fS-4e339465"></div>
+<div id="observablehq-pn-4e339465"></div>
+<div id="observablehq-pp-4e339465"></div>
+<div id="observablehq-pp1-4e339465"></div>
+<div id="observablehq-pp2-4e339465"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/perfect-numbers.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof title") return new Inspector(document.querySelector("#observablehq-viewof-title-4e339465"));
+  if (name === "txt1") return new Inspector(document.querySelector("#observablehq-txt1-4e339465"));
+  if (name === "txt2") return new Inspector(document.querySelector("#observablehq-txt2-4e339465"));
+  if (name === "txt3") return new Inspector(document.querySelector("#observablehq-txt3-4e339465"));
+  if (name === "txt4") return new Inspector(document.querySelector("#observablehq-txt4-4e339465"));
+  if (name === "txt5") return new Inspector(document.querySelector("#observablehq-txt5-4e339465"));
+  if (name === "viewof content") return new Inspector(document.querySelector("#observablehq-viewof-content-4e339465"));
+  if (name === "viewof fS") return new Inspector(document.querySelector("#observablehq-viewof-fS-4e339465"));
+  if (name === "pn") return new Inspector(document.querySelector("#observablehq-pn-4e339465"));
+  if (name === "pp") return new Inspector(document.querySelector("#observablehq-pp-4e339465"));
+  if (name === "pp1") return new Inspector(document.querySelector("#observablehq-pp1-4e339465"));
+  if (name === "pp2") return new Inspector(document.querySelector("#observablehq-pp2-4e339465"));
+});
+</script>
