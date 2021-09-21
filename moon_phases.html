@@ -1,0 +1,14 @@
+<div id="observablehq-canvas-0a57912b"></div>
+<div id="observablehq-viewof-year-0a57912b"></div>
+<div id="observablehq-viewof-locale-0a57912b"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/3b65026796492132.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "canvas") return new Inspector(document.querySelector("#observablehq-canvas-0a57912b"));
+  if (name === "viewof year") return new Inspector(document.querySelector("#observablehq-viewof-year-0a57912b"));
+  if (name === "viewof locale") return new Inspector(document.querySelector("#observablehq-viewof-locale-0a57912b"));
+  return ["days","months"].includes(name);
+});
+</script>
