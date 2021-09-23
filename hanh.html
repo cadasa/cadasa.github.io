@@ -1,0 +1,18 @@
+<div id="observablehq-viewof-power-3f5dbcea"></div>
+<div id="observablehq-viewof-primes-3f5dbcea"></div>
+<div id="observablehq-chart-3f5dbcea"></div>
+<div id="observablehq-code-3f5dbcea"></div>
+<div id="observablehq-text-3f5dbcea"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/cf00ce563e0f0946.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof power") return new Inspector(document.querySelector("#observablehq-viewof-power-3f5dbcea"));
+  if (name === "viewof primes") return new Inspector(document.querySelector("#observablehq-viewof-primes-3f5dbcea"));
+  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-3f5dbcea"));
+  if (name === "code") return new Inspector(document.querySelector("#observablehq-code-3f5dbcea"));
+  if (name === "text") return new Inspector(document.querySelector("#observablehq-text-3f5dbcea"));
+  return ["data"].includes(name);
+});
+</script>
