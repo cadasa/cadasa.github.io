@@ -1,3 +1,2 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:95ef526c322d4c32370fb1b4c77c7c52549b93b4cc260b2c3f78ead377171559
-size 314
+{"type":"FeatureCollection","features":[
+{"type":"Feature","properties":{"name":"Italy","description":"Travel Route to the Final","color":"blue"},"geometry":{"type":"LineString","coordinates":[[12.4828, 41.8931],[-0.1275, 51.5072],[12.4828, 41.8931],[11.5755, 48.1372],[12.4828, 41.8931],[-0.1275, 51.5072]]}}]}

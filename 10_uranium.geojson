@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e9ef11349fc52ce98ce82ba7d9ebf28cc1531b78a78f5968d4e466571320e48e
-size 2007
+{"type":"FeatureCollection", "features":[
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-104.5392366379141,58.0656433062549,0]},"properties":{"Name":"Uranium - 1 - Cigar Lake, Canada, 6,924mt", "description": "uranium"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[136.856782592319,-30.43452366575509,0]},"properties":{"Name":"Uranium - 2 - Olympic Dam, Australia, 3,159mt", "description": "uranium"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[15.06281009701804,-22.55116802590892,0]},"properties":{"Name":"Uranium - 3 - Husab, Namibia, 3,028mt", "description": "uranium"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[67.52847751433096,45.28434837496504,0]},"properties":{"Name":"Uranium - 4 - Inkai, sites 1-3, Kazakhstan", "description": "uranium"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[15.05582803799694,-22.48066621043894,0]},"properties":{"Name":"Uranium - 5 - Rössing, Namibia, 2,102mt", "description": "uranium"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[67.6416307925943,44.76806381960387,0]},"properties":{"Name":"Uranium - 6 - Budenovskoye 2, Kazakhstan, 2,081mt", "description": "uranium"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[69.20843338591021,44.50665622079994,0]},"properties":{"Name":"Uranium - 7 - Tortkuduk, Kazakhstan, 1,900mt", "description": "uranium"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[7.328292397570941,18.77289559091426,0]},"properties":{"Name":"Uranium - 8 - SOMAIR, Niger, 1,783mt", "description": "uranium"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[132.9114237794482,-12.68159223732736,0]},"properties":{"Name":"Uranium - 9 - Ranger, Australia, 1,695mt", "description": "uranium"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[66.8751365440437,43.82137659066814,0]},"properties":{"Name":"Uranium - 10 - Kharasan 2, Kazakhstan, 1,631mt", "description": "uranium"}}
+]}

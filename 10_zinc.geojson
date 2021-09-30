@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d2d3cc314dde182cb1fbe671d5a3d60c71bc33d36dd466d07fb825cf0e38cef9
-size 1932
+{"type":"FeatureCollection", "features":[
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-162.8318944106661,68.07093503279657,0]},"properties":{"Name":"Zinc - 1 - Red Dog, USA, 552kt", "description": "zinc"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[74.74229370029087,25.83112436994307,0]},"properties":{"Name":"Zinc - 2 - Rampura Agucha, India, 358kt", "description": "zinc"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[139.4766628588609,-20.71400823076689,0]},"properties":{"Name":"Zinc - 3 - Mt Isa, Australia, 326kt", "description": "zinc"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-77.05678489588094,-9.553612929366887,0]},"properties":{"Name":"Zinc - 4 - Antamina, Peru,  303kt", "description": "zinc"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[136.1010418797447,-16.4319759478028,0]},"properties":{"Name":"Zinc - 5 - MacArthur River, Australia,  271kt", "description": "zinc"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-67.20566352320779,-21.09138809364578,0]},"properties":{"Name":"Zinc - 6 - San Cristobel, Bolivia, 206kt", "description": "zinc"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[140.1546515953864,-20.25097798411877,0]},"properties":{"Name":"Zinc - 7 - Dugald River, Australia, 170kt", "description": "zinc"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-46.83352760149825,-17.96319539001655,0]},"properties":{"Name":"Zinc - 8 - Vazante, Brazil,  139kt", "description": "zinc"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-75.99070402056525,-13.07942806151359,0]},"properties":{"Name":"Zinc - 9 - Cerro Lindo, Peru, 126kt", "description": "zinc"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-6.718385322845317,53.65554474564762,0]},"properties":{"Name":"Zinc - 10 - Tara, Ireland, 122kt", "description": "zinc"}}
+]}
