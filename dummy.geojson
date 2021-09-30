@@ -1,3 +1,3 @@
-{"type":"FeatureCollection","features":[
-{"type":"Feature","properties":{"name":"Denmark","description":"Travel Route to the Final","link":"https://cadasa.github.io/dmeuro20.geojson"},"geometry":{"type":"LineString","coordinates":[[0,0]]}}
-]}
+version https://git-lfs.github.com/spec/v1
+oid sha256:03caf264b8759d86c10124d923d017075c3f2bddefb0fb93014c6bdb18973f3a
+size 246

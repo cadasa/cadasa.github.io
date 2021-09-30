@@ -1,5 +1,3 @@
-{"type":"FeatureCollection","features":[
-{"type":"Feature","properties":{"name":"Denmark","description":"8588.66km","link":"https://cadasa.github.io/dmeuro20.geojson"},"geometry":{"type":"Point","coordinates":[12.5635, 55.6786]}},
-{"type":"Feature","properties":{"name":"England","description":"2867.23km","link":"https://cadasa.github.io/eneuro20.geojson"},"geometry":{"type":"Point","coordinates":[-0.1275, 51.5072]}},
-{"type":"Feature","properties":{"name":"Italy","description":"5693.89km","link":"https://cadasa.github.io/iteuro20.geojson"},"geometry":{"type":"Point","coordinates":[12.4828, 41.8931]}},
-{"type":"Feature","properties":{"name":"Spain","description":"13712.56km","link":"https://cadasa.github.io/speuro20.geojson"},"geometry":{"type":"Point","coordinates":[-5.9731, 37.3828]}}]}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9026fb817cdebe250d0ec566f7bef8dfe1440d2903da623f99fa662459042808
+size 804

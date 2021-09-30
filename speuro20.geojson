@@ -1,2 +1,3 @@
-{"type":"FeatureCollection","features":[
-{"type":"Feature","properties":{"name":"Spain","description":"Travel Route to the Final","color":"orange"},"geometry":{"type":"LineString","coordinates":[[-5.9731, 37.3828],[12.5635, 55.6786],[-5.9731, 37.3828],[30.3167, 59.95],[-5.9731, 37.3828],[-0.1275, 51.5072]]}}]}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e1638f066239f39e437f3415f98f5800fae3d47918a8a07ce7384d81463e7476
+size 314
