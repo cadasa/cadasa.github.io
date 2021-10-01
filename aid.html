@@ -1,19 +1,15 @@
-<div id="observablehq-tl1-7197734e"></div>
-<div id="observablehq-dashboard-7197734e"></div>
-<div id="observablehq-tl2-7197734e"></div>
-<div id="observablehq-dashboard2-7197734e"></div>
-<div id="observablehq-tl3-7197734e"></div>
-<div id="observablehq-dashboard3-7197734e"></div>
+<div id="observablehq-viewof-dataset-53a1fb20"></div>
+<div id="observablehq-tl-53a1fb20"></div>
+<div id="observablehq-dashboard-53a1fb20"></div>
+<div id="observablehq-viewof-content2-53a1fb20"></div>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/d/6f9951a7bc582963.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "tl1") return new Inspector(document.querySelector("#observablehq-tl1-7197734e"));
-  if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-7197734e"));
-  if (name === "tl2") return new Inspector(document.querySelector("#observablehq-tl2-7197734e"));
-  if (name === "dashboard2") return new Inspector(document.querySelector("#observablehq-dashboard2-7197734e"));
-  if (name === "tl3") return new Inspector(document.querySelector("#observablehq-tl3-7197734e"));
-  if (name === "dashboard3") return new Inspector(document.querySelector("#observablehq-dashboard3-7197734e"));
+  if (name === "viewof dataset") return new Inspector(document.querySelector("#observablehq-viewof-dataset-53a1fb20"));
+  if (name === "tl") return new Inspector(document.querySelector("#observablehq-tl-53a1fb20"));
+  if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-53a1fb20"));
+  if (name === "viewof content2") return new Inspector(document.querySelector("#observablehq-viewof-content2-53a1fb20"));
 });
 </script>
