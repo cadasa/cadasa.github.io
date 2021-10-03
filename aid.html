@@ -1,18 +1,16 @@
-<div id="observablehq-viewof-dataset-e972c462"></div>
-<div id="observablehq-tl-e972c462"></div>
-<div id="observablehq-dashboard-e972c462"></div>
-<div id="observablehq-clock-e972c462"></div>
-<div id="observablehq-viewof-chart-e972c462"></div>
+<div id="observablehq-dashboard22-506580e8"></div>
+<div id="observablehq-tl-506580e8"></div>
+<div id="observablehq-dashboard-506580e8"></div>
+<div id="observablehq-clock-506580e8"></div>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/d/6f9951a7bc582963.js?v=3";
+import define from "https://api.observablehq.com/@cadasa/global_chinese_finance.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "viewof dataset") return new Inspector(document.querySelector("#observablehq-viewof-dataset-e972c462"));
-  if (name === "tl") return new Inspector(document.querySelector("#observablehq-tl-e972c462"));
-  if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-e972c462"));
-  if (name === "clock") return new Inspector(document.querySelector("#observablehq-clock-e972c462"));
-  if (name === "viewof chart") return new Inspector(document.querySelector("#observablehq-viewof-chart-e972c462"));
+  if (name === "dashboard22") return new Inspector(document.querySelector("#observablehq-dashboard22-506580e8"));
+  if (name === "tl") return new Inspector(document.querySelector("#observablehq-tl-506580e8"));
+  if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-506580e8"));
+  if (name === "clock") return new Inspector(document.querySelector("#observablehq-clock-506580e8"));
   return ["guessTheMovie"].includes(name);
 });
 </script>
