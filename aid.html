@@ -1,16 +1,18 @@
-<div id="observablehq-dashboard22-506580e8"></div>
-<div id="observablehq-tl-506580e8"></div>
-<div id="observablehq-dashboard-506580e8"></div>
-<div id="observablehq-clock-506580e8"></div>
+<div id="observablehq-dashboard22-b0857388"></div>
+<div id="observablehq-tl-b0857388"></div>
+<div id="observablehq-dashboard-b0857388"></div>
+<div id="observablehq-clock-b0857388"></div>
+<div id="observablehq-mapboxMap-b0857388"></div>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/@cadasa/global_chinese_finance.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "dashboard22") return new Inspector(document.querySelector("#observablehq-dashboard22-506580e8"));
-  if (name === "tl") return new Inspector(document.querySelector("#observablehq-tl-506580e8"));
-  if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-506580e8"));
-  if (name === "clock") return new Inspector(document.querySelector("#observablehq-clock-506580e8"));
+  if (name === "dashboard22") return new Inspector(document.querySelector("#observablehq-dashboard22-b0857388"));
+  if (name === "tl") return new Inspector(document.querySelector("#observablehq-tl-b0857388"));
+  if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-b0857388"));
+  if (name === "clock") return new Inspector(document.querySelector("#observablehq-clock-b0857388"));
+  if (name === "mapboxMap") return new Inspector(document.querySelector("#observablehq-mapboxMap-b0857388"));
   return ["guessTheMovie"].includes(name);
 });
 </script>
