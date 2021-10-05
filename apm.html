@@ -1,0 +1,9 @@
+<div id="observablehq-viewof-plane-55159eb1"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/e1dfbc226acdb8ff.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof plane") return new Inspector(document.querySelector("#observablehq-viewof-plane-55159eb1"));
+});
+</script>
