@@ -276,7 +276,7 @@ body { margin: 0; padding: 0; }
         var popup = new mapboxgl.Popup({
         closeButton: false,
         offset: popupOffsets,
-        closeOnClick: false
+        closeOnClick: true
         });
         map.on('mouseenter', 'places', function (e) {
         // Change the cursor style as a UI indicator.
