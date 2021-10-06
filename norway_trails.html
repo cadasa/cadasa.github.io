@@ -274,9 +274,9 @@ body { margin: 0; padding: 0; }
         });
         // Create a popup, but don't add it to the map yet.
         var popup = new mapboxgl.Popup({
-        closeButton: false,
+        closeButton: true,
         offset: popupOffsets,
-        closeOnClick: true
+        closeOnClick: false
         });
         map.on('mouseenter', 'places', function (e) {
         // Change the cursor style as a UI indicator.
