@@ -243,6 +243,28 @@ cursor: ew-resize;
             }
         });
 
+        map.addSource('volcanoes', {
+            'type': 'geojson',
+            'data': 'https://cadasa.github.io/volcanoes.geojson',
+        });
+
+        map.addLayer({
+            'id': 'volcanoes',
+            'type': 'symbol',
+            'source': 'volcanoes',
+            'layout': {
+                'icon-image': 'volcano-11',
+//                'icon-color': 'orange',
+                'icon-size': .8,
+                'icon-allow-overlap': true},
+            'paint': {
+//                'triangle-stroke-width': 2,
+//                'triangle-stroke-color': 'orange',
+//                'triangle-color': 'orange'
+                  'icon-color': 'orange'
+            }
+        });
+
         map.addSource('earthquakes', {
             'type': 'geojson',
             'data': 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson',
