@@ -324,6 +324,26 @@ map.on('mouseleave', 'earthquake_circle', function () {
 map.getCanvas().style.cursor = '';
 });
 
+map.on('click', 'volcanoes', function (e) {
+  var title = '<p><b>' + e.features[0].properties['Volcano Name'] +'</b></p>' +
+              '<p>Primary volcano type: ' + e.features[0].properties["Primary Volcano Type"] +'</p>' +
+              'Last known eruption: ' + e.features[0].properties["Last Known Eruption"];
+new mapboxgl.Popup()
+.setLngLat(e.lngLat)
+.setHTML(title)
+.addTo(map);
+});
+
+// Change the cursor to a pointer when the mouse is over the states layer.
+map.on('mouseenter', 'volcanoes', function () {
+map.getCanvas().style.cursor = 'pointer';
+});
+
+// Change it back to a pointer when it leaves.
+map.on('mouseleave', 'volcanoes', function () {
+map.getCanvas().style.cursor = '';
+});
+
         map.addLayer({
             'id': 'earthquake_label',
             'type': 'symbol',
