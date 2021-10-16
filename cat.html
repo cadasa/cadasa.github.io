@@ -1,16 +1,20 @@
-<div id="observablehq-eadfce85">
-  <div class="observablehq-viewof-title"></div>
-  <div class="observablehq-title"></div>
-  <div class="observablehq-dashboard2"></div>
-  <div class="observablehq-mapboxMap"></div>
-</div>
+<div id="observablehq-viewof-title-90a940d2"></div>
+<div id="observablehq-dashboard2-90a940d2"></div>
+<div id="observablehq-viewof-dep-90a940d2"></div>
+<div id="observablehq-mapboxMap-90a940d2"></div>
+<div id="observablehq-viewof-route2-90a940d2"></div>
+<div id="observablehq-c-90a940d2"></div>
+<p>Credit: <a href="https://observablehq.com/@cadasa/airline_routes_covid_restrictions">Global Airline Direct Routes &amp; COVID Restrictions by cadasa</a></p>
+
 <script type="module">
-  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-  import define from "https://api.observablehq.com/@cadasa/airline_routes_covid_restrictions.js?v=3";
-  (new Runtime).module(define, name => {
-    if (name === "viewof title") return Inspector.into("#observablehq-eadfce85 .observablehq-viewof-title")();
-    if (name === "title") return Inspector.into("#observablehq-eadfce85 .observablehq-title")();
-    if (name === "dashboard2") return Inspector.into("#observablehq-eadfce85 .observablehq-dashboard2")();
-    if (name === "mapboxMap") return Inspector.into("#observablehq-eadfce85 .observablehq-mapboxMap")();
-  });
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/8e3e8e967b4cb187.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof title") return new Inspector(document.querySelector("#observablehq-viewof-title-90a940d2"));
+  if (name === "dashboard2") return new Inspector(document.querySelector("#observablehq-dashboard2-90a940d2"));
+  if (name === "viewof dep") return new Inspector(document.querySelector("#observablehq-viewof-dep-90a940d2"));
+  if (name === "mapboxMap") return new Inspector(document.querySelector("#observablehq-mapboxMap-90a940d2"));
+  if (name === "viewof route2") return true;
+  if (name === "c") return true;
+});
 </script>
