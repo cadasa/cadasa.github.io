@@ -1,0 +1,16 @@
+<div id="observablehq-eadfce85">
+  <div class="observablehq-viewof-title"></div>
+  <div class="observablehq-title"></div>
+  <div class="observablehq-dashboard2"></div>
+  <div class="observablehq-mapboxMap"></div>
+</div>
+<script type="module">
+  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+  import define from "https://api.observablehq.com/@cadasa/airline_routes_covid_restrictions.js?v=3";
+  (new Runtime).module(define, name => {
+    if (name === "viewof title") return Inspector.into("#observablehq-eadfce85 .observablehq-viewof-title")();
+    if (name === "title") return Inspector.into("#observablehq-eadfce85 .observablehq-title")();
+    if (name === "dashboard2") return Inspector.into("#observablehq-eadfce85 .observablehq-dashboard2")();
+    if (name === "mapboxMap") return Inspector.into("#observablehq-eadfce85 .observablehq-mapboxMap")();
+  });
+</script>
