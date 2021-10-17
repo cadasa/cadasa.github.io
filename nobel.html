@@ -1,0 +1,12 @@
+<div id="observablehq-title-63ec12f6"></div>
+<div id="observablehq-chart-63ec12f6"></div>
+<p>Credit: <a href="https://observablehq.com/d/5ced65fa37e8e549">Nobel Prize Awards by cadasa</a></p>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/5ced65fa37e8e549.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-63ec12f6"));
+  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-63ec12f6"));
+});
+</script>
