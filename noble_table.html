@@ -1,0 +1,11 @@
+<div id="observablehq-viewof-searchTime-eabeae9f"></div>
+<div id="observablehq-table-eabeae9f"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/5ced65fa37e8e549.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof searchTime") return new Inspector(document.querySelector("#observablehq-viewof-searchTime-eabeae9f"));
+  if (name === "table") return new Inspector(document.querySelector("#observablehq-table-eabeae9f"));
+});
+</script>
