@@ -1,11 +1,26 @@
-<div id="observablehq-title-63ec12f6"></div>
-<div id="observablehq-chart-63ec12f6"></div>
+<div id="observablehq-title-9216f7f4"></div>
+<div id="observablehq-chart-9216f7f4"></div>
+<div id="observablehq-title4-9216f7f4"></div>
+<div id="observablehq-viewof-searchTime-9216f7f4"></div>
+<div id="observablehq-table-9216f7f4"></div>
+<div id="observablehq-title3-9216f7f4"></div>
+<div id="observablehq-viewof-searchTime2-9216f7f4"></div>
+<div id="observablehq-table2-9216f7f4"></div>
+<div id="observablehq-viewof-searchTime3-9216f7f4"></div>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/d/5ced65fa37e8e549.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-63ec12f6"));
-  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-63ec12f6"));
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-9216f7f4"));
+  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-9216f7f4"));
+  if (name === "title4") return new Inspector(document.querySelector("#observablehq-title4-9216f7f4"));
+  if (name === "viewof searchTime") return new Inspector(document.querySelector("#observablehq-viewof-searchTime-9216f7f4"));
+  if (name === "table") return new Inspector(document.querySelector("#observablehq-table-9216f7f4"));
+  if (name === "title3") return new Inspector(document.querySelector("#observablehq-title3-9216f7f4"));
+  if (name === "viewof searchTime2") return new Inspector(document.querySelector("#observablehq-viewof-searchTime2-9216f7f4"));
+  if (name === "table2") return new Inspector(document.querySelector("#observablehq-table2-9216f7f4"));
+  if (name === "viewof searchTime3") return new Inspector(document.querySelector("#observablehq-viewof-searchTime3-9216f7f4"));
+  return ["lpc"].includes(name);
 });
 </script>
