@@ -279,7 +279,7 @@ body { margin: 0; padding: 0; }
                 coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
             }
 
-            new mapboxgl.Popup({closeButton: false, offset: popupOffsets})
+            new mapboxgl.Popup({closeButton: false})
                 .setLngLat(coordinates)
                 .setMaxWidth("800px")
 //                .setHTML(description)
@@ -290,7 +290,7 @@ body { margin: 0; padding: 0; }
         var popup = new mapboxgl.Popup({
         className: 'popupCustom',
         closeButton: true,
-        offset: popupOffsets,
+//        offset: popupOffsets,
         closeOnClick: false
         });
         map.on('mouseenter', 'places', function (e) {
