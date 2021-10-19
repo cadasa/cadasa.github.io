@@ -13,9 +13,14 @@ body { margin: 0; padding: 0; }
 </head>
 <body>
 <style>
-    .mapboxgl-popup {
-        max-width: 800px;
+    .mapboxgl-popup-content {
         font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+    .popupCustom .mapboxgl-popup-content {
+        max-width: 900px;
+        max-height: 300px;
+        overflow-y: scroll;
+        border-radius: 0px;
     }
 </style>
 <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
@@ -235,8 +240,17 @@ body { margin: 0; padding: 0; }
             'id': 'places',
             'type': 'symbol',
             'source': 'places',
+            'paint': {'text-color': 'darkgreen'},
             'layout': {
                 'icon-image': '{icon}',
+                'text-field': ['get', 'name'],
+                'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
+                'text-ignore-placement': true,
+                'text-offset': [5,5],
+                'text-radial-offset': .8,
+                'text-justify': 'auto',
+                'text-size': 10,
+                'text-allow-overlap':true,
                 'icon-allow-overlap': true
             }
         });
@@ -274,6 +288,7 @@ body { margin: 0; padding: 0; }
         });
         // Create a popup, but don't add it to the map yet.
         var popup = new mapboxgl.Popup({
+        className: 'popupCustom',
         closeButton: true,
         offset: popupOffsets,
         closeOnClick: false
@@ -283,7 +298,7 @@ body { margin: 0; padding: 0; }
         map.getCanvas().style.cursor = 'pointer';
 
           var coordinates = e.features[0].geometry.coordinates.slice();
-          var name = '<h2><center>' + e.features[0].properties.name +'</center></h2>' + e.features[0].properties.rating + e.features[0].properties.picture + '<p><center><i>(MB1 click to see the hiking trail in 3D)</p>';
+          var name = '<h2><center>' + e.features[0].properties.name +'</center></h2>' + e.features[0].properties.rating + e.features[0].properties.picture + '<center><i>(MB1 click to see the hiking trail in 3D)';
 
         // Ensure that if the map is zoomed out such that multiple
         // copies of the feature are visible, the popup appears
@@ -294,7 +309,7 @@ body { margin: 0; padding: 0; }
 
         // Populate the popup and set its coordinates
         // based on the feature found.
-          popup.setLngLat(coordinates).setHTML(name).addTo(map);
+          popup.setLngLat(coordinates).setHTML(name).setMaxWidth("250px").addTo(map);
           });
 
         map.on('mouseleave', 'places', function () {
