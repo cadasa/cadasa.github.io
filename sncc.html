@@ -1,0 +1,13 @@
+<div id="observablehq-title-0aa90e2a"></div>
+<div id="observablehq-sn-0aa90e2a"></div>
+<div id="observablehq-legend-0aa90e2a"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/b5befb35f6b466f1.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-0aa90e2a"));
+  if (name === "sn") return new Inspector(document.querySelector("#observablehq-sn-0aa90e2a"));
+  if (name === "legend") return new Inspector(document.querySelector("#observablehq-legend-0aa90e2a"));
+});
+</script>
