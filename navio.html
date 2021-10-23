@@ -1,0 +1,14 @@
+<div id="observablehq-controls-b6ef03b9"></div>
+<div id="observablehq-div-b6ef03b9"></div>
+<div id="observablehq-drawTable-b6ef03b9"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/f4a6c8dafb1a5766.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "controls") return new Inspector(document.querySelector("#observablehq-controls-b6ef03b9"));
+  if (name === "div") return new Inspector(document.querySelector("#observablehq-div-b6ef03b9"));
+  if (name === "drawTable") return new Inspector(document.querySelector("#observablehq-drawTable-b6ef03b9"));
+  return ["nv"].includes(name);
+});
+</script>
