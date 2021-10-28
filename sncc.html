@@ -1,13 +1,15 @@
-<div id="observablehq-title-74f66e26"></div>
-<div id="observablehq-dashboard2-74f66e26"></div>
-<div id="observablehq-viewof-guessTheMovie-74f66e26"></div>
+<div id="observablehq-title-ecbc2ed3"></div>
+<div id="observablehq-dashboard2-ecbc2ed3"></div>
+<div id="observablehq-viewof-guessTheMovie-ecbc2ed3"></div>
+<div id="observablehq-cl-ecbc2ed3"></div>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/d/b5befb35f6b466f1.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-74f66e26"));
-  if (name === "dashboard2") return new Inspector(document.querySelector("#observablehq-dashboard2-74f66e26"));
-  if (name === "viewof guessTheMovie") return new Inspector(document.querySelector("#observablehq-viewof-guessTheMovie-74f66e26"));
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-ecbc2ed3"));
+  if (name === "dashboard2") return new Inspector(document.querySelector("#observablehq-dashboard2-ecbc2ed3"));
+  if (name === "viewof guessTheMovie") return new Inspector(document.querySelector("#observablehq-viewof-guessTheMovie-ecbc2ed3"));
+  if (name === "cl") return new Inspector(document.querySelector("#observablehq-cl-ecbc2ed3"));
 });
 </script>
