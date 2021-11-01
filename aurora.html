@@ -1,15 +1,16 @@
-<div id="observablehq-title-78eb9e96"></div>
-<div id="observablehq-app3-78eb9e96"></div>
-<div id="observablehq-viewof-gauge2-78eb9e96"></div>
-<div id="observablehq-gauge3-78eb9e96"></div>
-
+<div id="observablehq-title-b62d2b34"></div>
+<div id="observablehq-app3-b62d2b34"></div>
+<div id="observablehq-legend2-b62d2b34"></div>
+<div id="observablehq-viewof-gauge2-b62d2b34"></div>
+<div id="observablehq-gauge3-b62d2b34"></div>
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/@cadasa/aurora_forecast.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-78eb9e96"));
-  if (name === "app3") return new Inspector(document.querySelector("#observablehq-app3-78eb9e96"));
-  if (name === "viewof gauge2") return new Inspector(document.querySelector("#observablehq-viewof-gauge2-78eb9e96"));
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-b62d2b34"));
+  if (name === "app3") return new Inspector(document.querySelector("#observablehq-app3-b62d2b34"));
+  if (name === "legend2") return new Inspector(document.querySelector("#observablehq-legend2-b62d2b34"));
+  if (name === "viewof gauge2") return new Inspector(document.querySelector("#observablehq-viewof-gauge2-b62d2b34"));
   if (name === "gauge3") return true;
 });
 </script>
