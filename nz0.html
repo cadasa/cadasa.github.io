@@ -1,0 +1,11 @@
+<div id="observablehq-viewof-Title-0066ef30"></div>
+<div id="observablehq-controls-0066ef30"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/f4aae53cd933d024@2088.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof Title") return new Inspector(document.querySelector("#observablehq-viewof-Title-0066ef30"));
+  if (name === "controls") return new Inspector(document.querySelector("#observablehq-controls-0066ef30"));
+});
+</script>
