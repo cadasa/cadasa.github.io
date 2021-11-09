@@ -1,0 +1,18 @@
+<div id="observablehq-viewof-Title-1eabd68a"></div>
+<div id="observablehq-selection-1eabd68a"></div>
+<div id="observablehq-viewof-myvar2-1eabd68a"></div>
+<div id="observablehq-controls-1eabd68a"></div>
+<div id="observablehq-conclusion-1eabd68a"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/ac4a181e60b10557.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof Title") return new Inspector(document.querySelector("#observablehq-viewof-Title-1eabd68a"));
+  if (name === "selection") return new Inspector(document.querySelector("#observablehq-selection-1eabd68a"));
+  if (name === "viewof myvar2") return new Inspector(document.querySelector("#observablehq-viewof-myvar2-1eabd68a"));
+  if (name === "controls") return new Inspector(document.querySelector("#observablehq-controls-1eabd68a"));
+  if (name === "conclusion") return new Inspector(document.querySelector("#observablehq-conclusion-1eabd68a"));
+  return ["selection2","selection3","map2","count","legend"].includes(name);
+});
+</script>
