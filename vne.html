@@ -1,9 +1,16 @@
-<div id="observablehq-chart-a97a3d0b"></div>
+<div id="observablehq-title-9d32769a"></div>
+<div id="observablehq-viewof-start_year-9d32769a"></div>
+<div id="observablehq-chart-9d32769a"></div>
+<div id="observablehq-pie-9d32769a"></div>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/d/1cd9fe1f4c089ad0@637.js?v=3";
+import define from "https://api.observablehq.com/d/1cd9fe1f4c089ad0.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-a97a3d0b"));
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-9d32769a"));
+  if (name === "viewof start_year") return new Inspector(document.querySelector("#observablehq-viewof-start_year-9d32769a"));
+  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-9d32769a"));
+  if (name === "pie") return true
+  return ["alltotal","x","line","line2","Tooltip","hx","y","r","chartData","year"].includes(name);
 });
 </script>
