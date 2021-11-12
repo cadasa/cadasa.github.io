@@ -1,0 +1,9 @@
+<div id="observablehq-chart-a97a3d0b"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/1cd9fe1f4c089ad0@637.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-a97a3d0b"));
+});
+</script>
