@@ -1,17 +1,19 @@
-<div id="observablehq-title-9d32769a"></div>
-<div id="observablehq-viewof-start_year-9d32769a"></div>
-<div id="observablehq-chart-9d32769a"></div>
-<div id="observablehq-pie-9d32769a"></div>
+<div id="observablehq-title-9cd06ff4"></div>
+<div id="observablehq-viewof-start_year-9cd06ff4"></div>
+<div id="observablehq-chart-9cd06ff4"></div>
+<div id="observablehq-pie-9cd06ff4"></div>
+<div id="observablehq-style-9cd06ff4"></div>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/d/1cd9fe1f4c089ad0.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-9d32769a"));
-  if (name === "viewof start_year") return new Inspector(document.querySelector("#observablehq-viewof-start_year-9d32769a"));
-  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-9d32769a"));
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-9cd06ff4"));
+  if (name === "viewof start_year") return new Inspector(document.querySelector("#observablehq-viewof-start_year-9cd06ff4"));
+  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-9cd06ff4"));
   if (name === "pie") return true
-  return ["alltotal","x","line","line2","Tooltip","hx","y","r","chartData","year"].includes(name);
+  if (name === "style") true
+  return ["alltotal","x","line","line2","Tooltip","hx","y","drawAxisy","r","chartData","year"].includes(name);
 });
 </script>
 
