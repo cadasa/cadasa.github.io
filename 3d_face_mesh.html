@@ -1,12 +1,12 @@
-<div id="observablehq-12fb52ee">
-  <div class="observablehq-canvas"></div>
-  <div class="observablehq-viewof-selection"></div>
-</div>
+<div id="observablehq-viewof-selection-90662d89"></div>
+<div id="observablehq-canvas-90662d89"></div>
+
 <script type="module">
-  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-  import define from "https://api.observablehq.com/@radames/face-landmarks-detection-tensorflow-js.js?v=3";
-  (new Runtime).module(define, name => {
-    if (name === "canvas") return Inspector.into("#observablehq-12fb52ee .observablehq-canvas")();
-    if (name === "viewof selection") return Inspector.into("#observablehq-12fb52ee .observablehq-viewof-selection")();
-  });
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/bc9ccb8a6b8435cc.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof selection") return new Inspector(document.querySelector("#observablehq-viewof-selection-90662d89"));
+  if (name === "canvas") return new Inspector(document.querySelector("#observablehq-canvas-90662d89"));
+  return ["predictions","updateScattterPointsLoop","model","predictionsGen"].includes(name);
+});
 </script>
