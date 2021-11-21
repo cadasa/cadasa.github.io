@@ -1,0 +1,15 @@
+<div id="observablehq-title2-c9082012"></div>
+<div id="observablehq-dashboard2-c9082012"></div>
+<div id="observablehq-chart2-c9082012"></div>
+<div id="observablehq-des-c9082012"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/0913c9814b77678c.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "title2") return new Inspector(document.querySelector("#observablehq-title2-c9082012"));
+  if (name === "dashboard2") return new Inspector(document.querySelector("#observablehq-dashboard2-c9082012"));
+  if (name === "chart2") return new Inspector(document.querySelector("#observablehq-chart2-c9082012"));
+  if (name === "des") return new Inspector(document.querySelector("#observablehq-des-c9082012"));
+});
+</script>
