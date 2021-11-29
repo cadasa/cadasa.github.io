@@ -1,22 +1,15 @@
-<div id="observablehq-title-c2be6c4f"></div>
-<div id="observablehq-age-c2be6c4f"></div>
-<div id="observablehq-viewof-select-c2be6c4f"></div>
-<div id="observablehq-viewof-toggle-c2be6c4f"></div>
-<div id="observablehq-visual-c2be6c4f"></div>
-<div id="observablehq-legend-c2be6c4f"></div>
-<div id="observablehq-viewof-projName-c2be6c4f"></div>
+<div id="observablehq-title-b03ba782"></div>
+<div id="observablehq-dashboard2-b03ba782"></div>
+<div id="observablehq-visual-b03ba782"></div>
+<div id="observablehq-legend-b03ba782"></div>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/@cadasa/temperature-change-since-the-last-glacial-maximum-24000-ye.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-c2be6c4f"));
-  if (name === "age") return new Inspector(document.querySelector("#observablehq-age-c2be6c4f"));
-  if (name === "viewof select") return new Inspector(document.querySelector("#observablehq-viewof-select-c2be6c4f"));
-  if (name === "viewof toggle") return new Inspector(document.querySelector("#observablehq-viewof-toggle-c2be6c4f"));
-  if (name === "visual") return new Inspector(document.querySelector("#observablehq-visual-c2be6c4f"));
-  if (name === "legend") return new Inspector(document.querySelector("#observablehq-legend-c2be6c4f"));
-  if (name === "viewof projName") return new Inspector(document.querySelector("#observablehq-viewof-projName-c2be6c4f"));
-  return ["sat_sel","values","polygons","map","color","projection"].includes(name);
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-b03ba782"));
+  if (name === "dashboard2") return new Inspector(document.querySelector("#observablehq-dashboard2-b03ba782"));
+  if (name === "visual") return new Inspector(document.querySelector("#observablehq-visual-b03ba782"));
+  if (name === "legend") return new Inspector(document.querySelector("#observablehq-legend-b03ba782"));
 });
 </script>
