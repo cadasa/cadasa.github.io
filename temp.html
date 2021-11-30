@@ -13,3 +13,17 @@ new Runtime().module(define, name => {
   if (name === "legend") return new Inspector(document.querySelector("#observablehq-legend-b03ba782"));
 });
 </script>
+
+<div id="observablehq-chart-82ec2753"></div>
+<div id="observablehq-style-82ec2753"></div>
+<div id="observablehq-openaicss-82ec2753"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/b66fbd6e5a722317.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-82ec2753"));
+  if (name === "style") return true;
+  if (name === "openaicss") return true;
+});
+</script>
