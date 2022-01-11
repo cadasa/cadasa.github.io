@@ -1,0 +1,11 @@
+<div id="observablehq-pic-073df6bb"></div>
+<div id="observablehq-viewof-t-073df6bb"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/91d1bef62b51242f.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "pic") return new Inspector(document.querySelector("#observablehq-pic-073df6bb"));
+  if (name === "viewof t") return new Inspector(document.querySelector("#observablehq-viewof-t-073df6bb"));
+});
+</script>
