@@ -1,0 +1,9 @@
+<div id="observablehq-adobe_col-b5d015f0"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/95d6a4bc40ce1e33.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "adobe_col") return new Inspector(document.querySelector("#observablehq-adobe_col-b5d015f0"));
+});
+</script>
