@@ -1,0 +1,11 @@
+<div id="observablehq-viewof-mode-3732b82a"></div>
+<div id="observablehq-viewof-both-3732b82a"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/638f5f15baf80d09.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof mode") return new Inspector(document.querySelector("#observablehq-viewof-mode-3732b82a"));
+  if (name === "viewof both") return new Inspector(document.querySelector("#observablehq-viewof-both-3732b82a"));
+});
+</script>
