@@ -1,0 +1,9 @@
+<div id="observablehq-help-c4251f60"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/3d-virtual-gallery.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "help") return new Inspector(document.querySelector("#observablehq-help-c4251f60"));
+});
+</script>
