@@ -1,0 +1,11 @@
+<div id="observablehq-title-d0e5688a"></div>
+<div id="observablehq-chart-d0e5688a"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/untitled/2.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-d0e5688a"));
+  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-d0e5688a"));
+});
+</script>
