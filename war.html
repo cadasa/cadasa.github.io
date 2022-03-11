@@ -1,0 +1,11 @@
+<div id="observablehq-war1-d39cf3cc"></div>
+<div id="observablehq-war2-d39cf3cc"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/b5befb35f6b466f1.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "war1") return new Inspector(document.querySelector("#observablehq-war1-d39cf3cc"));
+  if (name === "war2") return new Inspector(document.querySelector("#observablehq-war2-d39cf3cc"));
+});
+</script>
