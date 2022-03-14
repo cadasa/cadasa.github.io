@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body { margin: 1000; padding: 1000;}
+</style>
+</head>
+<body>
+  <div id="observablehq-dashboard-197e8715"></div>
+  <div id="observablehq-cp-197e8715"></div>
+  <div id="observablehq-cp3-197e8715"></div>
+  <script type="module">
+  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+  import define from "https://api.observablehq.com/d/33630668c71fa5e8.js?v=3";
+  new Runtime().module(define, name => {
+    if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-197e8715"));
+    if (name === "cp") return true;
+    if (name === "cp3") return true;
+  });
+  </script>
+</body>
+</html>
