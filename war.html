@@ -1,13 +1,15 @@
-<div id="observablehq-chart-841b0b6b"></div>
-<div id="observablehq-viewof-yearn-841b0b6b"></div>
-<div id="observablehq-war-841b0b6b"></div>
+<div id="observablehq-chart-2a681e18"></div>
+<div id="observablehq-viewof-yearn-2a681e18"></div>
+<div id="observablehq-war-2a681e18"></div>
+<div id="observablehq-init-2a681e18"></div>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/d/b5befb35f6b466f1.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-841b0b6b"));
-  if (name === "viewof yearn") return new Inspector(document.querySelector("#observablehq-viewof-yearn-841b0b6b"));
-  if (name === "war") return new Inspector(document.querySelector("#observablehq-war-841b0b6b"));
+  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-2a681e18"));
+  if (name === "viewof yearn") return new Inspector(document.querySelector("#observablehq-viewof-yearn-2a681e18"));
+  if (name === "war") return new Inspector(document.querySelector("#observablehq-war-2a681e18"));
+  if (name === "init") return true;
 });
 </script>
