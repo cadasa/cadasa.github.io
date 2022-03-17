@@ -166,6 +166,27 @@ body { margin: 0; padding: 0; }
           }
         }
 
+        map.addSource('eez', {
+            type: 'geojson',
+            // Line metrics is required to use the 'line-progress' property
+            //lineMetrics: false,
+            data: 'https://cadasa.github.io/eez.geojson'
+        });
+
+        map.addLayer({
+                'id': 'eez',
+                'type': 'line',
+                'source': 'eez',
+                paint: {
+                    'line-color': 'grey',
+                    'line-width': 1
+                },
+                layout: {
+                    'line-cap': 'round',
+                    'line-join': 'round'
+                },
+            });
+
         map.addSource('10m-bathymetry-81bsvj', {
           type: 'vector',
           url: 'mapbox://mapbox.9tm8dx88'
@@ -196,6 +217,34 @@ body { margin: 0; padding: 0; }
         'land-structure-polygon'
         );
 
+        const popup2 = new mapboxgl.Popup({ closeButton: true });
+				map.on('mouseenter', 'eez', function (e) {
+			// Change the cursor to a pointer when the mouse is over the states layer.
+			  map.getCanvas().style.cursor = 'pointer';
+				const pinRoute = e.features[0].geometry.coordinates;
+			  var title = '<h3><center>' + e.features[0].properties.LINE_NAME + '</h3><p>' +
+				//	'<center>' + e.features[0].properties.description + '</p>' +
+			    '<center><i>Line type: ' + e.features[0].properties.LINE_TYPE;
+
+			  // Ensure that if the map is zoomed out such that multiple
+			  // copies of the feature are visible, the popup appears
+			  // over the copy being pointed to.
+			  //while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+			  //coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+			  //}
+
+			  // Populate the popup and set its coordinates
+			  // based on the feature found.
+			  popup2//.setLngLat(pinRoute[0]).setHTML(title).addTo(map);
+			     .setLngLat(e.lngLat)
+			     .setHTML(title)
+			     .addTo(map);
+			});
+			// Change it back to a pointer when it leaves.
+			map.on('mouseleave', 'line', function () {
+			map.getCanvas().style.cursor = '';
+//			popup2.remove();
+			});
 
 
     })();
