@@ -1,0 +1,11 @@
+<div id="observablehq-m4-48b9cfee"></div>
+<div id="observablehq-eurostatmap-48b9cfee"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/alcohol-consumption-covid-19-deaths-in-europe.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "m4") return new Inspector(document.querySelector("#observablehq-m4-48b9cfee"));
+  if (name === "eurostatmap") return true;
+});
+</script>
