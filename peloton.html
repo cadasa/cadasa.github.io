@@ -1,0 +1,21 @@
+<div id="observablehq-title-f4fd9c6c"></div>
+<div id="observablehq-dashboard2-f4fd9c6c"></div>
+<div id="observablehq-rider-f4fd9c6c"></div>
+<div id="observablehq-cpt-f4fd9c6c"></div>
+<div id="observablehq-team-f4fd9c6c"></div>
+<div id="observablehq-dashboard-f4fd9c6c"></div>
+<div id="observablehq-flag-f4fd9c6c"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/b5d0d61814600b79.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-f4fd9c6c"));
+  if (name === "dashboard2") return new Inspector(document.querySelector("#observablehq-dashboard2-f4fd9c6c"));
+  if (name === "rider") return new Inspector(document.querySelector("#observablehq-rider-f4fd9c6c"));
+  if (name === "cpt") return new Inspector(document.querySelector("#observablehq-cpt-f4fd9c6c"));
+  if (name === "team") return new Inspector(document.querySelector("#observablehq-team-f4fd9c6c"));
+  if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-f4fd9c6c"));
+  if (name === "flag") return new Inspector(document.querySelector("#observablehq-flag-f4fd9c6c"));
+});
+</script>
