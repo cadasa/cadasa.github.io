@@ -52,9 +52,9 @@ body { margin: 0; padding: 0; }
             map.once('load')
         ]);
 				// this is the path the camera will look at
-				const targetRoute = routes.target;
+				//const targetRoute = routes.target;
 				// this is the path the camera will move along
-				const cameraRoute = routes.camera;
+				//const cameraRoute = routes.camera;
         // Add a line feature and layer. This feature will get updated as we progress the animation
         map.addSource('line', {
             type: 'geojson',
@@ -65,7 +65,7 @@ body { margin: 0; padding: 0; }
 							'properties': {},
 							'geometry': {
 								'type': 'LineString',
-								'coordinates': targetRoute
+								'coordinates': pinRouteGeojson
 							}
 						}
         });
@@ -113,8 +113,8 @@ body { margin: 0; padding: 0; }
         // The total animation duration, in milliseconds
 				map.on('click', 'line', function (e) {
 					const pinRoute = e.features[0].geometry.coordinates;
-					//const cameraRoute = e.features[0].geometry.coordinates.camera;
-					var name = "Flight MU5735";
+					const cameraRoute = e.features[0].geometry.coordinates;
+					var name = e.features[0].properties.name;
 	        // Create the marker and popup that will display the elevation queries
 	        const popup = new mapboxgl.Popup({ closeButton: false });
 	        const marker = new mapboxgl.Marker({
