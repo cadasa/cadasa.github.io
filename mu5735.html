@@ -48,7 +48,7 @@ body { margin: 0; padding: 0; }
         const [pinRouteGeojson, _] = await Promise.all([
             fetch(
                 'https://cadasa.github.io/MU5735.geojson'
-            ).then((response) => response.text()),
+            ).then((response) => response.json()),
             map.once('load')
         ]);
 				// this is the path the camera will look at
