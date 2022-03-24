@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body { margin: 1000; padding: 1000;}
+</style>
+</head>
+<body>
+<div id="observablehq-viewof-file1-9d78917c"></div>
+<div id="observablehq-viewof-type-9d78917c"></div>
+<div id="observablehq-viewof-param-9d78917c"></div>
+<div id="observablehq-chart-9d78917c"></div>
+<div id="observablehq-tttt-9d78917c"></div>
+<div id="observablehq-equation-9d78917c"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/4a90ca4e9f859e4b.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof file1") return new Inspector(document.querySelector("#observablehq-viewof-file1-9d78917c"));
+  if (name === "viewof type") return new Inspector(document.querySelector("#observablehq-viewof-type-9d78917c"));
+  if (name === "viewof param") return new Inspector(document.querySelector("#observablehq-viewof-param-9d78917c"));
+  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-9d78917c"));
+  if (name === "tttt") return new Inspector(document.querySelector("#observablehq-tttt-9d78917c"));
+  if (name === "equation") return new Inspector(document.querySelector("#observablehq-equation-9d78917c"));
+  return ["pts2","linear","quad","poly","exp","log","pow","param2","polynomialRegression"].includes(name);
+});
+</script>
+</body>
+</html>
