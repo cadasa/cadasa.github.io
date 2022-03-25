@@ -6,23 +6,21 @@ body { margin: 1000; padding: 1000;}
 </style>
 </head>
 <body>
-<div id="observablehq-text-1ae55ca2"></div>
-<div id="observablehq-viewof-pts-1ae55ca2"></div>
-<div id="observablehq-viewof-newSvg-1ae55ca2"></div>
-<div id="observablehq-viewof-order-1ae55ca2"></div>
-<div id="observablehq-equation-1ae55ca2"></div>
+  <div id="observablehq-dashboard1-fd4d5718"></div>
+  <div id="observablehq-viewof-pts-fd4d5718"></div>
+  <div id="observablehq-dashboard2-fd4d5718"></div>
+  <div id="observablehq-equation-fd4d5718"></div>
 
-<script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/d/a57801e081eafd30.js?v=3";
-new Runtime().module(define, name => {
-  if (name === "text") return new Inspector(document.querySelector("#observablehq-text-1ae55ca2"));
-  if (name === "viewof pts") return new Inspector(document.querySelector("#observablehq-viewof-pts-1ae55ca2"));
-  if (name === "viewof newSvg") return new Inspector(document.querySelector("#observablehq-viewof-newSvg-1ae55ca2"));
-  if (name === "viewof order") return new Inspector(document.querySelector("#observablehq-viewof-order-1ae55ca2"));
-  if (name === "equation") return new Inspector(document.querySelector("#observablehq-equation-1ae55ca2"));
-  return ["A","Amat","svd","viewof u","pinv","beta","polyStr","y","data","addline","viewof sigma","viewof vT","ymat","drawPts","xDomain","xMin","x","xMax","svg","poly"].includes(name);
-});
-</script>
+  <script type="module">
+  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+  import define from "https://api.observablehq.com/d/a57801e081eafd30.js?v=3";
+  new Runtime().module(define, name => {
+    if (name === "dashboard1") return new Inspector(document.querySelector("#observablehq-dashboard1-fd4d5718"));
+    if (name === "viewof pts") return new Inspector(document.querySelector("#observablehq-viewof-pts-fd4d5718"));
+    if (name === "dashboard2") return new Inspector(document.querySelector("#observablehq-dashboard2-fd4d5718"));
+    if (name === "equation") return new Inspector(document.querySelector("#observablehq-equation-fd4d5718"));
+    return ["A","Amat","svd","viewof u","pinv","beta","polyStr","y","data","addline","viewof sigma","viewof vT","ymat","drawPts","xDomain","xMin","x","xMax"].includes(name);
+  });
+  </script>
 </body>
 </html>
