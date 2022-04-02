@@ -30,10 +30,10 @@ body { margin: 0; padding: 0; }
     (async () => {
         const map = new mapboxgl.Map({
             container: 'map',
-            zoom: 12.5,
-            center: [6.635538,59.041038,856],
+            zoom: 12,
+            center: [6.62715, 60.13304, 432.0],
             pitch: 60,
-            bearing:240,
+            bearing:0,
             style: 'mapbox://styles/mapbox/satellite-streets-v11',
             interactive: true,
             hash: true
@@ -58,7 +58,7 @@ body { margin: 0; padding: 0; }
         // Start downloading the route data, and wait for map load to occur in parallel
         const [pinRouteGeojson, _] = await Promise.all([
             fetch(
-                'https://cadasa.github.io/trolltunga.geojson'
+                'https://cadasa.github.io/Trolltunga.geojson'
             ).then((response) => response.json()),
             map.once('load')
         ]);
