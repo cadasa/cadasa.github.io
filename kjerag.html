@@ -65,7 +65,7 @@ body { margin: 0; padding: 0; }
 
         const pinRoute = pinRouteGeojson.features[0].geometry.coordinates;
         // Create the marker and popup that will display the elevation queries
-        const popup = new mapboxgl.Popup({ closeButton: true, closeOnClick: false, offset: 10 });
+        const popup = new mapboxgl.Popup({ closeButton: true, closeOnClick: false, offset: 15 });
 				// create DOM element for the marker
 				const el = document.createElement('div');
 				el.id = 'marker';
@@ -162,7 +162,9 @@ body { margin: 0; padding: 0; }
 				xyz.push({
           'type': 'Feature',
           'properties':{
-          'distance': Math.round(pathDistance * animationPhase*100)/100
+					'icon': 'mountain-15',
+					'elevation': elevation,
+					'distance': Math.round(pathDistance * animationPhase*100)/100
           },
           'geometry': {
           'type': 'Point',
@@ -192,15 +194,56 @@ body { margin: 0; padding: 0; }
         }
 
         window.requestAnimationFrame(frame);
-
-		const popup2 = new mapboxgl.Popup({ closeButton: true, closeOnClick: false });
-		map.on('mouseenter', 'line', function () {
+		await map.once('idle');
+		const ttt = {'type': 'FeatureCollection',
+  							'features': xyz};
+		map.addSource('places', {
+										// This GeoJSON contains features that include an "icon"
+										// property. The value of the "icon" property corresponds
+										// to an image in the Mapbox Streets style's sprite.
+									'type': 'geojson',
+									'data': ttt});
+		map.addLayer({
+											'id': 'places',
+											'type': 'symbol',
+											'source': 'places',
+											'paint': {'text-color': 'darkgreen', 'icon-opacity': 0},
+											'layout': {
+													'icon-image': '{icon}',
+													//'text-field': ['get', 'distance'],
+													'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
+													'text-ignore-placement': true,
+													'text-offset': [5,5],
+													'text-radial-offset': .8,
+													'text-justify': 'auto',
+													'text-size': 10,
+													'text-allow-overlap':true,
+													'icon-allow-overlap': true
+											}
+									});
+									var markerHeight = 50, markerRadius = 10, linearOffset = 25;
+									var popupOffsets = {
+									'top': [0, 0],
+									'top-left': [0,0],
+									'top-right': [0,0],
+									'bottom': [0, 0],
+									'bottom-left': [linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
+									'bottom-right': [-linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
+									'left': [markerRadius, (markerHeight - markerRadius) * -1],
+									'right': [-markerRadius, (markerHeight - markerRadius) * -1]
+								};
+		const popup2 = new mapboxgl.Popup({ anchor: 'top',
+																			closeButton: true, closeOnClick: false, offset: popupOffsets });
+		const popup3 = new mapboxgl.Popup({ anchor: 'bottom',
+																			closeButton: true, closeOnClick: false, offset: popupOffsets });
+		map.on('mouseenter', 'places', function () {
 		map.getCanvas().style.cursor = 'pointer';
 		});
-		map.on('click', 'line', function (e) {
+		map.on('click', 'places', function (e) {
 	// Change the cursor to a pointer when the mouse is over the states layer.
-			const pinRoute = e.features[0].geometry.coordinates;
-		var title = '<svg class="popup-d3-svg" style="margin: 0 auto; display: block;"></svg>'
+			var elev = e.features[0].properties.elevation;
+			var dist = e.features[0].properties.distance;
+			var title = '<svg class="popup-d3-svg" style="margin: 0 auto; display: block;"></svg>'
 		//	'<center>' + e.features[0].properties.description + '</p>' +
 		//	'<center><i>(MB1 click to see animation)';
 
@@ -213,10 +256,16 @@ body { margin: 0; padding: 0; }
 
 		// Populate the popup and set its coordinates
 		// based on the feature found.
-		popup2.setLngLat(pinRoute[0]).setHTML(title).addTo(map);
-	//.setLngLat(e.lngLat)
-	//.setHTML(title)
-	//.addTo(map);
+		popup2//.setLngLat(pinRoute[0]).setHTML(title).addTo(map);
+		.setLngLat(e.lngLat)
+		.setHTML(title)
+		.addTo(map);
+
+		popup3
+		.setHTML('Altitude: ' + elev + 'm<br/>' + 'Distance: ' + dist + 'km<br/>')
+		.setLngLat(e.lngLat)
+		.addTo(map);
+
 	const svgElement = popup2.getElement().getElementsByClassName('popup-d3-svg')[0];
 
 /*const svg = d3.select(svgElement)
@@ -258,6 +307,8 @@ svg.append('line')
    strokeWidth = 1.5,
    strokeOpacity = 1,
    focusColor = "#323232",
+	 dist = 1,
+	 elev = 800,
    markerFilter = d => { },
    markerText = d => y(d)
 } = {}) {
@@ -275,7 +326,7 @@ svg.append('line')
 
    // Compute default domains.
    if (xDomain === undefined) xDomain = d3.extent(X);
-   if (yDomain === undefined) yDomain = [0, d3.max(Y)];
+   if (yDomain === undefined) yDomain = [d3.min(Y), d3.max(Y)];
 
    // Construct scales and axes.
    const xScale = xType(xDomain, xRange);
@@ -344,7 +395,7 @@ svg.append('line')
       .join(
          enter => enter.append("g")
             .attr("transform", d => `translate(${xScale(x(d))},${yScale(y(d))})`)
-            .attr("font-size", 10)
+            .attr("font-size", 20)
             .call(g => g.append("text")
                .attr("text-anchor", "middle")
                .attr("y", -5)
@@ -352,7 +403,7 @@ svg.append('line')
                .text(markerText))
             .call(g => g.append("line")
                .attr("y2", d => height - marginBottom - yScale(y(d)))
-               .attr("style", "stroke: #08b8e8; stroke-dasharray: 4"))
+               .attr("style", "stroke: #08b8e8; stroke-dasharray: 4; stroke-width: 5"))
       );
 
    // Create elevation line
@@ -365,21 +416,42 @@ svg.append('line')
       .attr("stroke-opacity", strokeOpacity)
       .attr("d", line(I));
 
+			svg
+				 .append("g")
+				 .attr("transform", `translate(${xScale(dist)},${yScale(elev)})`)
+				 //.style("opacity", 0)
+				 .call(g => g.append("circle")
+				 //.attr("font-size", 10)
+				 //.call(g => g.append("text")
+						//.attr("text-anchor", "middle")
+						//.attr("y", -5)
+				 		//.attr("x", dist)
+				 		//.attr("y", elev)
+						.attr("r", 10)
+						.style("fill", 'red'))
+						//.text("\u25EC"))
+				 .call(g => g.append("line")
+				 		//.attr("x", dist)
+				 		//.attr("y", elev)
+						.attr("y2", height - marginBottom - yScale(elev))
+						.attr("style", "stroke: 'red'; stroke-dasharray: 4; stroke-width: 20"));
+
    // Create the circle that travels along the curve
    const focus = svg
       .append("g")
       .style("opacity", 0)
       .call(g => g.append("circle")
-         .attr("r", 2)
+         .attr("r", 10)
          .style("fill", focusColor))
       .call(g => g.append("line")
-         .attr("style", `stroke: ${focusColor}; stroke-dasharray: 4`));
+        .attr("style", `stroke: ${focusColor}; stroke-dasharray: 4; stroke-width: 5`));
+
 
    // Create brushing
    const brush = d3.brushX()
       .extent([
          [marginLeft, 0.5],
-         [width - marginRight, 120 - marginBottom + 0.5]
+         [width - marginRight, height - marginBottom + 0.5]
       ])
       .on("end", e => {
          if (e.selection) {
@@ -427,10 +499,12 @@ svg.append('line')
             width: 1000,
             height: 400,
             x: d => d.properties.distance, // mi
-            y: d => d.geometry.coordinates[2], // m
-            //markerText: "\u25EC",
-           // markerFilter: d => d.properties.name
-            //    && d.properties.name
+            y: d => d.geometry.coordinates[2],
+						dist: dist,
+						elev: elev,// m
+            markerText: "\u25EC",
+            markerFilter: d => d.properties.distance
+                && (d.properties.distance === 0.69 || d.properties.distance === 1.62 || d.properties.distance === 3.09)
              //       .toUpperCase()
              //       .indexOf("TRIG POINT") > -1
         });
