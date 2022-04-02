@@ -335,7 +335,7 @@ svg.append('line')
    const yAxis = d3.axisLeft(yScale).ticks(height / 40, yFormat);
    const yAxis2 = d3.axisRight(yScale).ticks(height / 40, yFormat);
 
-   // Construct a line generator.
+	 // Construct a line generator.
    const line = d3.line()
       .defined(i => D[i])
       .curve(curve)
@@ -389,7 +389,7 @@ svg.append('line')
          .attr("text-anchor", "start")
          .text(yLabel));
 
-   // Create indicator lines
+	   // Create indicator lines
    svg.selectAll(null)
       .data(d3.filter(data, markerFilter))
       .join(
@@ -406,7 +406,28 @@ svg.append('line')
                .attr("style", "stroke: #08b8e8; stroke-dasharray: 4; stroke-width: 5"))
       );
 
-   // Create elevation line
+			svg.append("g")
+								.attr("transform", `translate(${marginLeft}, 0)`)
+								.attr("font-size", 30)
+								.call(g => g.append("text")
+									 .attr("transform", "rotate(-90)")
+									 .attr("x", -height/2.2)
+									 .attr("y", 30)
+									 .attr("fill", "red")
+									 .attr("text-anchor", "middle")
+									 .text("Elevation gain: " + (d3.max(Y)-d3.min(Y)) + " m"));
+
+			svg.append("g")
+				 	      .attr("transform", `translate(${width/2},${height-marginBottom})`)
+								.attr("font-size", 30)
+				 	      .call(g => g.append("text")
+				 	         //.attr("x", -0.4*marginRight)
+				 	         .attr("y", -5)
+				 	         .attr("fill", "red")
+				 	         .attr("text-anchor", "middle")
+				 	         .text("Total distance: " + d3.max(X) + " km"));
+
+	 // Create elevation line
    svg.append("path")
       .attr("fill", "none")
       .attr("stroke", color)
@@ -414,7 +435,7 @@ svg.append('line')
       .attr("stroke-linecap", strokeLinecap)
       .attr("stroke-linejoin", strokeLinejoin)
       .attr("stroke-opacity", strokeOpacity)
-      .attr("d", line(I));
+			.attr("d", line(I));
 
 			svg
 				 .append("g")
@@ -440,10 +461,15 @@ svg.append('line')
    const focus = svg
       .append("g")
       .style("opacity", 0)
+			.attr("font-size", 30)
       .call(g => g.append("circle")
          .attr("r", 10)
          .style("fill", focusColor))
-      .call(g => g.append("line")
+			.call(g => g.append("text")
+	 				 //.attr("x", -0.4*marginRight)
+	 			.attr("fill", focusColor)
+	 			.attr("text-anchor", "middle"))
+			.call(g => g.append("line")
         .attr("style", `stroke: ${focusColor}; stroke-dasharray: 4; stroke-width: 5`));
 
 
@@ -480,12 +506,16 @@ svg.append('line')
 
          focus.attr("transform", `translate(${xScale(x(data[i]))},${yScale(y(data[i]))})`)
             .select("line")
-            .attr("y2", height - marginBottom - yScale(y(data[i])));
+            .attr("y2", height - marginBottom - yScale(y(data[i])))
+						.select("text")
+						.attr("x", xScale(x(data[i])))
+						.attr("y", height - marginBottom - yScale(y(data[i])))
+						.text("Altitude: " + y(data[i]) + " km");
 
          svg.node().dispatchEvent(new CustomEvent("move", { detail: data[i] }));
       })
       .on("mouseover touchstart", () => {
-         svg.node().dispatchEvent(new Event("over"))
+				 svg.node().dispatchEvent(new Event("over"))
          focus.style("opacity", 1);
       })
       .on("mouseout touchend", () => {
