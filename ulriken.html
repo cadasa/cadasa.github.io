@@ -6,26 +6,37 @@
 <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
 <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css" rel="stylesheet">
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js"></script>
+<script src="https://d3js.org/d3.v7.js"></script>
 <style>
 body { margin: 0; padding: 0; }
 #map { position: absolute; top: 0; bottom: 0; width: 100%; }
 </style>
 </head>
 <body>
+	<style>
+	#marker {
+	background-image: url('https://cdn1.vectorstock.com/i/1000x1000/59/15/hiking-icon-isolated-sign-symbol-vector-9485915.jpg');
+	background-size: cover;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	cursor: pointer;
+	}
+	</style>
 <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
 <div id="map"></div>
 <script>
 	mapboxgl.accessToken = 'pk.eyJ1IjoiY2FkYXNhIiwiYSI6ImNraWc1aTF2YjFpNWkycnBvZGs4a3ZrajEifQ.oy_ctBheuCWfip4-ou7akg';
     (async () => {
         const map = new mapboxgl.Map({
-            container: 'map',
-            zoom: 13,
-            center: [5.37024, 60.37264],
-            pitch: 60,
-            bearing:30,
-            style: 'mapbox://styles/mapbox/satellite-streets-v11',
-            interactive: true,
-            hash: true
+					container: 'map',
+					zoom: 13,
+					center: [5.37024, 60.37264],
+					pitch: 60,
+					bearing:30,
+					style: 'mapbox://styles/mapbox/satellite-streets-v11',
+					interactive: true,
+					hash: true
         });
 //        map.addControl(
 //        new MapboxGeocoder({
@@ -54,8 +65,11 @@ body { margin: 0; padding: 0; }
 
         const pinRoute = pinRouteGeojson.features[0].geometry.coordinates;
         // Create the marker and popup that will display the elevation queries
-        const popup = new mapboxgl.Popup({ closeButton: false });
-        const marker = new mapboxgl.Marker({
+        const popup = new mapboxgl.Popup({ closeButton: true, closeOnClick: false, offset: 15 });
+				// create DOM element for the marker
+				const el = document.createElement('div');
+				el.id = 'marker';
+        const marker = new mapboxgl.Marker(el,{
             color: 'red',
             scale: 0.8,
             draggable: false,
@@ -113,7 +127,7 @@ body { margin: 0; padding: 0; }
             'maxzoom': 14
         });
         map.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1.5 });
-
+				const xyz = [];
         await map.once('idle');
         // The total animation duration, in milliseconds
         const animationDuration = 20000;
@@ -137,7 +151,7 @@ body { margin: 0; padding: 0; }
                 lng: alongPath[0],
                 lat: alongPath[1]
             };
-						//var lineDistance = turf.length([[pinRoute[0]], [lngLat]]);
+
             // Sample the terrain elevation. We round to an integer value to
             // prevent showing a lot of digits during the animation
             const elevation = Math.floor(
@@ -145,6 +159,18 @@ body { margin: 0; padding: 0; }
                 map.queryTerrainElevation(lngLat, { exaggerated: false })
             );
 
+				xyz.push({
+          'type': 'Feature',
+          'properties':{
+					'icon': 'mountain-15',
+					'elevation': elevation,
+					'distance': Math.round(pathDistance * animationPhase*100)/100
+          },
+          'geometry': {
+          'type': 'Point',
+          'coordinates': [alongPath[0], alongPath[1], elevation]
+          }
+        });
             // Update the popup altitude value and marker location
             popup.setHTML('Altitude: ' + elevation + 'm<br/>' + 'Distance: ' + Math.round(pathDistance * animationPhase*100)/100 + 'km<br/>');
             marker.setLngLat(lngLat);
@@ -165,11 +191,360 @@ body { margin: 0; padding: 0; }
 
             window.requestAnimationFrame(frame);
 
-
         }
 
         window.requestAnimationFrame(frame);
-    })();
+		await map.once('idle');
+		const ttt = {'type': 'FeatureCollection',
+  							'features': xyz};
+		map.addSource('places', {
+										// This GeoJSON contains features that include an "icon"
+										// property. The value of the "icon" property corresponds
+										// to an image in the Mapbox Streets style's sprite.
+									'type': 'geojson',
+									'data': ttt});
+		map.addLayer({
+											'id': 'places',
+											'type': 'symbol',
+											'source': 'places',
+											'paint': {'text-color': 'darkgreen', 'icon-opacity': 0},
+											'layout': {
+													'icon-image': '{icon}',
+													//'text-field': ['get', 'distance'],
+													'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
+													'text-ignore-placement': true,
+													'text-offset': [5,5],
+													'text-radial-offset': .8,
+													'text-justify': 'auto',
+													'text-size': 10,
+													'text-allow-overlap':true,
+													'icon-allow-overlap': true
+											}
+									});
+									var markerHeight = 50, markerRadius = 10, linearOffset = 25;
+									var popupOffsets = {
+									'top': [0, 0],
+									'top-left': [0,0],
+									'top-right': [0,0],
+									'bottom': [0, 0],
+									'bottom-left': [linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
+									'bottom-right': [-linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
+									'left': [markerRadius, (markerHeight - markerRadius) * -1],
+									'right': [-markerRadius, (markerHeight - markerRadius) * -1]
+								};
+		const popup2 = new mapboxgl.Popup({ anchor: 'top',
+																			closeButton: true, closeOnClick: false, offset: popupOffsets });
+		const popup3 = new mapboxgl.Popup({ anchor: 'bottom',
+																			closeButton: true, closeOnClick: false, offset: popupOffsets });
+		map.on('mouseenter', 'places', function () {
+		map.getCanvas().style.cursor = 'pointer';
+		});
+		map.on('click', 'places', function (e) {
+	// Change the cursor to a pointer when the mouse is over the states layer.
+			var elev = e.features[0].properties.elevation;
+			var dist = e.features[0].properties.distance;
+			var title = '<svg class="popup-d3-svg" style="margin: 0 auto; display: block;"></svg>'
+		//	'<center>' + e.features[0].properties.description + '</p>' +
+		//	'<center><i>(MB1 click to see animation)';
+
+		// Ensure that if the map is zoomed out such that multiple
+		// copies of the feature are visible, the popup appears
+		// over the copy being pointed to.
+		//while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+		//coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+		//}
+
+		// Populate the popup and set its coordinates
+		// based on the feature found.
+		popup2//.setLngLat(pinRoute[0]).setHTML(title).addTo(map);
+		.setLngLat(e.lngLat)
+		.setHTML(title)
+		.addTo(map);
+
+		popup3
+		.setHTML('Altitude: ' + elev + 'm<br/>' + 'Distance: ' + dist + 'km<br/>')
+		.setLngLat(e.lngLat)
+		.addTo(map);
+
+	const svgElement = popup2.getElement().getElementsByClassName('popup-d3-svg')[0];
+
+/*const svg = d3.select(svgElement)
+  .attr('width', 100)
+  .attr('height', 100)
+  .style('background-color', 'black');
+
+svg.append('line')
+  .style('stroke', 'lightgreen')
+  .style('stroke-width', 2)
+  .attr('x1', 0)
+  .attr('y1', 0)
+  .attr('x2', 50)
+  .attr('y2', 50);*/
+
+	function ElevationChart(data, {
+   x = ([x]) => x,
+   y = ([, y]) => y,
+   defined,
+   curve = d3.curveLinear,
+   marginTop = 20,
+   marginRight = 40,
+   marginBottom = 30,
+   marginLeft = 40,
+   width = 220,
+   height = 130,
+   xDomain,
+   xRange = [marginLeft, width - marginRight],
+   xType = d3.scaleLinear,
+   xLabel = "→ distance (m)",
+   yDomain,
+   yRange = [height - marginBottom, marginTop],
+   yType = d3.scaleLinear,
+   yFormat,
+   yLabel = "↑ height (m)",
+   color = "red",
+   strokeLinecap = "round",
+   strokeLinejoin = "round",
+   strokeWidth = 1.5,
+   strokeOpacity = 1,
+   focusColor = "#323232",
+	 dist = 1,
+	 elev = 800,
+   markerFilter = d => { },
+   markerText = d => y(d)
+} = {}) {
+
+   // Compute values.
+   const X = d3.map(data, x);
+   const Y = d3.map(data, y);
+   const I = d3.range(X.length);
+
+   if (defined === undefined) {
+      defined = (d, i) => !isNaN(X[i]) && !isNaN(Y[i])
+   }
+
+   const D = d3.map(data, defined);
+
+   // Compute default domains.
+   if (xDomain === undefined) xDomain = d3.extent(X);
+   if (yDomain === undefined) yDomain = [d3.min(Y), d3.max(Y)];
+
+   // Construct scales and axes.
+   const xScale = xType(xDomain, xRange);
+   const yScale = yType(yDomain, yRange);
+   const xAxis = d3.axisBottom(xScale).ticks(12).tickSizeOuter(0);
+   const yAxis = d3.axisLeft(yScale).ticks(height / 40, yFormat);
+   const yAxis2 = d3.axisRight(yScale).ticks(height / 40, yFormat);
+
+	 // Construct a line generator.
+   const line = d3.line()
+      .defined(i => D[i])
+      .curve(curve)
+      .x(i => xScale(X[i]))
+      .y(i => yScale(Y[i]));
+
+   // Create svg
+   const svg = d3.select(svgElement)
+      .attr("width", width)
+      .attr("height", height)
+      .attr("viewBox", [0, 0, width, height])
+      .attr("preserveAspectRatio", "xMinYMin")
+      .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
+
+   // Create X axes and label
+   svg.append("g")
+      .attr("transform", `translate(0,${height - marginBottom})`)
+      .call(xAxis)
+      .call(g => g.append("text")
+         .attr("fill", "currentColor")
+         .attr("x", marginLeft)
+         .attr("y", marginBottom)
+         .text(xLabel));
+
+   // Create Y axes
+   svg.append("g")
+      .attr("transform", `translate(${marginLeft},0)`)
+      .call(yAxis)
+      .call(g => g.select(".domain").remove())
+      .call(g => g.selectAll(".tick line").clone()
+         .attr("x2", width - marginLeft - marginRight)
+         .attr("stroke-opacity", 0.1))
+      .call(g => g.append("text")
+         .attr("x", -marginLeft)
+         .attr("y", 10)
+         .attr("fill", "currentColor")
+         .attr("text-anchor", "start")
+         .text(yLabel));
+
+  svg.append("g")
+      .attr("transform", `translate(${width - marginRight},0)`)
+      .call(yAxis2)
+      .call(g => g.select(".domain").remove())
+//      .call(g => g.selectAll(".tick line").clone()
+//         .attr("x2", width - marginLeft - marginRight)
+//         .attr("stroke-opacity", 0.1))
+      .call(g => g.append("text")
+         .attr("x", -0.4*marginRight)
+         .attr("y", 10)
+         .attr("fill", "currentColor")
+         .attr("text-anchor", "start")
+         .text(yLabel));
+
+	   // Create indicator lines
+   svg.selectAll(null)
+      .data(d3.filter(data, markerFilter))
+      .join(
+         enter => enter.append("g")
+            .attr("transform", d => `translate(${xScale(x(d))},${yScale(y(d))})`)
+            .attr("font-size", 20)
+            .call(g => g.append("text")
+               .attr("text-anchor", "middle")
+               .attr("y", -5)
+               .style("fill", "#08b8e8")
+               .text(markerText))
+            .call(g => g.append("line")
+               .attr("y2", d => height - marginBottom - yScale(y(d)))
+               .attr("style", "stroke: #08b8e8; stroke-dasharray: 4; stroke-width: 5"))
+      );
+
+			svg.append("g")
+								.attr("transform", `translate(${marginLeft}, 0)`)
+								.attr("font-size", 30)
+								.call(g => g.append("text")
+									 .attr("transform", "rotate(-90)")
+									 .attr("x", -height/2.2)
+									 .attr("y", 30)
+									 .attr("fill", "red")
+									 .attr("text-anchor", "middle")
+									 .text("Elevation gain: " + (d3.max(Y)-d3.min(Y)) + " m"));
+
+			svg.append("g")
+				 	      .attr("transform", `translate(${width/2},${height-marginBottom})`)
+								.attr("font-size", 30)
+				 	      .call(g => g.append("text")
+				 	         //.attr("x", -0.4*marginRight)
+				 	         .attr("y", -5)
+				 	         .attr("fill", "red")
+				 	         .attr("text-anchor", "middle")
+				 	         .text("Total distance: " + d3.max(X) + " km"));
+
+	 // Create elevation line
+   svg.append("path")
+      .attr("fill", "none")
+      .attr("stroke", color)
+      .attr("stroke-width", strokeWidth)
+      .attr("stroke-linecap", strokeLinecap)
+      .attr("stroke-linejoin", strokeLinejoin)
+      .attr("stroke-opacity", strokeOpacity)
+			.attr("d", line(I));
+
+			svg
+				 .append("g")
+				 .attr("transform", `translate(${xScale(dist)},${yScale(elev)})`)
+				 //.style("opacity", 0)
+				 .call(g => g.append("circle")
+				 //.attr("font-size", 10)
+				 //.call(g => g.append("text")
+						//.attr("text-anchor", "middle")
+						//.attr("y", -5)
+				 		//.attr("x", dist)
+				 		//.attr("y", elev)
+						.attr("r", 10)
+						.style("fill", 'red'))
+						//.text("\u25EC"))
+				 .call(g => g.append("line")
+				 		//.attr("x", dist)
+				 		//.attr("y", elev)
+						.attr("y2", height - marginBottom - yScale(elev))
+						.attr("style", "stroke: 'red'; stroke-dasharray: 4; stroke-width: 20"));
+
+   // Create the circle that travels along the curve
+   const focus = svg
+      .append("g")
+      .style("opacity", 0)
+			.attr("font-size", 30)
+      .call(g => g.append("circle")
+         .attr("r", 10)
+         .style("fill", focusColor))
+			.call(g => g.append("text")
+	 				 //.attr("x", -0.4*marginRight)
+	 			.attr("fill", focusColor)
+	 			.attr("text-anchor", "middle"))
+			.call(g => g.append("line")
+        .attr("style", `stroke: ${focusColor}; stroke-dasharray: 4; stroke-width: 5`));
+
+
+   // Create brushing
+   const brush = d3.brushX()
+      .extent([
+         [marginLeft, 0.5],
+         [width - marginRight, height - marginBottom + 0.5]
+      ])
+      .on("end", e => {
+         if (e.selection) {
+            const start = d3.bisector(x).left(data, xScale.invert(e.selection[0]), 1),
+                  end = d3.bisector(x).right(data, xScale.invert(e.selection[1]), 1);
+            svg.node().dispatchEvent(new CustomEvent("brush", {
+               // the features between the start and end of the brush
+               detail: data.slice(start, end)
+            }));
+         }
+      });
+
+   svg.append("g")
+      .call(brush)
+      .on("touchstart", e => e.preventDefault())
+      .on("mousemove touchmove", e => {
+         const i = d3.bisector(x).left(
+            data,
+            xScale.invert(d3.pointers(e)[0][0]),
+            1
+         );
+
+         if (!data[i]) {
+            return; // no matching point
+         }
+
+         focus.attr("transform", `translate(${xScale(x(data[i]))},${yScale(y(data[i]))})`)
+            .select("line")
+            .attr("y2", height - marginBottom - yScale(y(data[i])))
+						.select("text")
+						.attr("x", xScale(x(data[i])))
+						.attr("y", height - marginBottom - yScale(y(data[i])))
+						.text("Altitude: " + y(data[i]) + " km");
+
+         svg.node().dispatchEvent(new CustomEvent("move", { detail: data[i] }));
+      })
+      .on("mouseover touchstart", () => {
+				 svg.node().dispatchEvent(new Event("over"))
+         focus.style("opacity", 1);
+      })
+      .on("mouseout touchend", () => {
+         svg.node().dispatchEvent(new Event("out"))
+         focus.style("opacity", 0);
+      });
+
+   return svg.node();
+}
+				ElevationChart(xyz, {
+            width: 1000,
+            height: 400,
+            x: d => d.properties.distance, // mi
+            y: d => d.geometry.coordinates[2],
+						dist: dist,
+						elev: elev,// m
+            markerText: "\u25EC",
+            markerFilter: d => d.properties.distance
+                && (d.properties.distance === 12.62 || d.properties.distance === 10.01 || d.properties.distance === 8.66 || d.properties.distance === 3.62 || d.properties.distance === 11.18 || d.properties.distance === 6.42)
+             //       .toUpperCase()
+             //       .indexOf("TRIG POINT") > -1
+        });
+	});
+	// Change it back to a pointer when it leaves.
+	map.on('mouseleave', 'line', function () {
+	map.getCanvas().style.cursor = '';
+//			popup2.remove();
+	});
+	})();
 </script>
 
 </body>
