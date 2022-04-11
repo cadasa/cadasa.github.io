@@ -1,0 +1,26 @@
+<div id="observablehq-title-264c185e"></div>
+<div id="observablehq-input-264c185e"></div>
+<div id="observablehq-dashboard1-264c185e"></div>
+<div id="observablehq-output-264c185e"></div>
+<div id="observablehq-viewof-pickerColorSpace2-264c185e"></div>
+<div id="observablehq-viewof-colorPickerForm20-264c185e"></div>
+<div id="observablehq-viewof-colorPickerForm21-264c185e"></div>
+<div id="observablehq-viewof-colorPickerForm22-264c185e"></div>
+<div id="observablehq-styles-264c185e"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/color-conversion-tool.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-264c185e"));
+  if (name === "input") return new Inspector(document.querySelector("#observablehq-input-264c185e"));
+  if (name === "dashboard1") return new Inspector(document.querySelector("#observablehq-dashboard1-264c185e"));
+  if (name === "output") return new Inspector(document.querySelector("#observablehq-output-264c185e"));
+  if (name === "viewof pickerColorSpace2") return new Inspector(document.querySelector("#observablehq-viewof-pickerColorSpace2-264c185e"));
+  if (name === "viewof colorPickerForm20") return new Inspector(document.querySelector("#observablehq-viewof-colorPickerForm20-264c185e"));
+  if (name === "viewof colorPickerForm21") return new Inspector(document.querySelector("#observablehq-viewof-colorPickerForm21-264c185e"));
+  if (name === "viewof colorPickerForm22") return new Inspector(document.querySelector("#observablehq-viewof-colorPickerForm22-264c185e"));
+  if (name === "styles") return new Inspector(document.querySelector("#observablehq-styles-264c185e"));
+  return ["cv2"].includes(name);
+});
+</script>
