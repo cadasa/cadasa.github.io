@@ -1,28 +1,17 @@
-<div id="observablehq-title-90fbc7e4"></div>
-<div id="observablehq-input-90fbc7e4"></div>
-<div id="observablehq-dashboard1-90fbc7e4"></div>
-<div id="observablehq-output-90fbc7e4"></div>
-<div id="observablehq-viewof-pickerColorSpace2-90fbc7e4"></div>
-<div id="observablehq-rgb22-90fbc7e4"></div>
-<div id="observablehq-viewof-colorPickerForm20-90fbc7e4"></div>
-<div id="observablehq-viewof-colorPickerForm21-90fbc7e4"></div>
-<div id="observablehq-viewof-colorPickerForm22-90fbc7e4"></div>
-<div id="observablehq-styles-90fbc7e4"></div>
+<div id="observablehq-title-d88aa331"></div>
+<div id="observablehq-input-d88aa331"></div>
+<div id="observablehq-dashboard1-d88aa331"></div>
+<div id="observablehq-output-d88aa331"></div>
+<div id="observablehq-dashboard2-d88aa331"></div>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/@cadasa/color-conversion-tool.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-90fbc7e4"));
-  if (name === "input") return new Inspector(document.querySelector("#observablehq-input-90fbc7e4"));
-  if (name === "dashboard1") return new Inspector(document.querySelector("#observablehq-dashboard1-90fbc7e4"));
-  if (name === "output") return new Inspector(document.querySelector("#observablehq-output-90fbc7e4"));
-  if (name === "viewof pickerColorSpace2") return new Inspector(document.querySelector("#observablehq-viewof-pickerColorSpace2-90fbc7e4"));
-  if (name === "rgb22") return new Inspector(document.querySelector("#observablehq-rgb22-90fbc7e4"));
-  if (name === "viewof colorPickerForm20") return new Inspector(document.querySelector("#observablehq-viewof-colorPickerForm20-90fbc7e4"));
-  if (name === "viewof colorPickerForm21") return new Inspector(document.querySelector("#observablehq-viewof-colorPickerForm21-90fbc7e4"));
-  if (name === "viewof colorPickerForm22") return new Inspector(document.querySelector("#observablehq-viewof-colorPickerForm22-90fbc7e4"));
-  if (name === "styles") return new Inspector(document.querySelector("#observablehq-styles-90fbc7e4"));
-  return ["rgb2","cv2"].includes(name);
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-d88aa331"));
+  if (name === "input") return new Inspector(document.querySelector("#observablehq-input-d88aa331"));
+  if (name === "dashboard1") return new Inspector(document.querySelector("#observablehq-dashboard1-d88aa331"));
+  if (name === "output") return new Inspector(document.querySelector("#observablehq-output-d88aa331"));
+  if (name === "dashboard2") return new Inspector(document.querySelector("#observablehq-dashboard2-d88aa331"));
 });
 </script>
