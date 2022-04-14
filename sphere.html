@@ -1,0 +1,15 @@
+<div id="observablehq-title-6bedfd91"></div>
+<div id="observablehq-dashboard1-6bedfd91"></div>
+<div id="observablehq-hexahedron-6bedfd91"></div>
+<div id="observablehq-hexahedra-6bedfd91"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/5354db94d3e0024d.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-6bedfd91"));
+  if (name === "dashboard1") return new Inspector(document.querySelector("#observablehq-dashboard1-6bedfd91"));
+  if (name === "hexahedron") return new Inspector(document.querySelector("#observablehq-hexahedron-6bedfd91"));
+  if (name === "hexahedra") return new Inspector(document.querySelector("#observablehq-hexahedra-6bedfd91"));
+});
+</script>
