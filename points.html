@@ -1,0 +1,9 @@
+<div id="observablehq-points-78460c7c"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/5354db94d3e0024d.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "points") return new Inspector(document.querySelector("#observablehq-points-78460c7c"));
+});
+</script>
