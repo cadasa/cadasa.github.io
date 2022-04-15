@@ -10,14 +10,16 @@
 </head>
 
 
-<div id="observablehq-container1-e6b641ba"></div>
-<div id="observablehq-chart-e6b641ba"></div>
+<div id="observablehq-container1-644bc63a"></div>
+<div id="observablehq-ins-644bc63a"></div>
+<div id="observablehq-chart-644bc63a"></div>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/@cadasa/timeline-70-years-of-machine-learning-in-geoscience.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "container1") return new Inspector(document.querySelector("#observablehq-container1-e6b641ba"));
+  if (name === "container1") return new Inspector(document.querySelector("#observablehq-container1-644bc63a"));
+  if (name === "ins") return new Inspector(document.querySelector("#observablehq-ins-644bc63a"));
   if (name === "chart") return true;
 });
 </script>
