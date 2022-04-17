@@ -11,26 +11,34 @@ body { margin: 100; padding: 100; }
 </style>
 </head>
 <body>
-  <div id="observablehq-run-007c8b2a"></div>
-  <div id="observablehq-viewof-initialTermRaw-007c8b2a"></div>
-  <div id="observablehq-viewof-SINGLE_RESULTS_ONLY-007c8b2a"></div>
-  <div id="observablehq-viewof-MAX_RESULTS-007c8b2a"></div>
-  <div id="observablehq-step2-007c8b2a"></div>
-  <div id="observablehq-viewof-table-007c8b2a"></div>
-  <div id="observablehq-search-007c8b2a"></div>
-  
-  <script type="module">
-  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-  import define from "https://api.observablehq.com/d/54b0679d8b0278c4.js?v=3";
-  new Runtime().module(define, name => {
-    if (name === "run") return new Inspector(document.querySelector("#observablehq-run-007c8b2a"));
-    if (name === "viewof initialTermRaw") return new Inspector(document.querySelector("#observablehq-viewof-initialTermRaw-007c8b2a"));
-    if (name === "viewof SINGLE_RESULTS_ONLY") return new Inspector(document.querySelector("#observablehq-viewof-SINGLE_RESULTS_ONLY-007c8b2a"));
-    if (name === "viewof MAX_RESULTS") return new Inspector(document.querySelector("#observablehq-viewof-MAX_RESULTS-007c8b2a"));
-    if (name === "step2") return new Inspector(document.querySelector("#observablehq-step2-007c8b2a"));
-    if (name === "viewof table") return new Inspector(document.querySelector("#observablehq-viewof-table-007c8b2a"));
-    if (name === "search") return new Inspector(document.querySelector("#observablehq-search-007c8b2a"));
-    return ["initialTerm","links","chartData","viz2","viz","unvisited","step","onUpload","onPageLoad","reset","distance","nodes","viewof results","viewof toDelete","linksRaw","unidirectedLinks","adj","exclude","deleteVertex","edges","allEdges","edgeDistance","onPageLoadInitialTerm","defaultSuggestionsFilter","suggestionsFromGoogle"].includes(name);
-  });
-  </script>
+  <div id="observablehq-title-a28076b3"></div>
+<div id="observablehq-viewof-gl-a28076b3"></div>
+<div id="observablehq-viewof-initialTermRaw-a28076b3"></div>
+<div id="observablehq-viewof-SINGLE_RESULTS_ONLY-a28076b3"></div>
+<div id="observablehq-viewof-MAX_RESULTS-a28076b3"></div>
+<div id="observablehq-viewof-maxDistance-a28076b3"></div>
+<div id="observablehq-viewof-k-a28076b3"></div>
+<div id="observablehq-run-a28076b3"></div>
+<div id="observablehq-step2-a28076b3"></div>
+<div id="observablehq-viewof-table-a28076b3"></div>
+<div id="observablehq-search-a28076b3"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/54b0679d8b0278c4.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-a28076b3"));
+  if (name === "viewof gl") return new Inspector(document.querySelector("#observablehq-viewof-gl-a28076b3"));
+  if (name === "viewof initialTermRaw") return new Inspector(document.querySelector("#observablehq-viewof-initialTermRaw-a28076b3"));
+  if (name === "viewof SINGLE_RESULTS_ONLY") return new Inspector(document.querySelector("#observablehq-viewof-SINGLE_RESULTS_ONLY-a28076b3"));
+  if (name === "viewof MAX_RESULTS") return new Inspector(document.querySelector("#observablehq-viewof-MAX_RESULTS-a28076b3"));
+  if (name === "viewof maxDistance") return new Inspector(document.querySelector("#observablehq-viewof-maxDistance-a28076b3"));
+  if (name === "viewof k") return new Inspector(document.querySelector("#observablehq-viewof-k-a28076b3"));
+  if (name === "run") return new Inspector(document.querySelector("#observablehq-run-a28076b3"));
+  if (name === "step2") return new Inspector(document.querySelector("#observablehq-step2-a28076b3"));
+  if (name === "viewof table") return new Inspector(document.querySelector("#observablehq-viewof-table-a28076b3"));
+  if (name === "search") return new Inspector(document.querySelector("#observablehq-search-a28076b3"));
+  return ["url","googleResponse","googleResponseBody2","googleResponseBody","googleResponseDoc","unfilteredSuggestions","filteredSuggestions","sugg","initialTerm","links","chartData","viz2","viz","unvisited","step","onUpload","onPageLoad","reset","distance","nodes","viewof results","viewof toDelete","linksRaw","unidirectedLinks","adj","exclude","deleteVertex","edges","allEdges","edgeDistance","onPageLoadInitialTerm","defaultSuggestionsFilter","suggestionsFromGoogle"].includes(name);
+});
+</script>
 </body>
