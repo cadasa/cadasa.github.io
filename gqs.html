@@ -1,29 +1,36 @@
-<div id="observablehq-run-9594774c"></div>
-<div id="observablehq-viewof-initialTermRaw-9594774c"></div>
-<div id="observablehq-viewof-SINGLE_RESULTS_ONLY-9594774c"></div>
-<div id="observablehq-viewof-MAX_RESULTS-9594774c"></div>
-<div id="observablehq-viewof-k-9594774c"></div>
-<div id="observablehq-step2-9594774c"></div>
-<div id="observablehq-step-9594774c"></div>
-<div id="observablehq-viewof-table-9594774c"></div>
-<div id="observablehq-search-9594774c"></div>
-<div id="observablehq-style-9594774c"></div>
-<p>Credit: <a href="https://observablehq.com/d/54b0679d8b0278c4">The Google &#039;VS&#039; trick online by cadasa</a></p>
-
-<script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/d/54b0679d8b0278c4.js?v=3";
-new Runtime().module(define, name => {
-  if (name === "run") return new Inspector(document.querySelector("#observablehq-run-9594774c"));
-  if (name === "viewof initialTermRaw") return new Inspector(document.querySelector("#observablehq-viewof-initialTermRaw-9594774c"));
-  if (name === "viewof SINGLE_RESULTS_ONLY") return new Inspector(document.querySelector("#observablehq-viewof-SINGLE_RESULTS_ONLY-9594774c"));
-  if (name === "viewof MAX_RESULTS") return new Inspector(document.querySelector("#observablehq-viewof-MAX_RESULTS-9594774c"));
-  if (name === "viewof k") return new Inspector(document.querySelector("#observablehq-viewof-k-9594774c"));
-  if (name === "step2") return new Inspector(document.querySelector("#observablehq-step2-9594774c"));
-  if (name === "step") return new Inspector(document.querySelector("#observablehq-step-9594774c"));
-  if (name === "viewof table") return new Inspector(document.querySelector("#observablehq-viewof-table-9594774c"));
-  if (name === "search") return new Inspector(document.querySelector("#observablehq-search-9594774c"));
-  if (name === "style") return new Inspector(document.querySelector("#observablehq-style-9594774c"));
-  return ["initialTerm","links","chartData","unvisited","onUpload","onPageLoad","reset","distance","nodes","viewof results","viewof toDelete","linksRaw","unidirectedLinks","adj","exclude","deleteVertex","edges","allEdges","edgeDistance","onPageLoadInitialTerm","defaultSuggestionsFilter","suggestionsFromGoogle"].includes(name);
-});
-</script>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Google Search Auto Suggestions</title>
+<meta content="Google Search Auto Suggestions" property="og:title"/>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<style>
+body { margin: 100; padding: 100; }
+</style>
+</head>
+<body>
+  <div id="observablehq-run-007c8b2a"></div>
+  <div id="observablehq-viewof-initialTermRaw-007c8b2a"></div>
+  <div id="observablehq-viewof-SINGLE_RESULTS_ONLY-007c8b2a"></div>
+  <div id="observablehq-viewof-MAX_RESULTS-007c8b2a"></div>
+  <div id="observablehq-step2-007c8b2a"></div>
+  <div id="observablehq-viewof-table-007c8b2a"></div>
+  <div id="observablehq-search-007c8b2a"></div>
+  
+  <script type="module">
+  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+  import define from "https://api.observablehq.com/d/54b0679d8b0278c4.js?v=3";
+  new Runtime().module(define, name => {
+    if (name === "run") return new Inspector(document.querySelector("#observablehq-run-007c8b2a"));
+    if (name === "viewof initialTermRaw") return new Inspector(document.querySelector("#observablehq-viewof-initialTermRaw-007c8b2a"));
+    if (name === "viewof SINGLE_RESULTS_ONLY") return new Inspector(document.querySelector("#observablehq-viewof-SINGLE_RESULTS_ONLY-007c8b2a"));
+    if (name === "viewof MAX_RESULTS") return new Inspector(document.querySelector("#observablehq-viewof-MAX_RESULTS-007c8b2a"));
+    if (name === "step2") return new Inspector(document.querySelector("#observablehq-step2-007c8b2a"));
+    if (name === "viewof table") return new Inspector(document.querySelector("#observablehq-viewof-table-007c8b2a"));
+    if (name === "search") return new Inspector(document.querySelector("#observablehq-search-007c8b2a"));
+    return ["initialTerm","links","chartData","viz2","viz","unvisited","step","onUpload","onPageLoad","reset","distance","nodes","viewof results","viewof toDelete","linksRaw","unidirectedLinks","adj","exclude","deleteVertex","edges","allEdges","edgeDistance","onPageLoadInitialTerm","defaultSuggestionsFilter","suggestionsFromGoogle"].includes(name);
+  });
+  </script>
+</body>
