@@ -1,26 +1,30 @@
-<div id="observablehq-chart-9b123c8e"></div>
-<div id="observablehq-xx-9b123c8e"></div>
-<div id="observablehq-viewof-x-9b123c8e"></div>
-<div id="observablehq-yy-9b123c8e"></div>
-<div id="observablehq-viewof-y-9b123c8e"></div>
-<div id="observablehq-i-9b123c8e"></div>
-<div id="observablehq-viewof-theta-9b123c8e"></div>
-<div id="observablehq-a-9b123c8e"></div>
-<div id="observablehq-viewof-phi-9b123c8e"></div>
+<div id="observablehq-chart-fcb894f9"></div>
+<div id="observablehq-xx-fcb894f9"></div>
+<div id="observablehq-viewof-x-fcb894f9"></div>
+<div id="observablehq-yy-fcb894f9"></div>
+<div id="observablehq-viewof-y-fcb894f9"></div>
+<div id="observablehq-zz-fcb894f9"></div>
+<div id="observablehq-viewof-z-fcb894f9"></div>
+<div id="observablehq-i-fcb894f9"></div>
+<div id="observablehq-viewof-theta-fcb894f9"></div>
+<div id="observablehq-a-fcb894f9"></div>
+<div id="observablehq-viewof-phi-fcb894f9"></div>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/d/5560199515d989d1.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-9b123c8e"));
-  if (name === "xx") return new Inspector(document.querySelector("#observablehq-xx-9b123c8e"));
-  if (name === "viewof x") return new Inspector(document.querySelector("#observablehq-viewof-x-9b123c8e"));
-  if (name === "yy") return new Inspector(document.querySelector("#observablehq-yy-9b123c8e"));
-  if (name === "viewof y") return new Inspector(document.querySelector("#observablehq-viewof-y-9b123c8e"));
-  if (name === "i") return new Inspector(document.querySelector("#observablehq-i-9b123c8e"));
-  if (name === "viewof theta") return new Inspector(document.querySelector("#observablehq-viewof-theta-9b123c8e"));
-  if (name === "a") return new Inspector(document.querySelector("#observablehq-a-9b123c8e"));
-  if (name === "viewof phi") return new Inspector(document.querySelector("#observablehq-viewof-phi-9b123c8e"));
+  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-fcb894f9"));
+  if (name === "xx") return new Inspector(document.querySelector("#observablehq-xx-fcb894f9"));
+  if (name === "viewof x") return new Inspector(document.querySelector("#observablehq-viewof-x-fcb894f9"));
+  if (name === "yy") return new Inspector(document.querySelector("#observablehq-yy-fcb894f9"));
+  if (name === "viewof y") return new Inspector(document.querySelector("#observablehq-viewof-y-fcb894f9"));
+  if (name === "zz") return new Inspector(document.querySelector("#observablehq-zz-fcb894f9"));
+  if (name === "viewof z") return new Inspector(document.querySelector("#observablehq-viewof-z-fcb894f9"));
+  if (name === "i") return new Inspector(document.querySelector("#observablehq-i-fcb894f9"));
+  if (name === "viewof theta") return new Inspector(document.querySelector("#observablehq-viewof-theta-fcb894f9"));
+  if (name === "a") return new Inspector(document.querySelector("#observablehq-a-fcb894f9"));
+  if (name === "viewof phi") return new Inspector(document.querySelector("#observablehq-viewof-phi-fcb894f9"));
   return ["spherical","cartesian","arrowQuaternion","scene","BlochSphere","horizontal_circle","theta_arc","projection_line","arrowQuaternion2","vertical_circle","verticalQuaternion","horizontalQuaternion","phi_arc"].includes(name);
 });
 </script>
