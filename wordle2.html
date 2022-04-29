@@ -1,0 +1,24 @@
+<div id="observablehq-viewof-gray-119ccf93"></div>
+<div id="observablehq-viewof-yellow-119ccf93"></div>
+<div id="observablehq-viewof-green-119ccf93"></div>
+<div id="observablehq-viewof-search-119ccf93"></div>
+<div id="observablehq-viewof-table-119ccf93"></div>
+<div id="observablehq-viewof-heatmap-119ccf93"></div>
+<div id="observablehq-viewof-text-119ccf93"></div>
+<div id="observablehq-distribution-119ccf93"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/f0496b6ae87022d8.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof gray") return new Inspector(document.querySelector("#observablehq-viewof-gray-119ccf93"));
+  if (name === "viewof yellow") return new Inspector(document.querySelector("#observablehq-viewof-yellow-119ccf93"));
+  if (name === "viewof green") return new Inspector(document.querySelector("#observablehq-viewof-green-119ccf93"));
+  if (name === "viewof search") return new Inspector(document.querySelector("#observablehq-viewof-search-119ccf93"));
+  if (name === "viewof table") return new Inspector(document.querySelector("#observablehq-viewof-table-119ccf93"));
+  if (name === "viewof heatmap") return new Inspector(document.querySelector("#observablehq-viewof-heatmap-119ccf93"));
+  if (name === "viewof text") return new Inspector(document.querySelector("#observablehq-viewof-text-119ccf93"));
+  if (name === "distribution") return new Inspector(document.querySelector("#observablehq-distribution-119ccf93"));
+  return ["matches","characters_sel","sel","sel2","characters","matches_score","words2","words_map","words1","words_map1","letters"].includes(name);
+});
+</script>
