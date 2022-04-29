@@ -15,7 +15,7 @@ new Runtime().module(define, name => {
   if (name === "mapboxMap") return new Inspector(document.querySelector("#observablehq-mapboxMap-d1e6dc76"));
   if (name === "guessTheMovie") return new Inspector(document.querySelector("#observablehq-guessTheMovie-d1e6dc76"));
   if (name === "viewof calculate") return new Inspector(document.querySelector("#observablehq-viewof-calculate-d1e6dc76"));
-  if (name === "c") return new Inspector(document.querySelector("#observablehq-c-d1e6dc76"));
+  if (name === "c") return true;
   if (name === "style") return new Inspector(document.querySelector("#observablehq-style-d1e6dc76"));
   return ["calculate"].includes(name);
 });
