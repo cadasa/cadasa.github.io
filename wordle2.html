@@ -1,22 +1,13 @@
-<div id="observablehq-viewof-gray-6fee34ba"></div>
-<div id="observablehq-viewof-yellow-6fee34ba"></div>
-<div id="observablehq-viewof-green-6fee34ba"></div>
-<div id="observablehq-viewof-search-6fee34ba"></div>
-<div id="observablehq-viewof-table-6fee34ba"></div>
-<div id="observablehq-viewof-text-6fee34ba"></div>
-<div id="observablehq-dashboard1-6fee34ba"></div>
+<div id="observablehq-dashboard-5dd77602"></div>
+<div id="observablehq-viewof-text-5dd77602"></div>
+<div id="observablehq-dashboard1-5dd77602"></div>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/d/f0496b6ae87022d8.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "viewof gray") return new Inspector(document.querySelector("#observablehq-viewof-gray-6fee34ba"));
-  if (name === "viewof yellow") return new Inspector(document.querySelector("#observablehq-viewof-yellow-6fee34ba"));
-  if (name === "viewof green") return new Inspector(document.querySelector("#observablehq-viewof-green-6fee34ba"));
-  if (name === "viewof search") return new Inspector(document.querySelector("#observablehq-viewof-search-6fee34ba"));
-  if (name === "viewof table") return new Inspector(document.querySelector("#observablehq-viewof-table-6fee34ba"));
-  if (name === "viewof text") return new Inspector(document.querySelector("#observablehq-viewof-text-6fee34ba"));
-  if (name === "dashboard1") return new Inspector(document.querySelector("#observablehq-dashboard1-6fee34ba"));
-  return ["matches","characters_sel","viewof heatmap","sel","distribution","sel2","characters","matches_score","words2","words_map","words1","words_map1","letters"].includes(name);
+  if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-5dd77602"));
+  if (name === "viewof text") return new Inspector(document.querySelector("#observablehq-viewof-text-5dd77602"));
+  if (name === "dashboard1") return new Inspector(document.querySelector("#observablehq-dashboard1-5dd77602"));
 });
 </script>
