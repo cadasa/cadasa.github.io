@@ -1,0 +1,13 @@
+<div id="observablehq-vie_dashboard-9e9620b1"></div>
+<div id="observablehq-viewof-vie_text-9e9620b1"></div>
+<div id="observablehq-vie_dashboard1-9e9620b1"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/f0496b6ae87022d8.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "vie_dashboard") return new Inspector(document.querySelector("#observablehq-vie_dashboard-9e9620b1"));
+  if (name === "viewof vie_text") return new Inspector(document.querySelector("#observablehq-viewof-vie_text-9e9620b1"));
+  if (name === "vie_dashboard1") return new Inspector(document.querySelector("#observablehq-vie_dashboard1-9e9620b1"));
+});
+</script>
