@@ -1,0 +1,22 @@
+<div id="observablehq-title-6053ea96"></div>
+<div id="observablehq-viewof-radios-6053ea96"></div>
+<div id="observablehq-viewof-uie_gray-6053ea96"></div>
+<div id="observablehq-viewof-uie_yellow-6053ea96"></div>
+<div id="observablehq-viewof-uie_green-6053ea96"></div>
+<div id="observablehq-viewof-fo_search-6053ea96"></div>
+<div id="observablehq-viewof-fo_table-6053ea96"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/f0496b6ae87022d8.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-6053ea96"));
+  if (name === "viewof radios") return new Inspector(document.querySelector("#observablehq-viewof-radios-6053ea96"));
+  if (name === "viewof uie_gray") return new Inspector(document.querySelector("#observablehq-viewof-uie_gray-6053ea96"));
+  if (name === "viewof uie_yellow") return new Inspector(document.querySelector("#observablehq-viewof-uie_yellow-6053ea96"));
+  if (name === "viewof uie_green") return new Inspector(document.querySelector("#observablehq-viewof-uie_green-6053ea96"));
+  if (name === "viewof fo_search") return new Inspector(document.querySelector("#observablehq-viewof-fo_search-6053ea96"));
+  if (name === "viewof fo_table") return new Inspector(document.querySelector("#observablehq-viewof-fo_table-6053ea96"));
+  return ["fo_words","fo_matches","fo_words1","fo_words_map1","fo_matches_score","fo_words2","fo_words_map2"].includes(name);
+});
+</script>
