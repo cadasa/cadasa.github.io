@@ -18,21 +18,23 @@
     <link href="https://www.nytimes.com/games/wordle/images/NYT-Wordle-Icon-192.png" rel="apple-touch-icon">
 </head>
 <body>
-  <div id="observablehq-title-e6fa742a"></div>
-  <div id="observablehq-viewof-radios-e6fa742a"></div>
-  <div id="observablehq-help-e6fa742a"></div>
-  <div id="observablehq-dashboardn-e6fa742a"></div>
-  
-  <script type="module">
-  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-  import define from "https://api.observablehq.com/d/f0496b6ae87022d8.js?v=3";
-  new Runtime().module(define, name => {
-    if (name === "title") return new Inspector(document.querySelector("#observablehq-title-e6fa742a"));
-    if (name === "viewof radios") return new Inspector(document.querySelector("#observablehq-viewof-radios-e6fa742a"));
-    if (name === "help") return new Inspector(document.querySelector("#observablehq-help-e6fa742a"));
-    if (name === "dashboardn") return new Inspector(document.querySelector("#observablehq-dashboardn-e6fa742a"));
-    return ["fo_words","fo_matches","viewof fo_search","viewof fo_table","fo_words1","fo_words_map1","fo_matches_score","fo_words2","fo_words_map2"].includes(name);
-  });
-  </script>
+<div id="observablehq-title-864d15d5"></div>
+<div id="observablehq-viewof-radios-864d15d5"></div>
+<div id="observablehq-help-864d15d5"></div>
+<div id="observablehq-dashboardn-864d15d5"></div>
+<div id="observablehq-pg-864d15d5"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/f0496b6ae87022d8.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-864d15d5"));
+  if (name === "viewof radios") return new Inspector(document.querySelector("#observablehq-viewof-radios-864d15d5"));
+  if (name === "help") return new Inspector(document.querySelector("#observablehq-help-864d15d5"));
+  if (name === "dashboardn") return new Inspector(document.querySelector("#observablehq-dashboardn-864d15d5"));
+  if (name === "pg") return true;
+  return ["fo_words","fo_matches","viewof fo_search","viewof fo_table","fo_words1","fo_words_map1","fo_matches_score","fo_words2","fo_words_map2"].includes(name);
+});
+</script>
 </body>
 </html>
