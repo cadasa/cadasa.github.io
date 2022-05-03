@@ -1,16 +1,16 @@
-<div id="observablehq-title-3bb72d97"></div>
-<div id="observablehq-newGame-3bb72d97"></div>
-<div id="observablehq-display-3bb72d97"></div>
-<div id="observablehq-viewof-keyboard-3bb72d97"></div>
+<div id="observablehq-newGame-60568f48"></div>
+<div id="observablehq-display-60568f48"></div>
+<div id="observablehq-viewof-keyboard-60568f48"></div>
+<div id="observablehq-progress-60568f48"></div>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/d/e5277d01c8e51b9a.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-3bb72d97"));
-  if (name === "newGame") return new Inspector(document.querySelector("#observablehq-newGame-3bb72d97"));
-  if (name === "display") return new Inspector(document.querySelector("#observablehq-display-3bb72d97"));
-  if (name === "viewof keyboard") return new Inspector(document.querySelector("#observablehq-viewof-keyboard-3bb72d97"));
+  if (name === "newGame") return new Inspector(document.querySelector("#observablehq-newGame-60568f48"));
+  if (name === "display") return new Inspector(document.querySelector("#observablehq-display-60568f48"));
+  if (name === "viewof keyboard") return new Inspector(document.querySelector("#observablehq-viewof-keyboard-60568f48"));
+  if (name === "progress") return new Inspector(document.querySelector("#observablehq-progress-60568f48"));
   return ["gameGrid"].includes(name);
 });
 </script>
