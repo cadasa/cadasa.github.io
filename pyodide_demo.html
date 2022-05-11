@@ -1,0 +1,16 @@
+<div id="observablehq-title-1ca3dbb7"></div>
+<div id="observablehq-viewof-horizon-1ca3dbb7"></div>
+<div id="observablehq-viewof-view-1ca3dbb7"></div>
+<div id="observablehq-viewof-py_code2-1ca3dbb7"></div>
+<p>Credit: <a href="https://observablehq.com/d/31c86064de0d015a">Untitled by cadasa</a></p>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/31c86064de0d015a.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-1ca3dbb7"));
+  if (name === "viewof horizon") return new Inspector(document.querySelector("#observablehq-viewof-horizon-1ca3dbb7"));
+  if (name === "viewof view") return new Inspector(document.querySelector("#observablehq-viewof-view-1ca3dbb7"));
+  if (name === "viewof py_code2") return new Inspector(document.querySelector("#observablehq-viewof-py_code2-1ca3dbb7"));
+});
+</script>
