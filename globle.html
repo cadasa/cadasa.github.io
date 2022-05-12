@@ -2,8 +2,19 @@
 <html>
 <head>
 </head>
-<body scroll="no" style="overflow: hidden">
-<iframe width="100%" height="1750" frameborder="0"
-  src="https://observablehq.com/embed/c92fa449a3dfab82?cells=title%2Cviewof+search%2Cglobe"></iframe>
+<body>
+  <div id="observablehq-viewof-game-3519aa6d"></div>
+  <div id="observablehq-viewof-toggle-3519aa6d"></div>
+  <div id="observablehq-help-3519aa6d"></div>
+  
+  <script type="module">
+  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+  import define from "https://api.observablehq.com/d/fdf64c5747878190@271.js?v=3";
+  new Runtime().module(define, name => {
+    if (name === "viewof game") return new Inspector(document.querySelector("#observablehq-viewof-game-3519aa6d"));
+    if (name === "viewof toggle") return new Inspector(document.querySelector("#observablehq-viewof-toggle-3519aa6d"));
+    if (name === "help") return new Inspector(document.querySelector("#observablehq-help-3519aa6d"));
+  });
+  </script>
 </body>
 </html>
