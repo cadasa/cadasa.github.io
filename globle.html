@@ -1,0 +1,14 @@
+<div id="observablehq-title-5b6ee133"></div>
+<div id="observablehq-viewof-search-5b6ee133"></div>
+<div id="observablehq-globe-5b6ee133"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/c92fa449a3dfab82.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-5b6ee133"));
+  if (name === "viewof search") return new Inspector(document.querySelector("#observablehq-viewof-search-5b6ee133"));
+  if (name === "globe") return new Inspector(document.querySelector("#observablehq-globe-5b6ee133"));
+  return ["Country","drawWorld","mapBase","drawWorldHighlight"].includes(name);
+});
+</script>
