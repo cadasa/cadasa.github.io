@@ -1,0 +1,19 @@
+<div id="observablehq-ptt-07ae39a0"></div>
+<div id="observablehq-viewof-py_code3-07ae39a0"></div>
+<div id="observablehq-pt-07ae39a0"></div>
+<div id="observablehq-jst-07ae39a0"></div>
+<div id="observablehq-jss-07ae39a0"></div>
+<div id="observablehq-js-07ae39a0"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/31c86064de0d015a.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "ptt") return new Inspector(document.querySelector("#observablehq-ptt-07ae39a0"));
+  if (name === "viewof py_code3") return new Inspector(document.querySelector("#observablehq-viewof-py_code3-07ae39a0"));
+  if (name === "pt") return new Inspector(document.querySelector("#observablehq-pt-07ae39a0"));
+  if (name === "jst") return new Inspector(document.querySelector("#observablehq-jst-07ae39a0"));
+  if (name === "jss") return new Inspector(document.querySelector("#observablehq-jss-07ae39a0"));
+  if (name === "js") return new Inspector(document.querySelector("#observablehq-js-07ae39a0"));
+});
+</script>
