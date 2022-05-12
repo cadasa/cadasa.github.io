@@ -1,20 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="theme-color" content="#000000"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"/>
+  <link rel="manifest" href="/favicon/site.webmanifest"/>
+  <link rel="image_src" href="/images/preview.png"/>
+  <title>Globle with Help</title>
+  <meta name="description" content="Use your geography knowledge to figure out the mystery country in as few guesses as possible!"/>
 </head>
 <body>
-  <div id="observablehq-viewof-game-3519aa6d"></div>
-  <div id="observablehq-viewof-toggle-3519aa6d"></div>
-  <div id="observablehq-help-3519aa6d"></div>
-  
-  <script type="module">
-  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-  import define from "https://api.observablehq.com/d/fdf64c5747878190@271.js?v=3";
-  new Runtime().module(define, name => {
-    if (name === "viewof game") return new Inspector(document.querySelector("#observablehq-viewof-game-3519aa6d"));
-    if (name === "viewof toggle") return new Inspector(document.querySelector("#observablehq-viewof-toggle-3519aa6d"));
-    if (name === "help") return new Inspector(document.querySelector("#observablehq-help-3519aa6d"));
-  });
-  </script>
+<div id="observablehq-viewof-game-e6af5ba6"></div>
+<div id="observablehq-viewof-toggle-e6af5ba6"></div>
+<div id="observablehq-help-e6af5ba6"></div>
+<div id="observablehq-Globe-e6af5ba6"></div>
+<div id="observablehq-d3-e6af5ba6"></div>
+<div id="observablehq-indexBy-e6af5ba6"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/fdf64c5747878190.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof game") return new Inspector(document.querySelector("#observablehq-viewof-game-e6af5ba6"));
+  if (name === "viewof toggle") return new Inspector(document.querySelector("#observablehq-viewof-toggle-e6af5ba6"));
+  if (name === "help") return new Inspector(document.querySelector("#observablehq-help-e6af5ba6"));
+  if (name === "Globe") return true;
+  if (name === "d3") return true;
+  if (name === "indexBy") return true;
+  return ["viewof map"].includes(name);
+});
+</script>
 </body>
 </html>
