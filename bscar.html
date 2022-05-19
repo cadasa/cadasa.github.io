@@ -1,0 +1,24 @@
+<div id="observablehq-title-d81f9840"></div>
+<div id="observablehq-viewof-horizon-d81f9840"></div>
+<div id="observablehq-txt2-d81f9840"></div>
+<div id="observablehq-txt-d81f9840"></div>
+<div id="observablehq-viewof-sol-d81f9840"></div>
+<div id="observablehq-Globe-d81f9840"></div>
+<div id="observablehq-d3-d81f9840"></div>
+<div id="observablehq-indexBy-d81f9840"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/40dd66337d5c96bc.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-d81f9840"));
+  if (name === "viewof horizon") return new Inspector(document.querySelector("#observablehq-viewof-horizon-d81f9840"));
+  if (name === "txt2") return new Inspector(document.querySelector("#observablehq-txt2-d81f9840"));
+  if (name === "txt") return new Inspector(document.querySelector("#observablehq-txt-d81f9840"));
+  if (name === "viewof sol") return new Inspector(document.querySelector("#observablehq-viewof-sol-d81f9840"));
+  if (name === "Globe") return true;
+  if (name === "d3") return true;
+  if (name === "indexBy") return true;
+  return ["map","largestPolygon"].includes(name);
+});
+</script>
