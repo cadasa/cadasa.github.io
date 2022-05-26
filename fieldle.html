@@ -17,20 +17,24 @@
   <meta name="description" content="Guess the field in 6 tries. A new field is available each day"/>
 </head>
 <body>
-  <div id="observablehq-title2-6f006f94"></div>
-  <div id="observablehq-title3-6f006f94"></div>
-  <div id="observablehq-dashboardn-6f006f94"></div>
-  <div id="observablehq-viewof-iframe-6f006f94"></div>
+<div id="observablehq-title2-e670908c"></div>
+<div id="observablehq-title3-e670908c"></div>
+<div id="observablehq-dashboard-e670908c"></div>
+<div id="observablehq-hints-e670908c"></div>
+<div id="observablehq-dashboardn-e670908c"></div>
+<div id="observablehq-viewof-iframe-e670908c"></div>
 
-  <script type="module">
-  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-  import define from "https://api.observablehq.com/d/6bff16b221cdc6e8.js?v=3";
-  new Runtime().module(define, name => {
-    if (name === "title2") return new Inspector(document.querySelector("#observablehq-title2-6f006f94"));
-    if (name === "title3") return new Inspector(document.querySelector("#observablehq-title3-6f006f94"));
-    if (name === "dashboardn") return new Inspector(document.querySelector("#observablehq-dashboardn-6f006f94"));
-    if (name === "viewof iframe") return new Inspector(document.querySelector("#observablehq-viewof-iframe-6f006f94"));
-  });
-  </script>
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/6bff16b221cdc6e8.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "title2") return new Inspector(document.querySelector("#observablehq-title2-e670908c"));
+  if (name === "title3") return new Inspector(document.querySelector("#observablehq-title3-e670908c"));
+  if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-e670908c"));
+  if (name === "hints") return new Inspector(document.querySelector("#observablehq-hints-e670908c"));
+  if (name === "dashboardn") return new Inspector(document.querySelector("#observablehq-dashboardn-e670908c"));
+  if (name === "viewof iframe") return new Inspector(document.querySelector("#observablehq-viewof-iframe-e670908c"));
+});
+</script>
 </body>
 </html>
