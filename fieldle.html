@@ -17,27 +17,33 @@
   <meta name="description" content="Guess the field in 6 tries. A new field is available each day"/>
 </head>
 <body>
-  <div id="observablehq-title2-e5676d09"></div>
-  <div id="observablehq-dashboardn-e5676d09"></div>
-  <div id="observablehq-title3-e5676d09"></div>
-  <div id="observablehq-dashboard-e5676d09"></div>
-  <div id="observablehq-hints-e5676d09"></div>
-  <div id="observablehq-viewof-iframe-e5676d09"></div>
-  <div id="observablehq-iframe1-e5676d09"></div>
-  <div id="observablehq-iframe2-e5676d09"></div>
-
+  <div id="observablehq-title2-bc15682b"></div>
+  <div id="observablehq-dashboardn-bc15682b"></div>
+  <div id="observablehq-title3-bc15682b"></div>
+  <div id="observablehq-dashboard-bc15682b"></div>
+  <div id="observablehq-hints-bc15682b"></div>
+  <div id="observablehq-viewof-iframe-bc15682b"></div>
+  <div id="observablehq-iframe1-bc15682b"></div>
+  <div id="observablehq-iframe2-bc15682b"></div>
+  <div id="observablehq-viewof-route2-bc15682b"></div>
+  <div id="observablehq-c-bc15682b"></div>
+  
   <script type="module">
   import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
   import define from "https://api.observablehq.com/d/6bff16b221cdc6e8.js?v=3";
   new Runtime().module(define, name => {
-    if (name === "title2") return new Inspector(document.querySelector("#observablehq-title2-e5676d09"));
-    if (name === "dashboardn") return new Inspector(document.querySelector("#observablehq-dashboardn-e5676d09"));
-    if (name === "title3") return new Inspector(document.querySelector("#observablehq-title3-e5676d09"));
-    if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-e5676d09"));
-    if (name === "hints") return new Inspector(document.querySelector("#observablehq-hints-e5676d09"));
-    if (name === "viewof iframe") return new Inspector(document.querySelector("#observablehq-viewof-iframe-e5676d09"));
-    if (name === "iframe1") return true;
-    if (name === "iframe2") return true;
+    if (name === "title2") return new Inspector(document.querySelector("#observablehq-title2-bc15682b"));
+    if (name === "dashboardn") return new Inspector(document.querySelector("#observablehq-dashboardn-bc15682b"));
+    if (name === "title3") return new Inspector(document.querySelector("#observablehq-title3-bc15682b"));
+    if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-bc15682b"));
+    if (name === "hints") return new Inspector(document.querySelector("#observablehq-hints-bc15682b"));
+    if (name === "viewof iframe") return new Inspector(document.querySelector("#observablehq-viewof-iframe-bc15682b"));
+    if (name === "iframe1") return new Inspector(document.querySelector("#observablehq-iframe1-bc15682b"));
+    if (name === "iframe2") return new Inspector(document.querySelector("#observablehq-iframe2-bc15682b"));
+    if (name === "viewof route2") return true;
+    if (name === "c") return true;
+    return ["mapboxMap"].includes(name);
   });
-  </script></body>
+  </script>
+</body>
 </html>
