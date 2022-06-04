@@ -27,7 +27,7 @@
   <div id="observablehq-iframe2-bc15682b"></div>
   <div id="observablehq-viewof-route2-bc15682b"></div>
   <div id="observablehq-c-bc15682b"></div>
-  
+
   <script type="module">
   import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
   import define from "https://api.observablehq.com/d/6bff16b221cdc6e8.js?v=3";
@@ -39,7 +39,7 @@
     if (name === "hints") return new Inspector(document.querySelector("#observablehq-hints-bc15682b"));
     if (name === "viewof iframe") return new Inspector(document.querySelector("#observablehq-viewof-iframe-bc15682b"));
     if (name === "iframe1") return new Inspector(document.querySelector("#observablehq-iframe1-bc15682b"));
-    if (name === "iframe2") return new Inspector(document.querySelector("#observablehq-iframe2-bc15682b"));
+    if (name === "iframe2") return true;
     if (name === "viewof route2") return true;
     if (name === "c") return true;
     return ["mapboxMap"].includes(name);
