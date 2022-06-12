@@ -1,0 +1,13 @@
+<div id="observablehq-title-2890cb8f"></div>
+<div id="observablehq-viewof-select-2890cb8f"></div>
+<div id="observablehq-viewof-selected-2890cb8f"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/federers-dropshots-on-clay.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-2890cb8f"));
+  if (name === "viewof select") return new Inspector(document.querySelector("#observablehq-viewof-select-2890cb8f"));
+  if (name === "viewof selected") return new Inspector(document.querySelector("#observablehq-viewof-selected-2890cb8f"));
+});
+</script>
