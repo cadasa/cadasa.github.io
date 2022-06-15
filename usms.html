@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Mass Shootings in the US</title>
+</head>
+<body>
 <div id="observablehq-title-e94707f9"></div>
 <div id="observablehq-viewof-horizon-e94707f9"></div>
 <div id="observablehq-map-e94707f9"></div>
@@ -13,7 +22,9 @@ new Runtime().module(define, name => {
   if (name === "viewof horizon") return new Inspector(document.querySelector("#observablehq-viewof-horizon-e94707f9"));
   if (name === "map") return new Inspector(document.querySelector("#observablehq-map-e94707f9"));
   if (name === "yearly_bar_chart") return new Inspector(document.querySelector("#observablehq-yearly_bar_chart-e94707f9"));
-  if (name === "make_hoverable_link") return new Inspector(document.querySelector("#observablehq-make_hoverable_link-e94707f9"));
-  if (name === "tippy_style") return new Inspector(document.querySelector("#observablehq-tippy_style-e94707f9"));
+  if (name === "make_hoverable_link") return true;
+  if (name === "tippy_style") return true;
 });
 </script>
+</body>
+</html>
