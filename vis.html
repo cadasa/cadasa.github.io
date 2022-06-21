@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>VIS Publications</title>
+    <style>
+      body { margin: 1000; padding: 1000;}
+    </style>
+</head>
+<body>
+<div id="observablehq-TT-14188058"></div>
+<div id="observablehq-viewof-byAuthor-14188058"></div>
+<div id="observablehq-viewof-byConf-14188058"></div>
+<div id="observablehq-viewof-byType-14188058"></div>
+<div id="observablehq-viewof-selectedPapers-14188058"></div>
+<div id="observablehq-title-14188058"></div>
+<div id="observablehq-authors-14188058"></div>
+<div id="observablehq-abs_st-14188058"></div>
+<div id="observablehq-abstract-14188058"></div>
+<div id="observablehq-cit_st-14188058"></div>
+<div id="observablehq-citation1-14188058"></div>
+<div id="observablehq-citation2-14188058"></div>
+<div id="observablehq-ref_st-14188058"></div>
+<div id="observablehq-references-14188058"></div>
+<div id="observablehq-styles-14188058"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/7aad13a2e6d5b1ac.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "TT") return new Inspector(document.querySelector("#observablehq-TT-14188058"));
+  if (name === "viewof byAuthor") return new Inspector(document.querySelector("#observablehq-viewof-byAuthor-14188058"));
+  if (name === "viewof byConf") return new Inspector(document.querySelector("#observablehq-viewof-byConf-14188058"));
+  if (name === "viewof byType") return new Inspector(document.querySelector("#observablehq-viewof-byType-14188058"));
+  if (name === "viewof selectedPapers") return new Inspector(document.querySelector("#observablehq-viewof-selectedPapers-14188058"));
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-14188058"));
+  if (name === "authors") return new Inspector(document.querySelector("#observablehq-authors-14188058"));
+  if (name === "abs_st") return new Inspector(document.querySelector("#observablehq-abs_st-14188058"));
+  if (name === "abstract") return new Inspector(document.querySelector("#observablehq-abstract-14188058"));
+  if (name === "cit_st") return new Inspector(document.querySelector("#observablehq-cit_st-14188058"));
+  if (name === "citation1") return new Inspector(document.querySelector("#observablehq-citation1-14188058"));
+  if (name === "citation2") return new Inspector(document.querySelector("#observablehq-citation2-14188058"));
+  if (name === "ref_st") return new Inspector(document.querySelector("#observablehq-ref_st-14188058"));
+  if (name === "references") return new Inspector(document.querySelector("#observablehq-references-14188058"));
+  if (name === "styles") return true;
+  return ["citation","output","viewof selectedPapers2"].includes(name);
+});
+</script>
+</body>
+</html>
