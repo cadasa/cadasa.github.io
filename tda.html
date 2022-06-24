@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>TDA</title>
+    <style>
+      body { margin: 1000; padding: 1000;}
+    </style>
+</head>
+<body>
+<div id="observablehq-title-cb52e099"></div>
+<div id="observablehq-desc-cb52e099"></div>
+<div id="observablehq-viewof-file1-cb52e099"></div>
+<div id="observablehq-viewof-sortby-cb52e099"></div>
+<div id="observablehq-viewof-numfeatures-cb52e099"></div>
+<div id="observablehq-viewof-numlabels-cb52e099"></div>
+<div id="observablehq-viewof-persistence-cb52e099"></div>
+<div id="observablehq-plot-cb52e099"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/622f7b4d4fd4b0a6.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-cb52e099"));
+  if (name === "desc") return new Inspector(document.querySelector("#observablehq-desc-cb52e099"));
+  if (name === "viewof file1") return new Inspector(document.querySelector("#observablehq-viewof-file1-cb52e099"));
+  if (name === "viewof sortby") return new Inspector(document.querySelector("#observablehq-viewof-sortby-cb52e099"));
+  if (name === "viewof numfeatures") return new Inspector(document.querySelector("#observablehq-viewof-numfeatures-cb52e099"));
+  if (name === "viewof numlabels") return new Inspector(document.querySelector("#observablehq-viewof-numlabels-cb52e099"));
+  if (name === "viewof persistence") return new Inspector(document.querySelector("#observablehq-viewof-persistence-cb52e099"));
+  if (name === "plot") return new Inspector(document.querySelector("#observablehq-plot-cb52e099"));
+  return ["aapl","series","features","index","labelsHigh","labelsLow"].includes(name);
+});
+</script>
+</body>
+</html>
