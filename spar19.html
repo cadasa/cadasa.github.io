@@ -2,16 +2,26 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Preikestolen Hike</title>
+<title>SPAR19</title>
 <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-<link href="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css" rel="stylesheet">
-<script src="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js"></script>
 <style>
 body { margin: 0; padding: 0; }
 #map { position: absolute; top: 0; bottom: 0; width: 100%; }
 </style>
 </head>
 <body>
+	<style>
+	#marker {
+	background-image: url('https://cutewallpaper.org/24/avion-png/silhouette-avion-png-plane-clip-art-transparent-png-large-size-png-image-pikpng.png');
+	background-size: cover;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	cursor: pointer;
+	}
+	</style>
 <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
 <div id="map"></div>
 <script>
@@ -19,11 +29,12 @@ body { margin: 0; padding: 0; }
     (async () => {
         const map = new mapboxgl.Map({
             container: 'map',
-            zoom: 13,
-            center: [6.18387,58.98756],
-            pitch: 60,
-            bearing:270,
+            zoom: 2.8,
+            center: [105.66,13.08],
+//            pitch: 60,
+//            bearing:270,
             style: 'mapbox://styles/mapbox/satellite-streets-v11',
+						projection: 'globe',
             interactive: true,
             hash: true
         });
@@ -47,20 +58,22 @@ body { margin: 0; padding: 0; }
         // Start downloading the route data, and wait for map load to occur in parallel
         const [pinRouteGeojson, _] = await Promise.all([
             fetch(
-                'https://cadasa.github.io/preikestolen.geojson'
+                'https://cadasa.github.io/spar19.geojson'
             ).then((response) => response.json()),
             map.once('load')
         ]);
 
         const pinRoute = pinRouteGeojson.features[0].geometry.coordinates;
         // Create the marker and popup that will display the elevation queries
-        const popup = new mapboxgl.Popup({ closeButton: false });
-        const marker = new mapboxgl.Marker({
+        const popup = new mapboxgl.Popup({ closeButton: false, offset: 15 });
+				const el = document.createElement('div');
+				el.id = 'marker';
+        const marker = new mapboxgl.Marker(el,{
             color: 'red',
             scale: 0.8,
             draggable: false,
-            pitchAlignment: 'auto',
-            rotationAlignment: 'auto'
+            pitchAlignment: 'map',
+            rotationAlignment: 'map'
         })
             .setLngLat(pinRoute[0])
             .setPopup(popup)
@@ -80,7 +93,7 @@ body { margin: 0; padding: 0; }
             id: 'line',
             paint: {
                 'line-color': 'rgba(0,0,0,0)',
-                'line-width': 5
+                'line-width': 2
             },
             layout: {
                 'line-cap': 'round',
@@ -113,7 +126,6 @@ body { margin: 0; padding: 0; }
             'maxzoom': 14
         });
         map.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1.5 });
-
         await map.once('idle');
         // The total animation duration, in milliseconds
         const animationDuration = 20000;
@@ -144,9 +156,8 @@ body { margin: 0; padding: 0; }
                 // Do not use terrain exaggeration to get actual meter values
                 map.queryTerrainElevation(lngLat, { exaggerated: false })
             );
-
             // Update the popup altitude value and marker location
-            popup.setHTML('Altitude: ' + elevation + 'm<br/>' + 'Distance: ' + Math.round(pathDistance * animationPhase*100)/100 + 'km<br/>');
+            popup.setHTML('<b>SPAR19: SZB-TSA</b><br/>' + 'Distance: ' + Math.round(pathDistance * animationPhase*100)/100 + 'km<br/>');
             marker.setLngLat(lngLat);
 
             // Reduce the visible length of the line by using a line-gradient to cutoff the line
@@ -160,8 +171,8 @@ body { margin: 0; padding: 0; }
             ]);
 
             // Rotate the camera at a slightly lower speed to give some parallax effect in the background
-            const rotation = 270 - animationPhase * 40.0;
-            map.setBearing(rotation % 360);
+            //const rotation = 0 - animationPhase * 40.0;
+            //map.setBearing(rotation % 360);
 
             window.requestAnimationFrame(frame);
 
