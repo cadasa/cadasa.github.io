@@ -1,0 +1,21 @@
+<div id="observablehq-viewof-title-310e953c"></div>
+<div id="observablehq-title2-310e953c"></div>
+<div id="observablehq-refr-310e953c"></div>
+<div id="observablehq-mapboxMap-310e953c"></div>
+<div id="observablehq-viewof-route2-310e953c"></div>
+<div id="observablehq-c-310e953c"></div>
+<div id="observablehq-style-310e953c"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/6cb900fe0280fe85.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof title") return new Inspector(document.querySelector("#observablehq-viewof-title-310e953c"));
+  if (name === "title2") return new Inspector(document.querySelector("#observablehq-title2-310e953c"));
+  if (name === "refr") return new Inspector(document.querySelector("#observablehq-refr-310e953c"));
+  if (name === "mapboxMap") return new Inspector(document.querySelector("#observablehq-mapboxMap-310e953c"));
+  if (name === "viewof route2") return true;
+  if (name === "c") return true;
+  if (name === "style") return new Inspector(document.querySelector("#observablehq-style-310e953c"));
+});
+</script>
