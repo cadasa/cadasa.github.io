@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <meta name="theme-color" content="#000000"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://globle-game.com/favicon/apple-touch-icon.png"/>
+  <link rel="icon shortcut" type="image/png" sizes="32x32" href="https://globle-game.com/favicon/favicon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="https://globle-game.com/favicon/favicon-16x16.png"/>
+  <link rel="manifest" href="https://globle-game.com/favicon/site.webmanifest"/>
+  <link rel="image_src" href="https://globle-game.com/images/preview.png"/>
+  <title>Moon Phase and Libration in 2022</title>
+  <meta property="og:image" content="https://cadasa.github.io/tm22.JPG">
+  <meta property="og:url" content="https://cadasa.github.io/tm22.html">
+  <meta property="og:title" content="Moon Phase and Libration in 2022">
+  <meta name="description" content="Moon Phase and Libration in 2022 at your local time and location"/>
+</head>
+<body>
+<div id="observablehq-title-55831f0e"></div>
+<div id="observablehq-viewof-hour-55831f0e"></div>
+<div id="observablehq-app3-55831f0e"></div>
+<div id="observablehq-combined-55831f0e"></div>
+<div id="observablehq-style-55831f0e"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/b5ca8f816fcd9fa3.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-55831f0e"));
+  if (name === "viewof hour") return new Inspector(document.querySelector("#observablehq-viewof-hour-55831f0e"));
+  if (name === "app3") return new Inspector(document.querySelector("#observablehq-app3-55831f0e"));
+  if (name === "combined") return new Inspector(document.querySelector("#observablehq-combined-55831f0e"));
+  if (name === "style") return new Inspector(document.querySelector("#observablehq-style-55831f0e"));
+  return ["videoTime","moon","duration","orbit"].includes(name);
+});
+</script>
+</body>
+</html>
