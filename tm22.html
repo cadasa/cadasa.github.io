@@ -17,22 +17,31 @@
   <meta name="description" content="Moon Phase and Libration in 2022 at your local time and location"/>
 </head>
 <body>
-<div id="observablehq-title-55831f0e"></div>
-<div id="observablehq-viewof-hour-55831f0e"></div>
-<div id="observablehq-app3-55831f0e"></div>
-<div id="observablehq-combined-55831f0e"></div>
-<div id="observablehq-style-55831f0e"></div>
+  <div id="observablehq-title-769fbd5a"></div>
+  <div id="observablehq-app3-769fbd5a"></div>
+  <div id="observablehq-lucal-769fbd5a"></div>
+  <div id="observablehq-combined-769fbd5a"></div>
+  <div id="observablehq-caption-769fbd5a"></div>
+  <div id="observablehq-style-769fbd5a"></div>
+
+  <div id="observablehq-title-769fbd5a"></div>
+<div id="observablehq-app3-769fbd5a"></div>
+<div id="observablehq-lucal-769fbd5a"></div>
+<div id="observablehq-combined-769fbd5a"></div>
+<div id="observablehq-caption-769fbd5a"></div>
+<div id="observablehq-style-769fbd5a"></div>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/d/b5ca8f816fcd9fa3.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-55831f0e"));
-  if (name === "viewof hour") return new Inspector(document.querySelector("#observablehq-viewof-hour-55831f0e"));
-  if (name === "app3") return new Inspector(document.querySelector("#observablehq-app3-55831f0e"));
-  if (name === "combined") return new Inspector(document.querySelector("#observablehq-combined-55831f0e"));
-  if (name === "style") return new Inspector(document.querySelector("#observablehq-style-55831f0e"));
-  return ["videoTime","moon","duration","orbit"].includes(name);
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-769fbd5a"));
+  if (name === "app3") return new Inspector(document.querySelector("#observablehq-app3-769fbd5a"));
+  if (name === "lucal") return new Inspector(document.querySelector("#observablehq-lucal-769fbd5a"));
+  if (name === "combined") return new Inspector(document.querySelector("#observablehq-combined-769fbd5a"));
+  if (name === "caption") return new Inspector(document.querySelector("#observablehq-caption-769fbd5a"));
+  if (name === "style") return new Inspector(document.querySelector("#observablehq-style-769fbd5a"));
+  return ["moon","videoTime","duration","orbit"].includes(name);
 });
 </script>
 </body>
