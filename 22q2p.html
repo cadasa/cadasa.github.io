@@ -1,0 +1,14 @@
+<div id="observablehq-title-e473bca6"></div>
+<div id="observablehq-viewof-select-e473bca6"></div>
+<div id="observablehq-pchart-e473bca6"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/8e245ea7c109e903.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-e473bca6"));
+  if (name === "viewof select") return new Inspector(document.querySelector("#observablehq-viewof-select-e473bca6"));
+  if (name === "pchart") return new Inspector(document.querySelector("#observablehq-pchart-e473bca6"));
+  return ["profits2"].includes(name);
+});
+</script>
