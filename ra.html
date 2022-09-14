@@ -1,0 +1,15 @@
+<div id="observablehq-ra-ba69efa8"></div>
+<div id="observablehq-viewof-rollingAverageWindowSize-ba69efa8"></div>
+<div id="observablehq-viewof-rollingAverageMethod-ba69efa8"></div>
+<div id="observablehq-rollingAverageWindow-ba69efa8"></div>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/5f9393eef64c560c.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "ra") return new Inspector(document.querySelector("#observablehq-ra-ba69efa8"));
+  if (name === "viewof rollingAverageWindowSize") return new Inspector(document.querySelector("#observablehq-viewof-rollingAverageWindowSize-ba69efa8"));
+  if (name === "viewof rollingAverageMethod") return new Inspector(document.querySelector("#observablehq-viewof-rollingAverageMethod-ba69efa8"));
+  if (name === "rollingAverageWindow") return new Inspector(document.querySelector("#observablehq-rollingAverageWindow-ba69efa8"));
+});
+</script>
