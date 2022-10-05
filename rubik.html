@@ -1,9 +1,39 @@
-<div id="observablehq-viewof-rubik-5702869b"></div>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <meta name="theme-color" content="#000000"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://globle-game.com/favicon/apple-touch-icon.png"/>
+  <link rel="icon shortcut" type="image/png" sizes="32x32" href="https://globle-game.com/favicon/favicon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="https://globle-game.com/favicon/favicon-16x16.png"/>
+  <link rel="manifest" href="https://globle-game.com/favicon/site.webmanifest"/>
+  <link rel="image_src" href="https://globle-game.com/images/preview.png"/>
+  <title>Rubik's cube</title>
+  <meta property="og:image" content="https://cadasa.github.io/rubik.JPG">
+  <meta property="og:url" content="https://cadasa.github.io/rubik.html">
+  <meta property="og:title" content="Play Rubik's cube">
+  <meta name="description" content="Play and Calculate Rubik's cube arrangements"/>
+</head>
+<body>
+<div id="observablehq-title-2a031ec1"></div>
+<div id="observablehq-help-2a031ec1"></div>
+<div id="observablehq-viewof-button-2a031ec1"></div>
+<div id="observablehq-arrs-2a031ec1"></div>
+<div id="observablehq-viewof-rubik-2a031ec1"></div>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/@cadasa/rubik.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "viewof rubik") return new Inspector(document.querySelector("#observablehq-viewof-rubik-5702869b"));
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-2a031ec1"));
+  if (name === "help") return new Inspector(document.querySelector("#observablehq-help-2a031ec1"));
+  if (name === "viewof button") return new Inspector(document.querySelector("#observablehq-viewof-button-2a031ec1"));
+  if (name === "arrs") return new Inspector(document.querySelector("#observablehq-arrs-2a031ec1"));
+  if (name === "viewof rubik") return new Inspector(document.querySelector("#observablehq-viewof-rubik-2a031ec1"));
+  return ["result"].includes(name);
 });
 </script>
+</body>
+</html>
