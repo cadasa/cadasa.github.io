@@ -10,29 +10,29 @@
   <link rel="icon" type="image/png" sizes="16x16" href="https://globle-game.com/favicon/favicon-16x16.png"/>
   <link rel="manifest" href="https://globle-game.com/favicon/site.webmanifest"/>
   <link rel="image_src" href="https://globle-game.com/images/preview.png"/>
-  <title>Rubik's cube</title>
-  <meta property="og:image" content="https://cadasa.github.io/rubik.JPG">
-  <meta property="og:url" content="https://cadasa.github.io/rubik.html">
-  <meta property="og:title" content="Play Rubik's cube">
-  <meta name="description" content="Play and Calculate Rubik's cube arrangements"/>
+  <title>The Queens Problem</title>
+  <meta property="og:image" content="https://cadasa.github.io/queens.JPG">
+  <meta property="og:url" content="https://cadasa.github.io/queens.html">
+  <meta property="og:title" content="Solve the Queens Problem">
+  <meta name="description" content="How many different ways can you place 8 chess on a chessboard so that no 2 queens threaten each other?"/>
 </head>
 <body>
-<div id="observablehq-queens-6ce6f2ce"></div>
-<div id="observablehq-board-6ce6f2ce"></div>
-<div id="observablehq-viewof-button-6ce6f2ce"></div>
-<div id="observablehq-arrs-6ce6f2ce"></div>
-<div id="observablehq-sol-6ce6f2ce"></div>
+  <div id="observablehq-queens-a7941528"></div>
+  <div id="observablehq-board-a7941528"></div>
+  <div id="observablehq-viewof-button-a7941528"></div>
+  <div id="observablehq-arrs-a7941528"></div>
+  <div id="observablehq-sol-a7941528"></div>
 
-<script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/d/31c86064de0d015a@420.js?v=3";
-new Runtime().module(define, name => {
-  if (name === "queens") return new Inspector(document.querySelector("#observablehq-queens-6ce6f2ce"));
-  if (name === "board") return new Inspector(document.querySelector("#observablehq-board-6ce6f2ce"));
-  if (name === "viewof button") return new Inspector(document.querySelector("#observablehq-viewof-button-6ce6f2ce"));
-  if (name === "arrs") return new Inspector(document.querySelector("#observablehq-arrs-6ce6f2ce"));
-  if (name === "sol") return new Inspector(document.querySelector("#observablehq-sol-6ce6f2ce"));
-});
-</script>
+  <script type="module">
+  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+  import define from "https://api.observablehq.com/d/31c86064de0d015a@441.js?v=3";
+  new Runtime().module(define, name => {
+    if (name === "queens") return new Inspector(document.querySelector("#observablehq-queens-a7941528"));
+    if (name === "board") return new Inspector(document.querySelector("#observablehq-board-a7941528"));
+    if (name === "viewof button") return new Inspector(document.querySelector("#observablehq-viewof-button-a7941528"));
+    if (name === "arrs") return new Inspector(document.querySelector("#observablehq-arrs-a7941528"));
+    if (name === "sol") return new Inspector(document.querySelector("#observablehq-sol-a7941528"));
+  });
+  </script>
 </body>
 </html>
