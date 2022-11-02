@@ -1,0 +1,19 @@
+<div id="observablehq-viewof-rawfile-d2fa8fc2"></div>
+<div id="observablehq-title-d2fa8fc2"></div>
+<div id="observablehq-tweet_scat-d2fa8fc2"></div>
+<div id="observablehq-viewof-tweettable-d2fa8fc2"></div>
+<div id="observablehq-td-d2fa8fc2"></div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@3/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/dba27bac17c41de0@653.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "viewof rawfile") return new Inspector(document.querySelector("#observablehq-viewof-rawfile-d2fa8fc2"));
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-d2fa8fc2"));
+  if (name === "tweet_scat") return new Inspector(document.querySelector("#observablehq-tweet_scat-d2fa8fc2"));
+  if (name === "viewof tweettable") return new Inspector(document.querySelector("#observablehq-viewof-tweettable-d2fa8fc2"));
+  if (name === "td") return new Inspector(document.querySelector("#observablehq-td-d2fa8fc2"));
+  return ["text","tweets","tidytweets","tidytweets2","interacted","usertweets","db","interactedMap","viewof usertweet","besties","followersDerived","viewof users","viewof user"].includes(name);
+});
+</script>
