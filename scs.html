@@ -60,19 +60,25 @@ body { margin: 0; padding: 0; }
   content: '✔';
   margin-right: 5px;
   }
+
   </style>
   <div id="map"></div>
   <nav id="filter-group" class="filter-group"></nav>
-
+  <div class="map-overlay top">
+  <div class="map-overlay-inner">
+  <label>Layer opacity: <span id="slider-value">100%</span></label>
+  <input id="slider" type="range" min="0" max="100" step="0" value="100">
+  </div>
+  </div>
 <script>
 	mapboxgl.accessToken = 'pk.eyJ1IjoiY2FkYXNhIiwiYSI6ImNraWc1aTF2YjFpNWkycnBvZGs4a3ZrajEifQ.oy_ctBheuCWfip4-ou7akg';
     (async () => {
         const map = new mapboxgl.Map({
             container: 'map',
             center: [112.591669, 15.373335],
-            zoom: 3,
+            zoom: 5,
             minZoom: 3,
-//            maxZoom: 7,
+            maxZoom: 7,
             style: 'mapbox://styles/mapbox/streets-v11',
 //            interactive: true,
 //            hash: true
@@ -95,6 +101,8 @@ body { margin: 0; padding: 0; }
         })
         );
         const filterGroup = document.getElementById('filter-group');
+        const slider = document.getElementById('slider');
+        const sliderValue = document.getElementById('slider-value');
         // Start downloading the route data, and wait for map load to occur in parallel
         const [places, _] = await Promise.all([
             fetch(
@@ -165,6 +173,26 @@ body { margin: 0; padding: 0; }
             });
           }
         }
+
+        map.addSource('radar', {
+          'type': 'image',
+          'url': 'https://cadasa.github.io/scs_tec.JPG',
+          'coordinates': [
+              [110, 20],
+              [120, 20],
+              [120, 10],
+              [110, 10]
+            ]
+          });
+        map.addLayer({
+          id: 'radar',
+          'type': 'raster',
+          'source': 'radar',
+          'paint': {
+          'raster-fade-duration': 0,
+          'raster-opacity': .3
+          }
+        });
 
         map.addSource('eez', {
             type: 'geojson',
@@ -244,6 +272,20 @@ body { margin: 0; padding: 0; }
 			map.on('mouseleave', 'eez', function () {
 			map.getCanvas().style.cursor = '';
 //			popup2.remove();
+
+slider.addEventListener('input', (e) => {
+// Adjust the layers opacity. layer here is arbitrary - this could
+// be another layer name found in your style or a custom layer
+// added on the fly using `addSource`.
+map.setPaintProperty(
+'radar',
+'raster-opacity',
+parseInt(e.target.value, 10) / 100
+);
+
+// Value indicator
+sliderValue.textContent = e.target.value + '%';
+});
 			});
 
 
