@@ -103,6 +103,12 @@ body { margin: 0; padding: 0; }
         const filterGroup = document.getElementById('filter-group');
         const slider = document.getElementById('slider');
         const sliderValue = document.getElementById('slider-value');
+        const frameCount = 2;
+        let currentImage = 0;
+
+        function getPath() {
+          return `https://cadasa.github.io/scs_tec${currentImage}.JPG`;
+        }
         // Start downloading the route data, and wait for map load to occur in parallel
         const [places, _] = await Promise.all([
             fetch(
@@ -176,7 +182,7 @@ body { margin: 0; padding: 0; }
 
         map.addSource('radar', {
           'type': 'image',
-          'url': 'https://cadasa.github.io/scs_tec.JPG',
+          'url': getPath(),
           'coordinates': [
               [110, 20],
               [120, 20],
@@ -193,6 +199,11 @@ body { margin: 0; padding: 0; }
           'raster-opacity': .3
           }
         });
+
+        setInterval(() => {
+        currentImage = (currentImage + 1) % frameCount;
+        map.getSource('radar').updateImage({ url: getPath() });
+      }, 400);
 
         map.addSource('eez', {
             type: 'geojson',
