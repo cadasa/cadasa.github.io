@@ -203,7 +203,7 @@ body { margin: 0; padding: 0; }
         setInterval(() => {
         currentImage = (currentImage + 1) % frameCount;
         map.getSource('radar').updateImage({ url: getPath() });
-      }, 400);
+      }, 800);
 
         map.addSource('eez', {
             type: 'geojson',
@@ -299,8 +299,8 @@ sliderValue.textContent = e.target.value + '%';
 });
 			});
 
-
     })();
+
 </script>
 
 </body>
