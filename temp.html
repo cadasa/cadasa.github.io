@@ -14,16 +14,18 @@ new Runtime().module(define, name => {
 });
 </script>
 
-<div id="observablehq-chart-82ec2753"></div>
-<div id="observablehq-style-82ec2753"></div>
-<div id="observablehq-openaicss-82ec2753"></div>
+<div id="observablehq-viewof-plotType-6781082e"></div>
+<div id="observablehq-viewof-isCurve-6781082e"></div>
+<div id="observablehq-timeSeries-6781082e"></div>
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
 <script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/d/b66fbd6e5a722317.js?v=3";
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/d/48799d135530ed27@1132.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-82ec2753"));
-  if (name === "style") return true;
-  if (name === "openaicss") return true;
+  if (name === "viewof plotType") return new Inspector(document.querySelector("#observablehq-viewof-plotType-6781082e"));
+  if (name === "viewof isCurve") return new Inspector(document.querySelector("#observablehq-viewof-isCurve-6781082e"));
+  if (name === "timeSeries") return new Inspector(document.querySelector("#observablehq-timeSeries-6781082e"));
+  return ["memberData"].includes(name);
 });
 </script>
