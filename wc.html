@@ -1,0 +1,19 @@
+<div id="observablehq-title-7c026d04"></div>
+<div id="observablehq-viewof-storyYear-7c026d04"></div>
+<div id="observablehq-teams-7c026d04"></div>
+<div id="observablehq-viewof-matchIndex-7c026d04"></div>
+<div id="observablehq-matches-7c026d04"></div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/d/4ba5abbab8b3764e@2065.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-7c026d04"));
+  if (name === "viewof storyYear") return new Inspector(document.querySelector("#observablehq-viewof-storyYear-7c026d04"));
+  if (name === "teams") return new Inspector(document.querySelector("#observablehq-teams-7c026d04"));
+  if (name === "viewof matchIndex") return new Inspector(document.querySelector("#observablehq-viewof-matchIndex-7c026d04"));
+  if (name === "matches") return new Inspector(document.querySelector("#observablehq-matches-7c026d04"));
+  return ["match"].includes(name);
+});
+</script>
