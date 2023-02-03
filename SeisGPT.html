@@ -1,0 +1,27 @@
+<div id="observablehq-title-02ad0878"></div>
+<div id="observablehq-viewof-prompt-02ad0878"></div>
+<div id="observablehq-viewof-aic-02ad0878"></div>
+<div id="observablehq-help-02ad0878"></div>
+<div id="observablehq-viewof-camera-02ad0878"></div>
+<div id="observablehq-dashboard2-02ad0878"></div>
+<div id="observablehq-viewof-radios-02ad0878"></div>
+<div id="observablehq-style1-02ad0878"></div>
+<div id="observablehq-style4-02ad0878"></div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/band-limited-seismic-reflectivity@945.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-02ad0878"));
+  if (name === "viewof prompt") return new Inspector(document.querySelector("#observablehq-viewof-prompt-02ad0878"));
+  if (name === "viewof aic") return new Inspector(document.querySelector("#observablehq-viewof-aic-02ad0878"));
+  if (name === "help") return new Inspector(document.querySelector("#observablehq-help-02ad0878"));
+  if (name === "viewof camera") return new Inspector(document.querySelector("#observablehq-viewof-camera-02ad0878"));
+  if (name === "dashboard2") return new Inspector(document.querySelector("#observablehq-dashboard2-02ad0878"));
+  if (name === "viewof radios") return new Inspector(document.querySelector("#observablehq-viewof-radios-02ad0878"));
+  if (name === "style1") return true;
+  if (name === "style4") return true;
+  return ["run","dalle_url","url_dalle","viewof image","ama","pixels","viewof takePhoto","pixels2","coeffs","out","display","video2","video","photo","checkMediaDevices","imageData","screenShot"].includes(name);
+});
+</script>
