@@ -27,7 +27,7 @@
   <div id="observablehq-style2-d06e7290"></div>
   <div id="observablehq-style3-d06e7290"></div>
   <div id="observablehq-style4-d06e7290"></div>
-  
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
   <script type="module">
   import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
@@ -39,10 +39,10 @@
     if (name === "dashboard3") return new Inspector(document.querySelector("#observablehq-dashboard3-d06e7290"));
     if (name === "dashboard2") return new Inspector(document.querySelector("#observablehq-dashboard2-d06e7290"));
     if (name === "viewof radios") return new Inspector(document.querySelector("#observablehq-viewof-radios-d06e7290"));
-    if (name === "style1") return new Inspector(document.querySelector("#observablehq-style1-d06e7290"));
-    if (name === "style2") return new Inspector(document.querySelector("#observablehq-style2-d06e7290"));
-    if (name === "style3") return new Inspector(document.querySelector("#observablehq-style3-d06e7290"));
-    if (name === "style4") return new Inspector(document.querySelector("#observablehq-style4-d06e7290"));
+    if (name === "style1") return true;
+    if (name === "style2") return true;
+    if (name === "style3") return true;
+    if (name === "style4") return true;
     return ["viewof image","viewof takePhoto","video2","video","photo","pixels2","checkMediaDevices","pixels","imageData","screenShot","coeffs","out","display"].includes(name);
   });
   </script>
