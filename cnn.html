@@ -1,0 +1,14 @@
+<div id="observablehq-draw-01f8133d"></div>
+<div id="observablehq-clear-01f8133d"></div>
+<div id="observablehq-cnn-01f8133d"></div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/d/cf3b69dfaab9e29f@1801.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "draw") return new Inspector(document.querySelector("#observablehq-draw-01f8133d"));
+  if (name === "clear") return new Inspector(document.querySelector("#observablehq-clear-01f8133d"));
+  if (name === "cnn") return new Inspector(document.querySelector("#observablehq-cnn-01f8133d"));
+});
+</script>
