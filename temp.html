@@ -14,18 +14,15 @@ new Runtime().module(define, name => {
 });
 </script>
 
-<div id="observablehq-viewof-plotType-6781082e"></div>
-<div id="observablehq-viewof-isCurve-6781082e"></div>
-<div id="observablehq-timeSeries-6781082e"></div>
+<div id="observablehq-viewof-map-57c135cc"></div>
+<div id="observablehq-iframe2-57c135cc"></div>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-import define from "https://api.observablehq.com/d/48799d135530ed27@1132.js?v=3";
+import define from "https://api.observablehq.com/d/48799d135530ed27@1162.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "viewof plotType") return new Inspector(document.querySelector("#observablehq-viewof-plotType-6781082e"));
-  if (name === "viewof isCurve") return new Inspector(document.querySelector("#observablehq-viewof-isCurve-6781082e"));
-  if (name === "timeSeries") return new Inspector(document.querySelector("#observablehq-timeSeries-6781082e"));
-  return ["memberData"].includes(name);
+  if (name === "viewof map") return new Inspector(document.querySelector("#observablehq-viewof-map-57c135cc"));
+  if (name === "iframe2") return new Inspector(document.querySelector("#observablehq-iframe2-57c135cc"));
 });
 </script>
