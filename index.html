@@ -43,14 +43,14 @@
   }
 
   a:hover {
-    color: #101010;
+    color: #00853e;/*#101010;*/
   }
 
   .heading {
     background: #fff;
     border-bottom: 1px solid #eee;
     height: 40px;
-    line-height: 40px;
+    line-height: 20px;
     padding: 0 10px;
   }
 </style>
@@ -243,9 +243,9 @@ function openPopup(link) {
   popup.style.width = '80%';
   popup.style.zIndex = 9999;
   const iframe = document.createElement('iframe');
-  iframe.src = link;
-  iframe.style.width = '100%';
-  iframe.style.height = '100%';
+      iframe.src = link;
+      iframe.style.width = '100%';
+      iframe.style.height = '100%';
 
   const close = document.createElement('div');
       close.innerText = '✖️';
@@ -294,7 +294,7 @@ function openPopup(link) {
         maxPopup();
         e.stopPropagation();
         return false;
-      };
+      };    
   popup.appendChild(iframe);
   popup.appendChild(close);
   popup.appendChild(fullscreen);
