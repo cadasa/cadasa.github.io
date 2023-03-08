@@ -176,7 +176,7 @@ duration: 1000 // In ms. This matches the CSS transition duration property.
 }
 
 if (window.self !== window.top) {
-return
+console.log("The webpage is inside an iframe");
 } else {
   map.on('load', () => {
   toggleSidebar('left');
