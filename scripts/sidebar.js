@@ -155,13 +155,10 @@ const listHtml = items.map(item => '<p><b><a href="' + item.link + '" style="tex
 
 // Add the list to the sidebar
 listingDiv.innerHTML = listHtml;
-if (window.self !== window.top) {
-const map ={};
-} else {
-   const map = new mapboxgl.Map({
+const map = new mapboxgl.Map({
     container: 'map',
   });
-}
+
 function toggleSidebar(id) {
 const elem = document.getElementById(id);
 // Add or remove the 'collapsed' CSS class from the sidebar element.
@@ -178,6 +175,10 @@ duration: 1000 // In ms. This matches the CSS transition duration property.
 });
 }
 
-map.on('load', () => {
-toggleSidebar('left');
-});
+if (window.self !== window.top) {
+return
+} else {
+  map.on('load', () => {
+  toggleSidebar('left');
+  });
+}
