@@ -15,8 +15,20 @@
 	body { margin: 0; padding: 0; }
 	#map { position: absolute; top: 0; bottom: 0; width: 100%; }
 </style>
+<link rel="stylesheet" href="stylesheets/app.css" />
+<link rel="stylesheet" href="stylesheets/sidebar.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 </head>
 <body>
+<div id="left" class="sidebar flex-center left collapsed">
+	<div class="sidebar-content rounded-rect flex-center">
+		<div class="sidebar-toggle rounded-rect left" onclick="toggleSidebar('left')">
+			&rarr;
+		</div>
+	</div>
+	<div id='listings' class='listings'></div>
+</div>
+<script src="scripts/sidebar2.js"></script>
 <style>
 #buttons {
 width: 80%;
@@ -123,6 +135,13 @@ document
 	.addEventListener('click', function (event) {
 		var period = event.target.id.substr('button-'.length);
 		map.getSource('places').setData(period);
+		// Zoom to the zoom level 1.2 without an animated transition
+		map.setZoom(1.2);
+		// Rotate the map to 0 degrees.
+		map.setBearing(0);
+		// setPitch with an animation of 2 seconds.
+		map.setPitch(0);
+		map.setCenter([18.491427, 35.012891]);
 	//  var link = 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_' + period + '.geojson';
 	// Use setLayoutProperty to set the value of a layout property in a style layer.
 	// The three arguments are the id of the layer, the name of the layout property,

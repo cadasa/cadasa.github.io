@@ -14,8 +14,23 @@
   <meta property="og:url" content="https://cadasa.github.io/ttttt.html">
   <meta property="og:title" content="tttttttt">
   <meta name="description" content="tttttttttttttttttttt"/>
+  <link rel="stylesheet" href="stylesheets/app.css" />
+  <link rel="stylesheet" href="stylesheets/sidebar.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 </head>
 <body>
+  <div id="left" class="sidebar flex-center left collapsed">
+    <div class="sidebar-content rounded-rect flex-center">
+      <div class="sidebar-toggle rounded-rect left" onclick="toggleSidebar('left')">
+        &rarr;
+      </div>
+    </div>
+    <div id='listings' class='listings'></div>
+  </div>
+  <div id="map"></div>
+
+  <script src="scripts/sidebar.js"></script>
+
 
 </body>
 </html>

@@ -1,3 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="theme-color" content="#000000"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://globle-game.com/favicon/apple-touch-icon.png"/>
+  <link rel="icon shortcut" type="image/png" sizes="32x32" href="https://globle-game.com/favicon/favicon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="https://globle-game.com/favicon/favicon-16x16.png"/>
+  <link rel="manifest" href="https://globle-game.com/favicon/site.webmanifest"/>
+  <link rel="image_src" href="https://globle-game.com/images/preview.png"/>
+  <title>Global Temperature since the Last Glacial Maximum</title>
+  <meta property="og:image" content="https://cadasa.github.io/vizapps/temp.JPG">
+  <meta property="og:url" content="https://cadasa.github.io/temp.html">
+  <meta property="og:title" content="Global Temperature since the Last Glacial Maximum">
+  <meta name="description" content="Global Temperature since the Last Glacial Maximum"/>
+  <link rel="stylesheet" href="stylesheets/app.css" />
+  <link rel="stylesheet" href="stylesheets/sidebar.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+<body>
+  <div id="left" class="sidebar flex-center left collapsed">
+    <div class="sidebar-content rounded-rect flex-center">
+      <div class="sidebar-toggle rounded-rect left" onclick="toggleSidebar('left')">
+        &rarr;
+      </div>
+    </div>
+    <div id='listings' class='listings'></div>
+  </div>
+  <div id="map"></div>
+
+  <script src="scripts/sidebar.js"></script>
+
 <div id="observablehq-title-b03ba782"></div>
 <div id="observablehq-dashboard2-b03ba782"></div>
 <div id="observablehq-visual-b03ba782"></div>

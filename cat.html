@@ -5,11 +5,22 @@
     <meta http-equiv="cache-control" content="no-cache">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Global Airline Direct Routes & COVID Restrictions</title>
-    <style>
-      body { margin: 1000; padding: 1000;}
-    </style>
-</head>
-<body>
+    <link rel="stylesheet" href="stylesheets/app.css" />
+    <link rel="stylesheet" href="stylesheets/sidebar.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    </head>
+    <body>
+    <div id="left" class="sidebar flex-center left collapsed">
+      <div class="sidebar-content rounded-rect flex-center">
+        <div class="sidebar-toggle rounded-rect left" onclick="toggleSidebar('left')">
+          &rarr;
+        </div>
+      </div>
+      <div id='listings' class='listings'></div>
+    </div>
+    <div id="map"></div>
+    <script src="scripts/sidebar.js"></script>
+
 <div id="observablehq-viewof-title-de770927"></div>
 <div id="observablehq-dashboard2-de770927"></div>
 <div id="observablehq-viewof-dep-de770927"></div>

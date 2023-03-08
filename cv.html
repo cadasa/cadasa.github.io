@@ -22,8 +22,22 @@
 		<meta name="csrf-param" content="authenticity_token" />
 <meta name="csrf-token" content="jfE9XMBwCu9cU0erAXTwaz8ovePlhEJD+kbNxTgNrWJ2uhUblHvoyDHjeq9wLcP5N9gW+YeOyV+2TQWevMPdQA==" />
 		<style id="user-css-output" type="text/css"></style>
+		<link rel="stylesheet" href="stylesheets/app.css" />
+		<link rel="stylesheet" href="stylesheets/sidebar.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 	</head>
 	<body class="reveal-viewport theme-font-montserrat theme-color-white-blue"">
+		<div id="left" class="sidebar flex-center left collapsed">
+			<div class="sidebar-content rounded-rect flex-center">
+				<div class="sidebar-toggle rounded-rect left" onclick="toggleSidebar('left')">
+					&rarr;
+				</div>
+			</div>
+			<div id='listings' class='listings'></div>
+		</div>
+		<div id="map"></div>
+
+		<script src="scripts/sidebar.js"></script>
 		<div class="reveal">
 			<div class="slides">
 				<section data-id="89d149d90c791d579f603df255c8d3f9"><div class="sl-block" data-block-type="image" data-name="image-e6843d" style="width: 569.009px; height: 565.802px; left: 354.334px; top: 110.599px; min-width: 1px; min-height: 1px;" data-block-id="4d57a5806698d1aa3e59d698d37d725e"><div class="sl-block-content" style="z-index: 10;"><img style="left: 0px; top: 0px; width: 569px; height: 738px;" data-natural-width="740" data-natural-height="960" data-crop-x="0" data-crop-y="0" data-crop-width="1" data-crop-height="0.766488" data-lazy-loaded="" data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/1573118/images/8541058/untitled__2_.png"></div></div>
@@ -130,7 +144,7 @@
 			</div>
 		</div>
 
-		
+
 <script>
 	var SLConfig = {"current_user":{"id":1573118,"username":"khanhducnguyen","name":"Khanh Duc Nguyen","description":"","thumbnail_url":"https://lh3.googleusercontent.com/a-/AOh14GhWYzbmRuftBVSMle2RW-JkglyXt7WkADed8Z__f0A=s96-c","account_type":"default","team_id":null,"settings":{"id":7402900,"present_controls":true,"present_upsizing":false,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null,"editor_grid":true,"editor_grid_on_top":false,"editor_snap":true,"editor_fixed_notes":false,"developer_mode":false,"speaker_layout":"wide","speaker_theme":"dark","phone_number":null,"phone_country_code":null,"media_sources":null,"export_controls":null,"export_slide_number":null,"export_slide_notes":null,"export_separate_fragments":null,"auto_animate_tutorial_completed":true,"profile_sorting":"created","profile_layout":"grid"},"email":"khanhduc@gmail.com","notify_on_receipt":true,"billing_address":null,"billing_vat_id":null,"editor_tutorial_completed":true,"manually_upgraded":false,"deck_user_editor_limit":null,"storage_used":52084337,"storage_limit":262144000,"image_upload_limit":10485760,"video_upload_limit":104857600},"deck":{"id":2118126,"slug":"deck-a35198","title":"My Triangle","description":"","width":1280,"height":720,"margin":0.0,"visibility":"all","published_at":"2021-05-06T09:07:10.139Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/d0b2e057a4a0e0c2ef95c37d3b4b1628/thumb.jpg?1645187736","view_count":4,"user":{"id":1573118,"username":"khanhducnguyen","name":"Khanh Duc Nguyen","description":"","thumbnail_url":"https://lh3.googleusercontent.com/a-/AOh14GhWYzbmRuftBVSMle2RW-JkglyXt7WkADed8Z__f0A=s96-c","account_type":"default","team_id":null,"settings":{"id":7402900,"present_controls":true,"present_upsizing":false,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"slide","transition":"none","theme_id":null,"theme_font":"montserrat","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":false,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":true,"slide_count":12,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":null,"data_updated_at":1649742339282,"font_typekit":null,"font_google":null,"time_limit":null,"navigation_mode":"default","upsizing_enabled":true,"notes":{}},"user":{"id":1573118,"username":"khanhducnguyen","name":"Khanh Duc Nguyen","description":"","thumbnail_url":"https://lh3.googleusercontent.com/a-/AOh14GhWYzbmRuftBVSMle2RW-JkglyXt7WkADed8Z__f0A=s96-c","account_type":"default","team_id":null,"settings":{"id":7402900,"present_controls":true,"present_upsizing":false,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}}};
 </script>
@@ -413,7 +427,7 @@ var Tl={id:"highlight",HIGHLIGHT_STEP_DELIMITER:"|",HIGHLIGHT_LINE_DELIMITER:","
 				width: SLConfig.deck.width,
 				height: SLConfig.deck.height,
 				margin: 0.05,
-				
+
 
 				hash: true,
 				controls: true,
@@ -448,7 +462,7 @@ var Tl={id:"highlight",HIGHLIGHT_STEP_DELIMITER:"|",HIGHLIGHT_LINE_DELIMITER:","
 			});
 		</script>
 
-		
+
 
 	</body>
 </html>

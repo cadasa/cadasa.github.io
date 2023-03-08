@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  color: #404040;
+  background-color: white;
+
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding-left: 8px;
+  padding-right: : 0px;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font-size: 32px;
+  margin: 0;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 20px 2px;
+}
+
+a {
+  color: #404040;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00853e;/*#101010;*/
+}
+
+.heading {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  height: 40px;
+  line-height: 20px;
+  padding: 0 10px;
+}
