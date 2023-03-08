@@ -166,7 +166,12 @@ const elem = document.getElementById(id);
 const collapsed = elem.classList.toggle('collapsed');
 const padding = {};
 // 'id' is 'right' or 'left'. When run at start, this object looks like: '{left: 300}';
-padding[id] = collapsed ? 0 : 300; // 0 if collapsed, 300 px if not. This matches the width of the sidebars in the .sidebar CSS class.
+if (window.self !== window.top) {
+  padding[id] = collapsed ? -300 : 0; // 0 if collapsed, 300 px if not. This matches the width of the sidebars in the .sidebar CSS class.
+} else {
+  padding[id] = collapsed ? 0 : 300; // 0 if collapsed, 300 px if not. This matches the width of the sidebars in the .sidebar CSS class.
+}
+
 // Use `map.easeTo()` with a padding option to adjust the map's center accounting for the position of sidebars.
 map.easeTo({
 padding: padding,
