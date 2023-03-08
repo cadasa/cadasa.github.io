@@ -174,6 +174,10 @@ duration: 1000 // In ms. This matches the CSS transition duration property.
 });
 }
 
-map.on('load', () => {
-toggleSidebar('left');
-});
+//if (window.self !== window.top) {
+//console.log("The webpage is inside an iframe");
+//} else {
+//  map.on('load', () => {
+//  toggleSidebar('left');
+//  });
+//}
