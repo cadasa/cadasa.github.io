@@ -155,10 +155,13 @@ const listHtml = items.map(item => '<p><b><a href="' + item.link + '" style="tex
 
 // Add the list to the sidebar
 listingDiv.innerHTML = listHtml;
-  const map = new mapboxgl.Map({
+if (window.self !== window.top) {
+const map ={};
+} else {
+   const map = new mapboxgl.Map({
     container: 'map',
   });
-
+}
 function toggleSidebar(id) {
 const elem = document.getElementById(id);
 // Add or remove the 'collapsed' CSS class from the sidebar element.
@@ -166,11 +169,7 @@ const elem = document.getElementById(id);
 const collapsed = elem.classList.toggle('collapsed');
 const padding = {};
 // 'id' is 'right' or 'left'. When run at start, this object looks like: '{left: 300}';
-if (window.self !== window.top) {
-  padding[id] = collapsed ? -300 : 0; // 0 if collapsed, 300 px if not. This matches the width of the sidebars in the .sidebar CSS class.
-} else {
   padding[id] = collapsed ? 0 : 300; // 0 if collapsed, 300 px if not. This matches the width of the sidebars in the .sidebar CSS class.
-}
 
 // Use `map.easeTo()` with a padding option to adjust the map's center accounting for the position of sidebars.
 map.easeTo({
