@@ -158,7 +158,10 @@ listingDiv.innerHTML = listHtml;
 //  const map = new mapboxgl.Map({
 //    container: 'map',
 //  });
-
+if (window.location !== window.parent.location) {
+  // The code is running inside an iframe
+} else {
+  // The code is not running inside an iframe
 function toggleSidebar(id) {
 const elem = document.getElementById(id);
 // Add or remove the 'collapsed' CSS class from the sidebar element.
@@ -173,7 +176,7 @@ padding: padding,
 duration: 1000 // In ms. This matches the CSS transition duration property.
 });
 }
-
+}
 //if (window.self !== window.top) {
 //console.log("The webpage is inside an iframe");
 //} else {
