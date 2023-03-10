@@ -29,22 +29,27 @@
   </div>
 
   <script src="scripts/sidebar.js"></script>
-  <div id="observablehq-title-30a31f6d"></div>
-  <div id="observablehq-app2-30a31f6d"></div>
-  <div id="observablehq-app-30a31f6d"></div>
-  <div id="observablehq-style-30a31f6d"></div>
+  <div id="observablehq-title-6330bdd4"></div>
+<div id="observablehq-app2-6330bdd4"></div>
+<div id="observablehq-txt-6330bdd4"></div>
+<div id="observablehq-txt2-6330bdd4"></div>
+<div id="observablehq-app-6330bdd4"></div>
+<div id="observablehq-style-6330bdd4"></div>
+<p>Credit: <a href="https://observablehq.com/d/dcc6c3a156271b6a">English Speech to Text by cadasa</a></p>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
-  <script type="module">
-  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-  import define from "https://api.observablehq.com/d/dcc6c3a156271b6a.js?v=3";
-  new Runtime().module(define, name => {
-    if (name === "title") return new Inspector(document.querySelector("#observablehq-title-30a31f6d"));
-    if (name === "app2") return new Inspector(document.querySelector("#observablehq-app2-30a31f6d"));
-    if (name === "app") return true;
-    if (name === "style") return new Inspector(document.querySelector("#observablehq-style-30a31f6d"));
-  });
-  </script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/d/dcc6c3a156271b6a.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-6330bdd4"));
+  if (name === "app2") return new Inspector(document.querySelector("#observablehq-app2-6330bdd4"));
+  if (name === "txt") return new Inspector(document.querySelector("#observablehq-txt-6330bdd4"));
+  if (name === "txt2") return new Inspector(document.querySelector("#observablehq-txt2-6330bdd4"));
+  if (name === "app") return true;
+  if (name === "style") return new Inspector(document.querySelector("#observablehq-style-6330bdd4"));
+});
+</script>
 
 </body>
 </html>
