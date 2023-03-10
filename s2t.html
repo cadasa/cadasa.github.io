@@ -9,11 +9,11 @@
   <link rel="icon" type="image/png" sizes="16x16" href="https://globle-game.com/favicon/favicon-16x16.png"/>
   <link rel="manifest" href="https://globle-game.com/favicon/site.webmanifest"/>
   <link rel="image_src" href="https://globle-game.com/images/preview.png"/>
-  <title>tttttttt</title>
+  <title>Speech Recognition</title>
   <meta property="og:image" content="https://cadasa.github.io/ttttt.JPG">
-  <meta property="og:url" content="https://cadasa.github.io/ttttt.html">
-  <meta property="og:title" content="tttttttt">
-  <meta name="description" content="tttttttttttttttttttt"/>
+  <meta property="og:url" content="https://cadasa.github.io/s2t.html">
+  <meta property="og:title" content="Speech to Text">
+  <meta name="description" content="English Speech Recording, Transcription & Translation into German"/>
   <link rel="stylesheet" href="stylesheets/app.css" />
   <link rel="stylesheet" href="stylesheets/sidebar.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
@@ -29,7 +29,22 @@
   </div>
 
   <script src="scripts/sidebar.js"></script>
+  <div id="observablehq-title-30a31f6d"></div>
+  <div id="observablehq-app2-30a31f6d"></div>
+  <div id="observablehq-app-30a31f6d"></div>
+  <div id="observablehq-style-30a31f6d"></div>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+  <script type="module">
+  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+  import define from "https://api.observablehq.com/d/dcc6c3a156271b6a.js?v=3";
+  new Runtime().module(define, name => {
+    if (name === "title") return new Inspector(document.querySelector("#observablehq-title-30a31f6d"));
+    if (name === "app2") return new Inspector(document.querySelector("#observablehq-app2-30a31f6d"));
+    if (name === "app") return true;
+    if (name === "style") return new Inspector(document.querySelector("#observablehq-style-30a31f6d"));
+  });
+  </script>
 
 </body>
 </html>
