@@ -27,7 +27,7 @@ https://cadasa.github.io/mtt.html,https://cadasa.github.io/mtt.JPG,LaTEX Equatio
 https://cadasa.github.io/icf.html,https://cadasa.github.io/icf.JPG,Interactive Curve Fitting
 https://cadasa.github.io/scs.html,https://cadasa.github.io/scs.JPG,South China Sea Map
 https://cadasa.github.io/measure.html,https://cadasa.github.io/measure.JPG,Measure Distance on Map
-https://cadasa.github.io/blsr.html,https://cadasa.github.io/vizapps/blsr.JPG,Band-Limited Seismic Reflectivity
+https://cadasa.github.io/SeisGPT.html,https://cadasa.github.io/vizapps/blsr.JPG,SeisGPT
 https://cadasa.github.io/stratworld.html,https://cadasa.github.io/vizapps/stratworld.JPG,World Stratigraphic Atlas
 https://cadasa.github.io/fieldle.html,https://cadasa.github.io/vizapps/fieldle.JPG,Guess Oil/Gas Field in 6 tries
 https://cadasa.github.io/f&t.html,https://cadasa.github.io/vizapps/f&t.JPG,My Stadium Collection
