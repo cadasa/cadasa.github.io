@@ -17,32 +17,36 @@
   <meta name="description" content="Simulate the band-limited seismic reflectivity of picture"/>
 </head>
 <body>
-  <div id="observablehq-title-36e9e63c"></div>
-  <div id="observablehq-viewof-aic-36e9e63c"></div>
-  <div id="observablehq-help-36e9e63c"></div>
-  <div id="observablehq-dashboard3-36e9e63c"></div>
-  <div id="observablehq-dashboard2-36e9e63c"></div>
-  <div id="observablehq-viewof-radios-36e9e63c"></div>
-  <div id="observablehq-style1-36e9e63c"></div>
-  <div id="observablehq-style4-36e9e63c"></div>
-  <div id="observablehq-app-36e9e63c"></div>
-  <div id="observablehq-app2-36e9e63c"></div>
-  
+  <div id="observablehq-title-841090fc"></div>
+  <div id="observablehq-viewof-aic-841090fc"></div>
+  <div id="observablehq-help-841090fc"></div>
+  <div id="observablehq-dashboard3-841090fc"></div>
+  <div id="observablehq-dashboard2-841090fc"></div>
+  <div id="observablehq-viewof-radios-841090fc"></div>
+  <div id="observablehq-style1-841090fc"></div>
+  <div id="observablehq-style2-841090fc"></div>
+  <div id="observablehq-style3-841090fc"></div>
+  <div id="observablehq-style4-841090fc"></div>
+  <div id="observablehq-app-841090fc"></div>
+  <div id="observablehq-app2-841090fc"></div>
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
   <script type="module">
   import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-  import define from "https://api.observablehq.com/@cadasa/band-limited-seismic-reflectivity.js?v=3";
+  import define from "https://api.observablehq.com/@cadasa/band-limited-seismic-reflectivity@1126.js?v=3";
   new Runtime().module(define, name => {
-    if (name === "title") return new Inspector(document.querySelector("#observablehq-title-36e9e63c"));
-    if (name === "viewof aic") return new Inspector(document.querySelector("#observablehq-viewof-aic-36e9e63c"));
-    if (name === "help") return new Inspector(document.querySelector("#observablehq-help-36e9e63c"));
-    if (name === "dashboard3") return new Inspector(document.querySelector("#observablehq-dashboard3-36e9e63c"));
-    if (name === "dashboard2") return new Inspector(document.querySelector("#observablehq-dashboard2-36e9e63c"));
-    if (name === "viewof radios") return new Inspector(document.querySelector("#observablehq-viewof-radios-36e9e63c"));
+    if (name === "title") return new Inspector(document.querySelector("#observablehq-title-841090fc"));
+    if (name === "viewof aic") return new Inspector(document.querySelector("#observablehq-viewof-aic-841090fc"));
+    if (name === "help") return new Inspector(document.querySelector("#observablehq-help-841090fc"));
+    if (name === "dashboard3") return new Inspector(document.querySelector("#observablehq-dashboard3-841090fc"));
+    if (name === "dashboard2") return new Inspector(document.querySelector("#observablehq-dashboard2-841090fc"));
+    if (name === "viewof radios") return new Inspector(document.querySelector("#observablehq-viewof-radios-841090fc"));
     if (name === "style1") return true;
+    if (name === "style2") return true;
+    if (name === "style3") return true;
     if (name === "style4") return true;
     if (name === "app") return true;
-    if (name === "app2") return new Inspector(document.querySelector("#observablehq-app2-36e9e63c"));
+    if (name === "app2") return new Inspector(document.querySelector("#observablehq-app2-841090fc"));
     return ["viewof image","viewof takePhoto","video2","video","photo","pixels2","checkMediaDevices","pixels","imageData","screenShot","coeffs","out","display"].includes(name);
   });
   </script>
