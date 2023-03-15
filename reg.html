@@ -1,30 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body { margin: 1000; padding: 1000;}
-</style>
+  <meta charset="utf-8"/>
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <meta name="theme-color" content="#000000"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://globle-game.com/favicon/apple-touch-icon.png"/>
+  <link rel="icon shortcut" type="image/png" sizes="32x32" href="https://globle-game.com/favicon/favicon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="https://globle-game.com/favicon/favicon-16x16.png"/>
+  <link rel="manifest" href="https://globle-game.com/favicon/site.webmanifest"/>
+  <link rel="image_src" href="https://globle-game.com/images/preview.png"/>
+  <title>Multi-trend regression analysis with different types</title>
+  <meta property="og:image" content="https://cadasa.github.io/regression.JPG">
+  <meta property="og:url" content="https://cadasa.github.io/regression.html">
+  <meta property="og:title" content="Multi-trend regression analysis with different types">
+  <meta name="description" content="Multi-trend regression analysis with different types"/>
+  <link rel="stylesheet" href="stylesheets/app.css" />
+  <link rel="stylesheet" href="stylesheets/sidebar.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 </head>
 <body>
-<div id="observablehq-viewof-file1-9d78917c"></div>
-<div id="observablehq-viewof-type-9d78917c"></div>
-<div id="observablehq-viewof-param-9d78917c"></div>
-<div id="observablehq-chart-9d78917c"></div>
-<div id="observablehq-tttt-9d78917c"></div>
-<div id="observablehq-equation-9d78917c"></div>
+  <div id="left" class="sidebar flex-center left collapsed">
+    <div class="sidebar-content rounded-rect flex-center">
+      <div class="sidebar-toggle rounded-rect left" onclick="toggleSidebar('left')">
+        &rarr;
+      </div>
+    </div>
+    <div id='listings' class='listings'></div>
+  </div>
 
-<script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/d/4a90ca4e9f859e4b.js?v=3";
-new Runtime().module(define, name => {
-  if (name === "viewof file1") return new Inspector(document.querySelector("#observablehq-viewof-file1-9d78917c"));
-  if (name === "viewof type") return new Inspector(document.querySelector("#observablehq-viewof-type-9d78917c"));
-  if (name === "viewof param") return new Inspector(document.querySelector("#observablehq-viewof-param-9d78917c"));
-  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-9d78917c"));
-  if (name === "tttt") return new Inspector(document.querySelector("#observablehq-tttt-9d78917c"));
-  if (name === "equation") return new Inspector(document.querySelector("#observablehq-equation-9d78917c"));
-  return ["pts2","linear","quad","poly","exp","log","pow","param2","polynomialRegression"].includes(name);
-});
-</script>
+  <script src="scripts/sidebar.js"></script>
+  <div id="observablehq-title-017ddea6"></div>
+  <div id="observablehq-viewof-file1-017ddea6"></div>
+  <div id="observablehq-viewof-type-017ddea6"></div>
+  <div id="observablehq-viewof-param-017ddea6"></div>
+  <div id="observablehq-viewof-chart-017ddea6"></div>
+  <div id="observablehq-tttt-017ddea6"></div>
+  <div id="observablehq-tttt2-017ddea6"></div>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+  <script type="module">
+  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+  import define from "https://api.observablehq.com/d/4a90ca4e9f859e4b.js?v=3";
+  new Runtime().module(define, name => {
+    if (name === "title") return new Inspector(document.querySelector("#observablehq-title-017ddea6"));
+    if (name === "viewof file1") return new Inspector(document.querySelector("#observablehq-viewof-file1-017ddea6"));
+    if (name === "viewof type") return new Inspector(document.querySelector("#observablehq-viewof-type-017ddea6"));
+    if (name === "viewof param") return new Inspector(document.querySelector("#observablehq-viewof-param-017ddea6"));
+    if (name === "viewof chart") return new Inspector(document.querySelector("#observablehq-viewof-chart-017ddea6"));
+    if (name === "tttt") return new Inspector(document.querySelector("#observablehq-tttt-017ddea6"));
+    if (name === "tttt2") return new Inspector(document.querySelector("#observablehq-tttt2-017ddea6"));
+    return ["pts2","linear","quad","poly","exp","log","pow","e_lin","r2_lin","e_quad","r2_quad","e_pol","r2_pol","e_log","r2_log","e_exp","r2_exp","e_pow","r2_pow","z","equation","color_map","param2","polynomialRegression"].includes(name);
+  });
+  </script>
 </body>
 </html>
