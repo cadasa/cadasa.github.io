@@ -1,0 +1,576 @@
+<svg class="plot-b427055d1fb67" fill="currentColor" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle" width="1152" height="680" viewBox="0 0 1152 680" style="overflow: visible;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style>
+        .plot-b427055d1fb67 {
+          display: block;
+          background: white;
+          height: auto;
+          height: intrinsic;
+          max-width: 100%;
+        }
+        .plot-b427055d1fb67 text,
+        .plot-b427055d1fb67 tspan {
+          white-space: pre;
+        }
+      </style><g aria-label="x-axis tick" fill="none" stroke="currentColor"><path transform="translate(72.98104793756968,650)" d="M0,0L0,6"/><path transform="translate(167.20376563854825,650)" d="M0,0L0,6"/><path transform="translate(261.55555555555554,650)" d="M0,0L0,6"/><path transform="translate(355.77827325653413,650)" d="M0,0L0,6"/><path transform="translate(450.13006317354143,650)" d="M0,0L0,6"/><path transform="translate(544.35278087452,650)" d="M0,0L0,6"/><path transform="translate(638.7045707915273,650)" d="M0,0L0,6"/><path transform="translate(732.9272884925058,650)" d="M0,0L0,6"/><path transform="translate(827.2790784095133,650)" d="M0,0L0,6"/><path transform="translate(921.5017961104917,650)" d="M0,0L0,6"/><path transform="translate(1015.853586027499,650)" d="M0,0L0,6"/></g><g aria-label="x-axis tick label" font-variant="tabular-nums" transform="translate(0,9)"><text y="0.71em" transform="translate(72.98104793756968,650)">2002</text><text y="0.71em" transform="translate(167.20376563854825,650)">2004</text><text y="0.71em" transform="translate(261.55555555555554,650)">2006</text><text y="0.71em" transform="translate(355.77827325653413,650)">2008</text><text y="0.71em" transform="translate(450.13006317354143,650)">2010</text><text y="0.71em" transform="translate(544.35278087452,650)">2012</text><text y="0.71em" transform="translate(638.7045707915273,650)">2014</text><text y="0.71em" transform="translate(732.9272884925058,650)">2016</text><text y="0.71em" transform="translate(827.2790784095133,650)">2018</text><text y="0.71em" transform="translate(921.5017961104917,650)">2020</text><text y="0.71em" transform="translate(1015.853586027499,650)">2022</text></g><line aria-label="frame" stroke="currentColor" stroke-linecap="square" x1="20" x2="1132" y1="650" y2="650"/><g aria-label="dot" stroke="#000"><circle opacity="0.7" cx="390.3696271522358" cy="568" r="80" fill="rgb(45, 154, 223)"><title>Washington Mutual Bank
+307.0B</title></circle><circle opacity="0.7" cx="1071.7418555679426" cy="581.9924000032648" r="66.00759999673515" fill="rgb(175, 240, 91)"><title>Silicon Valley Bank
+209.0B</title></circle><circle opacity="0.7" cx="1072" cy="466.0111529969627" r="47.97393429077403" fill="rgb(175, 240, 91)"><title>Signature Bank
+110.4B</title></circle><circle opacity="0.7" cx="380.5601387340518" cy="460.6147773086806" r="25.832333349004145" fill="rgb(47, 151, 224)"><title>IndyMac Bank
+32.0B</title></circle><circle opacity="0.7" cx="432.05995292951815" cy="471.81746972691747" r="22.829205821413986" fill="rgb(38, 167, 218)"><title>Colonial Bank
+25.0B</title></circle><circle opacity="0.7" cx="432.9634584417193" cy="430.53577550619843" r="16.46237443344582" fill="rgb(37, 167, 218)"><title>Guaranty Bank
+13.0B</title></circle><circle opacity="0.7" cx="421.0888145670754" cy="397.8269464920572" r="16.33524994848499" fill="rgb(39, 163, 220)"><title>BankUnited
+12.8B</title></circle><circle opacity="0.7" cx="397.7267434658739" cy="372.2094291071075" r="16.33524994848499" fill="rgb(43, 156, 222)"><title>Downey Savings and Loan Association
+12.8B</title></circle><circle opacity="0.7" cx="446.5160411247368" cy="375.02780719468984" r="15.81653775165448" fill="rgb(35, 171, 216)"><title>AmTrust Bank
+12.0B</title></circle><circle opacity="0.7" cx="465.4896568809612" cy="632.2230531433594" r="15.776946856640667" fill="rgb(33, 176, 213)"><title>Westernbank Puerto Rico
+11.9B</title></circle><circle opacity="0.7" cx="442.9020190759322" cy="342.12895171067873" r="15.280227158636874" fill="rgb(36, 170, 217)"><title>United Commercial Bank
+11.2B</title></circle><circle opacity="0.7" cx="441.99851356373097" cy="312.11699846441996" r="12.745322958991277" fill="rgb(36, 169, 217)"><title>California National Bank
+7.8B</title></circle><circle opacity="0.7" cx="435.6739749783228" cy="286.04781227037836" r="12.080080246513884" fill="rgb(37, 168, 218)"><title>Corus Bank
+7.0B</title></circle><circle opacity="0.7" cx="448.32305214913913" cy="264.07118809472894" r="11.276795811687892" fill="rgb(35, 171, 216)"><title>First Federal Bank of California
+6.1B</title></circle><circle opacity="0.7" cx="465.4896568809612" cy="512.988193432321" r="11.109171021357035" fill="rgb(33, 176, 213)"><title>R-G Premier Bank of Puerto Rico
+5.9B</title></circle><circle opacity="0.7" cx="693.1730459556546" cy="636.9096103462949" r="11.090389653705127" fill="rgb(34, 229, 151)"><title>Doral Bank
+5.9B</title></circle><circle opacity="0.7" cx="395.9197324414716" cy="425.7005109110549" r="10.311121095256437" fill="rgb(44, 156, 222)"><title>Franklin Bank
+5.1B</title></circle><circle opacity="0.7" cx="795.2691688343863" cy="638.0594601631724" r="9.940539836827625" fill="rgb(59, 242, 120)"><title>First NBC Bank
+4.7B</title></circle><circle opacity="0.7" cx="441.99851356373097" cy="241.76888809046307" r="9.904929184493804" fill="rgb(36, 169, 217)"><title>Park National Bank
+4.7B</title></circle><circle opacity="0.7" cx="418.50737024650067" cy="354.0754123812903" r="9.245123725704435" fill="rgb(40, 163, 220)"><title>Silverton Bank
+4.1B</title></circle><circle opacity="0.7" cx="448.32305214913913" cy="407.61166484235594" r="9.131682328565592" fill="rgb(35, 171, 216)"><title>Imperial Capital Bank
+4.0B</title></circle><circle opacity="0.7" cx="464.5861513687601" cy="490.997111918922" r="8.900462967865506" fill="rgb(33, 176, 213)"><title>Amcore Bank
+3.8B</title></circle><circle opacity="0.7" cx="397.7267434658739" cy="345.0916083226657" r="8.782570835956824" fill="rgb(43, 156, 222)"><title>PFF Bank and Trust
+3.7B</title></circle><circle opacity="0.7" cx="441.99851356373097" cy="221.19114391487744" r="8.67281499109181" fill="rgb(36, 169, 217)"><title>San Diego National Bank
+3.6B</title></circle><circle opacity="0.7" cx="456.4546017589496" cy="448.86896323592657" r="8.663074508213203" fill="rgb(34, 174, 215)"><title>La Jolla Bank
+3.6B</title></circle><circle opacity="0.7" cx="465.4896568809612" cy="471.5757470204414" r="8.541906659587628" fill="rgb(33, 176, 213)"><title>Frontier Bank
+3.5B</title></circle><circle opacity="0.7" cx="463.6826458565589" cy="431.1821038087011" r="8.443720562531112" fill="rgb(33, 176, 213)"><title>Riverside National Bank of Florida
+3.4B</title></circle><circle opacity="0.7" cx="382.3671497584541" cy="410.01404474081505" r="8.418995119808631" fill="rgb(46, 152, 224)"><title>First National Bank of Nevada
+3.4B</title></circle><circle opacity="0.7" cx="467.29666790536356" cy="412.96414437695444" r="8.12924907686718" fill="rgb(33, 177, 213)"><title>Midwest Bank and Trust Company
+3.2B</title></circle><circle opacity="0.7" cx="624.5066270283661" cy="639.9610070801049" r="8.038992919895113" fill="rgb(27, 216, 173)"><title>First National Bank
+3.1B</title></circle><circle opacity="0.7" cx="510.66493249101944" cy="640.0917311241727" r="7.90826887582724" fill="rgb(28, 189, 204)"><title>Superior Bank
+3.0B</title></circle><circle opacity="0.7" cx="470.007184441967" cy="395.4027278819264" r="7.640113579318437" fill="rgb(32, 177, 212)"><title>TierOne Bank
+2.8B</title></circle><circle opacity="0.7" cx="443.8055245881333" cy="203.1059372634865" r="7.502442598990015" fill="rgb(36, 170, 217)"><title>Orion Bank
+2.7B</title></circle><circle opacity="0.7" cx="436.57748049052395" cy="187.71368274637643" r="7.502442598990015" fill="rgb(37, 168, 218)"><title>Irwin Union Bank and Trust Company
+2.7B</title></circle><circle opacity="0.7" cx="465.4896568809612" cy="358.5623602989635" r="7.305345862852475" fill="rgb(33, 176, 213)"><title>Eurobank
+2.6B</title></circle><circle opacity="0.7" cx="343.516412733804" cy="492.0734099367911" r="7.219228756844335" fill="rgb(54, 140, 225)"><title>NetBank
+2.5B</title></circle><circle opacity="0.7" cx="441.99851356373097" cy="641.0226238096525" r="6.977376190347534" fill="rgb(36, 169, 217)"><title>Pacific National Bank
+2.3B</title></circle><circle opacity="0.7" cx="500.7263718568066" cy="626.4876295465259" r="6.939477775130557" fill="rgb(29, 186, 206)"><title>First Community Bank
+2.3B</title></circle><circle opacity="0.7" cx="52.58763780502911" cy="641.075559030784" r="6.924440969215952" fill="rgb(108, 68, 177)"><title>Superior Bank
+2.3B</title></circle><circle opacity="0.7" cx="524.2175151740369" cy="630.3671861756611" r="6.772236866974635" fill="rgb(27, 192, 201)"><title>Integra Bank National Association
+2.2B</title></circle><circle opacity="0.7" cx="453.7440852223461" cy="190.25732235505444" r="6.741383691176555" fill="rgb(34, 173, 215)"><title>First Regional Bank
+2.2B</title></circle><circle opacity="0.7" cx="479.94574507617983" cy="612.4581571211236" r="6.7103886594527475" fill="rgb(31, 180, 210)"><title>ShoreBank
+2.2B</title></circle><circle opacity="0.7" cx="372.42858912424134" cy="427.13937954244136" r="6.616532447488223" fill="rgb(48, 149, 224)"><title>ANB Financial
+2.1B</title></circle><circle opacity="0.7" cx="499.8228663446055" cy="611.0372571034544" r="6.537289679354245" fill="rgb(29, 186, 206)"><title>United Western Bank
+2.0B</title></circle><circle opacity="0.7" cx="437.4809860027251" cy="171.77976095153986" r="6.457074498170093" fill="rgb(37, 168, 218)"><title>Georgian Bank
+2.0B</title></circle><circle opacity="0.7" cx="415.79685370989716" cy="336.5819586896333" r="6.457074498170093" fill="rgb(40, 162, 220)"><title>New Frontier Bank
+2.0B</title></circle><circle opacity="0.7" cx="387.78818283166106" cy="331.00507632339213" r="6.457074498170093" fill="rgb(45, 153, 223)"><title>Silver State Bank
+2.0B</title></circle><circle opacity="0.7" cx="428.44593088071343" cy="266.99941817872815" r="6.293577720277445" fill="rgb(38, 165, 219)"><title>Vineyard Bank
+1.9B</title></circle><circle opacity="0.7" cx="448.32305214913913" cy="501.6106722964635" r="6.125718730681871" fill="rgb(35, 171, 216)"><title>Peoples First Community Bank
+1.8B</title></circle><circle opacity="0.7" cx="526.9280317106404" cy="615.8934345378334" r="5.953128539993133" fill="rgb(27, 193, 200)"><title>Lydian Private Bank
+1.7B</title></circle><circle opacity="0.7" cx="407.6653041000867" cy="440.44630077888814" r="5.953128539993133" fill="rgb(42, 159, 221)"><title>County Bank
+1.7B</title></circle><circle opacity="0.7" cx="488.07729468599035" cy="642.1350708327544" r="5.86492916724557" fill="rgb(30, 183, 209)"><title>Hillcrest Bank
+1.6B</title></circle><circle opacity="0.7" cx="465.4896568809612" cy="337.07950820288903" r="5.86492916724557" fill="rgb(33, 176, 213)"><title>CF Bancorp
+1.6B</title></circle><circle opacity="0.7" cx="460.06862380775425" cy="324.56269884153505" r="5.775383005475467" fill="rgb(34, 175, 214)"><title>Advanta Bank Corp.
+1.6B</title></circle><circle opacity="0.7" cx="430.2529419051158" cy="159.51932763472382" r="5.775383005475467" fill="rgb(38, 166, 219)"><title>Mutual Bank
+1.6B</title></circle><circle opacity="0.7" cx="432.05995292951815" cy="146.23715398192962" r="5.629147041687408" fill="rgb(38, 167, 218)"><title>Community Bank of Nevada
+1.5B</title></circle><circle opacity="0.7" cx="448.32305214913913" cy="162.84523072372804" r="5.591990549543956" fill="rgb(35, 171, 216)"><title>New South Federal Savings Bank
+1.5B</title></circle><circle opacity="0.7" cx="428.44593088071343" cy="253.11384990890673" r="5.591990549543956" fill="rgb(38, 165, 219)"><title>Temecula Valley Bank
+1.5B</title></circle><circle opacity="0.7" cx="417.6038647342995" cy="322.6495884723089" r="5.591990549543956" fill="rgb(40, 162, 220)"><title>First Bank of Beverly Hills
+1.5B</title></circle><circle opacity="0.7" cx="535.0595813204508" cy="642.636351088886" r="5.363648911113945" fill="rgb(26, 195, 198)"><title>Community Banks of Colorado
+1.4B</title></circle><circle opacity="0.7" cx="451.0335686857426" cy="176.57599553236577" r="5.20585989042128" fill="rgb(35, 172, 215)"><title>Horizon Bank
+1.3B</title></circle><circle opacity="0.7" cx="74.27177009785706" cy="642.7941401095787" r="5.20585989042128" fill="rgb(105, 72, 184)"><title>Hamilton Bank
+1.3B</title></circle><circle opacity="0.7" cx="453.7440852223461" cy="296.2171425883249" r="5.022425280711076" fill="rgb(34, 173, 215)"><title>Community Bank and Trust
+1.2B</title></circle><circle opacity="0.7" cx="464.5861513687601" cy="312.6109640229409" r="5.001628399326678" fill="rgb(33, 176, 213)"><title>Broadway Bank
+1.2B</title></circle><circle opacity="0.7" cx="452.840579710145" cy="151.089756128251" r="5.001628399326678" fill="rgb(34, 173, 215)"><title>Charter Bank
+1.2B</title></circle><circle opacity="0.7" cx="429.34943639291464" cy="230.55137784701907" r="5.001628399326678" fill="rgb(38, 166, 219)"><title>Security Bank of Bibb County
+1.2B</title></circle><circle opacity="0.7" cx="547.7086584912671" cy="643.0297300815862" r="4.970269918413813" fill="rgb(26, 198, 195)"><title>Tennessee Commerce Bank
+1.2B</title></circle><circle opacity="0.7" cx="487.17378917378915" cy="600.8551963262256" r="4.959773032529004" fill="rgb(30, 182, 209)"><title>Premier Bank
+1.2B</title></circle><circle opacity="0.7" cx="407.6653041000867" cy="315.12293746338764" r="4.874984339739317" fill="rgb(42, 159, 221)"><title>Alliance Bank
+1.1B</title></circle><circle opacity="0.7" cx="463.6826458565589" cy="289.7160705561237" r="4.853555733411226" fill="rgb(33, 176, 213)"><title>City Bank
+1.1B</title></circle><circle opacity="0.7" cx="452.840579710145" cy="139.29943311648503" r="4.788694612439304" fill="rgb(34, 173, 215)"><title>Columbia River Bank
+1.1B</title></circle><circle opacity="0.7" cx="386.8846773194599" cy="395.4928267571929" r="4.788694612439304" fill="rgb(45, 153, 223)"><title>Integrity Bank
+1.1B</title></circle><circle opacity="0.7" cx="523.3140096618357" cy="603.7434703455926" r="4.722942824667839" fill="rgb(27, 192, 201)"><title>Bank of Choice
+1.1B</title></circle><circle opacity="0.7" cx="476.33172302737523" cy="596.8784093008729" r="4.58861358068359" fill="rgb(31, 179, 211)"><title>Crescent Bank and Trust Company
+1.0B</title></circle><circle opacity="0.7" cx="460.06862380775425" cy="278.8596400541969" r="4.58861358068359" fill="rgb(34, 175, 214)"><title>Appalachian Community Bank
+1.0B</title></circle><circle opacity="0.7" cx="796.1726743465874" cy="621.5778251853178" r="4.565841164282796" fill="rgb(59, 242, 120)"><title>Guaranty Bank
+1.0B</title></circle><circle opacity="0.7" cx="433.8669639539205" cy="134.1767871342156" r="4.565841164282796" fill="rgb(37, 167, 218)"><title>Affinity Bank
+1.0B</title></circle><circle opacity="0.7" cx="124.86807878112225" cy="643.4341588357172" r="4.565841164282796" fill="rgb(98, 82, 198)"><title>Southern Pacific Bank
+1.0B</title></circle><circle opacity="0.7" cx="531.4455592716463" cy="595.9624138143893" r="4.5316979869526985" fill="rgb(27, 194, 199)"><title>Bank of the Commonwealth
+1.0B</title></circle><circle opacity="0.7" cx="435.6739749783228" cy="123.26269305720496" r="4.496832037260843" fill="rgb(37, 168, 218)"><title>Venture Bank
+1.0B</title></circle><circle opacity="0.7" cx="424.83190883190883" cy="369.76616505140265" r="4.496832037260843" fill="rgb(39, 164, 219)"><title>Cooperative Bank
+1.0B</title></circle><circle opacity="0.7" cx="426.50984764028243" cy="219.42703237953026" r="4.479413642409524" fill="rgb(38, 165, 219)"><title>Founders Bank
+1.0B</title></circle><circle opacity="0.7" cx="521.5069986374334" cy="591.2395410856859" r="4.471961144965896" fill="rgb(27, 192, 201)"><title>First Chicago Bank &amp; Trust
+1.0B</title></circle><circle opacity="0.7" cx="413.98984268549486" cy="305.71130977645225" r="4.464262726790514" fill="rgb(41, 161, 221)"><title>Omni National Bank
+1.0B</title></circle><circle opacity="0.7" cx="676.9099467360337" cy="643.5394746223174" r="4.460525377682671" fill="rgb(32, 227, 156)"><title>The National Republic Bank of Chicago
+1.0B</title></circle><circle opacity="0.7" cx="512.4719435154218" cy="620.0430404877807" r="4.457954132655464" fill="rgb(28, 189, 203)"><title>The Park Avenue Bank
+1.0B</title></circle><circle opacity="0.7" cx="583.8488789793138" cy="643.611088891694" r="4.388911108306066" fill="rgb(25, 207, 185)"><title>Citizens First National Bank
+0.9B</title></circle><circle opacity="0.7" cx="453.7440852223461" cy="230.64503105505395" r="4.2721734278989185" fill="rgb(34, 173, 215)"><title>Florida Community Bank
+0.9B</title></circle><circle opacity="0.7" cx="446.5160411247368" cy="130.22959123896283" r="4.2685120873366875" fill="rgb(35, 171, 216)"><title>The Buckhead Community Bank
+0.9B</title></circle><circle opacity="0.7" cx="479.94574507617983" cy="586.6497723834033" r="4.2597120301499904" fill="rgb(31, 180, 210)"><title>Los Padres Bank
+0.9B</title></circle><circle opacity="0.7" cx="453.7440852223461" cy="122.70374429428148" r="4.166189332050164" fill="rgb(34, 173, 215)"><title>First National Bank of Georgia
+0.8B</title></circle><circle opacity="0.7" cx="451.93707419794373" cy="112.54282017896116" r="4.154162780140998" fill="rgb(35, 172, 215)"><title>Barnes Banking Company
+0.8B</title></circle><circle opacity="0.7" cx="555.8402081010778" cy="635.4736731974905" r="4.130004613889576" fill="rgb(25, 201, 193)"><title>Fidelity Bank
+0.8B</title></circle><circle opacity="0.7" cx="405.8582930756844" cy="328.91971537354823" r="4.092226682167183" fill="rgb(42, 159, 221)"><title>1st Centennial Bank
+0.8B</title></circle><circle opacity="0.7" cx="510.66493249101944" cy="604.6079971184015" r="4.067700692661818" fill="rgb(28, 189, 204)"><title>Nexity Bank
+0.8B</title></circle><circle opacity="0.7" cx="500.7263718568066" cy="598.4961539551091" r="4.036317217157793" fill="rgb(29, 186, 206)"><title>FirsTier Bank
+0.8B</title></circle><circle opacity="0.7" cx="440.19150253932855" cy="113.76610894518069" r="4.019496459947557" fill="rgb(36, 169, 217)"><title>San Joaquin Bank
+0.8B</title></circle><circle opacity="0.7" cx="477.2352285395764" cy="576.7526912273239" r="4.001823688504557" fill="rgb(31, 179, 211)"><title>LibertyBank
+0.8B</title></circle><circle opacity="0.7" cx="385.9811718072587" cy="318.72079257224146" r="3.95940310705659" fill="rgb(46, 153, 223)"><title>Columbian Bank and Trust
+0.8B</title></circle><circle opacity="0.7" cx="491.69131673479495" cy="590.918114608132" r="3.955979270290819" fill="rgb(30, 184, 208)"><title>First Banking Center
+0.8B</title></circle><circle opacity="0.7" cx="515.1824600520252" cy="582.9777199963974" r="3.9327241472344636" fill="rgb(28, 190, 203)"><title>Atlantic Southern Bank
+0.7B</title></circle><circle opacity="0.7" cx="515.1824600520252" cy="573.1412684063356" r="3.9037274428272695" fill="rgb(28, 190, 203)"><title>First Georgia Banking Company
+0.7B</title></circle><circle opacity="0.7" cx="443.8055245881333" cy="104.53300868428164" r="3.8957088227009926" fill="rgb(36, 170, 217)"><title>Century Bank
+0.7B</title></circle><circle opacity="0.7" cx="457.35810727115074" cy="249.4998869931755" r="3.868321185577572" fill="rgb(34, 174, 214)"><title>Rainier Pacific Bank
+0.7B</title></circle><circle opacity="0.7" cx="521.5069986374334" cy="565.6929567712759" r="3.8675127308293424" fill="rgb(27, 192, 201)"><title>Colorado Capital Bank
+0.7B</title></circle><circle opacity="0.7" cx="430.2529419051158" cy="209.81485722324487" r="3.83585009200552" fill="rgb(38, 166, 219)"><title>Peoples Community Bank
+0.7B</title></circle><circle opacity="0.7" cx="77.75671993063297" cy="632.3334535499349" r="3.8200567896592186" fill="rgb(105, 73, 185)"><title>NextBank
+0.7B</title></circle><circle opacity="0.7" cx="475.428217515174" cy="556.9711384071784" r="3.7706219084585015" fill="rgb(32, 179, 211)"><title>First National Bank of the South
+0.7B</title></circle><circle opacity="0.7" cx="397.7267434658739" cy="409.72339502770853" r="3.7678565088137006" fill="rgb(43, 156, 222)"><title>Community Bank
+0.7B</title></circle><circle opacity="0.7" cx="413.0863371732937" cy="420.65139799155617" r="3.736744215087544" fill="rgb(41, 161, 221)"><title>TeamBank
+0.7B</title></circle><circle opacity="0.7" cx="490.7878112225938" cy="581.3101398803509" r="3.6943834472580934" fill="rgb(30, 183, 208)"><title>Darby Bank &amp; Trust Co.
+0.7B</title></circle><circle opacity="0.7" cx="474.5247120029729" cy="547.5783794433894" r="3.665491865888193" fill="rgb(32, 179, 211)"><title>Home National Bank
+0.6B</title></circle><circle opacity="0.7" cx="472.7177009785705" cy="538.4246176832519" r="3.6649230875674608" fill="rgb(32, 178, 212)"><title>Peninsula Bank
+0.6B</title></circle><circle opacity="0.7" cx="469.1036789297659" cy="606.5118657049779" r="3.6552403148025236" fill="rgb(32, 177, 212)"><title>Bank of Florida - Southwest
+0.6B</title></circle><circle opacity="0.7" cx="463.6826458565589" cy="302.02697076005467" r="3.6208588611692867" fill="rgb(33, 176, 213)"><title>Tamalpais Bank
+0.6B</title></circle><circle opacity="0.7" cx="432.9634584417193" cy="107.4392326296014" r="3.586438444559223" fill="rgb(37, 167, 218)"><title>CapitalSouth Bank
+0.6B</title></circle><circle opacity="0.7" cx="498.0158553202032" cy="575.5754768700843" r="3.5322617349468" fill="rgb(29, 185, 207)"><title>First Commercial Bank of Florida
+0.6B</title></circle><circle opacity="0.7" cx="469.1036789297659" cy="529.9775346138912" r="3.52280610684856" fill="rgb(32, 177, 212)"><title>Bank of Florida - Southeast
+0.6B</title></circle><circle opacity="0.7" cx="448.32305214913913" cy="96.3018035972176" r="3.493689052016852" fill="rgb(35, 171, 216)"><title>Independent Bankers' Bank
+0.6B</title></circle><circle opacity="0.7" cx="462.7791403443577" cy="241.8685510418863" r="3.492495444516346" fill="rgb(33, 175, 214)"><title>Beach First National Bank
+0.6B</title></circle><circle opacity="0.7" cx="400.4372600024774" cy="307.74551983131965" r="3.453176793537613" fill="rgb(43, 157, 222)"><title>Haven Trust Bank
+0.6B</title></circle><circle opacity="0.7" cx="395.9197324414716" cy="400.71486773035804" r="3.4201167665839134" fill="rgb(44, 156, 222)"><title>Security Pacific Bank
+0.6B</title></circle><circle opacity="0.7" cx="525.121020686238" cy="582.0724492241063" r="3.38180608223626" fill="rgb(27, 193, 200)"><title>Bank of Whitman
+0.5B</title></circle><circle opacity="0.7" cx="408.56880961228785" cy="297.5275999065153" r="3.3520862287075124" fill="rgb(41, 160, 221)"><title>Riverside Bank of the Gulf Coast
+0.5B</title></circle><circle opacity="0.7" cx="489.8843057103927" cy="620.7015578993593" r="3.3499088421648624" fill="rgb(30, 183, 208)"><title>K Bank
+0.5B</title></circle><circle opacity="0.7" cx="526.0245261984392" cy="557.6591947461825" r="3.3492864717289916" fill="rgb(27, 193, 200)"><title>The First National Bank of Olathe
+0.5B</title></circle><circle opacity="0.7" cx="438.3844915149263" cy="97.0445786821798" r="3.3489752431382787" fill="rgb(37, 168, 217)"><title>Warren Bank
+0.5B</title></circle><circle opacity="0.7" cx="421.2178867831042" cy="299.0785190200056" r="3.3458613649724986" fill="rgb(39, 163, 220)"><title>Strategic Capital Bank
+0.5B</title></circle><circle opacity="0.7" cx="546.8051529790661" cy="632.6181678605639" r="3.3455498177522163" fill="rgb(26, 198, 195)"><title>The First State Bank
+0.5B</title></circle><circle opacity="0.7" cx="458.2616127833519" cy="222.15853574879606" r="3.3418089856269373" fill="rgb(34, 174, 214)"><title>Sun American Bank
+0.5B</title></circle><circle opacity="0.7" cx="564.8752632230893" cy="644.6663105510531" r="3.3336894489468487" fill="rgb(25, 203, 190)"><title>Waccamaw Bank
+0.5B</title></circle><circle opacity="0.7" cx="477.2352285395764" cy="567.4290808056022" r="3.321786733217109" fill="rgb(31, 179, 211)"><title>The Cowlitz Bank
+0.5B</title></circle><circle opacity="0.7" cx="470.9106899541682" cy="458.84463070503216" r="3.2953229120167475" fill="rgb(32, 178, 212)"><title>Washington First International Bank
+0.5B</title></circle><circle opacity="0.7" cx="459.16511829555304" cy="213.5713358228042" r="3.2927914555939575" fill="rgb(34, 174, 214)"><title>Park Avenue Bank
+0.5B</title></circle><circle opacity="0.7" cx="447.419546636938" cy="87.59066700315486" r="3.26417729607254" fill="rgb(35, 171, 216)"><title>SolutionsBank
+0.5B</title></circle><circle opacity="0.7" cx="487.17378917378915" cy="631.0513620046084" r="3.2555440060371317" fill="rgb(30, 182, 209)"><title>Security Savings Bank
+0.5B</title></circle><circle opacity="0.7" cx="479.94574507617983" cy="533.2496705307594" r="3.2246606770456774" fill="rgb(31, 180, 210)"><title>Butte Community Bank
+0.5B</title></circle><circle opacity="0.7" cx="460.9721293199554" cy="205.25505792130997" r="3.217541497774703" fill="rgb(33, 175, 214)"><title>Desert Hills Bank
+0.5B</title></circle><circle opacity="0.7" cx="479.0422395639787" cy="524.8663987364351" r="3.207158117739506" fill="rgb(31, 180, 211)"><title>Palos Bank and Trust Company
+0.5B</title></circle><circle opacity="0.7" cx="436.57748049052395" cy="88.68276786890044" r="3.205857830591903" fill="rgb(37, 168, 218)"><title>Irwin Union Bank
+0.5B</title></circle><circle opacity="0.7" cx="415.79685370989716" cy="448.9856057938568" r="3.202604803036111" fill="rgb(40, 162, 220)"><title>Cape Fear Bank
+0.5B</title></circle><circle opacity="0.7" cx="417.6038647342995" cy="291.3427289261251" r="3.192499352742901" fill="rgb(40, 162, 220)"><title>First Bank of Idaho
+0.5B</title></circle><circle opacity="0.7" cx="452.840579710145" cy="421.9464194947915" r="3.1911930927239203" fill="rgb(34, 173, 215)"><title>Evergreen Bank
+0.5B</title></circle><circle opacity="0.7" cx="559.4542301498824" cy="626.8890586141358" r="3.184326436378688" fill="rgb(25, 201, 192)"><title>Plantation Federal Bank
+0.5B</title></circle><circle opacity="0.7" cx="464.5861513687601" cy="270.1964361133143" r="3.1817066692249036" fill="rgb(33, 176, 213)"><title>New Century Bank
+0.5B</title></circle><circle opacity="0.7" cx="582.9453734671126" cy="634.0917813472444" r="3.173177488668548" fill="rgb(25, 207, 185)"><title>NOVA Bank
+0.5B</title></circle><circle opacity="0.7" cx="559.4542301498824" cy="618.5361568343511" r="3.1685753434059905" fill="rgb(25, 201, 192)"><title>Inter Savings Bank
+0.5B</title></circle><circle opacity="0.7" cx="471.81419546636937" cy="450.43339840924585" r="3.1642959295302475" fill="rgb(32, 178, 212)"><title>Nevada Security Bank
+0.5B</title></circle><circle opacity="0.7" cx="512.4719435154218" cy="595.5680385571246" r="3.151092049987092" fill="rgb(28, 189, 203)"><title>Community Central Bank
+0.5B</title></circle><circle opacity="0.7" cx="431.15644741731705" cy="200.91798067318217" r="3.106785680384736" fill="rgb(38, 166, 218)"><title>First State Bank
+0.5B</title></circle><circle opacity="0.7" cx="433.8669639539205" cy="80.83867940711082" r="3.0933363285769317" fill="rgb(37, 167, 218)"><title>Mainstreet Bank
+0.5B</title></circle><circle opacity="0.7" cx="434.77046946612165" cy="72.70540848651103" r="3.0899648438382514" fill="rgb(37, 167, 218)"><title>Vantus Bank
+0.5B</title></circle><circle opacity="0.7" cx="660.6468475164127" cy="644.9154371967334" r="3.084562803266682" fill="rgb(30, 224, 161)"><title>Valley Bank
+0.5B</title></circle><circle opacity="0.7" cx="425.73541434411" cy="330.7165347823582" r="3.0832108142456676" fill="rgb(39, 165, 219)"><title>Mirae Bank
+0.5B</title></circle><circle opacity="0.7" cx="429.34943639291464" cy="644.9269480628423" r="3.0730519371577585" fill="rgb(38, 166, 219)"><title>Security Bank of Jones County
+0.5B</title></circle><circle opacity="0.7" cx="433.8669639539205" cy="64.59596179905975" r="3.069658173629695" fill="rgb(37, 167, 218)"><title>Bradford Bank
+0.5B</title></circle><circle opacity="0.7" cx="495.30533878359967" cy="567.4253948870169" r="3.056727508609371" fill="rgb(29, 185, 207)"><title>The Bank of Miami
+0.4B</title></circle><circle opacity="0.7" cx="483.5597671249845" cy="561.9388576059337" r="3.0533156005155755" fill="rgb(31, 181, 210)"><title>The Peoples Bank
+0.4B</title></circle><circle opacity="0.7" cx="404.95478756348325" cy="484.2089924979435" r="3.0509249945673145" fill="rgb(42, 159, 222)"><title>Bank of Clark County
+0.4B</title></circle><circle opacity="0.7" cx="475.428217515174" cy="500.2638444832122" r="3.036541835578466" fill="rgb(32, 179, 211)"><title>Metro Bank of Dade County
+0.4B</title></circle><circle opacity="0.7" cx="499.8228663446055" cy="587.0921092007369" r="3.0307006747292875" fill="rgb(29, 186, 206)"><title>CommunitySouth Bank and Trust
+0.4B</title></circle><circle opacity="0.7" cx="611.8575498575499" cy="644.9806703075797" r="3.019329692420313" fill="rgb(26, 214, 177)"><title>Mountain National Bank
+0.4B</title></circle><circle opacity="0.7" cx="464.5861513687601" cy="261.99574499547475" r="3.0189844486146655" fill="rgb(33, 176, 213)"><title>Wheatland Bank
+0.4B</title></circle><circle opacity="0.7" cx="421.2178867831042" cy="312.6737687309796" r="3.0182938425325165" fill="rgb(39, 163, 220)"><title>Citizens National Bank
+0.4B</title></circle><circle opacity="0.7" cx="551.3226805400718" cy="625.5912111507348" r="3.0082622382051523" fill="rgb(26, 199, 194)"><title>Home Savings of America
+0.4B</title></circle><circle opacity="0.7" cx="447.419546636938" cy="79.32204132215043" r="3.0044483849318944" fill="rgb(35, 171, 216)"><title>Republic Federal Bank
+0.4B</title></circle><circle opacity="0.7" cx="404.95478756348325" cy="290.00106978803024" r="2.9971539159828287" fill="rgb(42, 159, 222)"><title>National Bank of Commerce
+0.4B</title></circle><circle opacity="0.7" cx="485.3667781493869" cy="572.9536469210216" r="2.973410943417758" fill="rgb(30, 182, 209)"><title>Wakulla Bank
+0.4B</title></circle><circle opacity="0.7" cx="533.2525702960486" cy="607.012290379094" r="2.9498302275445454" fill="rgb(26, 195, 198)"><title>The RiverBank
+0.4B</title></circle><circle opacity="0.7" cx="456.4546017589496" cy="396.1352490419701" r="2.9335307405689806" fill="rgb(34, 174, 215)"><title>George Washington Savings Bank
+0.4B</title></circle><circle opacity="0.7" cx="476.33172302737523" cy="483.7212562792339" r="2.916068032253301" fill="rgb(31, 179, 211)"><title>Sterling Bank
+0.4B</title></circle><circle opacity="0.7" cx="95.69775795862752" cy="645.1173663869248" r="2.88263361307525" fill="rgb(102, 76, 190)"><title>Connecticut Bank of Commerce
+0.4B</title></circle><circle opacity="0.7" cx="463.6826458565589" cy="233.56164130903102" r="2.863404957019306" fill="rgb(33, 176, 213)"><title>First Federal Bank of North Florida
+0.4B</title></circle><circle opacity="0.7" cx="502.533382881209" cy="564.2125708195431" r="2.8531941070277442" fill="rgb(29, 187, 206)"><title>Peoples State Bank
+0.4B</title></circle><circle opacity="0.7" cx="503.4368883934101" cy="556.570017867606" r="2.8425799173144135" fill="rgb(29, 187, 205)"><title>Habersham Bank
+0.4B</title></circle><circle opacity="0.7" cx="621.7961104917628" cy="627.3704603889313" r="2.8400119282219567" fill="rgb(26, 216, 174)"><title>Community South Bank
+0.4B</title></circle><circle opacity="0.7" cx="538.6736033692556" cy="631.810313242382" r="2.8260306989487303" fill="rgb(26, 196, 197)"><title>Central Progressive Bank
+0.4B</title></circle><circle opacity="0.7" cx="429.34943639291464" cy="116.41367095695239" r="2.8256618376668685" fill="rgb(38, 166, 219)"><title>Security Bank of Houston County
+0.4B</title></circle><circle opacity="0.7" cx="547.7086584912671" cy="618.6620107714592" r="2.8067856353141507" fill="rgb(26, 198, 195)"><title>First Guaranty Bank and Trust Company of Jacksonville
+0.4B</title></circle><circle opacity="0.7" cx="460.06862380775425" cy="172.26166913115725" r="2.806414244556943" fill="rgb(34, 175, 214)"><title>Bank of Hiawassee
+0.4B</title></circle><circle opacity="0.7" cx="424.83190883190883" cy="243.36685811901606" r="2.8034413472769764" fill="rgb(39, 164, 219)"><title>Southern Community Bank
+0.4B</title></circle><circle opacity="0.7" cx="475.428217515174" cy="443.33577444206924" r="2.800465294052433" fill="rgb(32, 179, 211)"><title>Woodlands Bank
+0.4B</title></circle><circle opacity="0.7" cx="453.7440852223461" cy="286.4054404933518" r="2.789276814262042" fill="rgb(34, 173, 215)"><title>American Marine Bank
+0.4B</title></circle><circle opacity="0.7" cx="477.2352285395764" cy="465.27240635788166" r="2.7881554969044613" fill="rgb(31, 179, 211)"><title>Coastal Community Bank
+0.4B</title></circle><circle opacity="0.7" cx="460.9721293199554" cy="181.32316583545798" r="2.7505166822878886" fill="rgb(33, 175, 214)"><title>McIntosh Commercial Bank
+0.4B</title></circle><circle opacity="0.7" cx="783.523597175771" cy="629.2458787819388" r="2.744066741194589" fill="rgb(55, 241, 123)"><title>Seaway Bank and Trust Company
+0.4B</title></circle><circle opacity="0.7" cx="469.1036789297659" cy="383.0534548065562" r="2.742166812460825" fill="rgb(32, 177, 212)"><title>Sun West Bank
+0.4B</title></circle><circle opacity="0.7" cx="406.7617985878855" cy="415.0080827134632" r="2.739504698569678" fill="rgb(42, 159, 221)"><title>Suburban Federal Savings Bank
+0.4B</title></circle><circle opacity="0.7" cx="533.2525702960486" cy="586.8849655990166" r="2.723860069970878" fill="rgb(26, 195, 198)"><title>Sun Security Bank
+0.4B</title></circle><circle opacity="0.7" cx="394.1127214170692" cy="321.79316386889514" r="2.7169632406078534" fill="rgb(44, 155, 223)"><title>Alpha Bank &amp; Trust
+0.4B</title></circle><circle opacity="0.7" cx="512.4719435154218" cy="564.9662845478877" r="2.708894746789854" fill="rgb(28, 189, 203)"><title>First National Bank of Central Florida
+0.4B</title></circle><circle opacity="0.7" cx="452.840579710145" cy="103.73019302557589" r="2.7046587868147913" fill="rgb(34, 173, 215)"><title>Premier American Bank
+0.4B</title></circle><circle opacity="0.7" cx="483.5597671249845" cy="554.182425213476" r="2.7031167919421235" fill="rgb(31, 181, 210)"><title>Maritime Savings Bank
+0.4B</title></circle><circle opacity="0.7" cx="434.77046946612165" cy="56.89496811557194" r="2.6841554637810994" fill="rgb(37, 167, 218)"><title>Platinum Community Bank
+0.3B</title></circle><circle opacity="0.7" cx="518.79648210083" cy="554.2044960032994" r="2.6619284724016175" fill="rgb(27, 191, 202)"><title>McIntosh State Bank
+0.3B</title></circle><circle opacity="0.7" cx="479.94574507617983" cy="506.7110390735837" r="2.65094169243262" fill="rgb(31, 180, 210)"><title>Sonoma Valley Bank
+0.3B</title></circle><circle opacity="0.7" cx="407.6653041000867" cy="282.8498145265236" r="2.650548465152784" fill="rgb(42, 159, 221)"><title>FirstBank Financial Services
+0.3B</title></circle><circle opacity="0.7" cx="466.3931623931624" cy="254.5469855155319" r="2.645825179311518" fill="rgb(33, 176, 213)"><title>1st Pacific Bank of California
+0.3B</title></circle><circle opacity="0.7" cx="419.4108757587018" cy="282.16074995511616" r="2.6410934464410523" fill="rgb(40, 163, 220)"><title>Westsound Bank
+0.3B</title></circle><circle opacity="0.7" cx="503.4368883934101" cy="549.0942496201947" r="2.6331883300969867" fill="rgb(29, 187, 205)"><title>San Luis Trust Bank
+0.3B</title></circle><circle opacity="0.7" cx="641.6732317601883" cy="645.3715661516572" r="2.628433848342774" fill="rgb(28, 220, 167)"><title>The Bank of Union
+0.3B</title></circle><circle opacity="0.7" cx="510.66493249101944" cy="554.6991149941915" r="2.62367075077439" fill="rgb(28, 189, 204)"><title>Bartow County Bank
+0.3B</title></circle><circle opacity="0.7" cx="579.331351418308" cy="627.1911963419415" r="2.6165098468191603" fill="rgb(25, 206, 186)"><title>First United Bank
+0.3B</title></circle><circle opacity="0.7" cx="441.09500805152976" cy="155.64193446066054" r="2.6125230856327692" fill="rgb(36, 169, 217)"><title>Bank of Elmwood
+0.3B</title></circle><circle opacity="0.7" cx="441.99851356373097" cy="395.41446482423794" r="2.6077309267482365" fill="rgb(36, 169, 217)"><title>North Houston Bank
+0.3B</title></circle><circle opacity="0.7" cx="429.34943639291464" cy="100.10387157941102" r="2.5908885701746973" fill="rgb(38, 166, 219)"><title>Security Bank of Gwinnett County
+0.3B</title></circle><circle opacity="0.7" cx="606.4365167843429" cy="639.6712371203412" r="2.568666113492733" fill="rgb(26, 213, 178)"><title>Douglas County Bank
+0.3B</title></circle><circle opacity="0.7" cx="459.16511829555304" cy="164.94582375614738" r="2.5650113815775066" fill="rgb(34, 174, 214)"><title>Old Southern Bank
+0.3B</title></circle><circle opacity="0.7" cx="479.94574507617983" cy="494.1680325387233" r="2.5507487563931184" fill="rgb(31, 180, 210)"><title>Pacific State Bank
+0.3B</title></circle><circle opacity="0.7" cx="512.4719435154218" cy="547.7712347971076" r="2.53599494445596" fill="rgb(28, 189, 203)"><title>First Choice Community Bank
+0.3B</title></circle><circle opacity="0.7" cx="418.50737024650067" cy="377.1539337881384" r="2.498312133804603" fill="rgb(40, 163, 220)"><title>America West Bank
+0.3B</title></circle><circle opacity="0.7" cx="413.0863371732937" cy="278.20489753339336" r="2.4882787112028684" fill="rgb(41, 161, 221)"><title>FirstCity Bank
+0.3B</title></circle><circle opacity="0.7" cx="529.6385482472439" cy="575.6290812622894" r="2.4874407658310007" fill="rgb(27, 194, 199)"><title>The First National Bank Of Florida
+0.3B</title></circle><circle opacity="0.7" cx="721.1817168338907" cy="645.5234783245204" r="2.4765216754796473" fill="rgb(40, 234, 142)"><title>The Bank of Georgia
+0.3B</title></circle><circle opacity="0.7" cx="448.32305214913913" cy="71.89667973399492" r="2.4756797506973776" fill="rgb(35, 171, 216)"><title>RockBridge Commercial Bank
+0.3B</title></circle><circle opacity="0.7" cx="406.7617985878855" cy="275.30104065109316" r="2.471044036823671" fill="rgb(42, 159, 221)"><title>MagnetBank
+0.3B</title></circle><circle opacity="0.7" cx="460.9721293199554" cy="158.14882300437984" r="2.468089503653707" fill="rgb(33, 175, 214)"><title>Unity National Bank
+0.3B</title></circle><circle opacity="0.7" cx="531.4455592716463" cy="568.927291650896" r="2.4536883093046353" fill="rgb(27, 194, 199)"><title>Citizens Bank of Northern California
+0.3B</title></circle><circle opacity="0.7" cx="484.46327263718564" cy="547.0828803656245" r="2.4536883093046353" fill="rgb(31, 182, 209)"><title>North County Bank
+0.3B</title></circle><circle opacity="0.7" cx="395.0162269292704" cy="314.68738119547595" r="2.446029821823686" fill="rgb(44, 156, 222)"><title>Freedom Bank
+0.3B</title></circle><circle opacity="0.7" cx="577.5243403939056" cy="620.3845443978761" r="2.4259186781969335" fill="rgb(25, 206, 187)"><title>Truman Bank
+0.3B</title></circle><circle opacity="0.7" cx="474.5247120029729" cy="424.249127848546" r="2.425488969810213" fill="rgb(32, 179, 211)"><title>Bay National Bank
+0.3B</title></circle><circle opacity="0.7" cx="441.09500805152976" cy="141.85693188680375" r="2.4116978759685344" fill="rgb(36, 169, 217)"><title>First DuPage Bank
+0.3B</title></circle><circle opacity="0.7" cx="551.3226805400718" cy="612.4138823519014" r="2.411265633313218" fill="rgb(26, 199, 194)"><title>Central Bank of Georgia
+0.3B</title></circle><circle opacity="0.7" cx="523.3140096618357" cy="645.6056526937804" r="2.394347306219652" fill="rgb(27, 192, 201)"><title>LandMark Bank of Florida
+0.3B</title></circle><circle opacity="0.7" cx="428.44593088071343" cy="323.7475337384685" r="2.394347306219652" fill="rgb(38, 165, 219)"><title>BankFirst
+0.3B</title></circle><circle opacity="0.7" cx="547.7086584912671" cy="606.6595101709602" r="2.3838763494593" fill="rgb(26, 198, 195)"><title>BankEast
+0.3B</title></circle><circle opacity="0.7" cx="691.3660349312523" cy="621.5425347141162" r="2.382564244223052" fill="rgb(34, 229, 152)"><title>Capitol City Bank &amp; Trust Company
+0.3B</title></circle><circle opacity="0.7" cx="488.07729468599035" cy="541.280535005335" r="2.382126715205641" fill="rgb(30, 183, 209)"><title>First Arizona Savings
+0.3B</title></circle><circle opacity="0.7" cx="408.56880961228785" cy="268.6922083133337" r="2.3803757949284883" fill="rgb(41, 160, 221)"><title>Corn Belt Bank and Trust Company
+0.3B</title></circle><circle opacity="0.7" cx="416.7003592220983" cy="272.36853813576664" r="2.376431507554493" fill="rgb(40, 162, 220)"><title>Great Basin Bank of Nevada
+0.3B</title></circle><circle opacity="0.7" cx="463.6826458565589" cy="198.1707003326672" r="2.3676428993880814" fill="rgb(33, 176, 213)"><title>Innovative Bank
+0.3B</title></circle><circle opacity="0.7" cx="554.9367025888766" cy="606.6797297090523" r="2.3667622436390414" fill="rgb(25, 200, 193)"><title>Premier Bank
+0.3B</title></circle><circle opacity="0.7" cx="463.6826458565589" cy="151.87776737974173" r="2.363677364624683" fill="rgb(33, 176, 213)"><title>Butler Bank
+0.3B</title></circle><circle opacity="0.7" cx="619.0855939551592" cy="620.7071354649917" r="2.353512864061493" fill="rgb(26, 215, 174)"><title>First Community Bank of Southwest Florida
+0.3B</title></circle><circle opacity="0.7" cx="478.13873405177753" cy="476.684876792484" r="2.3486360308084615" fill="rgb(31, 180, 211)"><title>Ravenswood Bank
+0.3B</title></circle><circle opacity="0.7" cx="475.428217515174" cy="379.85413930420367" r="2.3455273119994797" fill="rgb(32, 179, 211)"><title>Turnberry Bank
+0.3B</title></circle><circle opacity="0.7" cx="383.27065527065525" cy="387.1278004048589" r="2.3236498303750404" fill="rgb(46, 152, 223)"><title>First Priority Bank
+0.3B</title></circle><circle opacity="0.7" cx="600.1119781989347" cy="645.6772475049859" r="2.322752495014151" fill="rgb(25, 211, 180)"><title>Frontier Bank
+0.3B</title></circle><circle opacity="0.7" cx="441.99851356373097" cy="148.77528795593736" r="2.3133094586470264" fill="rgb(36, 169, 217)"><title>Madisonville State Bank
+0.3B</title></circle><circle opacity="0.7" cx="382.3671497584541" cy="358.4274737371545" r="2.3011114719879733" fill="rgb(46, 152, 224)"><title>First Heritage Bank National Association
+0.3B</title></circle><circle opacity="0.7" cx="494.40183327139846" cy="560.1291807955313" r="2.295215246837638" fill="rgb(29, 184, 207)"><title>Paramount Bank
+0.3B</title></circle><circle opacity="0.7" cx="472.7177009785705" cy="373.79274532167676" r="2.294306790341795" fill="rgb(32, 178, 212)"><title>First National Bank
+0.3B</title></circle><circle opacity="0.7" cx="476.33172302737523" cy="436.30197592681805" r="2.291124355929256" fill="rgb(31, 179, 211)"><title>Home Valley Bank
+0.3B</title></circle><circle opacity="0.7" cx="483.5597671249845" cy="518.9023435378546" r="2.274687221223479" fill="rgb(31, 181, 210)"><title>First Commerce Community Bank
+0.2B</title></circle><circle opacity="0.7" cx="500.7263718568066" cy="542.7488500532266" r="2.266883811531529" fill="rgb(29, 186, 206)"><title>Evergreen State Bank
+0.2B</title></circle><circle opacity="0.7" cx="469.1036789297659" cy="347.5752383258088" r="2.260898325397455" fill="rgb(32, 177, 212)"><title>Bank of Florida - Tampa Bay
+0.2B</title></circle><circle opacity="0.7" cx="495.30533878359967" cy="553.6393490657151" r="2.2572070603635477" fill="rgb(29, 185, 207)"><title>Chestatee State Bank
+0.2B</title></circle><circle opacity="0.7" cx="459.16511829555304" cy="132.8396961400298" r="2.2516588166749636" fill="rgb(34, 174, 214)"><title>Statewide Bank
+0.2B</title></circle><circle opacity="0.7" cx="466.3931623931624" cy="372.1099821029651" r="2.2502696183010733" fill="rgb(33, 176, 213)"><title>The Bank of Bonifay
+0.2B</title></circle><circle opacity="0.7" cx="495.30533878359967" cy="547.1346533598348" r="2.2474886455166763" fill="rgb(29, 185, 207)"><title>United Americas Bank
+0.2B</title></circle><circle opacity="0.7" cx="532.3490647838474" cy="562.2985643921883" r="2.2363301720534206" fill="rgb(26, 195, 199)"><title>First International Bank
+0.2B</title></circle><circle opacity="0.7" cx="524.2175151740369" cy="549.9392947435692" r="2.235864027145375" fill="rgb(27, 192, 201)"><title>BankMeridian
+0.2B</title></circle><circle opacity="0.7" cx="410.37582063669026" cy="455.6329913269401" r="2.2288601547823825" fill="rgb(41, 160, 221)"><title>Security Savings Bank
+0.2B</title></circle><circle opacity="0.7" cx="501.62987736900783" cy="536.3167204317488" r="2.228392447263902" fill="rgb(29, 186, 206)"><title>American Trust Bank
+0.2B</title></circle><circle opacity="0.7" cx="399.53375449027624" cy="393.9777745336932" r="2.2251157419663765" fill="rgb(43, 157, 222)"><title>First Georgia Community Bank
+0.2B</title></circle><circle opacity="0.7" cx="410.37582063669026" cy="430.6580716610763" r="2.203461889771245" fill="rgb(41, 160, 221)"><title>Heritage Community Bank
+0.2B</title></circle><circle opacity="0.7" cx="498.9193608324043" cy="645.8074452305727" r="2.1925547694272334" fill="rgb(29, 186, 206)"><title>Oglethorpe Bank
+0.2B</title></circle><circle opacity="0.7" cx="522.4105041496346" cy="543.7814974610617" r="2.181593118388934" fill="rgb(27, 192, 201)"><title>First Peoples Bank
+0.2B</title></circle><circle opacity="0.7" cx="583.8488789793138" cy="618.5184613370038" r="2.168173701228079" fill="rgb(25, 207, 185)"><title>Heritage Bank of Florida
+0.2B</title></circle><circle opacity="0.7" cx="510.66493249101944" cy="541.3226854445454" r="2.160950448388597" fill="rgb(28, 189, 204)"><title>Heritage Banking Group
+0.2B</title></circle><circle opacity="0.7" cx="429.34943639291464" cy="362.38042593440355" r="2.160950448388597" fill="rgb(38, 166, 219)"><title>Security Bank of North Metro
+0.2B</title></circle><circle opacity="0.7" cx="406.7617985878855" cy="262.40793461143335" r="2.158537325973806" fill="rgb(42, 159, 221)"><title>Ocala National Bank
+0.2B</title></circle><circle opacity="0.7" cx="570.2962962962963" cy="639.500273552469" r="2.1546707087608956" fill="rgb(25, 204, 189)"><title>First Cherokee State Bank
+0.2B</title></circle><circle opacity="0.7" cx="425.73541434411" cy="307.10897232033494" r="2.149342752355002" fill="rgb(39, 165, 219)"><title>Neighborhood Community Bank
+0.2B</title></circle><circle opacity="0.7" cx="489.8843057103927" cy="535.0065316942547" r="2.1469165829934447" fill="rgb(30, 183, 208)"><title>Pierce Commercial Bank
+0.2B</title></circle><circle opacity="0.7" cx="571.1998018084975" cy="633.2854883840723" r="2.125446877710056" fill="rgb(25, 204, 188)"><title>Jasper Banking Company
+0.2B</title></circle><circle opacity="0.7" cx="576.6208348817045" cy="639.1185600547874" r="2.1215199517179797" fill="rgb(25, 206, 187)"><title>First Commercial Bank
+0.2B</title></circle><circle opacity="0.7" cx="535.0595813204508" cy="625.8767388833356" r="2.1215199517179797" fill="rgb(26, 195, 198)"><title>Old Harbor Bank
+0.2B</title></circle><circle opacity="0.7" cx="458.2616127833519" cy="99.587472110725" r="2.118077919166629" fill="rgb(34, 174, 214)"><title>Centennial Bank
+0.2B</title></circle><circle opacity="0.7" cx="503.4368883934101" cy="530.2375642279318" r="2.1136442124154966" fill="rgb(29, 187, 205)"><title>Citizens Bank of Effingham
+0.2B</title></circle><circle opacity="0.7" cx="476.33172302737523" cy="368.50297068389864" r="2.112164241960432" fill="rgb(31, 179, 211)"><title>SouthwestUSA Bank
+0.2B</title></circle><circle opacity="0.7" cx="423.02489780750653" cy="275.93892369144635" r="2.112164241960432" fill="rgb(39, 164, 220)"><title>Bank of Lincolnwood
+0.2B</title></circle><circle opacity="0.7" cx="441.99851356373097" cy="74.72049768510738" r="2.1062339609766374" fill="rgb(36, 169, 217)"><title>Bank USA
+0.2B</title></circle><circle opacity="0.7" cx="434.77046946612165" cy="50.10854150516366" r="2.10227114662723" fill="rgb(37, 167, 218)"><title>InBank
+0.2B</title></circle><circle opacity="0.7" cx="458.2616127833519" cy="93.36861102752641" r="2.100783164031959" fill="rgb(34, 174, 214)"><title>Bank of Illinois
+0.2B</title></circle><circle opacity="0.7" cx="502.533382881209" cy="524.0931830620627" r="2.096810048108832" fill="rgb(29, 187, 206)"><title>Canyon National Bank
+0.2B</title></circle><circle opacity="0.7" cx="459.03604607952434" cy="108.34941980377005" r="2.090836218168513" fill="rgb(34, 174, 214)"><title>LibertyPointe Bank
+0.2B</title></circle><circle opacity="0.7" cx="431.15644741731705" cy="93.67475842706642" r="2.0873435887100595" fill="rgb(38, 166, 218)"><title>Community First Bank
+0.2B</title></circle><circle opacity="0.7" cx="429.34943639291464" cy="301.0111662203764" r="2.0873435887100595" fill="rgb(38, 166, 219)"><title>Security Bank of North Fulton
+0.2B</title></circle><circle opacity="0.7" cx="516.9894710764277" cy="612.7941969304214" r="2.083344842530641" fill="rgb(27, 190, 202)"><title>Atlantic Bank and Trust
+0.2B</title></circle><circle opacity="0.7" cx="534.1560758082497" cy="556.2626751556605" r="2.064245017399019" fill="rgb(26, 195, 198)"><title>First State Bank
+0.2B</title></circle><circle opacity="0.7" cx="490.7878112225938" cy="528.8634781140685" r="2.062224219051288" fill="rgb(30, 183, 208)"><title>Copper Star Bank
+0.2B</title></circle><circle opacity="0.7" cx="446.5160411247368" cy="65.61872205662837" r="2.0571635384928038" fill="rgb(35, 171, 216)"><title>Greater Atlantic Bank
+0.2B</title></circle><circle opacity="0.7" cx="621.7961104917628" cy="614.9021491999107" r="2.0531060127704723" fill="rgb(26, 216, 174)"><title>Sunrise Bank of Arizona
+0.2B</title></circle><circle opacity="0.7" cx="534.1560758082497" cy="550.1478641561713" r="2.050565982090198" fill="rgb(26, 195, 198)"><title>Piedmont Community Bank
+0.2B</title></circle><circle opacity="0.7" cx="582.0418679549114" cy="612.5738985978053" r="2.04496680922071" fill="rgb(25, 207, 185)"><title>Excel Bank
+0.2B</title></circle><circle opacity="0.7" cx="464.5861513687601" cy="226.7162085289629" r="2.0413957031742056" fill="rgb(33, 176, 213)"><title>Lincoln Park Savings Bank
+0.2B</title></circle><circle opacity="0.7" cx="442.9020190759322" cy="60.708900312924925" r="2.0393522635197496" fill="rgb(36, 170, 217)"><title>Prosperan Bank
+0.2B</title></circle><circle opacity="0.7" cx="425.73541434411" cy="196.26262007819605" r="2.0388410835985673" fill="rgb(39, 165, 219)"><title>Community Bank of West Georgia
+0.2B</title></circle><circle opacity="0.7" cx="570.2962962962963" cy="627.189324806503" r="2.0373067742753284" fill="rgb(25, 204, 189)"><title>Second Federal Savings and Loan Association of Chicago
+0.2B</title></circle><circle opacity="0.7" cx="536.8665923448532" cy="619.9943257714059" r="2.0321840435774225" fill="rgb(26, 196, 198)"><title>SunFirst Bank
+0.2B</title></circle><circle opacity="0.7" cx="499.8228663446055" cy="518.6133502961366" r="2.016737779275805" fill="rgb(29, 186, 206)"><title>The Bank of Asheville
+0.2B</title></circle><circle opacity="0.7" cx="474.5247120029729" cy="351.7545492411359" r="2.007412972059033" fill="rgb(32, 179, 211)"><title>USA Bank
+0.2B</title></circle><circle opacity="0.7" cx="522.4105041496346" cy="537.5966496619192" r="2.003254680753526" fill="rgb(27, 192, 201)"><title>High Trust Bank
+0.2B</title></circle><circle opacity="0.7" cx="495.30533878359967" cy="539.6053911926957" r="1.9996090823170136" fill="rgb(29, 185, 207)"><title>First Southern Bank
+0.2B</title></circle><circle opacity="0.7" cx="535.0595813204508" cy="580.4104992751857" r="1.9980446467542843" fill="rgb(26, 195, 198)"><title>Decatur First Bank
+0.2B</title></circle><circle opacity="0.7" cx="534.1560758082497" cy="544.1039542008943" r="1.9933439731866998" fill="rgb(26, 195, 198)"><title>Country Bank
+0.2B</title></circle><circle opacity="0.7" cx="506.14740493001364" cy="592.247160469633" r="1.9922978728925669" fill="rgb(28, 188, 205)"><title>Legacy Bank
+0.2B</title></circle><circle opacity="0.7" cx="441.09500805152976" cy="83.08140634401354" r="1.99020402273668" fill="rgb(36, 169, 217)"><title>Flagship National Bank
+0.2B</title></circle><circle opacity="0.7" cx="676.0064412238324" cy="635.1466872132622" r="1.9807543063565043" fill="rgb(32, 226, 156)"><title>NBRS Financial
+0.2B</title></circle><circle opacity="0.7" cx="482.6562616127833" cy="500.6608685979153" r="1.978648240576089" fill="rgb(31, 181, 210)"><title>Horizon Bank
+0.2B</title></circle><circle opacity="0.7" cx="465.4896568809612" cy="220.76701704655142" r="1.9760125017737424" fill="rgb(33, 176, 213)"><title>Champion Bank
+0.2B</title></circle><circle opacity="0.7" cx="509.7614269788183" cy="535.2552638394" r="1.9733732425462227" fill="rgb(28, 188, 204)"><title>Western Springs National Bank and Trust
+0.2B</title></circle><circle opacity="0.7" cx="522.4105041496346" cy="531.6226645324161" r="1.9707304487495656" fill="rgb(27, 192, 201)"><title>One Georgia Bank
+0.2B</title></circle><circle opacity="0.7" cx="417.6038647342995" cy="266.0951163413697" r="1.9617183187743805" fill="rgb(40, 162, 220)"><title>Michigan Heritage Bank
+0.2B</title></circle><circle opacity="0.7" cx="549.5156695156695" cy="600.5877590546335" r="1.9510625185114043" fill="rgb(26, 199, 194)"><title>SCB Bank
+0.2B</title></circle><circle opacity="0.7" cx="535.0595813204508" cy="538.2361939933431" r="1.9435686978822286" fill="rgb(26, 195, 198)"><title>Community Capital Bank
+0.2B</title></circle><circle opacity="0.7" cx="416.7003592220983" cy="260.2604422239635" r="1.9424957920881396" fill="rgb(40, 162, 220)"><title>American Sterling Bank
+0.2B</title></circle><circle opacity="0.7" cx="568.489285271894" cy="621.5311885178431" r="1.9023729395948972" fill="rgb(25, 204, 189)"><title>Montgomery Bank &amp; Trust
+0.2B</title></circle><circle opacity="0.7" cx="516.0859655642264" cy="538.6079762785677" r="1.9018249421934674" fill="rgb(28, 190, 203)"><title>First Heritage Bank
+0.2B</title></circle><circle opacity="0.7" cx="411.27932614889136" cy="258.08410623557756" r="1.8990825832439344" fill="rgb(41, 160, 221)"><title>Freedom Bank of Georgia
+0.2B</title></circle><circle opacity="0.7" cx="446.5160411247368" cy="119.16291170148406" r="1.8825445390131088" fill="rgb(35, 171, 216)"><title>Benchmark Bank
+0.2B</title></circle><circle opacity="0.7" cx="565.7787687352904" cy="615.4249768509678" r="1.8797740525391204" fill="rgb(25, 203, 190)"><title>Putnam State Bank
+0.2B</title></circle><circle opacity="0.7" cx="664.2608695652175" cy="638.9654629102582" r="1.876999476779527" fill="rgb(30, 224, 160)"><title>Eastside Commercial Bank
+0.2B</title></circle><circle opacity="0.7" cx="483.5597671249845" cy="624.4961486388147" r="1.8758884974121268" fill="rgb(31, 181, 210)"><title>Bank of Ellijay
+0.2B</title></circle><circle opacity="0.7" cx="475.428217515174" cy="345.94160032098597" r="1.8753327609172141" fill="rgb(32, 179, 211)"><title>Olde Cypress Community Bank
+0.2B</title></circle><circle opacity="0.7" cx="448.32305214913913" cy="58.34472525486524" r="1.8747768596864094" fill="rgb(35, 171, 216)"><title>Citizens State Bank
+0.2B</title></circle><circle opacity="0.7" cx="477.2352285395764" cy="455.47732981873594" r="1.8697663112356904" fill="rgb(31, 179, 211)"><title>NorthWest Bank and Trust
+0.2B</title></circle><circle opacity="0.7" cx="432.9634584417193" cy="44.42054541392281" r="1.8658599156302436" fill="rgb(37, 167, 218)"><title>First Coweta Bank
+0.2B</title></circle><circle opacity="0.7" cx="559.4542301498824" cy="611.5033982507312" r="1.8641832402139178" fill="rgb(25, 201, 192)"><title>Bank of the Eastern Shore
+0.2B</title></circle><circle opacity="0.7" cx="825.0848507370246" cy="646.1380546756471" r="1.8619453243528603" fill="rgb(68, 244, 112)"><title>Washington Federal Bank for Savings
+0.2B</title></circle><circle opacity="0.7" cx="430.2529419051158" cy="39.37657792431139" r="1.8602651206799101" fill="rgb(38, 166, 219)"><title>First BankAmericano
+0.2B</title></circle><circle opacity="0.7" cx="426.50984764028243" cy="378.3726094607404" r="1.8602651206799101" fill="rgb(38, 165, 219)"><title>The First National Bank of Danville
+0.2B</title></circle><circle opacity="0.7" cx="526.9280317106404" cy="527.9483156416754" r="1.8524040195016305" fill="rgb(27, 193, 200)"><title>First Southern National Bank
+0.2B</title></circle><circle opacity="0.7" cx="559.4542301498824" cy="602.4078483997382" r="1.8507151536107762" fill="rgb(25, 201, 192)"><title>HarVest Bank of Maryland
+0.2B</title></circle><circle opacity="0.7" cx="565.7787687352904" cy="609.6967418663045" r="1.8484609321242296" fill="rgb(25, 203, 190)"><title>The Farmers Bank of Lynchburg
+0.2B</title></circle><circle opacity="0.7" cx="507.95441595441594" cy="586.6977070780179" r="1.843944221813558" fill="rgb(28, 188, 204)"><title>The Bank of Commerce
+0.2B</title></circle><circle opacity="0.7" cx="542.2876254180602" cy="626.205643305062" r="1.8428133144874217" fill="rgb(26, 197, 196)"><title>Western National Bank
+0.2B</title></circle><circle opacity="0.7" cx="534.1560758082497" cy="532.5316980080063" r="1.8320348772692467" fill="rgb(26, 195, 198)"><title>Blue Ridge Savings Bank
+0.2B</title></circle><circle opacity="0.7" cx="636.2521986869813" cy="641.8667370167097" r="1.8269071067099254" fill="rgb(27, 219, 169)"><title>Texas Community Bank
+0.2B</title></circle><circle opacity="0.7" cx="582.0418679549114" cy="606.707739137872" r="1.8211926507126508" fill="rgb(25, 207, 185)"><title>GulfSouth Private Bank
+0.2B</title></circle><circle opacity="0.7" cx="432.05995292951815" cy="33.99376939430283" r="1.817755354190243" fill="rgb(38, 167, 218)"><title>Community Bank of Arizona
+0.2B</title></circle><circle opacity="0.7" cx="442.9020190759322" cy="54.86041450834716" r="1.8091335410580134" fill="rgb(36, 170, 217)"><title>United Security Bank
+0.2B</title></circle><circle opacity="0.7" cx="424.83190883190883" cy="204.42511097008554" r="1.8085572921053292" fill="rgb(39, 164, 219)"><title>First National Bank of Anthony
+0.2B</title></circle><circle opacity="0.7" cx="479.94574507617983" cy="542.4389773627786" r="1.804518396955581" fill="rgb(31, 180, 210)"><title>Independent National Bank
+0.2B</title></circle><circle opacity="0.7" cx="458.2616127833519" cy="461.57055138021633" r="1.8010492779567868" fill="rgb(34, 174, 214)"><title>Waterfield Bank
+0.2B</title></circle><circle opacity="0.7" cx="642.5767372723894" cy="639.0187882884725" r="1.7882715983446849" fill="rgb(28, 220, 167)"><title>Syringa Bank
+0.2B</title></circle><circle opacity="0.7" cx="501.62987736900783" cy="513.0979801803516" r="1.7871054608888535" fill="rgb(29, 186, 206)"><title>North Georgia Bank
+0.2B</title></circle><circle opacity="0.7" cx="933.5055122011644" cy="646.2175667182447" r="1.782433281755251" fill="rgb(111, 246, 91)"><title>First State Bank
+0.2B</title></circle><circle opacity="0.7" cx="565.7787687352904" cy="635.6605109188312" r="1.774227363151733" fill="rgb(25, 203, 190)"><title>Security Exchange Bank
+0.2B</title></circle><circle opacity="0.7" cx="528.7350427350427" cy="542.1383187286332" r="1.7730519888172651" fill="rgb(27, 194, 200)"><title>Patriot Bank of Georgia
+0.2B</title></circle><circle opacity="0.7" cx="498.0158553202032" cy="639.9118443093738" r="1.771875834798073" fill="rgb(29, 185, 207)"><title>Legacy Bank
+0.2B</title></circle><circle opacity="0.7" cx="488.07729468599035" cy="523.7099242108852" r="1.7606631856832227" fill="rgb(30, 183, 209)"><title>First Suburban National Bank
+0.1B</title></circle><circle opacity="0.7" cx="484.46327263718564" cy="512.9356036077521" r="1.7600710675613214" fill="rgb(31, 182, 209)"><title>Haven Trust Bank Florida
+0.1B</title></circle><circle opacity="0.7" cx="509.7614269788183" cy="529.5438697073423" r="1.7380208895113571" fill="rgb(28, 188, 204)"><title>Nevada Commerce Bank
+0.1B</title></circle><circle opacity="0.7" cx="552.226186052273" cy="595.5940864780966" r="1.7308091534692374" fill="rgb(26, 200, 194)"><title>Global Commerce Bank
+0.1B</title></circle><circle opacity="0.7" cx="490.7878112225938" cy="518.9340087429905" r="1.7308091534692374" fill="rgb(30, 183, 208)"><title>Tifton Banking Company
+0.1B</title></circle><circle opacity="0.7" cx="432.9634584417193" cy="28.52353855655747" r="1.7265883967688065" fill="rgb(37, 167, 218)"><title>ebank
+0.1B</title></circle><circle opacity="0.7" cx="515.1824600520252" cy="533.0543900706316" r="1.7247763391800803" fill="rgb(28, 190, 203)"><title>Summit Bank
+0.1B</title></circle><circle opacity="0.7" cx="526.9280317106404" cy="522.3814397849068" r="1.714471837267022" fill="rgb(27, 193, 200)"><title>First Choice Bank
+0.1B</title></circle><circle opacity="0.7" cx="657.9363309798092" cy="638.6860328702284" r="1.7089913591934995" fill="rgb(30, 223, 162)"><title>Slavie Federal Savings Bank
+0.1B</title></circle><circle opacity="0.7" cx="476.33172302737523" cy="430.3067465443813" r="1.7041050265074855" fill="rgb(31, 179, 211)"><title>Williamsburg First National Bank
+0.1B</title></circle><circle opacity="0.7" cx="460.06862380775425" cy="402.4669446612039" r="1.691211234511944" fill="rgb(34, 175, 214)"><title>First Lowndes Bank
+0.1B</title></circle><circle opacity="0.7" cx="467.29666790536356" cy="442.9656585427117" r="1.6819408674008798" fill="rgb(33, 177, 213)"><title>Satilla Community Bank
+0.1B</title></circle><circle opacity="0.7" cx="958.803666542797" cy="646.3242678686927" r="1.6757321313073175" fill="rgb(123, 246, 89)"><title>First City Bank of Florida
+0.1B</title></circle><circle opacity="0.7" cx="443.8055245881333" cy="448.05922251837154" r="1.6738650197176974" fill="rgb(36, 170, 217)"><title>Pacific Coast National Bank
+0.1B</title></circle><circle opacity="0.7" cx="610.9540443453487" cy="635.366585676746" r="1.671372293063261" fill="rgb(26, 214, 177)"><title>Banks of Wisconsin
+0.1B</title></circle><circle opacity="0.7" cx="488.07729468599035" cy="566.9046828291329" r="1.655078060884788" fill="rgb(30, 183, 209)"><title>The First National Bank of Barnesville
+0.1B</title></circle><circle opacity="0.7" cx="409.472315124489" cy="252.83211503047482" r="1.655078060884788" fill="rgb(41, 160, 221)"><title>Silver Falls Bank
+0.1B</title></circle><circle opacity="0.7" cx="646.1907593211942" cy="634.9575851892636" r="1.6481358534814248" fill="rgb(28, 221, 166)"><title>Millennium Bank
+0.1B</title></circle><circle opacity="0.7" cx="464.5861513687601" cy="612.8196271208353" r="1.6475032931612605" fill="rgb(33, 176, 213)"><title>Peotone Bank and Trust Company
+0.1B</title></circle><circle opacity="0.7" cx="408.56880961228785" cy="450.0440201227129" r="1.6449706194221871" fill="rgb(41, 160, 221)"><title>Sherman County Bank
+0.1B</title></circle><circle opacity="0.7" cx="513.375449027623" cy="628.8635595027511" r="1.6424340402424784" fill="rgb(28, 189, 203)"><title>Coastal Bank
+0.1B</title></circle><circle opacity="0.7" cx="446.5160411247368" cy="144.90788769829214" r="1.633524994848499" fill="rgb(35, 171, 216)"><title>First Security National Bank
+0.1B</title></circle><circle opacity="0.7" cx="781.7165861513688" cy="646.3767166421309" r="1.6232833578691226" fill="rgb(55, 241, 124)"><title>Harvest Community Bank
+0.1B</title></circle><circle opacity="0.7" cx="542.2876254180602" cy="615.208731602077" r="1.6207128362914478" fill="rgb(26, 197, 196)"><title>Premier Community Bank of the Emerald Coast
+0.1B</title></circle><circle opacity="0.7" cx="559.4542301498824" cy="596.9377072006989" r="1.6194260454285578" fill="rgb(25, 201, 192)"><title>Palm Desert National Bank
+0.1B</title></circle><circle opacity="0.7" cx="502.533382881209" cy="507.769436995745" r="1.617493939695336" fill="rgb(29, 187, 206)"><title>Sunshine State Community Bank
+0.1B</title></circle><circle opacity="0.7" cx="585.6558900037161" cy="627.871858373782" r="1.6116837251667668" fill="rgb(25, 208, 184)"><title>Hometown Community Bank
+0.1B</title></circle><circle opacity="0.7" cx="432.05995292951815" cy="23.26622343857241" r="1.6077985839790228" fill="rgb(38, 167, 218)"><title>Union Bank
+0.1B</title></circle><circle opacity="0.7" cx="504.3403939056113" cy="582.2295587622972" r="1.6065014489683658" fill="rgb(29, 187, 205)"><title>Valley Community Bank
+0.1B</title></circle><circle opacity="0.7" cx="413.0863371732937" cy="286.2641586520257" r="1.6045537803003742" fill="rgb(41, 161, 221)"><title>Colorado National Bank
+0.1B</title></circle><circle opacity="0.7" cx="503.4368883934101" cy="570.9608144686896" r="1.586917196618992" fill="rgb(29, 187, 205)"><title>Charter Oak Bank
+0.1B</title></circle><circle opacity="0.7" cx="913.6283909327387" cy="646.4143970207465" r="1.5856029792535045" fill="rgb(103, 247, 94)"><title>City National Bank of New Jersey
+0.1B</title></circle><circle opacity="0.7" cx="466.3931623931624" cy="248.31818906497045" r="1.5829712712499258" fill="rgb(33, 176, 213)"><title>Towne Bank of Arizona
+0.1B</title></circle><circle opacity="0.7" cx="570.2962962962963" cy="606.6861319662561" r="1.58033518070934" fill="rgb(25, 204, 189)"><title>Georgia Trust Bank
+0.1B</title></circle><circle opacity="0.7" cx="456.4546017589496" cy="304.53375775016895" r="1.5790154851299367" fill="rgb(34, 174, 215)"><title>Marco Community Bank
+0.1B</title></circle><circle opacity="0.7" cx="430.2529419051158" cy="18.408587371981298" r="1.5750497639622862" fill="rgb(38, 166, 219)"><title>Integrity Bank
+0.1B</title></circle><circle opacity="0.7" cx="441.99851356373097" cy="69.04451717308257" r="1.5697465510481898" fill="rgb(36, 169, 217)"><title>Citizens National Bank
+0.1B</title></circle><circle opacity="0.7" cx="426.50984764028243" cy="318.1078394967986" r="1.5684179460272043" fill="rgb(38, 165, 219)"><title>Millennium State Bank of Texas
+0.1B</title></circle><circle opacity="0.7" cx="428.44593088071343" cy="180.23050402414367" r="1.5483520713351395" fill="rgb(38, 165, 219)"><title>First Piedmont Bank
+0.1B</title></circle><circle opacity="0.7" cx="389.5951938560635" cy="312.1290585613605" r="1.5483520713351395" fill="rgb(45, 154, 223)"><title>Ameribank
+0.1B</title></circle><circle opacity="0.7" cx="494.40183327139846" cy="635.1849226379919" r="1.5321101668998593" fill="rgb(29, 184, 207)"><title>Earthstar Bank
+0.1B</title></circle><circle opacity="0.7" cx="417.6038647342995" cy="254.86297706634025" r="1.5300678062937856" fill="rgb(40, 162, 220)"><title>American Southern Bank
+0.1B</title></circle><circle opacity="0.7" cx="491.69131673479495" cy="513.7526803477292" r="1.5287047166634846" fill="rgb(30, 184, 208)"><title>Gulf State Community Bank
+0.1B</title></circle><circle opacity="0.7" cx="547.7086584912671" cy="592.9113679076271" r="1.5232401604209422" fill="rgb(26, 198, 195)"><title>Patriot Bank Minnesota
+0.1B</title></circle><circle opacity="0.7" cx="441.09500805152976" cy="49.84573441841678" r="1.5211858908949885" fill="rgb(36, 169, 217)"><title>American United Bank
+0.1B</title></circle><circle opacity="0.7" cx="605.5330112721417" cy="633.6494742512998" r="1.5205005176270854" fill="rgb(26, 212, 178)"><title>Heritage Bank of North Florida
+0.1B</title></circle><circle opacity="0.7" cx="525.121020686238" cy="517.4696898683421" r="1.5191288434483567" fill="rgb(27, 193, 200)"><title>Bank of Shorewood
+0.1B</title></circle><circle opacity="0.7" cx="510.66493249101944" cy="612.2733195169005" r="1.5191288434483567" fill="rgb(28, 189, 204)"><title>New Horizons Bank
+0.1B</title></circle><circle opacity="0.7" cx="488.07729468599035" cy="509.08738371653516" r="1.5191288434483567" fill="rgb(30, 183, 209)"><title>Progress Bank of Florida
+0.1B</title></circle><circle opacity="0.7" cx="570.2962962962963" cy="601.5914785861182" r="1.5143181994285484" fill="rgb(25, 204, 189)"><title>Heartland Bank
+0.1B</title></circle><circle opacity="0.7" cx="467.29666790536356" cy="215.58914908081908" r="1.5081105377712891" fill="rgb(33, 177, 213)"><title>New Liberty Bank
+0.1B</title></circle><circle opacity="0.7" cx="606.4365167843429" cy="628.7062138637963" r="1.50465077056707" fill="rgb(26, 213, 178)"><title>Parkway Bank
+0.1B</title></circle><circle opacity="0.7" cx="476.33172302737523" cy="405.64167378913385" r="1.5004885197980031" fill="rgb(31, 179, 211)"><title>Community Security Bank
+0.1B</title></circle><circle opacity="0.7" cx="441.09500805152976" cy="44.8240600077238" r="1.5004885197980031" fill="rgb(36, 169, 217)"><title>Riverview Community Bank
+0.1B</title></circle><circle opacity="0.7" cx="491.69131673479495" cy="505.617867270674" r="1.4907314078307867" fill="rgb(30, 184, 208)"><title>Allegiance Bank of North America
+0.1B</title></circle><circle opacity="0.7" cx="536.8665923448532" cy="614.4749105159706" r="1.4872312118579376" fill="rgb(26, 196, 198)"><title>Mid City Bank
+0.1B</title></circle><circle opacity="0.7" cx="434.77046946612165" cy="359.7183760380977" r="1.4795016327916721" fill="rgb(37, 167, 218)"><title>First State Bank
+0.1B</title></circle><circle opacity="0.7" cx="485.3667781493869" cy="491.53967816066637" r="1.4738546593892008" fill="rgb(30, 182, 209)"><title>Shoreline Bank
+0.1B</title></circle><circle opacity="0.7" cx="519.6999876130311" cy="526.9048188453003" r="1.4703142875706974" fill="rgb(27, 191, 202)"><title>Mountain Heritage Bank
+0.1B</title></circle><circle opacity="0.7" cx="430.2529419051158" cy="86.5513194672834" r="1.4681859666177477" fill="rgb(38, 166, 219)"><title>First State Bank of Altus
+0.1B</title></circle><circle opacity="0.7" cx="749.190387712127" cy="646.5325241596471" r="1.467475840352932" fill="rgb(46, 237, 133)"><title>First CornerStone Bank
+0.1B</title></circle><circle opacity="0.7" cx="469.1036789297659" cy="328.4783714062984" r="1.4646318922529853" fill="rgb(32, 177, 212)"><title>Granite Community Bank
+0.1B</title></circle><circle opacity="0.7" cx="528.7350427350427" cy="536.9049111541855" r="1.4603555856304604" fill="rgb(27, 194, 200)"><title>CreekSide Bank
+0.1B</title></circle><circle opacity="0.7" cx="560.3577356620835" cy="591.9483811024925" r="1.4510470217340952" fill="rgb(25, 202, 191)"><title>Security Bank
+0.1B</title></circle><circle opacity="0.7" cx="927.1809736157562" cy="646.5496714962707" r="1.4503285037292901" fill="rgb(108, 246, 92)"><title>Ericson State Bank
+0.1B</title></circle><circle opacity="0.7" cx="499.8228663446055" cy="503.48739023947564" r="1.4503285037292901" fill="rgb(29, 186, 206)"><title>Enterprise Banking Company
+0.1B</title></circle><circle opacity="0.7" cx="605.5330112721417" cy="623.840164211532" r="1.4445674938540165" fill="rgb(26, 212, 178)"><title>First Federal Bank
+0.1B</title></circle><circle opacity="0.7" cx="518.79648210083" cy="548.1088643238171" r="1.4337032070807" fill="rgb(27, 191, 202)"><title>First Commercial Bank of Tampa Bay
+0.1B</title></circle><circle opacity="0.7" cx="489.8843057103927" cy="610.2336952443467" r="1.4337032070807" fill="rgb(30, 183, 208)"><title>Western Commercial Bank
+0.1B</title></circle><circle opacity="0.7" cx="392.3057103926669" cy="307.9540780323097" r="1.4293343704924364" fill="rgb(44, 155, 223)"><title>Main Street Bank
+0.1B</title></circle><circle opacity="0.7" cx="592.8839341013254" cy="646.5728550630683" r="1.427144936931695" fill="rgb(25, 209, 182)"><title>Westside Community Bank
+0.1B</title></circle><circle opacity="0.7" cx="475.428217515174" cy="385.7565846227294" r="1.4249521393185574" fill="rgb(32, 179, 211)"><title>Mainstreet Savings Bank
+0.1B</title></circle><circle opacity="0.7" cx="431.15644741731705" cy="13.493873190073941" r="1.4220231492959423" fill="rgb(38, 166, 218)"><title>Community National Bank of Sarasota County
+0.1B</title></circle><circle opacity="0.7" cx="467.29666790536356" cy="210.66195042918082" r="1.4190881138669884" fill="rgb(33, 177, 213)"><title>Southwest Community Bank
+0.1B</title></circle><circle opacity="0.7" cx="460.06862380775425" cy="390.5535315994619" r="1.4183534060186906" fill="rgb(34, 175, 214)"><title>Century Security Bank
+0.1B</title></circle><circle opacity="0.7" cx="524.2175151740369" cy="573.2988540228098" r="1.4131997560460443" fill="rgb(27, 192, 201)"><title>Virginia Business Bank
+0.1B</title></circle><circle opacity="0.7" cx="554.9367025888766" cy="591.2230067360013" r="1.4124619853061016" fill="rgb(25, 200, 193)"><title>Covenant Bank &amp; Trust
+0.1B</title></circle><circle opacity="0.7" cx="549.5156695156695" cy="588.3326893562801" r="1.399115588494184" fill="rgb(26, 199, 194)"><title>Charter National Bank and Trust
+0.1B</title></circle><circle opacity="0.7" cx="538.6736033692556" cy="603.7407643607664" r="1.3818742877813706" fill="rgb(26, 196, 197)"><title>Polk County Bank
+0.1B</title></circle><circle opacity="0.7" cx="487.17378917378915" cy="503.79389392462673" r="1.38111978360949" fill="rgb(30, 182, 209)"><title>WestBridge Bank and Trust Company
+0.1B</title></circle><circle opacity="0.7" cx="463.6826458565589" cy="459.79810443105725" r="1.3735519470118573" fill="rgb(33, 176, 213)"><title>AmericanFirst Bank
+0.1B</title></circle><circle opacity="0.7" cx="506.14740493001364" cy="577.5913528462208" r="1.371273451751629" fill="rgb(28, 188, 205)"><title>The First National Bank of Davis
+0.1B</title></circle><circle opacity="0.7" cx="702.2081010776662" cy="625.6196375523132" r="1.369752349284839" fill="rgb(36, 231, 148)"><title>Edgebrook Bank
+0.1B</title></circle><circle opacity="0.7" cx="572.1033073206986" cy="646.6386440941914" r="1.3613559058086646" fill="rgb(25, 205, 188)"><title>Waukegan Savings Bank
+0.1B</title></circle><circle opacity="0.7" cx="460.9721293199554" cy="348.9071473766557" r="1.354447373394927" fill="rgb(33, 175, 214)"><title>Key West Bank
+0.1B</title></circle><circle opacity="0.7" cx="425.73541434411" cy="190.87241341671654" r="1.35136557788092" fill="rgb(39, 165, 219)"><title>Horizon Bank
+0.1B</title></circle><circle opacity="0.7" cx="570.2962962962963" cy="612.796615039739" r="1.346729661720925" fill="rgb(25, 204, 189)"><title>The Royal Palm Bank of Florida
+0.1B</title></circle><circle opacity="0.7" cx="344.2908460299764" cy="646.6555942911094" r="1.3444057088906307" fill="rgb(54, 141, 225)"><title>Miami Valley Bank
+0.1B</title></circle><circle opacity="0.7" cx="678.716957760436" cy="630.5656784802222" r="1.3420777318905497" fill="rgb(32, 227, 156)"><title>Frontier Bank
+0.1B</title></circle><circle opacity="0.7" cx="502.533382881209" cy="499.5598408456355" r="1.3217301857940171" fill="rgb(29, 187, 206)"><title>Badger State Bank
+0.1B</title></circle><circle opacity="0.7" cx="441.09500805152976" cy="40.008165406288185" r="1.3154060816375757" fill="rgb(36, 169, 217)"><title>Hillcrest Bank Florida
+0.1B</title></circle><circle opacity="0.7" cx="660.6468475164127" cy="634.4668078999938" r="1.3058625015537315" fill="rgb(30, 224, 161)"><title>Valley Bank
+0.1B</title></circle><circle opacity="0.7" cx="441.99851356373097" cy="35.47607967150634" r="1.3058625015537315" fill="rgb(36, 169, 217)"><title>Community Bank of Lemont
+0.1B</title></circle><circle opacity="0.7" cx="483.5597671249845" cy="593.4232940700715" r="1.3042651156328136" fill="rgb(31, 181, 210)"><title>ISN Bank
+0.1B</title></circle><circle opacity="0.7" cx="488.07729468599035" cy="499.2013438801468" r="1.29946117623198" fill="rgb(30, 183, 209)"><title>First Bank of Jacksonville
+0.1B</title></circle><circle opacity="0.7" cx="472.7177009785705" cy="589.8732808172283" r="1.2938340367520018" fill="rgb(32, 178, 212)"><title>High Desert State Bank
+0.1B</title></circle><circle opacity="0.7" cx="425.73541434411" cy="186.22963293920162" r="1.2914148996340185" fill="rgb(39, 165, 219)"><title>MetroPacific Bank
+0.1B</title></circle><circle opacity="0.7" cx="687.7520128824477" cy="617.1715638790104" r="1.2889912223655773" fill="rgb(34, 229, 153)"><title>First National Bank of Crestview
+0.1B</title></circle><circle opacity="0.7" cx="444.7090301003344" cy="31.765853148904966" r="1.2889912223655773" fill="rgb(36, 170, 216)"><title>Commerce Bank of Southwest Florida
+0.1B</title></circle><circle opacity="0.7" cx="546.8051529790661" cy="584.5135414538802" r="1.2841301444997812" fill="rgb(26, 198, 195)"><title>Central Florida State Bank
+0.1B</title></circle><circle opacity="0.7" cx="464.5861513687601" cy="192.60649979678482" r="1.2694352279835321" fill="rgb(33, 176, 213)"><title>Citizens Bank &amp; Trust Company of Chicago
+0.1B</title></circle><circle opacity="0.7" cx="426.50984764028243" cy="175.8215468267078" r="1.266969504914923" fill="rgb(38, 165, 219)"><title>Rock River Bank
+0.1B</title></circle><circle opacity="0.7" cx="176.36789297658862" cy="646.7571179861606" r="1.2428820138395005" fill="rgb(89, 94, 209)"><title>Guaranty National Bank of Tallahassee
+0.1B</title></circle><circle opacity="0.7" cx="408.56880961228785" cy="248.02763071850126" r="1.2336223507356403" fill="rgb(41, 160, 221)"><title>Pinnacle Bank
+0.1B</title></circle><circle opacity="0.7" cx="665.1643750774186" cy="633.9361990873173" r="1.232777114356355" fill="rgb(30, 225, 160)"><title>GreenChoice Bank
+0.1B</title></circle><circle opacity="0.7" cx="76.98228663446055" cy="625.3283813252451" r="1.2276934757333795" fill="rgb(105, 72, 184)"><title>Oakwood Deposit Bank Company
+0.1B</title></circle><circle opacity="0.7" cx="522.4105041496346" cy="513.5759484145365" r="1.2251437461363741" fill="rgb(27, 192, 201)"><title>Summit Bank
+0.1B</title></circle><circle opacity="0.7" cx="435.6739749783228" cy="498.1863865738351" r="1.2251437461363741" fill="rgb(37, 168, 218)"><title>Brickwell Community Bank
+0.1B</title></circle><circle opacity="0.7" cx="553.1296915644741" cy="585.4587476238842" r="1.2183183796804102" fill="rgb(26, 200, 193)"><title>New City Bank
+0.1B</title></circle><circle opacity="0.7" cx="512.4719435154218" cy="525.3974331520183" r="1.2157489883219577" fill="rgb(28, 189, 203)"><title>Cortez Community Bank
+0.1B</title></circle><circle opacity="0.7" cx="460.06862380775425" cy="147.19155491166714" r="1.2105938457151464" fill="rgb(34, 175, 214)"><title>American National Bank
+0.1B</title></circle><circle opacity="0.7" cx="959.7071720549981" cy="641.5248308495886" r="1.2080080246513885" fill="rgb(123, 246, 89)"><title>Almena State Bank
+0.1B</title></circle><circle opacity="0.7" cx="427.5424253685123" cy="171.46732966109846" r="1.2080080246513885" fill="rgb(38, 165, 219)"><title>Bank of Wyoming
+0.1B</title></circle><circle opacity="0.7" cx="426.50984764028243" cy="139.36026217349502" r="1.2080080246513885" fill="rgb(38, 165, 219)"><title>The John Warner Bank
+0.1B</title></circle><circle opacity="0.7" cx="451.93707419794373" cy="646.7954483716306" r="1.2045516283693138" fill="rgb(35, 172, 215)"><title>Town Community Bank and Trust
+0.1B</title></circle><circle opacity="0.7" cx="113.12250712250713" cy="646.7971802943501" r="1.2028197056498842" fill="rgb(100, 80, 194)"><title>Bank of Alamo
+0.1B</title></circle><circle opacity="0.7" cx="788.0411247367769" cy="625.3944778225643" r="1.1923753426059778" fill="rgb(56, 241, 122)"><title>Proficio Bank
+0.1B</title></circle><circle opacity="0.7" cx="495.30533878359967" cy="534.4134067677727" r="1.1923753426059778" fill="rgb(29, 185, 207)"><title>Appalachian Community Bank
+0.1B</title></circle><circle opacity="0.7" cx="479.94574507617983" cy="646.810250074178" r="1.1897499258220128" fill="rgb(31, 180, 210)"><title>Community National Bank at Bartow
+0.1B</title></circle><circle opacity="0.7" cx="582.0418679549114" cy="601.7029451809259" r="1.183601306233338" fill="rgb(25, 207, 185)"><title>First East Side Savings Bank
+0.1B</title></circle><circle opacity="0.7" cx="465.4896568809612" cy="378.35733167920046" r="1.183601306233338" fill="rgb(33, 176, 213)"><title>BC National Banks
+0.1B</title></circle><circle opacity="0.7" cx="741.9623436145174" cy="646.8172796773694" r="1.1827203226306369" fill="rgb(44, 236, 136)"><title>North Milwaukee State Bank
+0.1B</title></circle><circle opacity="0.7" cx="521.5069986374334" cy="522.6208254423091" r="1.1791898063282833" fill="rgb(27, 192, 201)"><title>Signature Bank
+0.1B</title></circle><circle opacity="0.7" cx="767.2604979561501" cy="646.8243513121968" r="1.1756486878032697" fill="rgb(50, 239, 128)"><title>Allied Bank
+0.1B</title></circle><circle opacity="0.7" cx="656.1293199554069" cy="634.1479253851181" r="1.1756486878032697" fill="rgb(29, 223, 163)"><title>AztecAmerica Bank
+0.1B</title></circle><circle opacity="0.7" cx="477.2352285395764" cy="471.2367765561255" r="1.1738741227346559" fill="rgb(31, 179, 211)"><title>Bayside Savings Bank
+0.1B</title></circle><circle opacity="0.7" cx="441.09500805152976" cy="29.156566265273796" r="1.168534258249874" fill="rgb(36, 169, 217)"><title>Partners Bank
+0.1B</title></circle><circle opacity="0.7" cx="646.1907593211942" cy="630.1588935997881" r="1.1505557359939866" fill="rgb(28, 221, 166)"><title>Vantage Point Bank
+0.1B</title></circle><circle opacity="0.7" cx="537.6410256410256" cy="591.4369816934459" r="1.140546757278043" fill="rgb(26, 196, 197)"><title>Community Bank of Rockmart
+0.1B</title></circle><circle opacity="0.7" cx="640.7697262479871" cy="634.4400589225983" r="1.134131417279866" fill="rgb(28, 220, 168)"><title>DuPage National Bank
+0.1B</title></circle><circle opacity="0.7" cx="429.34943639291464" cy="127.94469137702367" r="1.131370849898476" fill="rgb(38, 166, 219)"><title>Waterford Village Bank
+0.1B</title></circle><circle opacity="0.7" cx="468.2001734175647" cy="599.7875262168046" r="1.1295267234078652" fill="rgb(32, 177, 213)"><title>Pinehurst Bank
+0.1B</title></circle><circle opacity="0.7" cx="608.2435278087452" cy="620.1602691113476" r="1.1258294083374818" fill="rgb(26, 213, 178)"><title>Sunrise Bank
+0.1B</title></circle><circle opacity="0.7" cx="470.007184441967" cy="613.8718496563963" r="1.122119910910835" fill="rgb(32, 177, 212)"><title>First National Bank
+0.1B</title></circle><circle opacity="0.7" cx="453.7440852223461" cy="437.4044864384464" r="1.1174657228272422" fill="rgb(34, 173, 215)"><title>Marshall Bank
+0.1B</title></circle><circle opacity="0.7" cx="358.87600644122386" cy="646.8956703508728" r="1.1043296491271835" fill="rgb(51, 145, 225)"><title>Douglass National Bank
+0.1B</title></circle><circle opacity="0.7" cx="597.4014616623314" cy="640.9766015624035" r="1.1033853739231918" fill="rgb(25, 211, 181)"><title>Covenant Bank
+0.1B</title></circle><circle opacity="0.7" cx="438.3844915149263" cy="32.98526314278047" r="1.0833654885397437" fill="rgb(37, 168, 217)"><title>Jennings State Bank
+0.1B</title></circle><circle opacity="0.7" cx="426.50984764028243" cy="132.1115784139689" r="1.075640858897146" fill="rgb(38, 165, 219)"><title>The Elizabeth State Bank
+0.1B</title></circle><circle opacity="0.7" cx="688.6555183946489" cy="612.90942434156" r="1.0678603527142596" fill="rgb(34, 229, 152)"><title>Highland Community Bank
+0.1B</title></circle><circle opacity="0.7" cx="375.1391056608448" cy="401.0863783508986" r="1.0678603527142596" fill="rgb(48, 150, 224)"><title>First Integrity Bank
+0.1B</title></circle><circle opacity="0.7" cx="653.4188034188035" cy="646.9340936477385" r="1.0659063522615533" fill="rgb(29, 222, 164)"><title>Allendale County Bank
+0.1B</title></circle><circle opacity="0.7" cx="564.8752632230893" cy="630.9064492352712" r="1.0649280075374976" fill="rgb(25, 203, 190)"><title>Carolina Federal Savings Bank
+0.1B</title></circle><circle opacity="0.7" cx="456.4546017589496" cy="482.22607325171293" r="1.060022739599984" fill="rgb(34, 174, 215)"><title>The La Coste National Bank
+0.1B</title></circle><circle opacity="0.7" cx="463.6826458565589" cy="386.7828079214314" r="1.051135573313615" fill="rgb(33, 176, 213)"><title>Lakeside Community Bank
+0.1B</title></circle><circle opacity="0.7" cx="558.5507246376811" cy="646.9598296305921" r="1.0401703694078852" fill="rgb(25, 201, 192)"><title>Fort Lee Federal Savings Bank
+0.1B</title></circle><circle opacity="0.7" cx="562.1647466864858" cy="638.9008253598691" r="1.0371597397377603" fill="rgb(25, 202, 191)"><title>Alabama Trust Bank
+0.1B</title></circle><circle opacity="0.7" cx="95.82683017465625" cy="639.1989803144335" r="1.0371597397377603" fill="rgb(102, 76, 190)"><title>Universal Federal Savings Bank
+0.1B</title></circle><circle opacity="0.7" cx="501.62987736900783" cy="495.30076687647613" r="1.0321225086995096" fill="rgb(29, 186, 206)"><title>Community First Bank - Chicago
+0.1B</title></circle><circle opacity="0.7" cx="457.35810727115074" cy="316.1826479176431" r="1.0321225086995096" fill="rgb(34, 174, 214)"><title>Carson River Community Bank
+0.1B</title></circle><circle opacity="0.7" cx="593.7874396135265" cy="638.9851591116698" r="1.0229929901912602" fill="rgb(25, 210, 182)"><title>1st Regents Bank
+0.1B</title></circle><circle opacity="0.7" cx="446.5160411247368" cy="632.1076519124509" r="1.0168611088334436" fill="rgb(35, 171, 216)"><title>The Tattnall Bank
+0.0B</title></circle><circle opacity="0.7" cx="489.8843057103927" cy="557.366084987938" r="1.0003256798653353" fill="rgb(30, 183, 208)"><title>First Vietnamese American Bank
+0.0B</title></circle><circle opacity="0.7" cx="483.5597671249845" cy="580.3592102934335" r="0.99510201136834" fill="rgb(31, 181, 210)"><title>Bramble Savings Bank
+0.0B</title></circle><circle opacity="0.7" cx="526.7989594946116" cy="641.4083995489972" r="0.9877424660067493" fill="rgb(27, 193, 200)"><title>Public Savings Bank
+0.0B</title></circle><circle opacity="0.7" cx="189.9204756596061" cy="647.0164877138856" r="0.9835122861144696" fill="rgb(86, 98, 212)"><title>Bank of Ephraim
+0.0B</title></circle><circle opacity="0.7" cx="523.3140096618357" cy="509.46650333394166" r="0.9824518952011668" fill="rgb(27, 192, 201)"><title>Southshore Community Bank
+0.0B</title></circle><circle opacity="0.7" cx="564.8752632230893" cy="604.9532329144184" r="0.9803276724018724" fill="rgb(25, 203, 190)"><title>First Capital Bank
+0.0B</title></circle><circle opacity="0.7" cx="603.7260002477394" cy="619.8115916813093" r="0.9707111466822451" fill="rgb(26, 212, 179)"><title>Gold Canyon Bank
+0.0B</title></circle><circle opacity="0.7" cx="418.50737024650067" cy="647.0303632434053" r="0.9696367565946608" fill="rgb(40, 163, 220)"><title>Citizens Community Bank
+0.0B</title></circle><circle opacity="0.7" cx="619.9890994673603" cy="610.2331482851284" r="0.953375624522268" fill="rgb(26, 216, 174)"><title>Bank of Wausau
+0.0B</title></circle><circle opacity="0.7" cx="500.7263718568066" cy="491.42015423176537" r="0.9522816762279314" fill="rgb(29, 186, 206)"><title>The First State Bank
+0.0B</title></circle><circle opacity="0.7" cx="564.8752632230893" cy="601.0250119839624" r="0.9478932580541413" fill="rgb(25, 203, 190)"><title>Farmers and Traders State Bank
+0.0B</title></circle><circle opacity="0.7" cx="589.2699120525208" cy="638.6722005677285" r="0.9445885649335678" fill="rgb(25, 209, 183)"><title>Community Bank of the Ozarks
+0.0B</title></circle><circle opacity="0.7" cx="447.419546636938" cy="492.61361963706713" r="0.916586216981037" fill="rgb(35, 171, 216)"><title>Valley Capital Bank
+0.0B</title></circle><circle opacity="0.7" cx="438.3844915149263" cy="26.112442322005904" r="0.907442983734869" fill="rgb(37, 168, 217)"><title>Southern Colorado National Bank
+0.0B</title></circle><circle opacity="0.7" cx="605.5330112721417" cy="647.0960095702562" r="0.9039904297438129" fill="rgb(26, 212, 178)"><title>Chipola Community Bank
+0.0B</title></circle><circle opacity="0.7" cx="392.3057103926669" cy="303.62075323207347" r="0.9039904297438129" fill="rgb(44, 155, 223)"><title>Meridian Bank
+0.0B</title></circle><circle opacity="0.7" cx="535.963086832652" cy="575.6090215739364" r="0.8877009796750034" fill="rgb(26, 195, 198)"><title>All American Bank
+0.0B</title></circle><circle opacity="0.7" cx="510.66493249101944" cy="521.7158954900337" r="0.8853494497702413" fill="rgb(28, 189, 204)"><title>Rosemount National Bank
+0.0B</title></circle><circle opacity="0.7" cx="400.4372600024774" cy="333.75017949406504" r="0.8782570835956822" fill="rgb(43, 157, 222)"><title>Sanderson State Bank
+0.0B</title></circle><circle opacity="0.7" cx="118.1563235476279" cy="647.1217429164043" r="0.8782570835956822" fill="rgb(99, 81, 196)"><title>Farmers Bank &amp; Trust of Cheneyville
+0.0B</title></circle><circle opacity="0.7" cx="893.7512696643131" cy="647.1253106647359" r="0.8746893352641014" fill="rgb(94, 247, 97)"><title>The Enloe State Bank
+0.0B</title></circle><circle opacity="0.7" cx="657.032825467608" cy="630.202093601158" r="0.8723027296284609" fill="rgb(29, 223, 162)"><title>Columbia Savings Bank
+0.0B</title></circle><circle opacity="0.7" cx="426.50984764028243" cy="237.95108737157017" r="0.8663074508213202" fill="rgb(38, 165, 219)"><title>The First State Bank of Winchester
+0.0B</title></circle><circle opacity="0.7" cx="136.6136504397374" cy="647.1458093340412" r="0.8541906659587629" fill="rgb(96, 85, 200)"><title>First National Bank of Blanchardville
+0.0B</title></circle><circle opacity="0.7" cx="80.5963086832652" cy="623.4387554744707" r="0.8505219704098401" fill="rgb(104, 73, 185)"><title>Net 1st National Bank
+0.0B</title></circle><circle opacity="0.7" cx="798.8831908831909" cy="614.6784843960824" r="0.8468373813717716" fill="rgb(60, 242, 119)"><title>Fayette County Bank
+0.0B</title></circle><circle opacity="0.7" cx="816.9533011272141" cy="647.1556279437469" r="0.8443720562531112" fill="rgb(65, 244, 114)"><title>The Farmers and Merchants State Bank of Argonia
+0.0B</title></circle><circle opacity="0.7" cx="476.33172302737523" cy="490.1892264741639" r="0.8243840855579228" fill="rgb(31, 179, 211)"><title>Thunder Bank
+0.0B</title></circle><circle opacity="0.7" cx="466.3931623931624" cy="454.7276496766748" r="0.8167624974242494" fill="rgb(33, 176, 213)"><title>Access Bank
+0.0B</title></circle><circle opacity="0.7" cx="710.3396506874768" cy="647.1870750923133" r="0.8129249076867182" fill="rgb(37, 232, 145)"><title>Premier Bank
+0.0B</title></circle><circle opacity="0.7" cx="608.7598166728602" cy="616.2567931767613" r="0.8116416789345613" fill="rgb(26, 213, 178)"><title>Central Arizona Bank
+0.0B</title></circle><circle opacity="0.7" cx="495.30533878359967" cy="602.8522426088094" r="0.8116416789345613" fill="rgb(29, 185, 207)"><title>Community National Bank
+0.0B</title></circle><circle opacity="0.7" cx="58.008670878236096" cy="633.002322221241" r="0.7999999999999998" fill="rgb(107, 69, 179)"><title>Sinclair National Bank
+0.0B</title></circle><circle opacity="0.7" cx="177.2713984887898" cy="642.8218516482849" r="0.794771185804453" fill="rgb(89, 95, 209)"><title>Reliance Bank
+0.0B</title></circle><circle opacity="0.7" cx="912.7248854205376" cy="642.1362975667606" r="0.7868628180709396" fill="rgb(102, 247, 94)"><title>Louisa Community Bank
+0.0B</title></circle><circle opacity="0.7" cx="488.07729468599035" cy="551.0698553716724" r="0.782878676936154" fill="rgb(30, 183, 209)"><title>The Gordon Bank
+0.0B</title></circle><circle opacity="0.7" cx="460.06862380775425" cy="614.4894539183164" r="0.7667351147276037" fill="rgb(34, 175, 214)"><title>State Bank of Aurora
+0.0B</title></circle><circle opacity="0.7" cx="442.9020190759322" cy="179.63184882420546" r="0.7599074176421903" fill="rgb(36, 170, 217)"><title>Gateway Bank of St. Louis
+0.0B</title></circle><circle opacity="0.7" cx="912.7248854205376" cy="638.5978024316189" r="0.7516323170707513" fill="rgb(102, 247, 94)"><title>Resolute Bank
+0.0B</title></circle><circle opacity="0.7" cx="624.5066270283661" cy="622.4924780902068" r="0.7404550058141136" fill="rgb(27, 216, 173)"><title>The Community's Bank
+0.0B</title></circle><circle opacity="0.7" cx="630.5730211817169" cy="631.0643321854355" r="0.7291063648091488" fill="rgb(27, 218, 171)"><title>Bank of Jackson County
+0.0B</title></circle><circle opacity="0.7" cx="569.3927907840952" cy="597.4556703743018" r="0.7190293855809998" fill="rgb(25, 204, 189)"><title>Glasgow Savings Bank
+0.0B</title></circle><circle opacity="0.7" cx="451.93707419794373" cy="510.2483944515613" r="0.71757826526118" fill="rgb(35, 172, 215)"><title>St. Stephen State Bank
+0.0B</title></circle><circle opacity="0.7" cx="661.5503530286139" cy="630.575019729074" r="0.689426896961579" fill="rgb(30, 224, 161)"><title>The Freedom State Bank
+0.0B</title></circle><circle opacity="0.7" cx="608.2435278087452" cy="612.8078980271474" r="0.67568278894046" fill="rgb(26, 213, 178)"><title>Pisgah Community Bank
+0.0B</title></circle><circle opacity="0.7" cx="762.7429703951443" cy="647.3320750203042" r="0.6679249796957953" fill="rgb(49, 239, 129)"><title>The Woodbury Banking Company
+0.0B</title></circle><circle opacity="0.7" cx="748.2868821999258" cy="642.5083177057728" r="0.6569101495831885" fill="rgb(46, 237, 134)"><title>Trust Company Bank
+0.0B</title></circle><circle opacity="0.7" cx="611.7284776415211" cy="631.1162624760517" r="0.6489279558292103" fill="rgb(26, 214, 177)"><title>1st Commerce Bank
+0.0B</title></circle><circle opacity="0.7" cx="452.840579710145" cy="494.090157145183" r="0.6473197056346512" fill="rgb(34, 173, 215)"><title>Bank of Leeton
+0.0B</title></circle><circle opacity="0.7" cx="546.8051529790661" cy="580.5901935463808" r="0.6392177629995914" fill="rgb(26, 198, 195)"><title>American Eagle Savings Bank
+0.0B</title></circle><circle opacity="0.7" cx="84.08125851604112" cy="647.3706422279722" r="0.6293577720277445" fill="rgb(104, 74, 186)"><title>New Century Bank
+0.0B</title></circle><circle opacity="0.7" cx="684.137990833643" cy="647.3739634003476" r="0.6260365996523163" fill="rgb(33, 228, 154)"><title>Northern Star Bank
+0.0B</title></circle><circle opacity="0.7" cx="364.2970395144308" cy="647.3756306112961" r="0.6243693887039055" fill="rgb(50, 147, 225)"><title>Hume Bank
+0.0B</title></circle><circle opacity="0.7" cx="30" cy="647.3806591714659" r="0.6193408285340558" fill="rgb(110, 64, 170)"><title>First Alliance Bank &amp; Trust Company
+0.0B</title></circle><circle opacity="0.7" cx="454.6475907345473" cy="358.48588824435825" r="0.6159656490274104" fill="rgb(34, 173, 215)"><title>1st American State Bank of Minnesota
+0.0B</title></circle><circle opacity="0.7" cx="470.007184441967" cy="593.471209468075" r="0.5953128539993133" fill="rgb(32, 177, 212)"><title>Arcola Homestead Savings Bank
+0.0B</title></circle><circle opacity="0.7" cx="434.77046946612165" cy="647.4224616994525" r="0.5775383005475467" fill="rgb(37, 167, 218)"><title>First Bank of Kansas City
+0.0B</title></circle><circle opacity="0.7" cx="312.7972253189644" cy="647.4260826649318" r="0.5739173350682628" fill="rgb(60, 131, 225)"><title>Metropolitan Savings
+0.0B</title></circle><circle opacity="0.7" cx="442.9020190759322" cy="494.82776957071553" r="0.5573319410442428" fill="rgb(36, 170, 217)"><title>Home Federal Savings Bank
+0.0B</title></circle><circle opacity="0.7" cx="432.05995292951815" cy="640.0248190587179" r="0.5285343264178348" fill="rgb(38, 167, 218)"><title>Dwelling House Savings and Loan Association
+0.0B</title></circle><circle opacity="0.7" cx="172.8829431438127" cy="645.3743445319828" r="0.5063762811494523" fill="rgb(90, 94, 209)"><title>Dollar Savings Bank of Newark
+0.0B</title></circle><circle opacity="0.7" cx="108.08869069738635" cy="647.4998371600674" r="0.5001628399326676" fill="rgb(100, 79, 193)"><title>AmTrade International Bank
+0.0B</title></circle><circle opacity="0.7" cx="75.17527561005822" cy="622.0971402241561" r="0.4744961325496344" fill="rgb(105, 72, 184)"><title>Bank of Sierra Blanca
+0.0B</title></circle><circle opacity="0.7" cx="161.00829926916884" cy="647.5388726461355" r="0.46112735386450954" fill="rgb(92, 91, 206)"><title>Pulaski Savings Bank
+0.0B</title></circle><circle opacity="0.7" cx="41.6164994425864" cy="647.5549768516067" r="0.44502314839327534" fill="rgb(109, 66, 174)"><title>The Malta National Bank
+0.0B</title></circle><circle opacity="0.7" cx="479.94574507617983" cy="603.3050937367857" r="0.44267472488512066" fill="rgb(31, 180, 210)"><title>Imperial Savings and Loan Association
+0.0B</title></circle><circle opacity="0.7" cx="474.5247120029729" cy="603.8995057850553" r="0.36240240739541657" fill="rgb(32, 179, 211)"><title>Ideal Federal Savings Bank
+0.0B</title></circle><circle opacity="0.7" cx="721.1817168338907" cy="640.7273477675409" r="0.3196088814997957" fill="rgb(40, 234, 142)"><title>Hometown National Bank
+0.0B</title></circle></g><g aria-label="text" fill="#000" pointer-events="none"><text transform="translate(390.3696271522358,568)"><tspan x="0" y="-1.18em">Washington</tspan><tspan x="0" y="-0.17999999999999994em">Mutual</tspan><tspan x="0" y="0.8200000000000001em">Bank</tspan><tspan x="0" y="1.82em">307B</tspan></text><text transform="translate(1071.7418555679426,581.9924000032648)"><tspan x="0" y="-1.18em">Silicon</tspan><tspan x="0" y="-0.17999999999999994em">Valley</tspan><tspan x="0" y="0.8200000000000001em">Bank</tspan><tspan x="0" y="1.82em">209B</tspan></text><text transform="translate(1072,466.0111529969627)"><tspan x="0" y="-0.68em">Signature</tspan><tspan x="0" y="0.31999999999999995em">Bank</tspan><tspan x="0" y="1.3199999999999998em">110B</tspan></text><text transform="translate(380.5601387340518,460.6147773086806)"><tspan x="0" y="-0.68em">IndyMac</tspan><tspan x="0" y="0.31999999999999995em">Bank</tspan><tspan x="0" y="1.3199999999999998em">32B</tspan></text><text transform="translate(432.05995292951815,471.81746972691747)"><tspan x="0" y="-0.68em">Colonial</tspan><tspan x="0" y="0.31999999999999995em">Bank</tspan><tspan x="0" y="1.3199999999999998em">25B</tspan></text><text transform="translate(432.9634584417193,430.53577550619843)"><tspan x="0" y="-0.68em">Guaranty</tspan><tspan x="0" y="0.31999999999999995em">Bank</tspan><tspan x="0" y="1.3199999999999998em">13B</tspan></text><text y="0.32em" transform="translate(421.0888145670754,397.8269464920572)">12.8</text><text y="0.32em" transform="translate(397.7267434658739,372.2094291071075)">12.8</text><text y="0.32em" transform="translate(446.5160411247368,375.02780719468984)">12.0</text><text y="0.32em" transform="translate(465.4896568809612,632.2230531433594)">11.9</text><text y="0.32em" transform="translate(442.9020190759322,342.12895171067873)">11.2</text><text y="0.32em" transform="translate(441.99851356373097,312.11699846441996)">7.8</text><text y="0.32em" transform="translate(435.6739749783228,286.04781227037836)">7.0</text><text y="0.32em" transform="translate(448.32305214913913,264.07118809472894)">6.1</text><text y="0.32em" transform="translate(465.4896568809612,512.988193432321)">5.9</text><text y="0.32em" transform="translate(693.1730459556546,636.9096103462949)">5.9</text><text y="0.32em" transform="translate(395.9197324414716,425.7005109110549)">5.1</text><text y="0.32em" transform="translate(795.2691688343863,638.0594601631724)">4.7</text><text y="0.32em" transform="translate(441.99851356373097,241.76888809046307)">4.7</text><text y="0.32em" transform="translate(418.50737024650067,354.0754123812903)">4.1</text><text y="0.32em" transform="translate(448.32305214913913,407.61166484235594)">4.0</text><text y="0.32em" transform="translate(464.5861513687601,490.997111918922)">3.8</text><text y="0.32em" transform="translate(397.7267434658739,345.0916083226657)">3.7</text><text y="0.32em" transform="translate(441.99851356373097,221.19114391487744)">3.6</text><text y="0.32em" transform="translate(456.4546017589496,448.86896323592657)">3.6</text><text y="0.32em" transform="translate(465.4896568809612,471.5757470204414)">3.5</text><text y="0.32em" transform="translate(463.6826458565589,431.1821038087011)">3.4</text><text y="0.32em" transform="translate(382.3671497584541,410.01404474081505)">3.4</text><text y="0.32em" transform="translate(467.29666790536356,412.96414437695444)">3.2</text><text y="0.32em" transform="translate(624.5066270283661,639.9610070801049)">3.1</text><text y="0.32em" transform="translate(510.66493249101944,640.0917311241727)">3.0</text><text y="0.32em" transform="translate(470.007184441967,395.4027278819264)">2.8</text><text y="0.32em" transform="translate(443.8055245881333,203.1059372634865)">2.7</text><text y="0.32em" transform="translate(436.57748049052395,187.71368274637643)">2.7</text><text y="0.32em" transform="translate(465.4896568809612,358.5623602989635)">2.6</text><text y="0.32em" transform="translate(343.516412733804,492.0734099367911)">2.5</text><text y="0.32em" transform="translate(441.99851356373097,641.0226238096525)">2.3</text><text y="0.32em" transform="translate(500.7263718568066,626.4876295465259)">2.3</text><text y="0.32em" transform="translate(52.58763780502911,641.075559030784)">2.3</text><text y="0.32em" transform="translate(524.2175151740369,630.3671861756611)">2.2</text><text y="0.32em" transform="translate(453.7440852223461,190.25732235505444)">2.2</text><text y="0.32em" transform="translate(479.94574507617983,612.4581571211236)">2.2</text><text y="0.32em" transform="translate(372.42858912424134,427.13937954244136)">2.1</text><text y="0.32em" transform="translate(499.8228663446055,611.0372571034544)">2.0</text></g><g class="legend-wrap" transform="translate(0,undefined)"><g class="values-wrap"><circle class="values values-0.1" r="1.4438457513688672" cx="928" cy="166.55615424863115" style="fill: none; stroke: rgb(51, 51, 51); opacity: 0.9;"/><circle class="values values-1" r="4.565841164282797" cx="928" cy="163.4341588357172" style="fill: none; stroke: rgb(51, 51, 51); opacity: 0.9;"/><circle class="values values-10" r="14.438457513688672" cx="928" cy="153.56154248631134" style="fill: none; stroke: rgb(51, 51, 51); opacity: 0.9;"/><circle class="values values-30" r="25.008141996633388" cx="928" cy="142.99185800336662" style="fill: none; stroke: rgb(51, 51, 51); opacity: 0.9;"/><circle class="values values-60" r="35.36685358139111" cx="928" cy="132.63314641860887" style="fill: none; stroke: rgb(51, 51, 51); opacity: 0.9;"/><circle class="values values-110" r="47.886946124393035" cx="928" cy="120.11305387560697" style="fill: none; stroke: rgb(51, 51, 51); opacity: 0.9;"/><circle class="values values-209" r="66.00759999673515" cx="928" cy="101.99240000326485" style="fill: none; stroke: rgb(51, 51, 51); opacity: 0.9;"/><circle class="values values-307" r="80" cx="928" cy="88" style="fill: none; stroke: rgb(51, 51, 51); opacity: 0.9;"/></g><g class="values-line-wrap"><line x1="929.4438457513688" x2="1022" y1="166.55615424863115" y2="166.55615424863115" style="stroke: rgb(51, 51, 51); stroke-dasharray: 2, 2;"/><line x1="932.5658411642828" x2="1022" y1="163.4341588357172" y2="163.4341588357172" style="stroke: rgb(51, 51, 51); stroke-dasharray: 2, 2;"/><line x1="942.4384575136887" x2="1022" y1="153.56154248631134" y2="153.56154248631134" style="stroke: rgb(51, 51, 51); stroke-dasharray: 2, 2;"/><line x1="953.0081419966334" x2="1022" y1="142.99185800336662" y2="142.99185800336662" style="stroke: rgb(51, 51, 51); stroke-dasharray: 2, 2;"/><line x1="963.3668535813911" x2="1022" y1="132.63314641860887" y2="132.63314641860887" style="stroke: rgb(51, 51, 51); stroke-dasharray: 2, 2;"/><line x1="975.886946124393" x2="1022" y1="120.11305387560697" y2="120.11305387560697" style="stroke: rgb(51, 51, 51); stroke-dasharray: 2, 2;"/><line x1="994.0075999967352" x2="1022" y1="101.99240000326485" y2="101.99240000326485" style="stroke: rgb(51, 51, 51); stroke-dasharray: 2, 2;"/><line x1="1008" x2="1022" y1="88" y2="88" style="stroke: rgb(51, 51, 51); stroke-dasharray: 2, 2;"/></g><g class="values-labels-wrap"><text x="1049" y="170.55615424863115" shape-rendering="crispEdges" font-family="Arial" font-size="10" style="text-anchor: end; fill: rgb(51, 51, 51);">0.1B</text><text x="1049" y="167.4341588357172" shape-rendering="crispEdges" font-family="Arial" font-size="10" style="text-anchor: end; fill: rgb(51, 51, 51);">1B</text><text x="1049" y="157.56154248631134" shape-rendering="crispEdges" font-family="Arial" font-size="10" style="text-anchor: end; fill: rgb(51, 51, 51);">10B</text><text x="1049" y="146.99185800336662" shape-rendering="crispEdges" font-family="Arial" font-size="10" style="text-anchor: end; fill: rgb(51, 51, 51);">30B</text><text x="1049" y="136.63314641860887" shape-rendering="crispEdges" font-family="Arial" font-size="10" style="text-anchor: end; fill: rgb(51, 51, 51);">60B</text><text x="1049" y="124.11305387560697" shape-rendering="crispEdges" font-family="Arial" font-size="10" style="text-anchor: end; fill: rgb(51, 51, 51);">110B</text><text x="1049" y="105.99240000326485" shape-rendering="crispEdges" font-family="Arial" font-size="10" style="text-anchor: end; fill: rgb(51, 51, 51);">209B</text><text x="1049" y="92" shape-rendering="crispEdges" font-family="Arial" font-size="10" style="text-anchor: end; fill: rgb(51, 51, 51);">307B</text></g><g><text x="928" y="188" font-family="Arial" font-size="14" style="text-anchor: middle;">563 US Bank Failures 2001 - 2023: Asset Values (Billions USD)</text><text x="928" y="188" font-family="Arial" font-size="14" style="text-anchor: middle;">563 US Bank Failures 2001 - 2023: Asset Values (Billions USD)</text><text x="928" y="188" font-family="Arial" font-size="14" style="text-anchor: middle;">563 US Bank Failures 2001 - 2023: Asset Values (Billions USD)</text><text x="928" y="188" font-family="Arial" font-size="14" style="text-anchor: middle;">563 US Bank Failures 2001 - 2023: Asset Values (Billions USD)</text><text x="928" y="188" font-family="Arial" font-size="14" style="text-anchor: middle;">563 US Bank Failures 2001 - 2023: Asset Values (Billions USD)</text><text x="928" y="188" font-family="Arial" font-size="14" style="text-anchor: middle;">563 US Bank Failures 2001 - 2023: Asset Values (Billions USD)</text><text x="928" y="188" font-family="Arial" font-size="14" style="text-anchor: middle;">563 US Bank Failures 2001 - 2023: Asset Values (Billions USD)</text><text x="928" y="188" font-family="Arial" font-size="14" style="text-anchor: middle;">563 US Bank Failures 2001 - 2023: Asset Values (Billions USD)</text></g></g></svg>
