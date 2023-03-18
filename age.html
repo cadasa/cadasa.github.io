@@ -15,24 +15,36 @@
   <meta property="og:url" content="https://cadasa.github.io/age.html">
   <meta property="og:title" content="create photo with target ages">
   <meta name="description" content="create photo with target ages"/>
+  <link rel="stylesheet" href="stylesheets/app.css" />
+  <link rel="stylesheet" href="stylesheets/sidebar.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 </head>
 <body>
-<div id="observablehq-title-b004811b"></div>
-<div id="observablehq-viewof-inputImage-b004811b"></div>
-<div id="observablehq-viewof-list2-b004811b"></div>
-<div id="observablehq-images-b004811b"></div>
+  <div id="left" class="sidebar flex-center left collapsed">
+    <div class="sidebar-content rounded-rect flex-center">
+      <div class="sidebar-toggle rounded-rect left" onclick="toggleSidebar('left')">
+        &rarr;
+      </div>
+    </div>
+    <div id='listings' class='listings'></div>
+  </div>
+  <script src="scripts/sidebar.js"></script>
+  <div id="observablehq-title-3c122b4f"></div>
+  <div id="observablehq-viewof-inputImage-3c122b4f"></div>
+  <div id="observablehq-viewof-list2-3c122b4f"></div>
+  <div id="observablehq-images-3c122b4f"></div>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
-<script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-import define from "https://api.observablehq.com/d/1fb57662318ae120@933.js?v=3";
-new Runtime().module(define, name => {
-  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-b004811b"));
-  if (name === "viewof inputImage") return new Inspector(document.querySelector("#observablehq-viewof-inputImage-b004811b"));
-  if (name === "viewof list2") return new Inspector(document.querySelector("#observablehq-viewof-list2-b004811b"));
-  if (name === "images") return new Inspector(document.querySelector("#observablehq-images-b004811b"));
-  return ["url","canvasImage","chart1","formData","cf","viewof submitter","predict","result"].includes(name);
-});
-</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+  <script type="module">
+  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+  import define from "https://api.observablehq.com/d/1fb57662318ae120.js?v=3";
+  new Runtime().module(define, name => {
+    if (name === "title") return new Inspector(document.querySelector("#observablehq-title-3c122b4f"));
+    if (name === "viewof inputImage") return new Inspector(document.querySelector("#observablehq-viewof-inputImage-3c122b4f"));
+    if (name === "viewof list2") return new Inspector(document.querySelector("#observablehq-viewof-list2-3c122b4f"));
+    if (name === "images") return new Inspector(document.querySelector("#observablehq-images-3c122b4f"));
+    return ["url","canvasImage","chart1","formData","cf","viewof submitter","predict","result"].includes(name);
+  });
+  </script>
 </body>
 </html>
