@@ -1,5 +1,7 @@
 const csv = `link,src,title
 https://cadasa.github.io/,https://cadasa.github.io/lou.JPG,<center><font size="+3">🏠</font></center>
+https://cadasa.github.io/phr.html,https://cadasa.github.io/vizapps/phr.JPG,Old photo restoration
+https://cadasa.github.io/age.html,https://cadasa.github.io/vizapps/age.JPG,Create age-variation photo
 https://cadasa.github.io/s2t.html,https://cadasa.github.io/vizapps/s2t.JPG,Voice to Text/Image
 https://cadasa.github.io/norway_trails.html,https://cadasa.github.io/vizapps/hiking_trails.JPG,Famous Hiking Trails in Europe I Have Hiked
 https://cadasa.github.io/earthquake_map.html,https://cadasa.github.io/vizapps/earthquakes.JPG,Real-Time Earthquake Map
