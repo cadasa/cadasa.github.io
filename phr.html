@@ -1,0 +1,17 @@
+<div id="observablehq-title-cc20ed12"></div>
+<div id="observablehq-viewof-inputImage-cc20ed12"></div>
+<div id="observablehq-viewof-list2-cc20ed12"></div>
+<div id="observablehq-images-cc20ed12"></div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/d/ca3616b5ad6cf040@979.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-cc20ed12"));
+  if (name === "viewof inputImage") return new Inspector(document.querySelector("#observablehq-viewof-inputImage-cc20ed12"));
+  if (name === "viewof list2") return new Inspector(document.querySelector("#observablehq-viewof-list2-cc20ed12"));
+  if (name === "images") return new Inspector(document.querySelector("#observablehq-images-cc20ed12"));
+  return ["url","canvasImage","wh_i","chart1","formData","cf","viewof submitter","predict","result"].includes(name);
+});
+</script>
