@@ -1,0 +1,48 @@
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="theme-color" content="#000000"/>
+<link rel="apple-touch-icon" sizes="180x180" href="https://globle-game.com/favicon/apple-touch-icon.png"/>
+<link rel="icon shortcut" type="image/png" sizes="32x32" href="https://globle-game.com/favicon/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="https://globle-game.com/favicon/favicon-16x16.png"/>
+<link rel="manifest" href="https://globle-game.com/favicon/site.webmanifest"/>
+<link rel="image_src" href="https://globle-game.com/images/preview.png"/>
+<title>Comparison Cheatsheet</title>
+<meta property="og:image" content="https://cadasa.github.io/vizapps/ccs.JPG">
+<meta property="og:url" content="https://cadasa.github.io/ccs.html">
+<meta property="og:title" content="Comparison Cheatsheet">
+<meta name="description" content="Comparison Cheatsheet for JS, Python, SQL, R, Excel"/>
+
+<link rel="stylesheet" href="stylesheets/app.css" />
+<link rel="stylesheet" href="stylesheets/sidebar.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+<body>
+<div id="left" class="sidebar flex-center left collapsed">
+  <div class="sidebar-content rounded-rect flex-center">
+    <div class="sidebar-toggle rounded-rect left" onclick="toggleSidebar('left')">
+      &rarr;
+    </div>
+  </div>
+  <div id='listings' class='listings'></div>
+</div>
+<script src="scripts/sidebar.js"></script>
+<div id="observablehq-title_m-8687a91f"></div>
+<div id="observablehq-viewof-radios-8687a91f"></div>
+<div id="observablehq-viewof-select-8687a91f"></div>
+<div id="observablehq-title-8687a91f"></div>
+<div id="observablehq-table-8687a91f"></div>
+<div id="observablehq-style-8687a91f"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/d/54becf9e99d58299.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "title_m") return new Inspector(document.querySelector("#observablehq-title_m-8687a91f"));
+  if (name === "viewof radios") return new Inspector(document.querySelector("#observablehq-viewof-radios-8687a91f"));
+  if (name === "viewof select") return new Inspector(document.querySelector("#observablehq-viewof-select-8687a91f"));
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-8687a91f"));
+  if (name === "table") return new Inspector(document.querySelector("#observablehq-table-8687a91f"));
+  if (name === "style") return new Inspector(document.querySelector("#observablehq-style-8687a91f"));
+});
+</script>
+</body>
+</html>
