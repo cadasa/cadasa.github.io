@@ -29,21 +29,21 @@
   </div>
   <script src="scripts/sidebar.js"></script>
 
-<div id="observablehq-title-3cfdc7f6"></div>
-<div id="observablehq-viewof-list1-3cfdc7f6"></div>
-<div id="observablehq-viewof-list2-3cfdc7f6"></div>
-<div id="observablehq-images-3cfdc7f6"></div>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
-<script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-import define from "https://api.observablehq.com/d/ca3616b5ad6cf040@1077.js?v=3";
-new Runtime().module(define, name => {
-  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-3cfdc7f6"));
-  if (name === "viewof list1") return new Inspector(document.querySelector("#observablehq-viewof-list1-3cfdc7f6"));
-  if (name === "viewof list2") return new Inspector(document.querySelector("#observablehq-viewof-list2-3cfdc7f6"));
-  if (name === "images") return new Inspector(document.querySelector("#observablehq-images-3cfdc7f6"));
-});
-</script>
+  <div id="observablehq-title-d0d96dc1"></div>
+  <div id="observablehq-viewof-list1-d0d96dc1"></div>
+  <div id="observablehq-viewof-list2-d0d96dc1"></div>
+  <div id="observablehq-images-d0d96dc1"></div>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+  <script type="module">
+  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+  import define from "https://api.observablehq.com/d/ca3616b5ad6cf040@1180.js?v=3";
+  new Runtime().module(define, name => {
+    if (name === "title") return new Inspector(document.querySelector("#observablehq-title-d0d96dc1"));
+    if (name === "viewof list1") return new Inspector(document.querySelector("#observablehq-viewof-list1-d0d96dc1"));
+    if (name === "viewof list2") return new Inspector(document.querySelector("#observablehq-viewof-list2-d0d96dc1"));
+    if (name === "images") return new Inspector(document.querySelector("#observablehq-images-d0d96dc1"));
+  });
+  </script>
 </body>
 </html>
