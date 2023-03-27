@@ -16,19 +16,19 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 </head>
 <body>
-  <div id="observablehq-title-a1bbfbf1"></div>
-  <div id="observablehq-scrub-a1bbfbf1"></div>
-  <div id="observablehq-imgEl-a1bbfbf1"></div>
+  <div id="observablehq-title-c575bb90"></div>
+  <div id="observablehq-scrub-c575bb90"></div>
+  <div id="observablehq-imgEl-c575bb90"></div>
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
   <script type="module">
   import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-  import define from "https://api.observablehq.com/d/d3f15699bff3afd2@1857.js?v=3";
+  import define from "https://api.observablehq.com/d/d3f15699bff3afd2@1896.js?v=3";
   new Runtime().module(define, name => {
-    if (name === "title") return new Inspector(document.querySelector("#observablehq-title-a1bbfbf1"));
-    if (name === "scrub") return new Inspector(document.querySelector("#observablehq-scrub-a1bbfbf1"));
-    if (name === "imgEl") return new Inspector(document.querySelector("#observablehq-imgEl-a1bbfbf1"));
+    if (name === "title") return new Inspector(document.querySelector("#observablehq-title-c575bb90"));
+    if (name === "scrub") return new Inspector(document.querySelector("#observablehq-scrub-c575bb90"));
+    if (name === "imgEl") return new Inspector(document.querySelector("#observablehq-imgEl-c575bb90"));
     return ["update"].includes(name);
   });
-  </script></body>
+  </script>
 </html>
