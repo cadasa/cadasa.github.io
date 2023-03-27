@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <meta name="theme-color" content="#000000"/>
 <link rel="apple-touch-icon" sizes="180x180" href="https://globle-game.com/favicon/apple-touch-icon.png"/>
@@ -16,19 +20,21 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 </head>
 <body>
-  <div id="observablehq-title-c575bb90"></div>
-  <div id="observablehq-scrub-c575bb90"></div>
-  <div id="observablehq-imgEl-c575bb90"></div>
-  
+  <div id="observablehq-title-73a3c8c6"></div>
+  <div id="observablehq-scrub-73a3c8c6"></div>
+  <div id="observablehq-imgEl-73a3c8c6"></div>
+  <p>Credit: <a href="https://observablehq.com/d/d3f15699bff3afd2@1898">Extract a frame at time &#039;t&#039; from a video by cadasa</a></p>
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
   <script type="module">
   import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-  import define from "https://api.observablehq.com/d/d3f15699bff3afd2@1896.js?v=3";
+  import define from "https://api.observablehq.com/d/d3f15699bff3afd2@1898.js?v=3";
   new Runtime().module(define, name => {
-    if (name === "title") return new Inspector(document.querySelector("#observablehq-title-c575bb90"));
-    if (name === "scrub") return new Inspector(document.querySelector("#observablehq-scrub-c575bb90"));
-    if (name === "imgEl") return new Inspector(document.querySelector("#observablehq-imgEl-c575bb90"));
+    if (name === "title") return new Inspector(document.querySelector("#observablehq-title-73a3c8c6"));
+    if (name === "scrub") return new Inspector(document.querySelector("#observablehq-scrub-73a3c8c6"));
+    if (name === "imgEl") return new Inspector(document.querySelector("#observablehq-imgEl-73a3c8c6"));
     return ["update"].includes(name);
   });
   </script>
+</body>
 </html>
