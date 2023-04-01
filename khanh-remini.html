@@ -1,0 +1,10 @@
+<div id="observablehq-slider2-4d1d17cd"></div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/d/ca3616b5ad6cf040@latest.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "slider2") return new Inspector(document.querySelector("#observablehq-slider2-4d1d17cd"));
+});
+</script>
