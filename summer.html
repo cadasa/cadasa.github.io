@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="theme-color" content="#000000"/>
+</head>
+<body>
+<div id="observablehq-original-f89faa85"></div>
+<div id="observablehq-viewof-selectedLocation-f89faa85"></div>
+<div id="observablehq-Summer_trend-f89faa85"></div>
+<div id="observablehq-viewof-param-f89faa85"></div>
+<div id="observablehq-summer_chart-f89faa85"></div>
+<div id="observablehq-Monthly_trends-f89faa85"></div>
+<div id="observablehq-chartOriginal-f89faa85"></div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/summer-heat-210-us-cities.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "original") return new Inspector(document.querySelector("#observablehq-original-f89faa85"));
+  if (name === "viewof selectedLocation") return new Inspector(document.querySelector("#observablehq-viewof-selectedLocation-f89faa85"));
+  if (name === "Summer_trend") return new Inspector(document.querySelector("#observablehq-Summer_trend-f89faa85"));
+  if (name === "viewof param") return new Inspector(document.querySelector("#observablehq-viewof-param-f89faa85"));
+  if (name === "summer_chart") return new Inspector(document.querySelector("#observablehq-summer_chart-f89faa85"));
+  if (name === "Monthly_trends") return new Inspector(document.querySelector("#observablehq-Monthly_trends-f89faa85"));
+  if (name === "chartOriginal") return new Inspector(document.querySelector("#observablehq-chartOriginal-f89faa85"));
+  return ["data","alldata","permonth","summer","yMin","yMax","summer_data","quantileData","chart","model","deviations","means","summert","summerquantile","color","data1","data1l","data1h","summerquantilet","formatTemp","data1_sort","quantiledata1","quantiledata2","quantiledata1_sort"].includes(name);
+});
+</script>
+</body>
