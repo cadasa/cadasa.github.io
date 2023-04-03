@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/flatly/bootstrap.min.css">
+    <script src="https://cadasa.github.io/vanilla-js-wheel-zoom-master/dist/wheel-zoom.js"></script>
+    <link href="https://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
+    <title>Drag To Move & Mouse Wheel Example</title>
+    <style>
+      body { min-height: 100vh; background: linear-gradient(45deg, rgba(254, 246, 210, 0.53) 0%, rgba(254, 246, 210, 0.53) 14.286%,rgba(221, 240, 216, 0.53) 14.286%, rgba(221, 240, 216, 0.53) 28.572%,rgba(188, 233, 223, 0.53) 28.572%, rgba(188, 233, 223, 0.53) 42.858%,rgba(156, 227, 229, 0.53) 42.858%, rgba(156, 227, 229, 0.53) 57.144%,rgba(123, 220, 235, 0.53) 57.144%, rgba(123, 220, 235, 0.53) 71.42999999999999%,rgba(90, 214, 242, 0.53) 71.43%, rgba(90, 214, 242, 0.53) 85.71600000000001%,rgba(57, 207, 248, 0.53) 85.716%, rgba(57, 207, 248, 0.53) 100.002%),linear-gradient(135deg, rgb(246, 99, 200) 0%, rgb(246, 99, 200) 12.5%,rgb(223, 98, 196) 12.5%, rgb(223, 98, 196) 25%,rgb(199, 97, 192) 25%, rgb(199, 97, 192) 37.5%,rgb(176, 96, 188) 37.5%, rgb(176, 96, 188) 50%,rgb(152, 95, 184) 50%, rgb(152, 95, 184) 62.5%,rgb(129, 94, 180) 62.5%, rgb(129, 94, 180) 75%,rgb(105, 93, 176) 75%, rgb(105, 93, 176) 87.5%,rgb(82, 92, 172) 87.5%, rgb(82, 92, 172) 100%); }
+      .container { margin: 150px auto; }
+    </style>
+</head>
+<body><div id="css-script-menu">
+  <div class="css-script-center">
+    <ul>
+      <li><a href="https://www.cssscript.com/drag-move-mouse-wheel-zoom/">Download</a></li>
+      <li><a href="https://www.cssscript.com/">Back To CSS Script</a></li>
+    </ul>
+    <div class="css-script-ads">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- CSSScript Demo Page -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-2783044520727903"
+     data-ad-slot="3025259193"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+    <div class="css-script-clear"></div>
+  </div>
+</div>
+  <div class="container">
+    <h1>Drag To Move & Mouse Wheel Example</h1>
+        <a href="javascript:;" id="zoom_up" class="btn btn-danger">Up</a>
+        <a href="javascript:;" id="zoom_down" class="btn btn-primary">Down</a>
+
+    <div style="width:400px;height:250px;overflow:auto; border:3px dotted #222;margin-top:30px">
+        <img src="https://source.unsplash.com/Nl-SXO4FAHw/1600x900">
+    </div>
+</div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            jcWheelZoom = JcWheelZoom.create('img', {
+                prepare: function (scale, correct_x, correct_y) {
+                    // do smth when image prepared
+                },
+                rescale: function (scale, correct_x, correct_y, min_scale) {
+                    // do smth when image rescaled
+                }
+            });
+
+            window.addEventListener('resize', function () {
+                jcWheelZoom.prepare();
+            });
+
+            document.getElementById('zoom_up').addEventListener('click', function () {
+                jcWheelZoom.zoomUp();
+            });
+
+            document.getElementById('zoom_down').addEventListener('click', function () {
+                jcWheelZoom.zoomDown();
+            });
+        });
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46156385-1', 'cssscript.com');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

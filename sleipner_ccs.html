@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
   <script type="module">
   import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-  import define from "https://api.observablehq.com/d/d3f15699bff3afd2@1898.js?v=3";
+  import define from "https://api.observablehq.com/d/d3f15699bff3afd2.js?v=3";
   new Runtime().module(define, name => {
     if (name === "title") return new Inspector(document.querySelector("#observablehq-title-73a3c8c6"));
     if (name === "scrub") return new Inspector(document.querySelector("#observablehq-scrub-73a3c8c6"));
