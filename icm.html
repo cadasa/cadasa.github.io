@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="theme-color" content="#000000"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://globle-game.com/favicon/apple-touch-icon.png"/>
+  <link rel="icon shortcut" type="image/png" sizes="32x32" href="https://globle-game.com/favicon/favicon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="https://globle-game.com/favicon/favicon-16x16.png"/>
+  <link rel="manifest" href="https://globle-game.com/favicon/site.webmanifest"/>
+  <link rel="image_src" href="https://globle-game.com/images/preview.png"/>
+  <title>Image Captioning and More</title>
+  <meta property="og:image" content="https://cadasa.github.io/icm.JPG">
+  <meta property="og:url" content="https://cadasa.github.io/icm.html">
+  <meta property="og:title" content="Image Captioning and More">
+  <meta name="description" content="Image Captioning and More"/>
+
+  <link rel="stylesheet" href="stylesheets/app.css" />
+  <link rel="stylesheet" href="stylesheets/sidebar.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+<body>
+  <div id="left" class="sidebar flex-center left collapsed">
+    <div class="sidebar-content rounded-rect flex-center">
+      <div class="sidebar-toggle rounded-rect left" onclick="toggleSidebar('left')">
+        &rarr;
+      </div>
+    </div>
+    <div id='listings' class='listings'></div>
+  </div>
+  <script src="scripts/sidebar.js"></script>
+<div id="observablehq-title-635a38df"></div>
+<div id="observablehq-viewof-list1-635a38df"></div>
+<div id="observablehq-fig-635a38df"></div>
+<div id="observablehq-viewof-toggle-635a38df"></div>
+<div id="observablehq-fq-635a38df"></div>
+<div id="observablehq-viewof-toggle2-635a38df"></div>
+<div id="observablehq-fq2-635a38df"></div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/d/c55ed375eca2dcea.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-635a38df"));
+  if (name === "viewof list1") return new Inspector(document.querySelector("#observablehq-viewof-list1-635a38df"));
+  if (name === "fig") return new Inspector(document.querySelector("#observablehq-fig-635a38df"));
+  if (name === "viewof toggle") return new Inspector(document.querySelector("#observablehq-viewof-toggle-635a38df"));
+  if (name === "fq") return new Inspector(document.querySelector("#observablehq-fq-635a38df"));
+  if (name === "viewof toggle2") return new Inspector(document.querySelector("#observablehq-viewof-toggle2-635a38df"));
+  if (name === "fq2") return new Inspector(document.querySelector("#observablehq-fq2-635a38df"));
+});
+</script>
+</body>
+</html>
