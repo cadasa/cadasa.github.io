@@ -29,22 +29,25 @@
     <div id='listings' class='listings'></div>
   </div>
   <script src="scripts/sidebar.js"></script>
-<div id="observablehq-title-74e6e75e"></div>
-<div id="observablehq-viewof-list2-74e6e75e"></div>
-<div id="observablehq-viewof-list1-74e6e75e"></div>
-<div id="observablehq-normal_model-74e6e75e"></div>
+  <div id="observablehq-title-0cf11df2"></div>
+  <div id="observablehq-viewof-list2-0cf11df2"></div>
+  <div id="observablehq-viewof-list1-0cf11df2"></div>
+  <div id="observablehq-normal_model-0cf11df2"></div>
+  <div id="observablehq-chart-0cf11df2"></div>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
-<script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-import define from "https://api.observablehq.com/d/b71ace84d119be58@395.js?v=3";
-new Runtime().module(define, name => {
-  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-74e6e75e"));
-  if (name === "viewof list2") return new Inspector(document.querySelector("#observablehq-viewof-list2-74e6e75e"));
-  if (name === "viewof list1") return new Inspector(document.querySelector("#observablehq-viewof-list1-74e6e75e"));
-  if (name === "normal_model") return new Inspector(document.querySelector("#observablehq-normal_model-74e6e75e"));
-  return ["sliders"].includes(name);
-});
-</script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+  <script type="module">
+  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+  import define from "https://api.observablehq.com/d/b71ace84d119be58.js?v=3";
+  new Runtime().module(define, name => {
+    if (name === "title") return new Inspector(document.querySelector("#observablehq-title-0cf11df2"));
+    if (name === "viewof list2") return new Inspector(document.querySelector("#observablehq-viewof-list2-0cf11df2"));
+    if (name === "viewof list1") return new Inspector(document.querySelector("#observablehq-viewof-list1-0cf11df2"));
+    if (name === "normal_model") return new Inspector(document.querySelector("#observablehq-normal_model-0cf11df2"));
+    if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-0cf11df2"));
+    return ["sliders"].includes(name);
+  });
+  </script>
 </body>
 </html>
