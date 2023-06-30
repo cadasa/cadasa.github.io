@@ -47,7 +47,7 @@ body { margin: 0; padding: 0; }
         // Start downloading the route data, and wait for map load to occur in parallel
         const [pinRouteGeojson, _] = await Promise.all([
             fetch(
-                'https://cadasa.github.io/TdF.geojson'
+                'https://cadasa.github.io/TdF23_20.geojson'
             ).then((response) => response.json()),
             map.once('load')
         ]);
