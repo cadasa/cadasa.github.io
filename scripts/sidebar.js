@@ -1,5 +1,6 @@
 const csv = `link,src,title
 https://cadasa.github.io/,https://cadasa.github.io/lou.JPG,<center><font size="+3">🏠</font></center>
+https://cadasa.github.io/etemp.html,https://cadasa.github.io/vizapps/etemp.JPG,The Earth daily temperature
 https://cadasa.github.io/sbs.html,https://cadasa.github.io/vizapps/sbs.JPG,Shared birthday simulation
 https://cadasa.github.io/percentogram.html,https://cadasa.github.io/vizapps/percentogram.JPG,Normal percentogram
 https://cadasa.github.io/icm.html,https://cadasa.github.io/vizapps/icm.JPG,Image captioning and more

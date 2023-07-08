@@ -147,7 +147,7 @@ body { margin: 0; padding: 0; }
             );
 
             // Update the popup altitude value and marker location
-            popup.setHTML('<b>Stage ' + name + '</b><br/>' + 'Altitude: ' + elevation + 'm<br/>' + 'Distance: ' + Math.round(pathDistance * animationPhase*100)/100 + 'km<br/>');
+            popup.setHTML('<b>' + name + '</b><br/>' + 'Altitude: ' + elevation + 'm<br/>' + 'Distance: ' + Math.round(pathDistance * animationPhase*100)/100 + 'km<br/>');
             marker.setLngLat(lngLat);
 
             // Reduce the visible length of the line by using a line-gradient to cutoff the line
@@ -175,7 +175,7 @@ body { margin: 0; padding: 0; }
 			// Change the cursor to a pointer when the mouse is over the states layer.
 			  map.getCanvas().style.cursor = 'pointer';
 				const pinRoute = e.features[0].geometry.coordinates;
-			  var title = '<center><strong>Stage ' + e.features[0].properties.name + '</strong><p>' +
+			  var title = '<center><strong>' + e.features[0].properties.name + '</strong><p>' +
 					'<center>' + e.features[0].properties.description + '</p>' +
 			    '<center><i>(MB1 click to see animation)';
 
@@ -188,7 +188,7 @@ body { margin: 0; padding: 0; }
 
 			  // Populate the popup and set its coordinates
 			  // based on the feature found.
-			  popup2.setLngLat(pinRoute[0]).setHTML(title).addTo(map);
+			  popup2.setLngLat(e.lngLat).setHTML(title).addTo(map);
 			//.setLngLat(e.lngLat)
 			//.setHTML(title)
 			//.addTo(map);
