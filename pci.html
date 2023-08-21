@@ -1,0 +1,39 @@
+<div id="observablehq-title-97e5b3ab"></div>
+<div id="observablehq-viewof-c1-97e5b3ab"></div>
+<div id="observablehq-viewof-c2-97e5b3ab"></div>
+<div id="observablehq-rgb_txt-97e5b3ab"></div>
+<div id="observablehq-rgb_col-97e5b3ab"></div>
+<div id="observablehq-hcl_txt-97e5b3ab"></div>
+<div id="observablehq-hcl_col-97e5b3ab"></div>
+<div id="observablehq-lab_txt-97e5b3ab"></div>
+<div id="observablehq-lab_col-97e5b3ab"></div>
+<div id="observablehq-hsl_txt-97e5b3ab"></div>
+<div id="observablehq-hsl_col-97e5b3ab"></div>
+<div id="observablehq-comments-97e5b3ab"></div>
+<div id="observablehq-pi_txt-97e5b3ab"></div>
+<div id="observablehq-pi_col-97e5b3ab"></div>
+<div id="observablehq-pi_com-97e5b3ab"></div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/d/d4e6ffc2121bfbba@368.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-97e5b3ab"));
+  if (name === "viewof c1") return new Inspector(document.querySelector("#observablehq-viewof-c1-97e5b3ab"));
+  if (name === "viewof c2") return new Inspector(document.querySelector("#observablehq-viewof-c2-97e5b3ab"));
+  if (name === "rgb_txt") return new Inspector(document.querySelector("#observablehq-rgb_txt-97e5b3ab"));
+  if (name === "rgb_col") return new Inspector(document.querySelector("#observablehq-rgb_col-97e5b3ab"));
+  if (name === "hcl_txt") return new Inspector(document.querySelector("#observablehq-hcl_txt-97e5b3ab"));
+  if (name === "hcl_col") return new Inspector(document.querySelector("#observablehq-hcl_col-97e5b3ab"));
+  if (name === "lab_txt") return new Inspector(document.querySelector("#observablehq-lab_txt-97e5b3ab"));
+  if (name === "lab_col") return new Inspector(document.querySelector("#observablehq-lab_col-97e5b3ab"));
+  if (name === "hsl_txt") return new Inspector(document.querySelector("#observablehq-hsl_txt-97e5b3ab"));
+  if (name === "hsl_col") return new Inspector(document.querySelector("#observablehq-hsl_col-97e5b3ab"));
+  if (name === "comments") return new Inspector(document.querySelector("#observablehq-comments-97e5b3ab"));
+  if (name === "pi_txt") return new Inspector(document.querySelector("#observablehq-pi_txt-97e5b3ab"));
+  if (name === "pi_col") return new Inspector(document.querySelector("#observablehq-pi_col-97e5b3ab"));
+  if (name === "pi_com") return new Inspector(document.querySelector("#observablehq-pi_com-97e5b3ab"));
+  return ["examplecolors"].includes(name);
+});
+</script>
