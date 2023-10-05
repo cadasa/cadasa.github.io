@@ -1,5 +1,6 @@
 const csv = `link,src,title
 https://cadasa.github.io/,https://cadasa.github.io/lou.JPG,<center><font size="+3">🏠</font></center>
+https://cadasa.github.io/dst.html,https://cadasa.github.io/vizapps/dst.JPG,Daylight Saving Time
 https://cadasa.github.io/draw_pol.html,https://cadasa.github.io/vizapps/draw_pol.JPG,Polygon drawing tool
 https://cadasa.github.io/mcomp.html,https://cadasa.github.io/vizapps/mcomp.JPG,Map Comparison 2014 - 2022
 https://cadasa.github.io/etemp.html,https://cadasa.github.io/vizapps/etemp.JPG,The Earth daily temperature
