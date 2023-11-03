@@ -1,0 +1,25 @@
+<div id="observablehq-title-4156eff1"></div>
+<div id="observablehq-viewof-ceo-4156eff1"></div>
+<div id="observablehq-viewof-cto-4156eff1"></div>
+<div id="observablehq-viewof-cfo-4156eff1"></div>
+<div id="observablehq-chart-4156eff1"></div>
+<div id="observablehq-txt1-4156eff1"></div>
+<div id="observablehq-txt2-4156eff1"></div>
+<div id="observablehq-txt3-4156eff1"></div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/d/0bfabe09477dad25.js?v=4";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-4156eff1"));
+  if (name === "viewof ceo") return new Inspector(document.querySelector("#observablehq-viewof-ceo-4156eff1"));
+  if (name === "viewof cto") return new Inspector(document.querySelector("#observablehq-viewof-cto-4156eff1"));
+  if (name === "viewof cfo") return new Inspector(document.querySelector("#observablehq-viewof-cfo-4156eff1"));
+  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-4156eff1"));
+  if (name === "txt1") return new Inspector(document.querySelector("#observablehq-txt1-4156eff1"));
+  if (name === "txt2") return new Inspector(document.querySelector("#observablehq-txt2-4156eff1"));
+  if (name === "txt3") return new Inspector(document.querySelector("#observablehq-txt3-4156eff1"));
+  return ["employeesWithBosses","employeesWithBossesMedianData","employeesWithBossesMean","employeesWithBossesMedian"].includes(name);
+});
+</script>
