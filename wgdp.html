@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>GDP and WEALTH per Adult</title>
+    <meta property="description" content="GDP and WEALTH per Adult">
+    <meta property="og:title" content="GDP and WEALTH per Adult">
+    <meta property="og:url" content="https://cadasa.github.io/wgdp.html">
+    <meta property="og:description" content="GDP and WEALTH per Adult">
+    <meta property="og:image" content="https://cadasa.github.io/wgdp.JPG">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="nytimes.com">
+    <link rel="canonical" href="https://cadasa.github.io/wgdp.html">
+    <link rel="manifest" href="manifest.json">
+    <link href="https://www.nytimes.com/games/wordle/images/NYT-Wordle-Icon-32.png" rel="icon shortcut" sizes="3232">
+    <link href="https://www.nytimes.com/games/wordle/images/NYT-Wordle-Icon-192.png" rel="apple-touch-icon">
+</head>
+<body>
+<div id="observablehq-title22-ca92f092"></div>
+<div id="observablehq-viewof-countries33-ca92f092"></div>
+<div id="observablehq-wealth_gdp-ca92f092"></div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/@cadasa/linepie.js?v=4";
+new Runtime().module(define, name => {
+  if (name === "title22") return new Inspector(document.querySelector("#observablehq-title22-ca92f092"));
+  if (name === "viewof countries33") return new Inspector(document.querySelector("#observablehq-viewof-countries33-ca92f092"));
+  if (name === "wealth_gdp") return new Inspector(document.querySelector("#observablehq-wealth_gdp-ca92f092"));
+});
+</script>
+</body>
+</html>
