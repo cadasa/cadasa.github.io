@@ -27,7 +27,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-import define from "https://api.observablehq.com/d/b42168ecd74441c4@454.js?v=4";
+import define from "https://api.observablehq.com/d/b42168ecd74441c4.js?v=4";
 new Runtime().module(define, name => {
   if (name === "title") return new Inspector(document.querySelector("#observablehq-title-2e06190f"));
   if (name === "viewof radios") return new Inspector(document.querySelector("#observablehq-viewof-radios-2e06190f"));
