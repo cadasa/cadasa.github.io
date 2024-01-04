@@ -22,16 +22,36 @@ body { margin: 0; padding: 0; }
 	border-radius: 50%;
 	cursor: pointer;
 	}
+	#buttons {
+		width: 90%;
+		margin: 0 auto;
+	}
+.button {
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	width: 20%;
+	padding: 8px;
+	border-radius: 3px;
+	margin-top: 10px;
+	font-size: 12px;
+	text-align: center;
+	color: #fff;
+	background: #ee8a65;
+	font-family: sans-serif;
+	font-weight: bold;
+	}
 	</style>
 <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
 <div id="map"></div>
+
 <script>
 	mapboxgl.accessToken = 'pk.eyJ1IjoiY2FkYXNhIiwiYSI6ImNraWc1aTF2YjFpNWkycnBvZGs4a3ZrajEifQ.oy_ctBheuCWfip4-ou7akg';
-    (async () => {
+	  (async () => {
         const map = new mapboxgl.Map({
             container: 'map',
-            zoom: 11.5,
-            center: [6.635538,59.041038,856],
+            zoom: 11.3,
+            center: [6.7874,59.09],
             pitch: 60,
             bearing:240,
             style: 'mapbox://styles/mapbox/satellite-streets-v11',
@@ -63,30 +83,11 @@ body { margin: 0; padding: 0; }
             map.once('load')
         ]);
 
-        const pinRoute1 = pinRouteGeojson.features[0].geometry.coordinates;
-				const pinRoute = pinRoute1.reverse()
-        // Create the marker and popup that will display the elevation queries
-        const popup = new mapboxgl.Popup({ closeButton: true, closeOnClick: false, offset: 15 });
-				// create DOM element for the marker
-				const el = document.createElement('div');
-				el.id = 'marker';
-        const marker = new mapboxgl.Marker(el,{
-            color: 'red',
-            scale: 0.8,
-            draggable: false,
-            pitchAlignment: 'auto',
-            rotationAlignment: 'auto'
-        })
-            .setLngLat(pinRoute[0])
-            .setPopup(popup)
-            .addTo(map)
-            .togglePopup();
-
         // Add a line feature and layer. This feature will get updated as we progress the animation
         map.addSource('line', {
             type: 'geojson',
             // Line metrics is required to use the 'line-progress' property
-            lineMetrics: true,
+            lineMetrics: false,
             data: pinRouteGeojson
         });
         map.addLayer({
@@ -94,7 +95,7 @@ body { margin: 0; padding: 0; }
             source: 'line',
             id: 'line',
             paint: {
-                'line-color': 'rgba(0,0,0,0)',
+                'line-color': 'Red',
                 'line-width': 5
             },
             layout: {
@@ -129,8 +130,28 @@ body { margin: 0; padding: 0; }
         });
         map.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1.5 });
 				const xyz = [];
-        await map.once('idle');
+        //await map.once('idle');
         // The total animation duration, in milliseconds
+				map.on('click', 'line', function (e) {
+				const pinRoute1 = e.features[0].geometry.coordinates;
+				const pinRoute = pinRoute1.reverse();
+				var name = e.features[0].properties.name;
+        // Create the marker and popup that will display the elevation queries
+        const popup = new mapboxgl.Popup({ closeButton: true, closeOnClick: false, offset: 15 });
+				// create DOM element for the marker
+				const el = document.createElement('div');
+				el.id = 'marker';
+        const marker = new mapboxgl.Marker(el,{
+            color: 'red',
+            scale: 0.8,
+            draggable: false,
+            pitchAlignment: 'auto',
+            rotationAlignment: 'auto'
+        })
+            .setLngLat(pinRoute[0])
+            .setPopup(popup)
+            .addTo(map)
+            .togglePopup();
         const animationDuration = 20000;
         // Use the https://turfjs.org/ library to calculate line distances and
         // sample the line at a given percentage with the turf.along function.
@@ -173,17 +194,17 @@ body { margin: 0; padding: 0; }
           }
         });
             // Update the popup altitude value and marker location
-            popup.setHTML('Altitude: ' + elevation + 'm<br/>' + 'Distance: ' + Math.round(pathDistance * animationPhase*100)/100 + 'km<br/>');
+            popup.setHTML('<b>'+ name + '</b><br/>' + 'Altitude: ' + elevation + 'm<br/>' + 'Distance: ' + Math.round(pathDistance * animationPhase*100)/100 + 'km<br/>');
             marker.setLngLat(lngLat);
 
             // Reduce the visible length of the line by using a line-gradient to cutoff the line
             // animationPhase is a value between 0 and 1 that reprents the progress of the animation
             map.setPaintProperty('line', 'line-gradient', [
                 'step',
-                ['line-progress'],
+                //['line-progress'],
                 'red',
                 animationPhase,
-                'rgba(255, 0, 0, 0)'
+                'red'
             ]);
 
             // Rotate the camera at a slightly lower speed to give some parallax effect in the background
@@ -195,7 +216,8 @@ body { margin: 0; padding: 0; }
         }
 
         window.requestAnimationFrame(frame);
-		await map.once('idle');
+});
+		//await map.once('idle');
 		const ttt = {'type': 'FeatureCollection',
   							'features': xyz};
 		map.addSource('places', {
@@ -234,13 +256,40 @@ body { margin: 0; padding: 0; }
 									'right': [-markerRadius, (markerHeight - markerRadius) * -1]
 								};
 		const popup2 = new mapboxgl.Popup({ anchor: 'top',
-																			closeButton: true, closeOnClick: false, offset: popupOffsets });
+																			closeButton: true, closeOnClick: true, offset: popupOffsets });
+																			map.on('mouseenter', 'line', function (e) {
+																						// Change the cursor to a pointer when the mouse is over the states layer.
+																						  map.getCanvas().style.cursor = 'pointer';
+																							const pinRoute = e.features[0].geometry.coordinates;
+																						  var title = '<center><strong>' + e.features[0].properties.name + '</strong><p>' +
+																							//	'<center>' + e.features[0].properties.description + '</p>' +
+																						    '<center><i>(MB1 click to see animation)';
+
+																						  // Ensure that if the map is zoomed out such that multiple
+																						  // copies of the feature are visible, the popup appears
+																						  // over the copy being pointed to.
+																						  //while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+																						  //coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+																						  //}
+
+																						  // Populate the popup and set its coordinates
+																						  // based on the feature found.
+																						  popup2.setLngLat(pinRoute[0]).setHTML(title).addTo(map);
+																						//.setLngLat(e.lngLat)
+																						//.setHTML(title)
+																						//.addTo(map);
+																						});
+																						// Change it back to a pointer when it leaves.
+																						map.on('mouseleave', 'line', function () {
+																						map.getCanvas().style.cursor = '';
+																			//			popup2.remove();
+																						});
 		const popup3 = new mapboxgl.Popup({ anchor: 'bottom',
 																			closeButton: true, closeOnClick: false, offset: popupOffsets });
 		map.on('mouseenter', 'places', function () {
 		map.getCanvas().style.cursor = 'pointer';
 		});
-		map.on('click', 'places', function (e) {
+		map.on('mouseenter', 'places', function (e) {
 	// Change the cursor to a pointer when the mouse is over the states layer.
 			var elev = e.features[0].properties.elevation;
 			var dist = e.features[0].properties.distance;
@@ -266,7 +315,10 @@ body { margin: 0; padding: 0; }
 		.setHTML('Altitude: ' + elev + 'm<br/>' + 'Distance: ' + dist + 'km<br/>')
 		.setLngLat(e.lngLat)
 		.addTo(map);
-
+		map.on('mouseleave', 'places', function () {
+					map.getCanvas().style.cursor = '';
+		//				popup3.remove();
+					});
 	const svgElement = popup2.getElement().getElementsByClassName('popup-d3-svg')[0];
 
 /*const svg = d3.select(svgElement)
