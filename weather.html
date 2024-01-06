@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <meta name="theme-color" content="#000000"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://globle-game.com/favicon/apple-touch-icon.png"/>
+  <link rel="icon shortcut" type="image/png" sizes="32x32" href="https://globle-game.com/favicon/favicon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="https://globle-game.com/favicon/favicon-16x16.png"/>
+  <link rel="manifest" href="https://globle-game.com/favicon/site.webmanifest"/>
+  <link rel="image_src" href="https://globle-game.com/images/preview.png"/>
+  <title>Weather Forecast</title>
+  <meta property="og:image" content="https://cadasa.github.io/weather.JPG">
+  <meta property="og:url" content="https://cadasa.github.io/weather.html">
+  <meta property="og:title" content="Weather Forecast">
+  <meta name="description" content="Weather Forecast for cities around the World"/>
+</head>
+<body>
+<div id="observablehq-title-62b5bddf"></div>
+<div id="observablehq-c-62b5bddf"></div>
+<div id="observablehq-cc-62b5bddf"></div>
+<div id="observablehq-ccc-62b5bddf"></div>
+<div id="observablehq-viewof-radios-62b5bddf"></div>
+<div id="observablehq-cccc-62b5bddf"></div>
+<div id="observablehq-style-62b5bddf"></div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/d/f0c04b1f4448fd85.js?v=4";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-62b5bddf"));
+  if (name === "c") return new Inspector(document.querySelector("#observablehq-c-62b5bddf"));
+  if (name === "cc") return new Inspector(document.querySelector("#observablehq-cc-62b5bddf"));
+  if (name === "ccc") return new Inspector(document.querySelector("#observablehq-ccc-62b5bddf"));
+  if (name === "viewof radios") return new Inspector(document.querySelector("#observablehq-viewof-radios-62b5bddf"));
+  if (name === "cccc") return new Inspector(document.querySelector("#observablehq-cccc-62b5bddf"));
+  if (name === "style") return new Inspector(document.querySelector("#observablehq-style-62b5bddf"));
+  return ["genDayTableV2"].includes(name);
+});
+</script>
+</body>
+</html>
