@@ -1,0 +1,21 @@
+<div id="observablehq-title-2ed7914c"></div>
+<div id="observablehq-viewof-search-2ed7914c"></div>
+<div id="observablehq-viewof-range-2ed7914c"></div>
+<div id="observablehq-txt-2ed7914c"></div>
+<div id="observablehq-viewof-plotType-2ed7914c"></div>
+<div id="observablehq-timeSeries-2ed7914c"></div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/d/ec660741a896ac61.js?v=4";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-2ed7914c"));
+  if (name === "viewof search") return new Inspector(document.querySelector("#observablehq-viewof-search-2ed7914c"));
+  if (name === "viewof range") return new Inspector(document.querySelector("#observablehq-viewof-range-2ed7914c"));
+  if (name === "txt") return new Inspector(document.querySelector("#observablehq-txt-2ed7914c"));
+  if (name === "viewof plotType") return new Inspector(document.querySelector("#observablehq-viewof-plotType-2ed7914c"));
+  if (name === "timeSeries") return new Inspector(document.querySelector("#observablehq-timeSeries-2ed7914c"));
+  return ["gdpcheck","gdppast","gdpsim","data","gdp","quantileData","memberData","cur_pop"].includes(name);
+});
+</script>
