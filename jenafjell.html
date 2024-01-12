@@ -63,7 +63,8 @@ body { margin: 0; padding: 0; }
             map.once('load')
         ]);
 
-        const pinRoute = pinRouteGeojson.features[0].geometry.coordinates;
+        const pinRoute1 = pinRouteGeojson.features[0].geometry.coordinates;
+				const pinRoute = pinRoute1.reverse();
         // Create the marker and popup that will display the elevation queries
         const popup = new mapboxgl.Popup({ closeButton: true, closeOnClick: false, offset: 15 });
 				// create DOM element for the marker
