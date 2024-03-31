@@ -1,0 +1,16 @@
+<div id="observablehq-title-b654383c"></div>
+<div id="observablehq-viewof-list1-b654383c"></div>
+<div id="observablehq-viewof-list2-b654383c"></div>
+<div id="observablehq-images-b654383c"></div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/d/a8effabbfd460735.js?v=4&api_key=faefd01287d32bc55ce57dc8e5a4f3e1843db26e";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-b654383c"));
+  if (name === "viewof list1") return new Inspector(document.querySelector("#observablehq-viewof-list1-b654383c"));
+  if (name === "viewof list2") return new Inspector(document.querySelector("#observablehq-viewof-list2-b654383c"));
+  if (name === "images") return new Inspector(document.querySelector("#observablehq-images-b654383c"));
+});
+</script>
