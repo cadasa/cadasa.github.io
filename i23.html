@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="theme-color" content="#000000"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://globle-game.com/favicon/apple-touch-icon.png"/>
+  <link rel="icon shortcut" type="image/png" sizes="32x32" href="https://globle-game.com/favicon/favicon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="https://globle-game.com/favicon/favicon-16x16.png"/>
+  <link rel="manifest" href="https://globle-game.com/favicon/site.webmanifest"/>
+  <link rel="image_src" href="https://globle-game.com/images/preview.png"/>
+  <title>2D Image to 3D Viz</title>
+  <meta property="og:image" content="https://cadasa.github.io/i23.JPG">
+  <meta property="og:url" content="https://cadasa.github.io/i23.html">
+  <meta property="og:title" content="2D Image to 3D Viz">
+  <meta name="description" content="2D Image to 3D Viz"/>
+
+  <link rel="stylesheet" href="stylesheets/app.css" />
+  <link rel="stylesheet" href="stylesheets/sidebar.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+<body>
+  <div id="left" class="sidebar flex-center left collapsed">
+    <div class="sidebar-content rounded-rect flex-center">
+      <div class="sidebar-toggle rounded-rect left" onclick="toggleSidebar('left')">
+        &rarr;
+      </div>
+    </div>
+    <div id='listings' class='listings'></div>
+  </div>
+  <script src="scripts/sidebar.js"></script>
+<div id="observablehq-title-d600b97a"></div>
+<div id="observablehq-dashboard-d600b97a"></div>
+<div id="observablehq-dashboard2-d600b97a"></div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/d/f545efde5fd83c03.js?v=4&api_key=e5ce93ce3568414f492d97cfa021c7abfbbaee6e";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-d600b97a"));
+  if (name === "dashboard") return new Inspector(document.querySelector("#observablehq-dashboard-d600b97a"));
+  if (name === "dashboard2") return new Inspector(document.querySelector("#observablehq-dashboard2-d600b97a"));
+});
+</script>
+</body>
+</html>
