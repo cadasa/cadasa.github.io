@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="theme-color" content="#000000"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://globle-game.com/favicon/apple-touch-icon.png"/>
+  <link rel="icon shortcut" type="image/png" sizes="32x32" href="https://globle-game.com/favicon/favicon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="https://globle-game.com/favicon/favicon-16x16.png"/>
+  <link rel="manifest" href="https://globle-game.com/favicon/site.webmanifest"/>
+  <link rel="image_src" href="https://globle-game.com/images/preview.png"/>
+  <title>Image Generator</title>
+  <meta property="og:image" content="https://cadasa.github.io/ig.JPG">
+  <meta property="og:url" content="https://cadasa.github.io/ig.html">
+  <meta property="og:title" content="Image Generator">
+  <meta name="description" content="Image Generator"/>
+
+  <link rel="stylesheet" href="stylesheets/app.css" />
+  <link rel="stylesheet" href="stylesheets/sidebar.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+<body>
+  <div id="left" class="sidebar flex-center left collapsed">
+    <div class="sidebar-content rounded-rect flex-center">
+      <div class="sidebar-toggle rounded-rect left" onclick="toggleSidebar('left')">
+        &rarr;
+      </div>
+    </div>
+    <div id='listings' class='listings'></div>
+  </div>
+  <script src="scripts/sidebar.js"></script>
+<div id="observablehq-title-588b69a9"></div>
+<div id="observablehq-viewof-text-588b69a9"></div>
+<div id="observablehq-viewof-list1-588b69a9"></div>
+<div id="observablehq-images-588b69a9"></div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/d/647b4f197c807d3c.js?v=4&api_key=63aeb907908fa50318b3abdf94e16ed996d48b01";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-588b69a9"));
+  if (name === "viewof text") return new Inspector(document.querySelector("#observablehq-viewof-text-588b69a9"));
+  if (name === "viewof list1") return new Inspector(document.querySelector("#observablehq-viewof-list1-588b69a9"));
+  if (name === "images") return new Inspector(document.querySelector("#observablehq-images-588b69a9"));
+  return ["formData","viewof submitter","predict","result","button"].includes(name);
+});
+</script>
+</body>
+</html>
