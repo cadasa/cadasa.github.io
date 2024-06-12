@@ -1,0 +1,15 @@
+<div id="observablehq-title-e27acdd2"></div>
+<div id="observablehq-viewof-radios-e27acdd2"></div>
+<div id="observablehq-video-e27acdd2"></div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/d/7c3bf4b9ec057e30.js?v=4&api_key=da870ceddc650b9a73c1b03f45f57958b054a5bf";
+new Runtime().module(define, name => {
+  if (name === "title") return new Inspector(document.querySelector("#observablehq-title-e27acdd2"));
+  if (name === "viewof radios") return new Inspector(document.querySelector("#observablehq-viewof-radios-e27acdd2"));
+  if (name === "video") return new Inspector(document.querySelector("#observablehq-video-e27acdd2"));
+  return ["start","stop"].includes(name);
+});
+</script>
