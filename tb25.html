@@ -188,7 +188,7 @@ body { margin: 0; padding: 0; }
             );
 
             // Update the popup altitude value and marker location
-            popup.setHTML('<b>'+ name + desc + '</b><br/>' + 'Altitude: ' + elevation + 'm<br/>' + 'Distance: ' + Math.round(pathDistance * animationPhase*100)/100 + 'km<br/>');
+            popup.setHTML('<b>'+ name + ': ' + desc + '</b><br/>' + 'Altitude: ' + elevation + 'm<br/>' + 'Distance: ' + Math.round(pathDistance * animationPhase*100)/100 + 'km<br/>');
             marker.setLngLat(lngLat);
 
             // Reduce the visible length of the line by using a line-gradient to cutoff the line
@@ -217,7 +217,7 @@ body { margin: 0; padding: 0; }
 			  map.getCanvas().style.cursor = 'pointer';
 				const pinRoute = e.features[0].geometry.coordinates;
 			  var title = '<center><strong>' + e.features[0].properties.name + '</strong><p>' +
-				//	'<center>' + e.features[0].properties.description + '</p>' +
+				'<center>' + e.features[0].properties.desc + '</p>' +
 			    '<center><i>(MB1 click to see animation)';
 
 			  // Ensure that if the map is zoomed out such that multiple
