@@ -47,7 +47,7 @@ body { margin: 0; padding: 0; }
         // Start downloading the route data, and wait for map load to occur in parallel
         const [pinRouteGeojson, _] = await Promise.all([
             fetch(
-                'https://cadasa.github.io/ToN-22.geojson'
+                'https://cadasa.github.io/tb25.geojson'
             ).then((response) => response.json()),
             map.once('load')
         ]);
@@ -144,6 +144,7 @@ body { margin: 0; padding: 0; }
 				map.on('click', 'line', function (e) {
 					const pinRoute = e.features[0].geometry.coordinates;
 					var name = e.features[0].properties.name;
+                    var desc = e.features[0].properties.desc;
 	        // Create the marker and popup that will display the elevation queries
 	        const popup = new mapboxgl.Popup({ closeButton: false });
 	        const marker = new mapboxgl.Marker({
@@ -187,7 +188,7 @@ body { margin: 0; padding: 0; }
             );
 
             // Update the popup altitude value and marker location
-            popup.setHTML('<b>'+ name + '</b><br/>' + 'Altitude: ' + elevation + 'm<br/>' + 'Distance: ' + Math.round(pathDistance * animationPhase*100)/100 + 'km<br/>');
+            popup.setHTML('<b>'+ name + desc + '</b><br/>' + 'Altitude: ' + elevation + 'm<br/>' + 'Distance: ' + Math.round(pathDistance * animationPhase*100)/100 + 'km<br/>');
             marker.setLngLat(lngLat);
 
             // Reduce the visible length of the line by using a line-gradient to cutoff the line
