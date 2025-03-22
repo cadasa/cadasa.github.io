@@ -19,7 +19,7 @@ body { margin: 0; padding: 0; }
     (async () => {
         const map = new mapboxgl.Map({
             container: 'map',
-            zoom: 7,
+            zoom: 9,
             center: [105.8342, 21.0278],
             pitch: 50,
             bearing:0,
@@ -240,7 +240,7 @@ body { margin: 0; padding: 0; }
 //			popup2.remove();
 			});
 			const popup3 = new mapboxgl.Popup({ closeButton: false });
-			map.on('mouseenter', 'places', function (e) {
+			map.on('click', 'places', function (e) {
 			// Change the cursor style as a UI indicator.
 			map.getCanvas().style.cursor = 'pointer';
 
