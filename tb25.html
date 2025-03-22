@@ -19,7 +19,7 @@ body { margin: 0; padding: 0; }
     (async () => {
         const map = new mapboxgl.Map({
             container: 'map',
-            zoom: 9,
+            zoom: 8,
             center: [105.8342, 21.0278],
             pitch: 50,
             bearing:0,
@@ -244,24 +244,15 @@ body { margin: 0; padding: 0; }
 
 				var coordinates = e.features[0].geometry.coordinates.slice();
 				var name = '<h2><center>' + e.features[0].properties.name;
-                var description = e.features[0].properties.description;
-                var iframe = document.createElement('iframe');
-                iframe.src = description;
-                iframe.width = '675px';
-                iframe.height = '500px';
+                var div = window.document.createElement('div');
+                div.innerHTML = e.features[0].properties.description;
+            // Ensure that if the map is zoomed out such that multiple
+            // copies of the feature are visible, the popup appears
+            // over the copy being pointed to.
+            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+            }
 
-                var div = document.createElement('div');
-                div.appendChild(iframe);
-
-			// Ensure that if the map is zoomed out such that multiple
-			// copies of the feature are visible, the popup appears
-			// over the copy being pointed to.
-				while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-					coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-				}
-
-			// Populate the popup and set its coordinates
-			// based on the feature found.
             new mapboxgl.Popup({closeButton: false})
                 .setLngLat(coordinates)
                 .setMaxWidth("800px")
