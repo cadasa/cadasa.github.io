@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tây Bắc 2025 AEVN</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js"></script>
+<style>
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+</style>
+</head>
+<body>
+<script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+<div id="map"></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiY2FkYXNhIiwiYSI6ImNraWc1aTF2YjFpNWkycnBvZGs4a3ZrajEifQ.oy_ctBheuCWfip4-ou7akg';
+(async () => {
+    try {
+        const map = new mapboxgl.Map({
+            container: 'map',
+            zoom: 7,
+            center: [105.8342, 21.0278], // Coordinates for Hanoi, Vietnam
+            pitch: 50,
+            bearing: 0,
+            style: 'mapbox://styles/mapbox/satellite-streets-v11',
+            interactive: true,
+            hash: true
+        });
+
+        map.addControl(new mapboxgl.FullscreenControl());
+        map.addControl(new mapboxgl.NavigationControl());
+        map.addControl(new mapboxgl.GeolocateControl({
+            positionOptions: {
+                enableHighAccuracy: true
+            },
+            trackUserLocation: true
+        }));
+
+        const [pinRouteGeojson, _] = await Promise.all([
+            fetch('https://cadasa.github.io/ToN-22.geojson').then((response) => response.json()),
+            map.once('load')
+        ]);
+
+        console.log('GeoJSON data loaded:', pinRouteGeojson);
+
+        map.addSource('line', {
+            type: 'geojson',
+            lineMetrics: false,
+            data: pinRouteGeojson
+        });
+
+        map.addLayer({
+            type: 'line',
+            source: 'line',
+            id: 'line',
+            paint: {
+                'line-color': 'Red',
+                'line-width': 5
+            },
+            layout: {
+                'line-cap': 'round',
+                'line-join': 'round'
+            }
+        });
+
+        map.addSource('places', {
+            type: 'geojson',
+            data: {
+                type: 'FeatureCollection',
+                features: [
+                    {
+                        type: 'Feature',
+                        properties: {
+                            name: 'Tà Xùa',
+                            icon: 'camera-15'
+                        },
+                        geometry: {
+                            type: 'Point',
+                            coordinates: [104.3119, 21.2404] // Coordinates for Tà Xùa
+                        }
+                    }
+                ]
+            }
+        });
+
+        map.addLayer({
+            id: 'places',
+            type: 'symbol',
+            source: 'places',
+            layout: {
+                'icon-image': '{icon}',
+                'icon-allow-overlap': true
+            }
+        });
+
+        map.setFog({
+            range: [-0.5, 2],
+            color: 'white',
+            horizon-blend: 0.1
+        });
+
+        map.addLayer({
+            id: 'sky',
+            type: 'sky',
+            paint: {
+                'sky-type': 'atmosphere',
+                'sky-atmosphere-color': 'rgba(85, 151, 210, 0.5)'
+            }
+        });
+
+        map.addSource('mapbox-dem', {
+            type: 'raster-dem',
+            url: 'mapbox://mapbox.terrain-rgb',
+            tileSize: 512,
+            maxzoom: 14
+        });
+
+        map.setTerrain({ source: 'mapbox-dem', exaggeration: 1.5 });
+
+        map.on('click', 'line', function (e) {
+            const pinRoute = e.features[0].geometry.coordinates;
+            var name = e.features[0].properties.name;
+            const popup = new mapboxgl.Popup({ closeButton: false });
+            const marker = new mapboxgl.Marker({
+                color: 'red',
+                scale: 0.8,
+                draggable: false,
+                pitchAlignment: 'auto',
+                rotationAlignment: 'auto'
+            })
+            .setLngLat(pinRoute[0])
+            .setPopup(popup)
+            .addTo(map)
+            .togglePopup();
+
+            const animationDuration = 30000;
+            const path = turf.lineString(pinRoute);
+            const pathDistance = turf.lineDistance(path);
+            let start;
+
+            function frame(time) {
+                if (!start) start = time;
+                const animationPhase = (time - start) / animationDuration;
+                if (animationPhase > 1) {
+                    return;
+                }
+
+                const alongPath = turf.along(path, pathDistance * animationPhase).geometry.coordinates;
+                const lngLat = {
+                    lng: alongPath[0],
+                    lat: alongPath[1]
+                };
+
+                const elevation = Math.floor(map.queryTerrainElevation(lngLat, { exaggerated: false }));
+
+                popup.setHTML('<b>' + name + '</b><br/>' + 'Altitude: ' + elevation + 'm<br/>' + 'Distance: ' + Math.round(pathDistance * animationPhase * 100) / 100 + 'km<br/>');
+                marker.setLngLat(lngLat);
+
+                map.setPaintProperty('line', 'line-gradient', [
+                    'step',
+                    'red',
+                    animationPhase,
+                    'red'
+                ]);
+
+                const rotation = 0 - animationPhase * 40.0;
+                map.setBearing(rotation % 360);
+
+                window.requestAnimationFrame(frame);
+            }
+            window.requestAnimationFrame(frame);
+        });
+
+        const popup2 = new mapboxgl.Popup({ closeButton: false });
+        map.on('mouseenter', 'line', function (e) {
+            map.getCanvas().style.cursor = 'pointer';
+            const pinRoute = e.features[0].geometry.coordinates;
+            var title = '<center><strong>' + e.features[0].properties.name + '</strong><p><center><i>(MB1 click to see animation)';
+
+            popup2.setLngLat(pinRoute[0]).setHTML(title).addTo(map);
+        });
+
+        map.on('mouseleave', 'line', function () {
+            map.getCanvas().style.cursor = '';
+        });
+
+        const popup3 = new mapboxgl.Popup({ closeButton: false });
+        map.on('mouseenter', 'places', function (e) {
+            map.getCanvas().style.cursor = 'pointer';
+            var coordinates = e.features[0].geometry.coordinates.slice();
+            var name = '<h2><center>' + e.features[0].properties.name;
+
+            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+            }
+
+            popup3.setLngLat(coordinates).setHTML(name).addTo(map);
+        });
+
+        map.on('mouseleave', 'places', function () {
+            map.getCanvas().style.cursor = '';
+        });
+
+    } catch (error) {
+        console.error('Error loading map:', error);
+    }
+})();
+</script>
+</body>
+</html>
