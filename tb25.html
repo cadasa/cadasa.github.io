@@ -360,6 +360,10 @@ body { margin: 0; padding: 0; }
 			map.getCanvas().style.cursor = '';
 //			popup2.remove();
 			});
+            // Change the cursor to a pointer when the mouse is over the places layer.
+            map.on('mouseenter', 'places', function () {
+            map.getCanvas().style.cursor = 'pointer';
+            });
 			const popup3 = new mapboxgl.Popup({ closeButton: false });
 			map.on('click', 'places', function (e) {
 			// Change the cursor style as a UI indicator.
