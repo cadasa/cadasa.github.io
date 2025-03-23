@@ -263,6 +263,7 @@ body { margin: 0; padding: 0; }
 					const pinRoute = e.features[0].geometry.coordinates;
 					var name = e.features[0].properties.name;
                     var desc = e.features[0].properties.desc;
+                    var link = e.features[0].properties.link_href;
 	        // Create the marker and popup that will display the elevation queries
 	        const popup = new mapboxgl.Popup({ closeButton: false });
 	        const marker = new mapboxgl.Marker({
@@ -334,8 +335,10 @@ body { margin: 0; padding: 0; }
 			// Change the cursor to a pointer when the mouse is over the states layer.
 			  map.getCanvas().style.cursor = 'pointer';
 				const pinRoute = e.features[0].geometry.coordinates;
+                var link = e.features[0].properties.link_href;
 			  var title = '<center><strong>' + e.features[0].properties.name + '</strong><p>' +
 				'<center>' + e.features[0].properties.desc + '</p>' +
+                '<center><a href="' + link + '" target="_blank">Ấn để xem lộ trình trên STRAVA</a>' +
 			    '<center><i>(MB1 click to see animation)';
 
 			  // Ensure that if the map is zoomed out such that multiple
