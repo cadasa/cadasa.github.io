@@ -35,7 +35,7 @@ https://cadasa.github.io/slr.html,https://cadasa.github.io/vizapps/slr.JPG,Predi
 https://cadasa.github.io/lap.html,https://cadasa.github.io/vizapps/lap.JPG,Lunar Analemma and Phases Observed from Monte Cridola - Italy
 https://cadasa.github.io/nkm.html,https://cadasa.github.io/vizapps/nkm.JPG,North Korea's Line of Fire
 https://cadasa.github.io/droute.html,https://cadasa.github.io/vizapps/droute.JPG,Shortest Driving Route between Two Cities
-https://cadasa.github.io/tdf-21.html,https://cadasa.github.io/vizapps/tdf.JPG,Tour de France Map
+https://cadasa.github.io/tb25.html,https://cadasa.github.io/vizapps/tdf.JPG,AEVN Map
 https://cadasa.github.io/gold_mines.html,https://cadasa.github.io/vizapps/10_mines.JPG,Top 10 Mines in the World
 https://cadasa.github.io/us_trails.html,https://cadasa.github.io/vizapps/us_trails.JPG,All the Hiking Trails in the US
 https://cadasa.github.io/ai_tennis.html,https://cadasa.github.io/vizapps/ai_tennis.JPG,A.I Tennis
