@@ -48,7 +48,7 @@ https://cadasa.github.io/measure.html,https://cadasa.github.io/measure.JPG,Measu
 https://cadasa.github.io/SeisGPT.html,https://cadasa.github.io/vizapps/blsr.JPG,SeisGPT
 https://cadasa.github.io/stratworld.html,https://cadasa.github.io/vizapps/stratworld.JPG,World Stratigraphic Atlas
 https://cadasa.github.io/fieldle.html,https://cadasa.github.io/vizapps/fieldle.JPG,Guess Oil/Gas Field in 6 tries
-https://cadasa.github.io/f&t.html,https://cadasa.github.io/vizapps/f&t.JPG,My Stadium Collection
+https://cadasa.github.io/f&t.html,https://cadasa.github.io/vizapps/f&t.JPG,My Collection
 https://cadasa.github.io/flight_tracking.html,https://cadasa.github.io/vizapps/flight_tracking.JPG,Real-Time Flight Tracking
 https://cadasa.github.io/matrix.html,https://cadasa.github.io/vizapps/matrix.JPG,Matrix Multiplication
 https://cadasa.github.io/queens.html,https://cadasa.github.io/vizapps/queens.JPG,Solving Queens Problem using Python in Browser
